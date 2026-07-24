@@ -1,34 +1,69 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "willow",
+  "name": "Dax",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0A0A0A",
+    "light": "#F5F5F5",
+    "dark": "#0A0A0A"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
           "index",
-          "quickstart"
+          "quickstart",
+          "shortcuts"
+        ]
+      },
+      {
+        "group": "Capture & share",
+        "pages": [
+          "tools/image-to-url",
+          "tools/file-drop",
+          "tools/image-to-prompt"
+        ]
+      },
+      {
+        "group": "Ask AI",
+        "pages": [
+          "tools/ask-ai",
+          "tools/image-ask",
+          "tools/generate-image",
+          "tools/text-transform"
+        ]
+      },
+      {
+        "group": "Your workflow",
+        "pages": [
+          "tools/frequent-clis",
+          "tools/open-project",
+          "tools/inject-md",
+          "tools/boilerplates",
+          "tools/vibe-history"
+        ]
+      },
+      {
+        "group": "Help & feedback",
+        "pages": [
+          "tools/suggest-a-tool",
+          "tools/feedback"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://getdax.app",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Download",
+          "href": "https://getdax.app/download/",
+          "icon": "arrow-down-to-line"
         }
       ]
     }
@@ -40,14 +75,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Suggest a tool",
+        "href": "https://getdax.app"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Download for macOS",
+      "href": "https://getdax.app/download/"
     }
   },
   "contextual": {
@@ -64,9 +99,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://getdax.app",
+      "github": "https://github.com/daxorg",
+      "x": "https://x.com/getdax"
     }
   }
 }

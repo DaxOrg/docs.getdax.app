@@ -6,16 +6,23 @@
 
 ## About this project
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
+- This is the documentation site for **Dax**, a macOS menu-bar app that ships
+  fourteen small tools (image-to-URL, ask AI, image-to-prompt, and more), each
+  a keyboard shortcut away. The product site is [getdax.app](https://getdax.app).
+- Built on [Mintlify](https://mintlify.com) with the `willow` theme
+- Pages are MDX files with YAML frontmatter; tool pages live in `tools/`
 - Configuration lives in `docs.json`
 - Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
 - Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
 
 ## Terminology
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- The product is **Dax** (not "the app" in headings). It lives in the **menu bar**.
+- Refer to each tool by its public name (e.g. **Image to URL**, **Ask AI**).
+  Internal codenames (Uplink, Promptify, QuickQuestion, BulkUpload) may be
+  mentioned once for context but are not the primary name.
+- Tools are opened by a **global shortcut** or **from the menu** — don't invent
+  shortcuts for tools that open from the menu.
 
 ## Style preferences
 
