@@ -1,0 +1,33 @@
+---
+title: "Inject MD"
+description: "把 AGENTS.md（或任意 Markdown 文件）放进任意项目，放在 Agent 会读取到的位置。"
+icon: "markdown"
+---
+
+**Inject MD** 会把一份 Markdown 指令文件（比如 `AGENTS.md`）放进你用过的任意
+项目——正好放在编程 Agent 会读取到的位置。完全离线可用。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="选择文件">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>，然后选择要注入的 Markdown
+    文件（默认是 `AGENTS.md`）。
+  </Step>
+  <Step title="选择项目">
+    一份面板会出现，列出**你用过 Claude Code 或 Codex 的所有项目**，数据来自
+    你的会话记录。
+  </Step>
+  <Step title="注入">
+    选中一个项目，文件会被**写入该项目的文件夹**，正好是 Agent 会去查找的
+    位置。
+  </Step>
+</Steps>
+
+## 隐私
+
+本地运行。项目列表来自本地记录，文件写入也在本地完成。

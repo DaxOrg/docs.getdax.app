@@ -1,0 +1,47 @@
+---
+title: "Image to Prompt"
+description: "从一张图片反推出一段详细的生成提示词。"
+icon: "wand-magic-sparkles"
+---
+
+**Image to Prompt**（内部代号 *Promptify*）会从一张图片反推出一段详细的文本
+提示词，供图像生成模型或 LLM 用来重新创作出类似的画面。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="复制一张图片">
+    复制任意图片——一份设计稿、一张截图，或任何你想重现的画面。
+  </Step>
+  <Step title="按下快捷键">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd>，图片会连同你选择的提示词风格
+    一起发送给**视觉模型**。
+  </Step>
+  <Step title="粘贴提示词">
+    一段详细的复现提示词会**出现在你的剪贴板**，并显示在面板中，可以粘贴进
+    任意图像生成工具或 LLM。
+  </Step>
+</Steps>
+
+## 提示词风格
+
+设置 → Tools → Image to Prompt：
+
+- **UI Focused**——用于在代码中重建这个界面的提示词。
+- **General Purpose**——平衡、忠实的通用描述。
+- **Image Focused**——更适合在图像模型中重现这张图片。
+- **Ask me every time**——每次运行时从菜单中选择风格。
+
+<Tip>
+  搭配 [Generate Image](/zh/tools/generate-image) 使用：描述一张你喜欢的图片，
+  再在这段提示词的基础上改出新的变体。
+</Tip>
+
+## 为什么用快捷键，而不是自动监听
+
+Image to Prompt 刻意设计为按键触发，而不是监听剪贴板，这样图片只会在你明确
+按下快捷键时才离开这台设备。

@@ -9,48 +9,102 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Getting started",
-        "pages": [
-          "index",
-          "quickstart",
-          "how-dax-works",
-          "shortcuts"
+        "language": "en",
+        "default": true,
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "how-dax-works",
+              "shortcuts"
+            ]
+          },
+          {
+            "group": "Capture & share",
+            "pages": [
+              "tools/image-to-url",
+              "tools/file-drop",
+              "tools/image-to-prompt"
+            ]
+          },
+          {
+            "group": "Ask AI",
+            "pages": [
+              "tools/ask-ai",
+              "tools/image-ask",
+              "tools/generate-image",
+              "tools/text-transform"
+            ]
+          },
+          {
+            "group": "Your workflow",
+            "pages": [
+              "tools/frequent-clis",
+              "tools/open-project",
+              "tools/inject-md",
+              "tools/boilerplates",
+              "tools/vibe-history"
+            ]
+          },
+          {
+            "group": "Help & feedback",
+            "pages": [
+              "tools/suggest-a-tool",
+              "tools/feedback"
+            ]
+          }
         ]
       },
       {
-        "group": "Capture & share",
-        "pages": [
-          "tools/image-to-url",
-          "tools/file-drop",
-          "tools/image-to-prompt"
-        ]
-      },
-      {
-        "group": "Ask AI",
-        "pages": [
-          "tools/ask-ai",
-          "tools/image-ask",
-          "tools/generate-image",
-          "tools/text-transform"
-        ]
-      },
-      {
-        "group": "Your workflow",
-        "pages": [
-          "tools/frequent-clis",
-          "tools/open-project",
-          "tools/inject-md",
-          "tools/boilerplates",
-          "tools/vibe-history"
-        ]
-      },
-      {
-        "group": "Help & feedback",
-        "pages": [
-          "tools/suggest-a-tool",
-          "tools/feedback"
+        "language": "zh",
+        "groups": [
+          {
+            "group": "开始使用",
+            "pages": [
+              "zh/index",
+              "zh/quickstart",
+              "zh/how-dax-works",
+              "zh/shortcuts"
+            ]
+          },
+          {
+            "group": "捕获与分享",
+            "pages": [
+              "zh/tools/image-to-url",
+              "zh/tools/file-drop",
+              "zh/tools/image-to-prompt"
+            ]
+          },
+          {
+            "group": "AI 问答",
+            "pages": [
+              "zh/tools/ask-ai",
+              "zh/tools/image-ask",
+              "zh/tools/generate-image",
+              "zh/tools/text-transform"
+            ]
+          },
+          {
+            "group": "你的工作流",
+            "pages": [
+              "zh/tools/frequent-clis",
+              "zh/tools/open-project",
+              "zh/tools/inject-md",
+              "zh/tools/boilerplates",
+              "zh/tools/vibe-history"
+            ]
+          },
+          {
+            "group": "帮助与反馈",
+            "pages": [
+              "zh/tools/suggest-a-tool",
+              "zh/tools/feedback"
+            ]
+          }
         ]
       }
     ],

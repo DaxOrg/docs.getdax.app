@@ -1,0 +1,62 @@
+---
+title: "Dax 如何运作"
+description: "所有工具共通的运作模型——呼出方式、激活流程、离线行为与隐私。"
+---
+
+Dax 里的每个工具都遵循一些共同的规则，与其在十四个工具页面里各讲一遍，不如
+在这里统一说明。
+
+## 呼出工具
+
+- **每个工具都有一个全局快捷键。** 默认都是 <kbd>⌃</kbd> <kbd>⌥</kbd> 加一个
+  按键。在 **设置 → Shortcuts**（<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>）里
+  可以重新绑定或清除任意快捷键——完整列表见[快速参考](/zh/shortcuts)。
+- **启动器网格**——按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> 打开包含
+  所有工具的网格。点击一个，或按 <kbd>1</kbd>–<kbd>9</kbd> 选择前九个。在你
+  还没记住快捷键之前很好用。
+- **菜单栏图标**同样列出所有工具，也能打开设置。
+
+### 全局快捷键（非工具）
+
+| 快捷键 | 打开 |
+| --- | --- |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | 工具启动器网格 |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | 设置 |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | 设置 → Tools 标签（单个工具的配置） |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | 设置 → Shortcuts 标签（重新绑定快捷键） |
+
+## 激活
+
+Dax **仅限邀请使用**。在用邀请码激活之前，任何工具都不会打开——按下任意快
+捷键都会转到邀请页面。没有邀请码？邀请页面上的**申请访问**按钮可以把你加入
+等待名单。激活后，你的个人访问令牌会存储在 Mac 的钥匙串中，所有工具随即解锁。
+
+如果你的账号被暂停，Dax 会进入锁定状态，所有工具都会礼貌地把你指向支持渠道，
+而不是正常打开。
+
+## 在线与离线工具
+
+有些工具完全本地运行，有些需要联网。**离线时，需要联网的工具会在启动器里变暗**，
+并显示一个「需要联网」的提示，而不是打开一个注定会失败的面板。网络恢复的瞬间
+它们会重新启用。
+
+<CardGroup cols={2}>
+  <Card title="离线可用" icon="wifi-slash">
+    [Frequent CLIs](/zh/tools/frequent-clis)、[Boilerplates](/zh/tools/boilerplates)、
+    [Inject MD](/zh/tools/inject-md)、[Open Project](/zh/tools/open-project)、
+    [Vibe History](/zh/tools/vibe-history)
+  </Card>
+  <Card title="需要联网" icon="wifi">
+    [Ask AI](/zh/tools/ask-ai)、[AI Text Transform](/zh/tools/text-transform)、
+    [Image to Prompt](/zh/tools/image-to-prompt)、[Image Ask](/zh/tools/image-ask)、
+    [Generate Image](/zh/tools/generate-image)、[Image to URL](/zh/tools/image-to-url)、
+    [File Drop](/zh/tools/file-drop)、[Feedback](/zh/tools/feedback)、
+    [Suggest a Tool](/zh/tools/suggest-a-tool)
+  </Card>
+</CardGroup>
+
+## 隐私
+
+本地工具从不联网。需要联网的工具**只**发送该工具真正需要的内容，且**只**在
+你按下快捷键或点击按钮时发送——绝不会因为你复制了什么就自动发送。详情见每个
+工具各自的页面，以及隐私政策。
