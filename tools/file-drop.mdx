@@ -1,39 +1,40 @@
 ---
 title: "File Drop"
-description: "Bulk-upload files in one go and get links back."
+description: "Drop files or folders, get one shareable link."
 icon: "files"
 ---
 
-**File Drop** (internally, *BulkUpload*) takes a batch of files and uploads them
-together, handing back links for the whole set. When you have more than one
-thing to share, you don't have to upload them one at a time.
+**File Drop** (internally, *BulkUpload*) turns any files or folders into a
+single shareable link — the fast way to hand a bundle of context to an LLM.
 
 ## Open it
 
-Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>B</kbd> from any app, or choose **File Drop**
-from the Dax menu.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> from any app.
 
-## Use it
+## How it works
 
 <Steps>
+  <Step title="Open the drop window">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd>. A drop window floats up and
+    **stays up while you drag from Finder**.
+  </Step>
   <Step title="Drop your files">
-    Drag a selection of files into the window, or pick them from Finder.
+    A **single file** of any kind uploads **as-is**. **Multiple files or a
+    folder** are bundled into **one zip**, then uploaded.
   </Step>
-  <Step title="Upload the batch">
-    Dax uploads everything in one pass.
-  </Step>
-  <Step title="Collect the links">
-    Copy the links for the whole set and paste them where you need them.
+  <Step title="Upload">
+    Click **Upload**. The **link lands on your clipboard** — paste it to any
+    LLM.
   </Step>
 </Steps>
 
 <Tip>
-  Select several files in Finder and drag them in together — File Drop keeps them
-  as one batch.
+  Select several files in Finder and drag them in together — File Drop keeps
+  them as one batch.
 </Tip>
 
-## Great for
+## Limits & notes
 
-- Sharing a folder of screenshots or assets at once
-- Attaching multiple references to a single prompt or ticket
-- Handing a set of files to someone without zipping them first
+- Up to **256 MB** per upload.
+- Links **expire automatically after 90 days**.
+- **Files only leave this Mac when you click Upload** — never on drop.

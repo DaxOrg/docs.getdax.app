@@ -1,39 +1,77 @@
 ---
 title: "Generate Image"
-description: "Make an image from a prompt, right from the menu bar."
+description: "Create or edit an image from a prompt, fully keyboard-driven."
 icon: "image"
 ---
 
-**Generate Image** turns a text prompt into an image without opening a separate
-app. Describe what you want, generate it, and use it — for a placeholder, an
-icon, a diagram sketch, or a quick visual idea.
+**Generate Image** creates a brand-new image from a description, or edits a
+photo you provide — all from a floating panel, fully keyboard-driven.
 
 ## Open it
 
-Choose **Generate Image** from the Dax menu bar.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>G</kbd> from any app.
 
-## Use it
+## How it works
 
 <Steps>
-  <Step title="Describe it">
-    Type a prompt for the image you want.
+  <Step title="Pick a model">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>G</kbd>. A row of model tiles floats
+    up — pick with <kbd>←</kbd> <kbd>→</kbd> (or <kbd>1</kbd>–<kbd>3</kbd>)
+    and confirm with <kbd>↩</kbd>.
+  </Step>
+  <Step title="Choose a mode">
+    <kbd>⇥</kbd> toggles between modes:
+    - **Create new** — makes an image from your words.
+    - **Edit a photo** — changes a photo you add. Attach up to **10**
+      reference photos via **Choose Photo**, **Snip Screen**, <kbd>⌘</kbd>
+      <kbd>V</kbd>, or drag-and-drop.
   </Step>
   <Step title="Generate">
-    Dax creates the image from your prompt.
+    Type your description, set aspect ratio / background if you like, and
+    press <kbd>↩</kbd> to generate.
   </Step>
-  <Step title="Save or share">
-    Keep the result, or send it straight to [Image to URL](/tools/image-to-url)
-    for a shareable link.
+  <Step title="Use the result">
+    The result appears **in the panel**, the **hosted link is auto-copied**,
+    and the **file auto-saves to your Desktop**. The real per-image cost is
+    shown.
   </Step>
 </Steps>
 
+## Models
+
+**OpenAI**, **Nano Banana**, **Seedream**.
+
+## Aspect ratios
+
+Auto · Square (1:1) · Wide (16:9) · Tall (9:16) · Landscape (4:3) · Portrait
+(3:4) · Social (4:5) · Frame (5:4).
+
+## Background
+
+Auto · Transparent · Opaque.
+
+## History
+
+<kbd>⌘</kbd> <kbd>H</kbd> shows your **last 50 generations** — press
+<kbd>↩</kbd> on one to bring it back. The panel remembers where you dragged
+it.
+
+## Options
+
+Settings → Tools → Generate Image:
+
+- **When the image is ready, copy** — *the link* or *the image itself* (the
+  file is saved to your Desktop either way).
+- **Default model**, **aspect ratio**, and **background**.
+
 <Tip>
-  Not sure how to phrase it? Start from [Image to Prompt](/tools/image-to-prompt)
-  on a reference you like, then adjust the wording.
+  Not sure how to phrase a prompt? Start from [Image to
+  Prompt](/tools/image-to-prompt) on a reference you like, then adjust the
+  wording.
 </Tip>
 
-## Great for
+## Billing
 
-- A placeholder or hero image while you build
-- A quick icon or illustration
-- Trying a visual idea before committing to it
+Generation runs on **your personal activation token** and is **billed per
+person**, with a **monthly quota** of images. If a failure occurs, the
+panel's **More details** button shows exactly what the service returned.

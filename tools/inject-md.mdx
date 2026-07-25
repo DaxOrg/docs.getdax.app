@@ -1,38 +1,35 @@
 ---
 title: "Inject MD"
-description: "Drop Markdown into your context in one move."
+description: "Drop AGENTS.md (or any Markdown) into any project, right where the agent will read it."
 icon: "markdown"
 ---
 
-**Inject MD** puts Markdown where your AI tool can use it — a spec, a set of
-rules, a reference doc — so you don't have to paste the same context over and
-over. Keep the material in Dax and inject it when you need it.
+**Inject MD** drops a Markdown instruction file (like `AGENTS.md`) into any
+project you've worked in — right where the coding agent will read it. Works
+fully offline.
 
 ## Open it
 
-Choose **Inject MD** from the Dax menu bar.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd> from any app.
 
-## Use it
+## How it works
 
 <Steps>
-  <Step title="Open Inject MD">
-    Choose it from the menu.
+  <Step title="Pick the file">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>, then pick which Markdown
+    file to inject (`AGENTS.md` by default).
   </Step>
-  <Step title="Pick your Markdown">
-    Select the Markdown you want to drop in.
+  <Step title="Pick a project">
+    A palette of **every project you've run Claude Code or Codex in**
+    appears, distilled from your session traces.
   </Step>
   <Step title="Inject">
-    Dax hands it off, ready to use as context.
+    Pick a project. The file is **written into that project's folder**,
+    exactly where the agent looks for it.
   </Step>
 </Steps>
 
-<Tip>
-  Keep your project conventions or a style guide as Markdown and inject them at
-  the start of a session so your AI tool follows them from the first prompt.
-</Tip>
+## Privacy
 
-## Great for
-
-- Feeding an AI tool the same rules or spec every session
-- Reusing a reference doc across prompts
-- Standing up context without copy-paste
+Local. The project list comes from on-disk traces; the file is written
+locally.

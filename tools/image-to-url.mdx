@@ -1,40 +1,41 @@
 ---
 title: "Image to URL"
-description: "Drop an image, get a hosted link — instantly."
+description: "Turn a copied image into a shareable link, ready to paste into any LLM chat."
 icon: "link"
 ---
 
-**Image to URL** (internally, *Uplink*) uploads an image and hands you back a
-hosted link, copied straight to your clipboard. It's the fastest way to share a
-screenshot in a chat, a prompt, or a pull request without saving files or
-opening an uploader.
+**Image to URL** (internally, *Uplink*) turns the image on your clipboard into
+a shareable URL, ready to paste into any LLM chat that accepts image links.
 
 ## Open it
 
-Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd> from any app, or choose **Image to
-URL** from the Dax menu.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd> from any app.
 
-## Use it
+## How it works
 
 <Steps>
-  <Step title="Add an image">
-    Drag an image into the window, paste one from your clipboard, or pick a file.
+  <Step title="Copy an image">
+    Copy an image — or set the image source to a screen region instead (see
+    Options below).
   </Step>
-  <Step title="Let Dax upload">
-    Dax uploads the image and generates a hosted URL.
+  <Step title="Press the shortcut">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd>. The image is uploaded to the
+    image service.
   </Step>
   <Step title="Paste the link">
-    The link is on your clipboard — paste it wherever you need it.
+    The returned link is **copied to your clipboard** and shown in a toast.
+    Paste it anywhere.
   </Step>
 </Steps>
 
-<Tip>
-  Grab a region with <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>4</kbd> first — the capture
-  lands on your clipboard, and Image to URL turns it into a link in one paste.
-</Tip>
+## Options
 
-## Great for
+Settings → Tools → Image to URL:
 
-- Sharing a screenshot with a teammate in Slack or a PR
-- Feeding an image URL to an AI tool that takes links instead of uploads
-- Dropping a visual reference into a prompt
+- **Image source** — *Get Image from Clipboard* (default) or *Get Image from
+  Screenshot* (draw a region on screen when you press the shortcut).
+
+## Notes
+
+Links **expire automatically after 90 days**. The image only leaves your Mac
+on the keypress — there's no background clipboard watching.

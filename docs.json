@@ -15,6 +15,7 @@
         "pages": [
           "index",
           "quickstart",
+          "how-dax-works",
           "shortcuts"
         ]
       },

@@ -1,38 +1,40 @@
 ---
 title: "Vibe History"
-description: "Revisit everything you've generated with Dax."
+description: "Resume a recent Claude Code or Codex conversation from anywhere."
 icon: "clock-rotate-left"
 ---
 
-**Vibe History** is your record of what you've made with Dax — prompts, answers,
-generated images, links. When you need that thing from earlier, it's here
-instead of gone.
+**Vibe History** is a palette of your recent Claude Code and Codex
+conversations, read straight from their trace files on disk — pick one and
+jump back in.
 
 ## Open it
 
-Choose **Vibe History** from the Dax menu bar.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> from any app.
 
-## Use it
+## How it works
 
 <Steps>
-  <Step title="Open your history">
-    Choose Vibe History from the menu.
+  <Step title="Open the palette">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd>. Your recent agent
+    conversations float up as a list.
   </Step>
-  <Step title="Find the entry">
-    Scroll or search for what you're after.
+  <Step title="Pick a conversation">
+    Choose the one you want to resume.
   </Step>
-  <Step title="Reuse it">
-    Copy it back out and use it again.
+  <Step title="Jump back in">
+    The **resume command** for that conversation is **typed into the
+    terminal you were in**, so you're right back where you left off.
   </Step>
 </Steps>
 
-<Tip>
-  Generated a link or a prompt earlier and lost it? Check Vibe History before
-  redoing the work.
-</Tip>
+## Options
 
-## Great for
+Settings → Tools → Vibe History:
 
-- Recovering a link, prompt, or answer from earlier
-- Reusing something you generated without regenerating it
-- Seeing what you've been working on across tools
+- Toggle which agents to include: **Claude Code**, **Codex**.
+
+## Privacy
+
+Local. It reads the trace files the agents already write on your Mac;
+nothing is sent anywhere.

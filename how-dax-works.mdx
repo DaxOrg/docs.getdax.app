@@ -1,0 +1,67 @@
+---
+title: "How Dax works"
+description: "The shared model behind every tool — summoning, activation, offline behavior, and privacy."
+---
+
+A few things are true of every tool in Dax, so they're explained once here
+instead of fourteen times across the tool pages.
+
+## Summoning tools
+
+- **Every tool has a global shortcut.** By default they're all <kbd>⌃</kbd>
+  <kbd>⌥</kbd> plus one key. Rebind or clear any shortcut in **Settings →
+  Shortcuts** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>) — see the [Quick
+  reference](/shortcuts) for the full list.
+- **The launcher grid** — press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> to
+  open a grid of every tool. Click one, or press <kbd>1</kbd>–<kbd>9</kbd> for
+  the first nine. Handy before you've memorized a shortcut.
+- **The menu-bar icon** lists the tools too, and opens Settings.
+
+### Global shortcuts (not tools)
+
+| Shortcut | Opens |
+| --- | --- |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | The tool launcher grid |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings → Tools tab (per-tool config) |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → Shortcuts tab (rebind shortcuts) |
+
+## Activation
+
+Dax is **invite-only**. Until you activate with an invite code, no tool will
+open — pressing any shortcut sends you to the invite screen instead. Don't
+have a code? The invite screen has a **Request access** button that adds you
+to the waitlist. Once activated, your personal access token is stored in your
+Mac's Keychain and the tools unlock.
+
+If your account is suspended, Dax enters a locked-down state and every tool
+politely points you at support rather than opening.
+
+## Online vs. offline tools
+
+Some tools are purely local; others need the internet. **Offline, the network
+tools dim in the launcher** and show a "needs the internet" toast instead of
+opening a panel that could only fail. They re-enable the moment the
+connection returns.
+
+<CardGroup cols={2}>
+  <Card title="Work offline" icon="wifi-slash">
+    [Frequent CLIs](/tools/frequent-clis), [Boilerplates](/tools/boilerplates),
+    [Inject MD](/tools/inject-md), [Open Project](/tools/open-project),
+    [Vibe History](/tools/vibe-history)
+  </Card>
+  <Card title="Need the internet" icon="wifi">
+    [Ask AI](/tools/ask-ai), [AI Text Transform](/tools/text-transform),
+    [Image to Prompt](/tools/image-to-prompt), [Image Ask](/tools/image-ask),
+    [Generate Image](/tools/generate-image), [Image to URL](/tools/image-to-url),
+    [File Drop](/tools/file-drop), [Feedback](/tools/feedback),
+    [Suggest a Tool](/tools/suggest-a-tool)
+  </Card>
+</CardGroup>
+
+## Privacy
+
+Local tools never touch the network. Network tools send **only** what the
+tool needs, and **only** when you press the shortcut or click a button —
+never because you copied something. Details are in each tool's page and in
+the privacy policy.
