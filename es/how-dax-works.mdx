@@ -1,0 +1,72 @@
+---
+title: "Cómo funciona Dax"
+description: "El modelo común a todas las herramientas: invocación, activación, comportamiento sin conexión y privacidad."
+---
+
+Hay algunas cosas que son ciertas para todas las herramientas de Dax, así
+que las explicamos una sola vez aquí en lugar de catorce veces, una por
+página.
+
+## Invocar herramientas
+
+- **Cada herramienta tiene un atajo global.** Por defecto todos son
+  <kbd>⌃</kbd> <kbd>⌥</kbd> más una tecla. Reasigna o borra cualquier atajo
+  en **Settings → Shortcuts** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>);
+  consulta la [referencia rápida](/es/shortcuts) para ver la lista completa.
+- **La cuadrícula del lanzador**: pulsa <kbd>⌃</kbd> <kbd>⌥</kbd>
+  <kbd>Space</kbd> para abrir una cuadrícula con todas las herramientas.
+  Haz clic en una, o pulsa <kbd>1</kbd>–<kbd>9</kbd> para las primeras
+  nueve. Útil mientras aún no te sabes un atajo de memoria.
+- **El icono de la barra de menú** también lista las herramientas y abre
+  Settings.
+
+### Atajos globales (no son herramientas)
+
+| Atajo | Abre |
+| --- | --- |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | La cuadrícula del lanzador |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings → pestaña Tools (configuración de cada herramienta) |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → pestaña Shortcuts (reasignar atajos) |
+
+## Activación
+
+Dax funciona **solo por invitación**. Hasta que actives con un código de
+invitación, ninguna herramienta se abrirá; pulsar cualquier atajo te lleva
+en su lugar a la pantalla de invitación. ¿No tienes código? La pantalla de
+invitación tiene un botón de **Solicitar acceso** que te añade a la lista
+de espera. Una vez activado, tu token de acceso personal se guarda en el
+Keychain de tu Mac y las herramientas se desbloquean.
+
+Si tu cuenta está suspendida, Dax entra en un estado bloqueado y cada
+herramienta te dirige amablemente al soporte en lugar de abrirse.
+
+## Herramientas en línea y sin conexión
+
+Algunas herramientas son completamente locales; otras necesitan internet.
+**Sin conexión, las herramientas que necesitan red se atenúan en el
+lanzador** y muestran un aviso de "necesita internet" en lugar de abrir un
+panel condenado a fallar. Se reactivan en cuanto vuelve la conexión.
+
+<CardGroup cols={2}>
+  <Card title="Funcionan sin conexión" icon="wifi-slash">
+    [Frequent CLIs](/es/tools/frequent-clis), [Boilerplates](/es/tools/boilerplates),
+    [Inject MD](/es/tools/inject-md), [Open Project](/es/tools/open-project),
+    [Vibe History](/es/tools/vibe-history)
+  </Card>
+  <Card title="Necesitan conexión" icon="wifi">
+    [Ask AI](/es/tools/ask-ai), [AI Text Transform](/es/tools/text-transform),
+    [Image to Prompt](/es/tools/image-to-prompt), [Image Ask](/es/tools/image-ask),
+    [Generate Image](/es/tools/generate-image), [Image to URL](/es/tools/image-to-url),
+    [File Drop](/es/tools/file-drop), [Feedback](/es/tools/feedback),
+    [Suggest a Tool](/es/tools/suggest-a-tool)
+  </Card>
+</CardGroup>
+
+## Privacidad
+
+Las herramientas locales nunca tocan la red. Las herramientas en línea
+envían **solo** lo que la herramienta necesita, y **solo** cuando pulsas el
+atajo o haces clic en un botón, nunca porque hayas copiado algo. Los
+detalles están en la página de cada herramienta y en la política de
+privacidad.

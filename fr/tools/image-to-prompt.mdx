@@ -1,0 +1,54 @@
+---
+title: "Image to Prompt"
+description: "Fait remonter un prompt de génération détaillé à partir d'une image."
+icon: "wand-magic-sparkles"
+---
+
+**Image to Prompt** (en interne, *Promptify*) fait remonter, à partir
+d'une image, un prompt textuel détaillé que vous pouvez soumettre à un
+générateur d'images ou à un LLM pour la recréer.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd> depuis n'importe quelle
+app.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Copiez une image">
+    Copiez n'importe quelle image — un design, une capture d'écran, tout
+    ce que vous voulez reproduire.
+  </Step>
+  <Step title="Appuyez sur le raccourci">
+    Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd>. L'image est envoyée
+    à un **modèle de vision** avec le style de prompt choisi.
+  </Step>
+  <Step title="Collez le prompt">
+    Un prompt de recréation détaillé **atterrit dans votre presse-papiers**
+    et s'affiche dans un panneau. Collez-le dans n'importe quel générateur
+    d'images ou LLM.
+  </Step>
+</Steps>
+
+## Styles de prompt
+
+Settings → Tools → Image to Prompt :
+
+- **UI Focused** — un prompt pour reconstruire l'écran en code.
+- **General Purpose** — une description équilibrée et fidèle.
+- **Image Focused** — pensé pour recréer l'image dans un modèle d'image.
+- **Ask me every time** — choisissez le style dans un menu à chaque
+  utilisation.
+
+<Tip>
+  Combinez-le avec [Generate Image](/fr/tools/generate-image) : décrivez
+  une image que vous aimez, puis partez de ce prompt pour en créer des
+  variantes.
+</Tip>
+
+## Pourquoi un raccourci, et pas une surveillance automatique
+
+Image to Prompt se déclenche volontairement par un raccourci plutôt que de
+surveiller votre presse-papiers, afin que les images ne quittent la
+machine que sur une action explicite.

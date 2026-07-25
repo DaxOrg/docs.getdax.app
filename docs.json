@@ -106,6 +106,102 @@
             ]
           }
         ]
+      },
+      {
+        "language": "es",
+        "groups": [
+          {
+            "group": "Primeros pasos",
+            "pages": [
+              "es/index",
+              "es/quickstart",
+              "es/how-dax-works",
+              "es/shortcuts"
+            ]
+          },
+          {
+            "group": "Capturar y compartir",
+            "pages": [
+              "es/tools/image-to-url",
+              "es/tools/file-drop",
+              "es/tools/image-to-prompt"
+            ]
+          },
+          {
+            "group": "Preguntar a la IA",
+            "pages": [
+              "es/tools/ask-ai",
+              "es/tools/image-ask",
+              "es/tools/generate-image",
+              "es/tools/text-transform"
+            ]
+          },
+          {
+            "group": "Tu flujo de trabajo",
+            "pages": [
+              "es/tools/frequent-clis",
+              "es/tools/open-project",
+              "es/tools/inject-md",
+              "es/tools/boilerplates",
+              "es/tools/vibe-history"
+            ]
+          },
+          {
+            "group": "Ayuda y comentarios",
+            "pages": [
+              "es/tools/suggest-a-tool",
+              "es/tools/feedback"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "groups": [
+          {
+            "group": "Bien démarrer",
+            "pages": [
+              "fr/index",
+              "fr/quickstart",
+              "fr/how-dax-works",
+              "fr/shortcuts"
+            ]
+          },
+          {
+            "group": "Capturer et partager",
+            "pages": [
+              "fr/tools/image-to-url",
+              "fr/tools/file-drop",
+              "fr/tools/image-to-prompt"
+            ]
+          },
+          {
+            "group": "Demander à l'IA",
+            "pages": [
+              "fr/tools/ask-ai",
+              "fr/tools/image-ask",
+              "fr/tools/generate-image",
+              "fr/tools/text-transform"
+            ]
+          },
+          {
+            "group": "Votre flux de travail",
+            "pages": [
+              "fr/tools/frequent-clis",
+              "fr/tools/open-project",
+              "fr/tools/inject-md",
+              "fr/tools/boilerplates",
+              "fr/tools/vibe-history"
+            ]
+          },
+          {
+            "group": "Aide et retours",
+            "pages": [
+              "fr/tools/suggest-a-tool",
+              "fr/tools/feedback"
+            ]
+          }
+        ]
       }
     ],
     "global": {
