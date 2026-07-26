@@ -1,7 +1,8 @@
 # Dax documentation
 
-The documentation site for **[Dax](https://getdax.app)** — a macOS menu-bar app
-with fourteen small tools, each a keystroke away.
+The documentation site for **[Dax](https://getdax.app)** — less
+context-switching, more vibing. A macOS menu-bar app with small tools, each a
+keystroke away.
 
 Built with [Mintlify](https://mintlify.com) (`willow` theme).
 

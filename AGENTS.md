@@ -6,9 +6,10 @@
 
 ## About this project
 
-- This is the documentation site for **Dax**, a macOS menu-bar app that ships
-  fourteen small tools (image-to-URL, ask AI, image-to-prompt, and more), each
-  a keyboard shortcut away. The product site is [getdax.app](https://getdax.app).
+- This is the documentation site for **Dax** — "Less context-switching. More
+  Vibing." — a macOS menu-bar app that ships small tools (image-to-URL, ask AI,
+  image-to-prompt, and more), each a keyboard shortcut away. The product site
+  is [getdax.app](https://getdax.app).
 - Built on [Mintlify](https://mintlify.com) with the `willow` theme
 - Pages are MDX files with YAML frontmatter; tool pages live in `tools/`
 - Configuration lives in `docs.json`
