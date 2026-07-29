@@ -1,6 +1,14 @@
 <svg width="104" height="28" viewBox="0 0 104 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="28" height="28" rx="8" fill="#FFFFFF"/>
-  <path transform="scale(0.4375)" fill-rule="evenodd" clip-rule="evenodd" fill="#0A0A0A"
-    d="M18 15 H33 C42.39 15 50 22.61 50 32 C50 41.39 42.39 49 33 49 H18 Z M27 24 H33 C37.42 24 41 27.58 41 32 C41 36.42 37.42 40 33 40 H27 Z"/>
-  <text x="38" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="21" font-weight="800" letter-spacing="-1.1" fill="#FFFFFF">Dax</text>
+  <!-- App icon tile -->
+  <rect width="28" height="28" rx="6.5" fill="#F5F5F5"/>
+  <!-- Vertical bar -->
+  <rect x="6.5" y="6" width="4" height="16" rx="0.5" fill="#0A0A0A"/>
+  <!-- Play chevron -->
+  <polygon points="11.5,8 21,14 11.5,20" fill="#0A0A0A" opacity="0.85"/>
+  <!-- Staircase -->
+  <rect x="17" y="8"  width="4.5" height="4" fill="#0A0A0A" opacity="0.5"/>
+  <rect x="19" y="12" width="4.5" height="4" fill="#0A0A0A" opacity="0.38"/>
+  <rect x="21" y="16" width="4.5" height="4" fill="#0A0A0A" opacity="0.25"/>
+  <!-- Wordmark -->
+  <text x="36" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="21" font-weight="800" letter-spacing="-1.1" fill="#FFFFFF">Dax</text>
 </svg>
