@@ -1,0 +1,84 @@
+---
+title: "Changelog"
+description: "What's new in each Dax release."
+icon: "clock-rotate-left"
+---
+
+Stay up to date with what's shipping in Dax.
+
+## 2.23.0
+
+<sub>July 2026</sub>
+
+A new local tool for your shell history, plus stickier answer dialogs.
+
+**New: Command History** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd>)
+- **Every command you've run, fuzzy-searchable.** Reads your shell history (zsh, bash, fish, sh, ksh, tcsh) — 100% local and read-only, nothing ever leaves your Mac. The commands you use most lead before you type a thing.
+- **Pick what <kbd>↩</kbd> does, live.** A toggle in the palette (or <kbd>⌘</kbd><kbd>T</kbd>) switches between **Insert** into the focused terminal, open in a **New Terminal**, or **Copy** — remembered between sessions. <kbd>⌘</kbd><kbd>↩</kbd> inserts and runs; <kbd>⌘</kbd><kbd>C</kbd> always copies.
+- **Tune what shows.** A "Start with" prefix seeds the search bar (backspace it to widen), an exclude list hides throwaway commands (ls, cd, clear...), and a filter regex keeps only real *command + arguments* lines by default. Near-duplicates are merged.
+- **Safe by default.** Destructive-looking commands (rm -rf, sudo, dd...) are inserted for review but never auto-run.
+
+**Stickier answers**
+- **Ask AI & Image Ask stay open** until you close them — <kbd>esc</kbd> or the close button. No more losing an answer to a stray click.
+
+**Polish**
+- Signed, notarized, universal (Apple Silicon & Intel), macOS 14+.
+
+---
+
+## 2.1.0
+
+<sub>2026</sub>
+
+Four new tools for the agent-coding workflow — the suite is now ten strong.
+
+- **Vibe History** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd>) — your last 20 Claude Code & Codex conversations, grouped by date and project. Pick one and the resume command is typed straight into your terminal.
+- **Image Ask** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>I</kbd>) — draw a box on the screen and ask a question about it; keep asking follow-ups about the same capture.
+- **Open Project** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>O</kbd>) — reopen any project you've run an agent in, with your terminal or editor of choice (Terminal, iTerm, Ghostty, WezTerm, kitty, VS Code, Cursor, Windsurf, Xcode...). Optionally pick the command per launch.
+- **Inject MD** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>) — drop AGENTS.md, CLAUDE.md, BOOTSTRAP.md, SOUL.md, BACKLOG.md (or your own files) into any project folder, templates included.
+
+**Better asking**
+- **Follow-ups in Ask AI & Image Ask** — answers build into a conversation; the field keeps focus, <kbd>↩</kbd> asks the next question with context, <kbd>⌘</kbd><kbd>C</kbd> copies the latest answer, <kbd>⌘</kbd><kbd>N</kbd> starts over.
+
+**Launcher**
+- **Search bar** — <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd>, type to filter, and every cell is numbered: press <kbd>1</kbd>–<kbd>9</kbd> to run it. Pages of nine with an indicator when the suite outgrows one grid.
+
+**Polish**
+- Screen captures can no longer include the selection overlay or cursor pill — excluded at the capture layer.
+- Clearer onboarding (a real keycap instead of an ambiguous glyph), centered empty states, sharper project icons with tech badges.
+- Signed, notarized, universal (Apple Silicon & Intel), macOS 14+.
+
+---
+
+## 2.0.0
+
+<sub>2026</sub>
+
+The toolbox grew up. VibeTools for Mac is now a suite of six tools, each a keystroke away.
+
+- **Six tools, one launcher** — press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> to see every tool and its shortcut in one grid.
+- **Image to URL** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd>) — clipboard image to a shareable link.
+- **Image to Prompt** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd>) — reverse-engineer a copied image into a prompt that recreates it.
+- **Quick Question** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>K</kbd>) — a floating panel for a short answer, in place.
+- **File Drop** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd>) — drop files or folders; one link lands on your clipboard.
+- **AI Text Transform** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>\</kbd>) — select text anywhere and rewrite it: improve, enhance a prompt, shorten, fix grammar, or a custom instruction.
+- **Frequent CLIs** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>↩</kbd>) — still here, still entirely on-device.
+
+**Polish**
+- **Refreshed setup assistant** — an animated intro, a clear step-by-step progress bar, calmer transitions, and permissions that update live with an obvious "reopen the app" prompt for Screen Recording.
+- **New dark-glass look** throughout, with the red-orange accent applied consistently (including links).
+- **Full keyboard navigation** in every tool, morphing toasts with a countdown, and a post-setup tip that points you at the launcher.
+- Signed, notarized, universal (Apple Silicon & Intel), macOS 14+.
+
+---
+
+## 1.0.1
+
+<sub>2026</sub>
+
+- **New app icon** — VibeToolsForMac finally looks like itself in Finder and dialogs.
+- **Intel Macs supported** — the app is now a universal binary.
+- **Runs on macOS 14 Sonoma and later** (previously required macOS 26).
+- **Update window always comes to the front** when a new version is found.
+- **Launch at Login** can now be enabled right from the welcome wizard.
+- Hardened runtime enabled; smoother command saving while editing.

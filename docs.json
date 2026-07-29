@@ -1,5 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  "announcement": {
+    "content": "New in 2.23 — Command History: fuzzy-search every command you've run. <a href='/tools/command-history'>Learn more →</a>"
+  },
   "theme": "aspen",
   "name": "Dax",
   "colors": {
@@ -20,7 +23,8 @@
               "index",
               "quickstart",
               "how-dax-works",
-              "shortcuts"
+              "shortcuts",
+              "changelog"
             ]
           },
           {
@@ -69,7 +73,8 @@
               "zh/index",
               "zh/quickstart",
               "zh/how-dax-works",
-              "zh/shortcuts"
+              "zh/shortcuts",
+              "changelog"
             ]
           },
           {
@@ -118,7 +123,8 @@
               "es/index",
               "es/quickstart",
               "es/how-dax-works",
-              "es/shortcuts"
+              "es/shortcuts",
+              "changelog"
             ]
           },
           {
@@ -167,7 +173,8 @@
               "fr/index",
               "fr/quickstart",
               "fr/how-dax-works",
-              "fr/shortcuts"
+              "fr/shortcuts",
+              "changelog"
             ]
           },
           {
