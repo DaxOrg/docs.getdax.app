@@ -226,6 +226,11 @@
           "anchor": "Download",
           "href": "https://getdax.app/download/",
           "icon": "arrow-down-to-line"
+        },
+        {
+          "anchor": "Status",
+          "href": "https://status.getdax.app",
+          "icon": "signal"
         }
       ]
     }
