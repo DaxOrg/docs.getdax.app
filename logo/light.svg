@@ -1,14 +1,27 @@
-<svg width="104" height="28" viewBox="0 0 104 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- App icon tile -->
-  <rect width="28" height="28" rx="6.5" fill="#1A1A1A"/>
-  <!-- Vertical bar -->
-  <rect x="6.5" y="6" width="4" height="16" rx="0.5" fill="#FFFFFF"/>
-  <!-- Play chevron -->
-  <polygon points="11.5,8 21,14 11.5,20" fill="#FFFFFF" opacity="0.85"/>
-  <!-- Staircase -->
-  <rect x="17" y="8"  width="4.5" height="4" fill="#FFFFFF" opacity="0.5"/>
-  <rect x="19" y="12" width="4.5" height="4" fill="#FFFFFF" opacity="0.38"/>
-  <rect x="21" y="16" width="4.5" height="4" fill="#FFFFFF" opacity="0.25"/>
+<svg width="90" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dax mark (dark, for light backgrounds) scaled to 28px tall -->
+  <g transform="scale(0.16667)">
+    <path d="M48.06 0H0V167.5H48.06V0Z" fill="#0A0A0A"/>
+    <mask id="ml0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="48" y="0" width="110" height="168">
+      <path d="M157.919 46.75V119.38H135.059V143.27H111.169V167.5H48.0586V143.27L114.559 83.75L48.0586 24.23V0H109.799V22.86H134.029V46.75H157.919Z" fill="white"/>
+    </mask>
+    <g mask="url(#ml0)">
+      <mask id="ml1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="48" y="0" width="110" height="168">
+        <path d="M157.919 0H48.0586V167.5H157.919V0Z" fill="url(#mlg0)"/>
+      </mask>
+      <g mask="url(#ml1)">
+        <path d="M157.919 0H48.0586V167.5H157.919V0Z" fill="url(#mlg1)"/>
+      </g>
+    </g>
+    <defs>
+      <linearGradient id="mlg0" x1="160" y1="83.8088" x2="48.649" y2="83.8088" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/><stop offset="1"/>
+      </linearGradient>
+      <linearGradient id="mlg1" x1="160.01" y1="83.8088" x2="48.659" y2="83.8088" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#0A0A0A"/><stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </g>
   <!-- Wordmark -->
-  <text x="36" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="21" font-weight="800" letter-spacing="-1.1" fill="#0A0A0A">Dax</text>
+  <text x="34" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="21" font-weight="800" letter-spacing="-1.1" fill="#0A0A0A">Dax</text>
 </svg>

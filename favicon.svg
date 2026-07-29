@@ -1,11 +1,25 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="14" fill="#1A1A1A"/>
-  <!-- Vertical bar -->
-  <rect x="14" y="13" width="9" height="38" rx="1" fill="#FFFFFF"/>
-  <!-- Play chevron -->
-  <polygon points="25,16 47,32 25,48" fill="#FFFFFF" opacity="0.85"/>
-  <!-- Staircase -->
-  <rect x="38" y="16" width="10" height="10" fill="#FFFFFF" opacity="0.5"/>
-  <rect x="42" y="26" width="10" height="10" fill="#FFFFFF" opacity="0.38"/>
-  <rect x="46" y="36" width="10" height="10" fill="#FFFFFF" opacity="0.25"/>
+  <rect width="64" height="64" rx="14" fill="#0A0A0A"/>
+  <g transform="translate(12,8) scale(0.2381)">
+    <path d="M48.06 0H0V167.5H48.06V0Z" fill="white"/>
+    <mask id="fm0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="48" y="0" width="110" height="168">
+      <path d="M157.919 46.75V119.38H135.059V143.27H111.169V167.5H48.0586V143.27L114.559 83.75L48.0586 24.23V0H109.799V22.86H134.029V46.75H157.919Z" fill="white"/>
+    </mask>
+    <g mask="url(#fm0)">
+      <mask id="fm1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="48" y="0" width="110" height="168">
+        <path d="M157.919 0H48.0586V167.5H157.919V0Z" fill="url(#fg0)"/>
+      </mask>
+      <g mask="url(#fm1)">
+        <path d="M157.919 0H48.0586V167.5H157.919V0Z" fill="url(#fg1)"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <linearGradient id="fg0" x1="160" y1="83.8088" x2="48.649" y2="83.8088" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/><stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="fg1" x1="160.01" y1="83.8088" x2="48.659" y2="83.8088" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
 </svg>
