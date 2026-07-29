@@ -47,7 +47,8 @@
               "tools/open-project",
               "tools/inject-md",
               "tools/boilerplates",
-              "tools/vibe-history"
+              "tools/vibe-history",
+              "tools/command-history"
             ]
           },
           {
@@ -95,7 +96,8 @@
               "zh/tools/open-project",
               "zh/tools/inject-md",
               "zh/tools/boilerplates",
-              "zh/tools/vibe-history"
+              "zh/tools/vibe-history",
+              "zh/tools/command-history"
             ]
           },
           {
@@ -143,7 +145,8 @@
               "es/tools/open-project",
               "es/tools/inject-md",
               "es/tools/boilerplates",
-              "es/tools/vibe-history"
+              "es/tools/vibe-history",
+              "es/tools/command-history"
             ]
           },
           {
@@ -191,7 +194,8 @@
               "fr/tools/open-project",
               "fr/tools/inject-md",
               "fr/tools/boilerplates",
-              "fr/tools/vibe-history"
+              "fr/tools/vibe-history",
+              "fr/tools/command-history"
             ]
           },
           {

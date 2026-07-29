@@ -1,0 +1,64 @@
+---
+title: "Command History"
+description: "Every command you've run, fuzzy-searchable — pick one and drop it into your terminal."
+icon: "terminal"
+---
+
+**Command History** is a fuzzy-searchable palette of every command you've
+run across your shells (zsh, bash, fish, sh, ksh, tcsh). Pick one and it's
+typed into the focused terminal — or copied, or opened in a new window.
+100% local and read-only; nothing ever leaves your Mac.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Focus your terminal">
+    Focus the terminal (or any text field) where you want the command to go.
+  </Step>
+  <Step title="Open the palette">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd>. Your past commands float
+    up, ranked by frecency — the ones you use most lead before you type a
+    thing.
+  </Step>
+  <Step title="Search and pick">
+    Type to fuzzy-search. Press <kbd>↩</kbd> to act on the selected command,
+    <kbd>⌘</kbd><kbd>↩</kbd> to insert-and-run, or <kbd>⌘</kbd><kbd>C</kbd>
+    to copy.
+  </Step>
+</Steps>
+
+<Tip>
+  **Switch what ↩ does, live.** Press <kbd>⌘</kbd><kbd>T</kbd> (or click the
+  mode button) to cycle between **Insert** into the focused terminal, open in
+  a **New Terminal**, or **Copy** — remembered between sessions.
+</Tip>
+
+## Safety
+
+Destructive-looking commands (`rm -rf`, `sudo`, `dd`…) are inserted for
+review but **never auto-run** — even with <kbd>⌘</kbd><kbd>↩</kbd> or the
+"run on return" setting.
+
+## Configuring
+
+Settings → Tools → Command History:
+
+- **Shells** — choose which shells to search (defaults to every shell that
+  has a history file on your Mac).
+- **Start with** — seed the search bar with a prefix (e.g. `ssh`) to turn
+  the palette into a focused launcher for one command family.
+- **Only show commands matching** — a regex filter; the default
+  (`^\S+\s+\S+`) keeps only "command + arguments" lines.
+- **Hide these commands** — a comma-separated exclusion list for throwaway
+  commands (`ls`, `cd`, `clear`…).
+- **Run on ↩** — when on, <kbd>↩</kbd> presses Return after inserting (off
+  by default; destructive commands still never auto-run).
+
+## Privacy
+
+Entirely local. Your shell history files are read — never written to — and
+nothing leaves the machine.

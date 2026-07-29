@@ -2,7 +2,7 @@
 
 ## About this project
 
-This is the **official documentation site** for [Dax](https://getdax.app) — a macOS menu-bar app that ships 14 developer tools, each a keyboard shortcut away. Tagline: "Less context-switching. More Vibing."
+This is the **official documentation site** for [Dax](https://getdax.app) — a macOS menu-bar app that ships 15 developer tools, each a keyboard shortcut away. Tagline: "Less context-switching. More Vibing."
 
 - Built on [Mintlify](https://mintlify.com) with the Aspen theme
 - Pages are MDX files with YAML frontmatter; tool pages live in `tools/`
@@ -18,10 +18,10 @@ index.mdx                # Welcome/landing page
 quickstart.mdx           # Installation & first tool tutorial
 how-dax-works.mdx        # Shared model (summoning, activation, privacy)
 shortcuts.mdx            # Complete keyboard shortcut reference
-tools/                   # 14 tool documentation pages
+tools/                   # 15 tool documentation pages
   ask-ai.mdx, image-to-url.mdx, image-ask.mdx, image-to-prompt.mdx,
   generate-image.mdx, text-transform.mdx, file-drop.mdx, frequent-clis.mdx,
-  open-project.mdx, inject-md.mdx, boilerplates.mdx, vibe-history.mdx,
+  open-project.mdx, inject-md.mdx, boilerplates.mdx, vibe-history.mdx, command-history.mdx,
   suggest-a-tool.mdx, feedback.mdx
 zh/, es/, fr/            # Internationalization (Chinese, Spanish, French)
 logo/                    # Light/dark logo SVGs
@@ -62,5 +62,5 @@ Deployment is automatic via the [Mintlify GitHub App](https://dashboard.mintlify
 |---|---|
 | Capture & Share | Image to URL, File Drop, Image to Prompt |
 | Ask AI | Ask AI, Image Ask, Generate Image, AI Text Transform |
-| Your Workflow | Frequent CLIs, Open Project, Inject MD, Boilerplates, Vibe History |
+| Your Workflow | Frequent CLIs, Open Project, Inject MD, Boilerplates, Vibe History, Command History |
 | Help & Feedback | Suggest a Tool, Feedback |
