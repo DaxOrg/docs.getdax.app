@@ -1,7 +1,7 @@
 <svg width="90" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Squircle app icon (dark, for light bg) -->
   <rect width="28" height="28" rx="7" fill="#1A1A1A"/>
-  <g transform="translate(5,3.5) scale(0.1143)">
+  <g transform="translate(7,6) scale(0.09)">
     <path d="M48.06 0H0V167.5H48.06V0Z" fill="white"/>
     <mask id="ml0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="48" y="0" width="110" height="168">
       <path d="M157.919 46.75V119.38H135.059V143.27H111.169V167.5H48.0586V143.27L114.559 83.75L48.0586 24.23V0H109.799V22.86H134.029V46.75H157.919Z" fill="white"/>
