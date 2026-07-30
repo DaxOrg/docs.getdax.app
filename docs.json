@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.23 — Command History: fuzzy-search every command you've run. <a href='/tools/command-history'>Learn more →</a>"
+    "content": "New — Secrets, Context Fill & Fanout: 3 new tools just dropped. <a href='/tools/secrets'>Learn more →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
@@ -52,7 +52,10 @@
               "tools/inject-md",
               "tools/boilerplates",
               "tools/vibe-history",
-              "tools/command-history"
+              "tools/command-history",
+              "tools/secrets",
+              "tools/context-fill",
+              "tools/fanout"
             ]
           },
           {
@@ -102,7 +105,10 @@
               "zh/tools/inject-md",
               "zh/tools/boilerplates",
               "zh/tools/vibe-history",
-              "zh/tools/command-history"
+              "zh/tools/command-history",
+              "zh/tools/secrets",
+              "zh/tools/context-fill",
+              "zh/tools/fanout"
             ]
           },
           {
@@ -152,7 +158,10 @@
               "es/tools/inject-md",
               "es/tools/boilerplates",
               "es/tools/vibe-history",
-              "es/tools/command-history"
+              "es/tools/command-history",
+              "es/tools/secrets",
+              "es/tools/context-fill",
+              "es/tools/fanout"
             ]
           },
           {
@@ -202,7 +211,10 @@
               "fr/tools/inject-md",
               "fr/tools/boilerplates",
               "fr/tools/vibe-history",
-              "fr/tools/command-history"
+              "fr/tools/command-history",
+              "fr/tools/secrets",
+              "fr/tools/context-fill",
+              "fr/tools/fanout"
             ]
           },
           {

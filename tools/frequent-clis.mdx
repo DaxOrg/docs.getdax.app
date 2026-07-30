@@ -1,12 +1,12 @@
 ---
 title: "Frequent CLIs"
-description: "Type your go-to commands into the focused app — no retyping, no history hunting."
+description: "Type (or launch in a terminal) your go-to commands — no retyping, no history hunting."
 icon: "terminal"
 ---
 
-**Frequent CLIs** is a summonable palette of the commands you type all day,
-dropped into whatever app is focused so you never retype them. Works fully
-offline.
+**Frequent CLIs** is a summonable palette of the commands you type all day —
+dropped into whatever app is focused, or launched in a fresh terminal, so you
+never retype them. Works fully offline.
 
 ## Open it
 
@@ -29,6 +29,13 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>↩</kbd> from any app.
   </Step>
 </Steps>
 
+## Two modes — press Tab to switch
+
+- **Insert** (default) — types the command into the focused app.
+- **Open in Terminal** — opens a fresh terminal in your **default folder** and
+  runs the command there. Great for `claude`, `codex`, or a dev server you want
+  in its own window.
+
 <Tip>
   **Insert-and-run.** Mark a command with the <kbd>↩</kbd> badge and Frequent
   CLIs presses Return for you after inserting it — a one-keystroke summon can
@@ -40,10 +47,17 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>↩</kbd> from any app.
 Settings → Tools → Frequent CLIs:
 
 - Add as many commands as you like, each with a **Title**, the **Command**
-  text, and a chosen **icon**.
+  text, and a chosen **icon**. Click ✎ (or double-click a row) to edit, drag
+  to reorder, or press <kbd>⌘</kbd><kbd>E</kbd> from the palette to edit the
+  highlighted command.
 - Toggle the per-command **insert-and-run** (<kbd>↩</kbd>) behavior.
+- **Open in Terminal — default folder:** the directory that mode starts in.
+- **Also skip Claude's folder-trust prompt on YOLO launches:** when a command
+  runs `claude --dangerously-skip-permissions`, Dax marks the folder trusted in
+  `~/.claude.json` (a backup is saved first) so Claude drops straight in
+  instead of showing its trust banner. Off shows the normal one-time prompt.
 
 ## Privacy
 
-Entirely local. Your commands are stored on your Mac and typed directly into
-the focused app — they never leave the machine.
+Entirely local. Your commands are stored on your Mac and either typed into the
+focused app or run in a terminal you opened — they never leave the machine.
