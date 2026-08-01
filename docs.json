@@ -248,12 +248,6 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Suggest a tool",
-        "href": "https://getdax.app"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Download for macOS",
