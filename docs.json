@@ -8,8 +8,10 @@
   "colors": {
     "primary": "#0A0A0A",
     "light": "#F5F5F5",
-    "dark": "#0c0a09",
-    "background": {
+    "dark": "#0c0a09"
+  },
+  "background": {
+    "color": {
       "dark": "#0c0a09"
     }
   },
