@@ -57,6 +57,7 @@
               "tools/boilerplates",
               "tools/vibe-history",
               "tools/command-history",
+              "tools/image-to-text",
               "tools/secrets",
               "tools/context-fill",
               "tools/fanout"
@@ -109,6 +110,7 @@
               "zh/tools/boilerplates",
               "zh/tools/vibe-history",
               "zh/tools/command-history",
+              "zh/tools/image-to-text",
               "zh/tools/secrets",
               "zh/tools/context-fill",
               "zh/tools/fanout"
@@ -161,6 +163,7 @@
               "es/tools/boilerplates",
               "es/tools/vibe-history",
               "es/tools/command-history",
+              "es/tools/image-to-text",
               "es/tools/secrets",
               "es/tools/context-fill",
               "es/tools/fanout"
@@ -213,6 +216,7 @@
               "fr/tools/boilerplates",
               "fr/tools/vibe-history",
               "fr/tools/command-history",
+              "fr/tools/image-to-text",
               "fr/tools/secrets",
               "fr/tools/context-fill",
               "fr/tools/fanout"
