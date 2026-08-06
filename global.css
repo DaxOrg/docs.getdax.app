@@ -1,18 +1,19 @@
-/* Warm coffee-toned callouts — replaces Mintlify's default blue with
-   an orange/amber that matches the stone-950 + orange accent theme. */
+/* ─── Monochrome theme for dark mode ─────────────────────────────────
+   Pure black/white/gray — no color accents. Uses white at varying
+   opacities for depth instead of tinted hues.
+   ──────────────────────────────────────────────────────────────────── */
 
-/* Note / Info callouts — background + border */
+/* Note / Info callouts — white/gray monochrome */
 .dark [data-callout="note"],
 .dark [data-callout="info"],
 .dark .callout-note,
 .dark .callout-info,
 .dark [class*="Note"],
 .dark [class*="callout"] {
-  background: rgba(253, 155, 97, 0.08) !important;
-  border-color: rgba(253, 155, 97, 0.25) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-/* All text inside callouts — body, bold, paragraphs */
 .dark [data-callout="note"],
 .dark [data-callout="note"] *,
 .dark [data-callout="info"],
@@ -25,18 +26,17 @@
 .dark [class*="Note"] *,
 .dark [class*="callout"],
 .dark [class*="callout"] * {
-  color: #e7cdb8 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Links inside callouts — warm underline */
 .dark [data-callout="note"] a,
 .dark [data-callout="info"] a,
 .dark .callout-note a,
 .dark .callout-info a,
 .dark [class*="Note"] a,
 .dark [class*="callout"] a {
-  color: #fd9b61 !important;
-  text-decoration-color: rgba(253, 155, 97, 0.4) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .dark [data-callout="note"] a:hover,
@@ -45,15 +45,14 @@
 .dark .callout-info a:hover,
 .dark [class*="Note"] a:hover,
 .dark [class*="callout"] a:hover {
-  text-decoration-color: #fd9b61 !important;
+  text-decoration-color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Icon */
 .dark [data-callout="note"] svg,
 .dark [data-callout="info"] svg,
 .dark .callout-note svg,
 .dark .callout-info svg,
 .dark [class*="Note"] svg,
 .dark [class*="callout"] svg {
-  color: #fd9b61 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
