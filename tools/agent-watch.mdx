@@ -1,0 +1,144 @@
+---
+title: "Agent Watch"
+description: "See what every live Claude Code session is doing — working, waiting on you, or finished — without leaving what you're in."
+icon: "eye"
+---
+
+**Agent Watch** keeps an eye on your Claude Code sessions so you don't have
+to. It tells you the moment one finishes or needs your attention, and lets you
+jump straight to it — or answer from the toast without switching apps.
+
+Everything stays on your Mac.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Run your agents">
+    Start one or more Claude Code sessions in any terminal — Terminal, iTerm,
+    or Ghostty. Agent Watch picks them up automatically.
+  </Step>
+  <Step title="Keep working">
+    A toast appears when a session finishes or is waiting on you (a permission
+    prompt, a question). Click the toast to jump to that terminal, or type an
+    answer right there.
+  </Step>
+  <Step title="Open the palette">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> to see every live session
+    at a glance. Each row shows the project name, what the agent last said, a
+    status light, and how long it has been in that state. Press <kbd>↩</kbd>
+    to go to the selected session.
+  </Step>
+</Steps>
+
+## Session states
+
+Every session is in one of three states:
+
+| State | Light | Creature | Meaning |
+|---|---|---|---|
+| **Working** | 🟢 Green | Walking | The agent is producing output or a tool is running. |
+| **Needs you** | 🟡 Yellow | Shuffling | A tool call has been quiet long enough to look like a permission prompt. |
+| **Finished** | ⚫ Grey | Standing still | The agent handed control back — it's your move. |
+
+The status light and the creature animation both say the same thing, so you
+can read the palette at a glance without stopping to parse text.
+
+## Characters
+
+Each project gets its own pixel creature, chosen from its folder path — same
+repo, same character, every time. When two sessions want the same one, the
+second takes the next free character along, so no two on screen are ever
+alike.
+
+They walk while a session is working, shuffle about when one wants you, and
+stand still once it's done.
+
+<Accordion title="Meet all 21 characters">
+
+| Character | Animal | Personality |
+|---|---|---|
+| **Fin** | Fish | Never stops moving, not even asleep. Fin has strong opinions about currents and will share them unprompted. |
+| **Pip** | Bird | Small, loud, and first to notice anything. Pip has never once waited to be asked. |
+| **Bo** | Puffer | Puffs up at the slightest provocation and deflates just as quickly. Means well throughout. |
+| **Moss** | Sprout | Grows a little every day and refuses to be hurried. Moss will get there. |
+| **Nub** | Crawler | Many legs, one direction. Nub does not turn around — Nub simply starts again facing the other way. |
+| **Slate** | Rock | Has been here longer than anyone. Slate moves about once a season, and only if asked twice. |
+| **Dust** | Moth | Drawn to whatever is brightest, which is reliably the wrong thing. Dust is working on it. |
+| **Blip** | Tadpole | Still becoming something. Blip is fine with this and would rather you didn't bring it up. |
+| **Twig** | Stick insect | Holds perfectly still and assumes that makes it invisible. Unnervingly often, it does. |
+| **Coral** | Jellyfish | Drifts wherever the current goes and calls it a plan. Has never been in a hurry about anything. |
+| **Scale** | Lizard | Basks, then bolts. There is no middle setting on Scale. |
+| **Nipper** | Crab | Sideways is a perfectly good direction. Nipper will not be taking questions on this. |
+| **Coil** | Snail | Carries everything it owns and still arrives. Coil has never once been talked into hurrying. |
+| **Hoot** | Owl | Awake at the hours you are, and no more pleased about it. Hoot sees everything and mentions none of it. |
+| **Echo** | Bat | Navigates by shouting into the dark and listening. Echo finds this a perfectly reasonable way to work. |
+| **Husk** | Beetle | Armoured, deliberate, and quietly certain it is right. Husk has been proven wrong before and did not enjoy it. |
+| **Croak** | Frog | Sits very still, then isn't there. Croak considers this the whole of its personality and is not wrong. |
+| **Ink** | Squid | Solves most problems by leaving a cloud behind and reconsidering elsewhere. It works more often than it should. |
+| **Cap** | Mushroom | Turned up overnight and behaves as though it always lived here. Nobody has the heart to ask. |
+| **Star** | Starfish | Five arms, no front, no particular plan. Star gets where it's going by committee and is never in a rush. |
+| **Mite** | Ant | Small, tireless, and carrying something four times its size. Mite would like you to know it has this handled. |
+
+Every character is a 12 × 12 pixel grid with its own colour, so it reads by
+shape *and* by colour — "the orange crab" always means Nipper.
+
+</Accordion>
+
+## Replying from the toast
+
+When a session is waiting on you, the toast includes a text field. Type your
+answer and press Return — Dax finds the terminal running that session, brings
+it forward, and pastes your reply in. Works with Terminal, iTerm, and Ghostty.
+
+If the terminal can't be identified, your answer goes to the clipboard
+instead and Dax tells you to paste it yourself.
+
+## Hooks (optional, recommended)
+
+Without hooks, Dax reads the agent's trace files every few seconds and
+*infers* whether it's waiting. With hooks installed, Claude Code tells Dax
+directly — faster and certain.
+
+Install them from **Settings → Tools → Agent Watch → Install Hooks**. This
+adds two entries to `~/.claude/settings.json` (backed up first):
+
+- **Notification** — fires the moment a session hits a permission prompt or
+  finishes.
+- **Stop** — delivers the finished reply as it lands.
+
+Remove Hooks takes out only Dax's entries and leaves everything else
+untouched.
+
+## Plain-language summaries
+
+What agents write is paragraphs. A toast has room for a line. When **Say it
+in plain language** is on, Dax rewrites the agent's message into one sentence
+using Apple's on-device model — no network, no cost, works offline. Requires
+macOS 26 and Apple Intelligence.
+
+## Options
+
+Settings → Tools → Agent Watch:
+
+- **A session finishes** — toast when a turn is done.
+- **One is waiting on me** — toast on a permission prompt or question.
+- **Play a sound** — chime alongside the toast.
+- **Pause watching** — stop notifications without disabling the tool.
+- **Say it in plain language** — on-device AI summary of the agent's message.
+- **Let me answer from the toast** — reply field on "needs you" toasts.
+
+## Privacy
+
+Entirely on your Mac. Agent Watch reads the trace files Claude Code already
+writes to disk and never touches the network. The optional summary uses
+Apple's on-device model — your code stays local.
+
+## Supported agents
+
+Claude Code only for now. Codex writes trace files Dax can read, but has no
+hook to report state directly, so its sessions aren't watched rather than
+half-supported.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New — Secrets, Context Fill & Fanout: 3 new tools just dropped. <a href='/tools/secrets'>Learn more →</a>"
+    "content": "New — Agent Watch: see what every Claude Code session is doing, right from your menu bar. <a href='/tools/agent-watch'>Learn more →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
@@ -55,6 +55,7 @@
               "tools/open-project",
               "tools/inject-md",
               "tools/boilerplates",
+              "tools/agent-watch",
               "tools/vibe-history",
               "tools/command-history",
               "tools/image-to-text",
