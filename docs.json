@@ -60,7 +60,9 @@
               "tools/image-to-text",
               "tools/secrets",
               "tools/context-fill",
-              "tools/fanout"
+              "tools/fanout",
+              "tools/prompt-snippets",
+              "tools/clipboard-history"
             ]
           },
           {
