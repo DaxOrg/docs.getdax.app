@@ -1,0 +1,108 @@
+---
+title: "Herdr Collab"
+description: "Share a Herdr workspace with teammates. Everyone sees the same agents, same creatures, same status — and can type into any terminal."
+icon: "users"
+---
+
+**Herdr Collab** lets two or more Dax users work in the same workspace at the same time. The host runs the agents; guests see the live dashboard and can interact with any agent — or spin up their own.
+
+Think pair programming, but with 4-10 agents running simultaneously and everyone has their own terminal.
+
+## How it works
+
+<Steps>
+  <Step title="Host shares a workspace">
+    Open a Herdr workspace, click **Share** in the dashboard status bar. Dax
+    creates a session and gives you a 6-character invite code (e.g.
+    `HERDR-X7K9`). The code is copied to your clipboard.
+  </Step>
+  <Step title="Guest joins">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>, click **Join Session**, paste
+    the invite code. Or click a `dax://collab/HERDR-X7K9` link — Dax opens and
+    joins automatically.
+  </Step>
+  <Step title="Vibe together">
+    Both users see the same dashboard: same agents, same creature avatars, same
+    live status. Click **Terminal** on any agent to see its output and type into
+    it. Click **New Agent** to start a new Claude Code session on the host's
+    machine.
+  </Step>
+</Steps>
+
+## What the guest can do
+
+| Action | How |
+|--------|-----|
+| **See all agents** | The dashboard shows every agent, updated in real time |
+| **Read terminal output** | Click Terminal on any agent card — live output, updating every 500ms |
+| **Type into a terminal** | Type in the input field at the bottom of the terminal view |
+| **Scroll back** | Click "Load full scrollback" to read earlier output |
+| **Start a new agent** | Click New Agent, pick a command and repo |
+| **Chat with the host** | Open the chat panel from the status bar |
+| **See who's focused where** | Presence badges show which agent each person is looking at |
+
+## What the guest does NOT get
+
+- No access to the host's filesystem or source code
+- No SSH connection to the host's machine
+- No full terminal emulator — they see recent output and can type commands
+- Guest does not need Herdr installed
+
+## How data flows
+
+```
+Guest types "yes" into terminal view
+  → Guest's Dax (WebSocket) → collab.getdax.app (relay) → Host's Dax (WebSocket)
+  → Host's HerdrBridge → Herdr socket → PTY → Claude Code responds
+  → Host polls pane output (500ms) → sends diff
+  → collab.getdax.app → Guest's Dax → terminal view updates
+```
+
+No files leave the host's machine. Both ends connect outward to the relay server — no SSH, no port forwarding, no VPN.
+
+## Terminal diffs
+
+Instead of sending 80 lines of output every 500ms, Dax computes line-level diffs:
+
+- **Append** — only new lines are sent (the common case)
+- **Replace** — full content on clear-screen or major changes (rare)
+- **CRC32 checksum** — every diff includes a checksum of the full content. The guest verifies it after applying. If it doesn't match, it automatically resyncs.
+
+This reduces bandwidth by 3-5x compared to full snapshots.
+
+## Presence
+
+Each user's focused agent card shows a colored badge with their profile. The participant sidebar lists everyone connected, what they're looking at, and whether they're online.
+
+When someone sends a command, the agent card briefly flashes their color.
+
+## Disconnection
+
+- **Guest disconnects** — host sees them go grey. Guest can rejoin anytime with the same code.
+- **Host goes offline** (sleep, network) — guests see "Host offline." Agents keep running on the host's machine. When the host reconnects, everything resumes.
+- **Host clicks Stop Sharing** — session ends, guests are notified.
+- **Invite codes expire** after 48 hours.
+
+## Limits
+
+| Limit | Value |
+|-------|-------|
+| Active sessions per host | 5 |
+| WebSocket connections per person | 10 |
+| Keystrokes per second per person | 20 |
+| Chat message length | 2,000 characters |
+| Invite code lifetime | 48 hours |
+
+## Requirements
+
+- Both users need a Dax account (Free or Pro)
+- The host needs Herdr installed
+- The guest does NOT need Herdr
+- Both need an internet connection (the relay runs at `collab.getdax.app`)
+- Collab is included in all plans — Free, Pro, and BYOK
+
+## Privacy
+
+Terminal output and commands pass through `collab.getdax.app` (encrypted via TLS). The relay does not store terminal content — it passes messages through and caches the latest state snapshot in Redis (60-second TTL). Chat messages are stored in PostgreSQL for the session's lifetime (auto-deleted after 24 hours of inactivity).
+
+No source code or files are ever transmitted. The guest sees terminal output only — the same text you'd see looking over someone's shoulder.

@@ -1,0 +1,80 @@
+---
+title: "Herdr"
+description: "Orchestrate 4-10 coding agents from one dashboard. Configure a workspace, launch it with one keystroke, and manage every agent from a single pane of glass."
+icon: "grid-2-plus"
+---
+
+**Herdr** is your multi-agent mission control. Configure a workspace — a set of repos, each running a coding agent — and launch it all with one keystroke. Dax handles the presets and the dashboard; [Herdr](https://herdr.dev) handles the terminals.
+
+Each agent gets its own pixel creature from a biome matched to your workspace, so you recognize which is which at a glance.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Install Herdr">
+    The first time you press the shortcut, Dax offers to install
+    [Herdr](https://herdr.dev) — a terminal multiplexer with built-in agent
+    detection. It installs via Homebrew or a one-line script.
+  </Step>
+  <Step title="Create a workspace">
+    In **Settings → Tools → Herdr**, name your workspace and add the repos
+    you work on together. Pick an agent command (`claude`, `codex`, or your own).
+  </Step>
+  <Step title="Pick a workspace and go">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>, select your workspace, press
+    Enter. Herdr opens with one pane per repo, each running your agent, tiled
+    together. A Dax dashboard window shows every agent's live status.
+  </Step>
+</Steps>
+
+## The dashboard
+
+A glass-backed window showing every agent in your workspace:
+
+- **Creature avatar** — animated when the agent is working, still when idle
+- **State dot** — green (working), yellow (needs you), grey (finished)
+- **Last message** — what the agent said most recently
+- **Go** — brings Herdr to the front, focused on that pane
+- **Restart** — stops and relaunches the agent in that pane
+
+The status bar shows the agent count, the workspace's creature biome, and bulk actions (Start All, Open Herdr).
+
+## Creature biomes
+
+The 21 pixel creatures split into four biomes. Your workspace name determines which biome it gets — same name, same biome, every time.
+
+| Biome | Creatures |
+|-------|-----------|
+| **Aquatic** | Fin, Bo, Blip, Coral, Ink |
+| **Forest** | Pip, Moss, Twig, Cap, Mite |
+| **Ground** | Nub, Slate, Scale, Nipper, Husk |
+| **Nocturnal** | Dust, Hoot, Echo, Croak, Coil, Star |
+
+Each agent slot gets the next creature from the biome. "My Full Stack" might be aquatic: frontend is Fin, backend is Bo, database is Blip. Always.
+
+You can override the biome in **Settings → Herdr → Creature biome**.
+
+## Workspace options
+
+- **Agent command** — defaults to `claude`. Pick from the Agents menu or type
+  your own. Each repo can override it.
+- **YOLO** — append the agent's skip-permissions flag.
+- **Skip Claude's folder-trust prompt** — mark each folder trusted before launch.
+- **Layout** — how panes are arranged: side by side, grid, stacked, or primary
+  + sidebar.
+
+## Import from Fanout
+
+Already have Fanout profiles? **Settings → Herdr → Import from Fanout** converts them to Herdr workspaces. The original profiles are kept.
+
+## Sharing a workspace
+
+See [Herdr Collab](/tools/herdr-collab) — share a workspace with teammates so everyone can see and interact with the same agents in real time.
+
+## Privacy
+
+Your repos and agent sessions live on your Mac. Dax talks to Herdr's local socket — nothing is sent anywhere unless you explicitly share a workspace (see Collab).
