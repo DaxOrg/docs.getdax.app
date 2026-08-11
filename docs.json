@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New — Herdr: orchestrate 4-10 agents from one dashboard, and vibe together with teammates. <a href='/tools/herdr'>Learn more →</a>"
+    "content": "New in 2.32 — Herdr: a window full of coding agents, side by side. Clip to Link: record a region, get a link. <a href='/tools/herdr'>Learn more →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
@@ -63,7 +63,7 @@
               "tools/context-fill",
               "tools/fanout",
               "tools/herdr",
-              "tools/herdr-collab",
+              "tools/clip-to-link",
               "tools/prompt-snippets",
               "tools/clipboard-history"
             ]
