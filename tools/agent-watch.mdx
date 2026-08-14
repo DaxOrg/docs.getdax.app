@@ -1,12 +1,12 @@
 ---
 title: "Agent Watch"
-description: "See what every live Claude Code session is doing — working, waiting on you, or finished — without leaving what you're in."
+description: "See what every live Claude Code session is doing (working, waiting on you, or finished) without leaving what you're in."
 icon: "eye"
 ---
 
 **Agent Watch** keeps an eye on your Claude Code sessions so you don't have
 to. It tells you the moment one finishes or needs your attention, and lets you
-jump straight to it — or answer from the toast without switching apps.
+jump straight to it, or answer from the toast without switching apps.
 
 Everything stays on your Mac.
 
@@ -18,8 +18,8 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> from any app.
 
 <Steps>
   <Step title="Run your agents">
-    Start one or more Claude Code sessions in any terminal — Terminal, iTerm,
-    or Ghostty. Agent Watch picks them up automatically.
+    Start one or more Claude Code sessions in any terminal (Terminal, iTerm,
+    or Ghostty). Agent Watch picks them up automatically.
   </Step>
   <Step title="Keep working">
     A toast appears when a session finishes or is waiting on you (a permission
@@ -42,18 +42,18 @@ Every session is in one of three states:
 |---|---|---|---|
 | **Working** | 🟢 Green | Walking | The agent is producing output or a tool is running. |
 | **Needs you** | 🟡 Yellow | Shuffling | A tool call has been quiet long enough to look like a permission prompt. |
-| **Finished** | ⚫ Grey | Standing still | The agent handed control back — it's your move. |
+| **Finished** | ⚫ Grey | Standing still | The agent handed control back. It's your move. |
 
 The status light and the creature animation both say the same thing, so you
 can read the palette at a glance without stopping to parse text.
 
 ## Characters
 
-Each project gets its own pixel creature, chosen from its folder path — same
+Each project gets its own pixel creature, chosen from its folder path. Same
 repo, same character, every time. No two sessions on screen are ever alike.
 
-When two or more sessions share the same folder, they're numbered — "Dax 1",
-"Dax 2" — on the corner of their avatar and in their name, so you can always
+When two or more sessions share the same folder, they're numbered ("Dax 1",
+"Dax 2") on the corner of their avatar and in their name, so you can always
 tell them apart.
 
 They walk while a session is working, shuffle about when one wants you, and
@@ -63,79 +63,79 @@ stand still once it's done.
 
 <div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/fin@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Fin</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Fish</span> <span style={{fontSize: "13px"}}>— Never stops moving, not even asleep.</span>
+    <img src="/images/characters/fin@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Fin</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Fish</span> <span style={{fontSize: "13px"}}> Never stops moving, not even asleep.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/pip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Pip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bird</span> <span style={{fontSize: "13px"}}>— Small, loud, and first to notice anything.</span>
+    <img src="/images/characters/pip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Pip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bird</span> <span style={{fontSize: "13px"}}> Small, loud, and first to notice anything.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/bo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Bo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Puffer</span> <span style={{fontSize: "13px"}}>— Puffs up at the slightest provocation and deflates just as quickly.</span>
+    <img src="/images/characters/bo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Bo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Puffer</span> <span style={{fontSize: "13px"}}> Puffs up at the slightest provocation and deflates just as quickly.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/moss@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Moss</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Sprout</span> <span style={{fontSize: "13px"}}>— Grows a little every day and refuses to be hurried.</span>
+    <img src="/images/characters/moss@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Moss</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Sprout</span> <span style={{fontSize: "13px"}}> Grows a little every day and refuses to be hurried.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/nub@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nub</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crawler</span> <span style={{fontSize: "13px"}}>— Many legs, one direction. Does not turn around.</span>
+    <img src="/images/characters/nub@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nub</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crawler</span> <span style={{fontSize: "13px"}}> Many legs, one direction. Does not turn around.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/slate@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Slate</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Rock</span> <span style={{fontSize: "13px"}}>— Moves about once a season, and only if asked twice.</span>
+    <img src="/images/characters/slate@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Slate</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Rock</span> <span style={{fontSize: "13px"}}> Moves about once a season, and only if asked twice.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/dust@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Dust</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Moth</span> <span style={{fontSize: "13px"}}>— Drawn to whatever is brightest, which is reliably the wrong thing.</span>
+    <img src="/images/characters/dust@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Dust</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Moth</span> <span style={{fontSize: "13px"}}> Drawn to whatever is brightest, which is reliably the wrong thing.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/blip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Blip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Tadpole</span> <span style={{fontSize: "13px"}}>— Still becoming something. Fine with this.</span>
+    <img src="/images/characters/blip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Blip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Tadpole</span> <span style={{fontSize: "13px"}}> Still becoming something. Fine with this.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/twig@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Twig</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Stick insect</span> <span style={{fontSize: "13px"}}>— Holds perfectly still and assumes that makes it invisible.</span>
+    <img src="/images/characters/twig@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Twig</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Stick insect</span> <span style={{fontSize: "13px"}}> Holds perfectly still and assumes that makes it invisible.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/coral@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coral</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Jellyfish</span> <span style={{fontSize: "13px"}}>— Drifts wherever the current goes and calls it a plan.</span>
+    <img src="/images/characters/coral@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coral</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Jellyfish</span> <span style={{fontSize: "13px"}}> Drifts wherever the current goes and calls it a plan.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/scale@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Scale</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Lizard</span> <span style={{fontSize: "13px"}}>— Basks, then bolts. There is no middle setting.</span>
+    <img src="/images/characters/scale@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Scale</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Lizard</span> <span style={{fontSize: "13px"}}> Basks, then bolts. There is no middle setting.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/nipper@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nipper</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crab</span> <span style={{fontSize: "13px"}}>— Sideways is a perfectly good direction.</span>
+    <img src="/images/characters/nipper@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nipper</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crab</span> <span style={{fontSize: "13px"}}> Sideways is a perfectly good direction.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/coil@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coil</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Snail</span> <span style={{fontSize: "13px"}}>— Carries everything it owns and still arrives.</span>
+    <img src="/images/characters/coil@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coil</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Snail</span> <span style={{fontSize: "13px"}}> Carries everything it owns and still arrives.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/hoot@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Hoot</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Owl</span> <span style={{fontSize: "13px"}}>— Sees everything and mentions none of it.</span>
+    <img src="/images/characters/hoot@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Hoot</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Owl</span> <span style={{fontSize: "13px"}}> Sees everything and mentions none of it.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/echo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Echo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bat</span> <span style={{fontSize: "13px"}}>— Navigates by shouting into the dark and listening.</span>
+    <img src="/images/characters/echo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Echo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bat</span> <span style={{fontSize: "13px"}}> Navigates by shouting into the dark and listening.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/husk@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Husk</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Beetle</span> <span style={{fontSize: "13px"}}>— Armoured, deliberate, and quietly certain it is right.</span>
+    <img src="/images/characters/husk@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Husk</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Beetle</span> <span style={{fontSize: "13px"}}> Armoured, deliberate, and quietly certain it is right.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/croak@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Croak</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Frog</span> <span style={{fontSize: "13px"}}>— Sits very still, then isn't there.</span>
+    <img src="/images/characters/croak@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Croak</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Frog</span> <span style={{fontSize: "13px"}}> Sits very still, then isn't there.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/ink@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Ink</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Squid</span> <span style={{fontSize: "13px"}}>— Solves most problems by leaving a cloud behind.</span>
+    <img src="/images/characters/ink@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Ink</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Squid</span> <span style={{fontSize: "13px"}}> Solves most problems by leaving a cloud behind.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/cap@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Cap</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Mushroom</span> <span style={{fontSize: "13px"}}>— Turned up overnight and behaves as though it always lived here.</span>
+    <img src="/images/characters/cap@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Cap</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Mushroom</span> <span style={{fontSize: "13px"}}> Turned up overnight and behaves as though it always lived here.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/star@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Star</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Starfish</span> <span style={{fontSize: "13px"}}>— Five arms, no front, no particular plan.</span>
+    <img src="/images/characters/star@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Star</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Starfish</span> <span style={{fontSize: "13px"}}> Five arms, no front, no particular plan.</span>
   </div>
   <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
-    <img src="/images/characters/mite@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Mite</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Ant</span> <span style={{fontSize: "13px"}}>— Small, tireless, and carrying something four times its size.</span>
+    <img src="/images/characters/mite@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Mite</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Ant</span> <span style={{fontSize: "13px"}}> Small, tireless, and carrying something four times its size.</span>
   </div>
 </div>
 
 Every character is a 12 × 12 pixel grid with its own colour, so it reads by
-shape *and* by colour — "the orange crab" always means Nipper.
+shape *and* by colour, so "the orange crab" always means Nipper.
 
 </Accordion>
 
 ## Replying from the toast
 
 When a session is waiting on you, the toast includes a text field. Type your
-answer and press Return — Dax finds the terminal running that session, brings
+answer and press Return. Dax finds the terminal running that session, brings
 it forward, and pastes your reply in. Works with Terminal, iTerm, and Ghostty.
 
 If the terminal can't be identified, your answer goes to the clipboard
@@ -145,14 +145,14 @@ instead and Dax tells you to paste it yourself.
 
 Without hooks, Dax reads the agent's trace files every few seconds and
 *infers* whether it's waiting. With hooks installed, Claude Code tells Dax
-directly — faster and certain.
+directly, which is faster and certain.
 
 Install them from **Settings → Tools → Agent Watch → Install Hooks**. This
 adds two entries to `~/.claude/settings.json` (backed up first):
 
-- **Notification** — fires the moment a session hits a permission prompt or
+- **Notification:** fires the moment a session hits a permission prompt or
   finishes.
-- **Stop** — delivers the finished reply as it lands.
+- **Stop:** delivers the finished reply as it lands.
 
 Remove Hooks takes out only Dax's entries and leaves everything else
 untouched.
@@ -161,25 +161,25 @@ untouched.
 
 What agents write is paragraphs. A toast has room for a line. When **Say it
 in plain language** is on, Dax rewrites the agent's message into one sentence
-using Apple's on-device model — no network, no cost, works offline. Requires
+using Apple's on-device model, with no network, no cost, and works offline. Requires
 macOS 26 and Apple Intelligence.
 
 ## Options
 
 Settings → Tools → Agent Watch:
 
-- **A session finishes** — toast when a turn is done.
-- **One is waiting on me** — toast on a permission prompt or question.
-- **Play a sound** — chime alongside the toast.
-- **Pause watching** — stop notifications without disabling the tool.
-- **Say it in plain language** — on-device AI summary of the agent's message.
-- **Let me answer from the toast** — reply field on "needs you" toasts.
+- **A session finishes:** toast when a turn is done.
+- **One is waiting on me:** toast on a permission prompt or question.
+- **Play a sound:** chime alongside the toast.
+- **Pause watching:** stop notifications without disabling the tool.
+- **Say it in plain language:** on-device AI summary of the agent's message.
+- **Let me answer from the toast:** reply field on "needs you" toasts.
 
 ## Privacy
 
 Entirely on your Mac. Agent Watch reads the trace files Claude Code already
 writes to disk and never touches the network. The optional summary uses
-Apple's on-device model — your code stays local.
+Apple's on-device model, so your code stays local.
 
 ## Supported agents
 

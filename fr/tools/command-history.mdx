@@ -1,12 +1,12 @@
 ---
 title: "Command History"
-description: "Toutes les commandes que vous avez exécutées, avec recherche floue — choisissez-en une et injectez-la dans votre terminal."
+description: "Toutes les commandes que vous avez exécutées, avec recherche floue. Choisissez-en une et injectez-la dans votre terminal."
 icon: "terminal"
 ---
 
 **Command History** est une palette à recherche floue regroupant toutes les
 commandes que vous avez exécutées dans vos shells (zsh, bash, fish, sh, ksh,
-tcsh). Choisissez-en une et elle est saisie dans le terminal actif — ou
+tcsh). Choisissez-en une et elle est saisie dans le terminal actif, ou
 copiée, ou ouverte dans une nouvelle fenêtre. 100% local et en lecture
 seule ; rien ne quitte votre Mac.
 
@@ -24,7 +24,7 @@ app.
   </Step>
   <Step title="Ouvrez la palette">
     Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd>. Vos commandes
-    passées apparaissent, classées par fréquence d'utilisation — les plus
+    passées apparaissent, classées par fréquence d'utilisation. Les plus
     utilisées en premier.
   </Step>
   <Step title="Cherchez et choisissez">
@@ -38,33 +38,33 @@ app.
   **Changez ce que fait ↩ à la volée.** Appuyez sur
   <kbd>⌘</kbd><kbd>T</kbd> (ou cliquez sur le bouton de mode) pour alterner
   entre **Insérer** dans le terminal actif, ouvrir dans un **Nouveau
-  Terminal**, ou **Copier** — mémorisé entre les sessions.
+  Terminal**, ou **Copier**, mémorisé entre les sessions.
 </Tip>
 
 ## Sécurité
 
 Les commandes potentiellement destructrices (`rm -rf`, `sudo`, `dd`…) sont
-insérées pour vérification mais **jamais exécutées automatiquement** — même
+insérées pour vérification mais **jamais exécutées automatiquement**, même
 avec <kbd>⌘</kbd><kbd>↩</kbd> ou le réglage « exécuter au retour ».
 
 ## Configuration
 
 Settings → Tools → Command History :
 
-- **Shells** — choisissez quels shells rechercher (par défaut, tous ceux
+- **Shells :** choisissez quels shells rechercher (par défaut, tous ceux
   disposant d'un fichier d'historique sur votre Mac).
-- **Start with** — pré-remplissez la barre de recherche avec un préfixe
+- **Start with :** pré-remplissez la barre de recherche avec un préfixe
   (ex. `ssh`) pour transformer la palette en lanceur dédié à une famille de
   commandes.
-- **Only show commands matching** — un filtre regex ; la valeur par défaut
+- **Only show commands matching :** un filtre regex ; la valeur par défaut
   (`^\S+\s+\S+`) ne garde que les lignes « commande + arguments ».
-- **Hide these commands** — liste d'exclusion séparée par des virgules pour
-  les commandes triviales (`ls`, `cd`, `clear`…).
-- **Run on ↩** — activé, <kbd>↩</kbd> appuie sur Entrée après l'insertion
+- **Hide these commands :** liste d'exclusion séparée par des virgules pour
+  les commandes triviales (`ls`, `cd`, `clear`...).
+- **Run on ↩ :** activé, <kbd>↩</kbd> appuie sur Entrée après l'insertion
   (désactivé par défaut ; les commandes destructrices ne s'exécutent jamais
   automatiquement).
 
 ## Confidentialité
 
-Entièrement local. Vos fichiers d'historique de shell sont lus — jamais
-écrits — et rien ne quitte la machine.
+Entièrement local. Vos fichiers d'historique de shell sont lus (jamais
+écrits) et rien ne quitte la machine.

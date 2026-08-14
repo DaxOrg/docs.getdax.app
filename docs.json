@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.32 — Herdr: a window full of coding agents, side by side. Clip to Link: record a region, get a link. <a href='/tools/herdr'>Learn more →</a>"
+    "content": "New in 2.32: Herdr, a window full of coding agents, side by side. Clip to Link: record a region, get a link. <a href='/tools/herdr'>Learn more →</a>"
   },
   "theme": "aspen",
   "name": "Dax",

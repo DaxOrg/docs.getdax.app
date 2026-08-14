@@ -1,12 +1,12 @@
 ---
 title: "Command History"
-description: "Todos los comandos que has ejecutado, con búsqueda difusa — elige uno y escríbelo en tu terminal."
+description: "Todos los comandos que has ejecutado, con búsqueda difusa. Elige uno y escríbelo en tu terminal."
 icon: "terminal"
 ---
 
 **Command History** es una paleta con búsqueda difusa de todos los comandos
 que has ejecutado en tus shells (zsh, bash, fish, sh, ksh, tcsh). Elige uno
-y se escribe en la terminal enfocada — o cópialo, o ábrelo en una ventana
+y se escribe en la terminal enfocada, o cópialo, o ábrelo en una ventana
 nueva. 100% local y de solo lectura; nada sale de tu Mac.
 
 ## Cómo abrirlo
@@ -21,7 +21,7 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd> desde cualquier app.
   </Step>
   <Step title="Abre la paleta">
     Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd>. Tus comandos pasados
-    aparecen ordenados por frecencia — los que más usas van primero.
+    aparecen ordenados por frecencia. Los que más usas van primero.
   </Step>
   <Step title="Busca y elige">
     Escribe para buscar. Pulsa <kbd>↩</kbd> para actuar sobre el comando
@@ -33,34 +33,34 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd> desde cualquier app.
 <Tip>
   **Cambia lo que hace ↩ en vivo.** Pulsa <kbd>⌘</kbd><kbd>T</kbd> (o haz
   clic en el botón de modo) para alternar entre **Insertar** en la terminal
-  enfocada, abrir en una **Nueva Terminal**, o **Copiar** — se recuerda
+  enfocada, abrir en una **Nueva Terminal**, o **Copiar**, y se recuerda
   entre sesiones.
 </Tip>
 
 ## Seguridad
 
 Los comandos que parecen destructivos (`rm -rf`, `sudo`, `dd`…) se insertan
-para revisión pero **nunca se ejecutan automáticamente** — ni con
+para revisión pero **nunca se ejecutan automáticamente**, ni con
 <kbd>⌘</kbd><kbd>↩</kbd> ni con la opción "ejecutar al pulsar Return".
 
 ## Configuración
 
 Settings → Tools → Command History:
 
-- **Shells** — elige qué shells buscar (por defecto, todos los que tengan
+- **Shells:** elige qué shells buscar (por defecto, todos los que tengan
   archivo de historial en tu Mac).
-- **Start with** — rellena la barra de búsqueda con un prefijo (p. ej.
+- **Start with:** rellena la barra de búsqueda con un prefijo (p. ej.
   `ssh`) para convertir la paleta en un lanzador para una familia de
   comandos.
-- **Only show commands matching** — un filtro regex; el predeterminado
+- **Only show commands matching:** un filtro regex; el predeterminado
   (`^\S+\s+\S+`) muestra solo líneas de "comando + argumentos".
-- **Hide these commands** — lista de exclusión separada por comas para
-  comandos triviales (`ls`, `cd`, `clear`…).
-- **Run on ↩** — cuando está activado, <kbd>↩</kbd> pulsa Return tras
+- **Hide these commands:** lista de exclusión separada por comas para
+  comandos triviales (`ls`, `cd`, `clear`...).
+- **Run on ↩:** cuando está activado, <kbd>↩</kbd> pulsa Return tras
   insertar (desactivado por defecto; los comandos destructivos nunca se
   ejecutan automáticamente).
 
 ## Privacidad
 
-Completamente local. Tus archivos de historial de shell se leen — nunca se
-escriben — y nada sale de la máquina.
+Completamente local. Tus archivos de historial de shell se leen (nunca se
+escriben) y nada sale de la máquina.

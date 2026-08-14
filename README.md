@@ -1,6 +1,6 @@
 # Dax documentation
 
-The documentation site for **[Dax](https://getdax.app)** — less
+The documentation site for **[Dax](https://getdax.app)** - less
 context-switching, more vibing. A macOS menu-bar app with small tools, each a
 keystroke away.
 
@@ -8,10 +8,10 @@ Built with [Mintlify](https://mintlify.com) (`willow` theme).
 
 ## Structure
 
-- `docs.json` — site config: theme, colors, navigation, logos
-- `index.mdx`, `quickstart.mdx`, `shortcuts.mdx` — getting started
-- `tools/` — one page per tool
-- `logo/`, `favicon.svg` — brand assets
+- `docs.json` - site config: theme, colors, navigation, logos
+- `index.mdx`, `quickstart.mdx`, `shortcuts.mdx` - getting started
+- `tools/` - one page per tool
+- `logo/`, `favicon.svg` - brand assets
 
 ## Develop
 

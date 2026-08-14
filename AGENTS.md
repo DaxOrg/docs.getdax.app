@@ -2,7 +2,7 @@
 
 ## About this project
 
-This is the **official documentation site** for [Dax](https://getdax.app) — a macOS menu-bar app that ships 15 developer tools, each a keyboard shortcut away. Tagline: "Less context-switching. More Vibing."
+This is the **official documentation site** for [Dax](https://getdax.app), a macOS menu-bar app that ships 15 developer tools, each a keyboard shortcut away. Tagline: "Less context-switching. More Vibing."
 
 - Built on [Mintlify](https://mintlify.com) with the Aspen theme
 - Pages are MDX files with YAML frontmatter; tool pages live in `tools/`
@@ -36,7 +36,7 @@ mint dev            # Local preview at localhost:3000
 mint broken-links   # Validate internal links
 ```
 
-Deployment is automatic via the [Mintlify GitHub App](https://dashboard.mintlify.com) — changes to the default branch auto-deploy.
+Deployment is automatic via the [Mintlify GitHub App](https://dashboard.mintlify.com); changes to the default branch auto-deploy.
 
 ## Terminology
 
@@ -44,13 +44,13 @@ Deployment is automatic via the [Mintlify GitHub App](https://dashboard.mintlify
 - Refer to each tool by its public name (e.g. **Image to URL**, **Ask AI**).
   Internal codenames (Uplink, Promptify, QuickQuestion, BulkUpload) may be
   mentioned once for context but are not the primary name.
-- Tools are opened by a **global shortcut** or **from the menu** — don't invent
+- Tools are opened by a **global shortcut** or **from the menu**. Don't invent
   shortcuts for tools that open from the menu.
 
 ## Style preferences
 
 - Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
+- Keep sentences concise; one idea per sentence
 - Use sentence case for headings
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references

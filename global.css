@@ -1,9 +1,9 @@
 /* ─── Monochrome theme for dark mode ─────────────────────────────────
-   Pure black/white/gray — no color accents. Uses white at varying
+   Pure black/white/gray, no color accents. Uses white at varying
    opacities for depth instead of tinted hues.
    ──────────────────────────────────────────────────────────────────── */
 
-/* Note / Info callouts — white/gray monochrome */
+/* Note / Info callouts: white/gray monochrome */
 .dark [data-callout="note"],
 .dark [data-callout="info"],
 .dark .callout-note,
