@@ -253,6 +253,11 @@
           "anchor": "Status",
           "href": "https://status.getdax.app",
           "icon": "signal"
+        },
+        {
+          "anchor": "Community",
+          "href": "https://discord.gg/V5te2fHHRA",
+          "icon": "discord"
         }
       ]
     }
@@ -284,7 +289,8 @@
     "socials": {
       "website": "https://getdax.app",
       "github": "https://github.com/daxorg",
-      "x": "https://x.com/getdax"
+      "x": "https://x.com/getdax",
+      "discord": "https://discord.gg/V5te2fHHRA"
     }
   }
 }
