@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.33: Herdr runs on a server over SSH. PRD Maker writes the brief. Remove BG cuts the subject out. Ask AI searches the web. <a href='/whats-new'>See what's new →</a>"
+    "content": "New in 2.34: Adding a server to Herdr shows you what happened — Test with a connection log, and two invisible failures gone. <a href='/whats-new'>See what's new →</a>"
   },
   "theme": "aspen",
   "name": "Dax",

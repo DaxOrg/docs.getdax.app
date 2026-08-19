@@ -74,6 +74,11 @@ que tiene el repositorio, la RAM y el uptime.
     Elige el servidor desde el selector encima del árbol de la barra lateral.
     Sus proyectos y terminales en vivo aparecen exactamente como los locales.
   </Step>
+  <Step title="Prueba la conexión">
+    Pulsa **Test** (justo al lado de Done) para ver cómo se conecta: qué
+    dirección respondió, qué clave se ofreció, qué aceptó el servidor. Copia
+    el registro completo si necesitas depurar.
+  </Step>
   <Step title="Instala herdr automáticamente">
     Si el servidor aún no tiene herdr, Dax lo instala automáticamente. En
     servidores solo IPv6 donde GitHub no es accesible, Dax envía el binario
@@ -83,7 +88,9 @@ que tiene el repositorio, la RAM y el uptime.
 
 <Note>
   Tu `~/.ssh/config`, agente y `known_hosts` siguen aplicando. No se añade
-  ninguna dependencia nueva: todo pasa por la conexión SSH.
+  ninguna dependencia nueva: todo pasa por la conexión SSH. Las direcciones
+  pegadas desde una consola cloud se limpian de caracteres invisibles, y los
+  archivos de clave descargados se ajustan automáticamente en permisos.
 </Note>
 
 ### Remote Panel

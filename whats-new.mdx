@@ -6,6 +6,27 @@ icon: "clock-rotate-left"
 
 Stay up to date with what's shipping in Dax.
 
+## 2.34.0
+
+<sub>August 2026</sub>
+
+**Herdr: adding a server tells you what happened**
+- **Test is in the server dialog now**, next to Done. It shows the actual connection log — which address answered, which key was offered, what the server accepted — with a Copy button for the whole thing.
+- **Pasted addresses just work.** Text copied from a cloud console often carries invisible characters (non-breaking spaces, zero-width spaces) that ssh refuses. Dax strips them automatically, and a server already saved with one starts working on the next try.
+- **Downloaded key files just work.** A `.pem` from AWS arrives readable by everyone on the Mac, which ssh won't touch. Dax narrows it to owner-only for you.
+- **When something is genuinely wrong, the message names it** — the field to look at, or the file and the one command that fixes it.
+
+---
+
+## 2.33.1
+
+<sub>August 2026</sub>
+
+**Herdr server fix**
+- A key file downloaded from a cloud console now works on the first try. Dax narrows its permissions to owner-only instead of failing silently.
+
+---
+
 ## 2.33.0
 
 <sub>August 2026</sub>

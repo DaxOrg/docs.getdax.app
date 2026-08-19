@@ -77,6 +77,12 @@ dépôt, la RAM et l'uptime.
     barre latérale. Ses projets et terminaux en direct apparaissent
     exactement comme les locaux.
   </Step>
+  <Step title="Tester la connexion">
+    Appuyez sur **Test** (juste à côté de Done) pour voir la connexion se
+    dérouler : quelle adresse a répondu, quelle clé a été proposée, ce que
+    le serveur a accepté. Copiez le journal complet si vous avez besoin de
+    déboguer.
+  </Step>
   <Step title="Installation automatique de herdr">
     Si le serveur n'a pas encore herdr, Dax l'installe automatiquement. Sur
     les serveurs IPv6 uniquement où GitHub est inaccessible, Dax envoie le
@@ -86,7 +92,10 @@ dépôt, la RAM et l'uptime.
 
 <Note>
   Vos `~/.ssh/config`, agent et `known_hosts` restent en vigueur. Aucune
-  nouvelle dépendance n'est ajoutée — tout passe par la connexion SSH.
+  nouvelle dépendance n'est ajoutée — tout passe par la connexion SSH. Les
+  adresses collées depuis une console cloud sont nettoyées des caractères
+  invisibles, et les fichiers de clé téléchargés voient leurs permissions
+  resserrées automatiquement.
 </Note>
 
 ### Remote Panel

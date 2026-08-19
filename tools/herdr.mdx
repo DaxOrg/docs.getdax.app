@@ -69,6 +69,11 @@ the RAM and the uptime.
     Pick the server from the switcher above the sidebar tree. Its projects
     and live terminals appear exactly as local ones do.
   </Step>
+  <Step title="Test the connection">
+    Press **Test** (right next to Done) to see the connection happen: which
+    address answered, which key was offered, what the server accepted. Copy
+    the whole log if you need to debug.
+  </Step>
   <Step title="Install herdr automatically">
     If the server doesn't have herdr yet, Dax installs it automatically. On
     IPv6-only servers where GitHub is unreachable, Dax sends the binary over
@@ -78,7 +83,9 @@ the RAM and the uptime.
 
 <Note>
   Your `~/.ssh/config`, agent, and `known_hosts` still apply. No new dependency
-  is added — everything goes through the SSH connection.
+  is added — everything goes through the SSH connection. Addresses pasted from
+  a cloud console are cleaned of invisible characters, and downloaded key files
+  have their permissions narrowed automatically.
 </Note>
 
 ### Remote Panel
