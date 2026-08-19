@@ -1,0 +1,89 @@
+---
+title: "PRD Maker"
+description: "Say what you want to build and get the brief for it."
+icon: "file-lines"
+---
+
+**PRD Maker** writes the brief for what you're about to build. Say what you
+want to make, answer a few questions, and get a PRD to review plus a starter
+prompt already on your clipboard, ready to paste into a coding agent.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>E</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Describe what you want to make">
+    Open the composer and write a short description of what you want to build.
+  </Step>
+  <Step title="Pick a questioning mode">
+    Choose between three modes before or during the idea step. Press
+    <kbd>⇥</kbd> to cycle forward, <kbd>⇧</kbd><kbd>⇥</kbd> to cycle back.
+  </Step>
+  <Step title="Answer the questions">
+    PRD Maker asks clarifying questions one at a time. Type your answer or
+    use a suggestion (<kbd>⌘</kbd><kbd>1</kbd>–<kbd>3</kbd>). You can go back
+    and edit any earlier answer.
+  </Step>
+  <Step title="Get the document">
+    A complete PRD appears with a starter prompt already on your clipboard.
+    The document is saved to your Mac and optionally shared as a link.
+  </Step>
+</Steps>
+
+## Questioning modes
+
+| Mode | Questions | Style |
+| --- | :---: | --- |
+| **Dax Standard** | 4 | Who it's for, the one thing it must do, what's out of scope for v1, and platform/constraints |
+| **Grill Me** | 9 (3 rounds) | Adversarial — finds the weak points in the idea |
+| **Office Hours** | 6 | Demand validation — asks for evidence that someone actually wants this |
+
+You can write the PRD early — from question 2 onward, press
+<kbd>⌘</kbd><kbd>D</kbd> to skip the remaining questions and generate the
+document with what you've answered so far.
+
+## Suggestions
+
+Each question comes with up to three suggested answers. Use them with
+<kbd>⌘</kbd><kbd>1</kbd>, <kbd>⌘</kbd><kbd>2</kbd>, or
+<kbd>⌘</kbd><kbd>3</kbd>, or click one. They're generated from your idea and
+previous answers.
+
+## Where PRDs are kept
+
+Every PRD is saved as Markdown in **~/Documents/Dax Specs/**, named for the
+project with a timestamp. The starter prompt is at the end of the same file.
+Nothing is deleted — old ones stay until you move them.
+
+Open the folder from **Settings → Tools → PRD Maker → Open Specs Folder**.
+
+## Sharing as a link
+
+After writing, the PRD is automatically uploaded and available as a
+shareable link. Use **Copy for agent** to copy a fetch command a remote
+coding agent can run. Links expire (default 7 days).
+
+If you're offline or not signed in, the PRD is still written and saved
+locally — the link is a convenience, not a requirement.
+
+## Shortcuts
+
+| Action | Shortcut |
+| --- | --- |
+| Submit answer | <kbd>↩</kbd> |
+| Use suggestion 1 / 2 / 3 | <kbd>⌘</kbd><kbd>1</kbd> / <kbd>⌘</kbd><kbd>2</kbd> / <kbd>⌘</kbd><kbd>3</kbd> |
+| Write PRD now (from Q2) | <kbd>⌘</kbd><kbd>D</kbd> |
+| Copy starter prompt | <kbd>⌘</kbd><kbd>C</kbd> |
+| Copy entire PRD | <kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd> |
+| Reveal in Finder | <kbd>⌘</kbd><kbd>R</kbd> |
+| Start over | <kbd>⌘</kbd><kbd>N</kbd> |
+| Close | <kbd>esc</kbd> |
+
+## Privacy
+
+Only the text you type is sent, and only when you press <kbd>↩</kbd>. The
+finished PRD is written to your Documents folder, not the server. The
+optional shareable link is the one part that leaves your Mac.

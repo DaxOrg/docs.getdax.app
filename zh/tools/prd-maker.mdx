@@ -1,0 +1,84 @@
+---
+title: "PRD Maker"
+description: "说出你要构建什么，获得一份产品需求文档。"
+icon: "file-lines"
+---
+
+**PRD Maker** 为你即将构建的东西撰写文档。说出你想做什么，回答几个问题，
+就能得到一份 PRD 供审阅，加上一段启动提示词已在你的剪贴板上，随时可粘贴给
+编程 Agent。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>E</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="描述你想做什么">
+    打开编辑器，简短描述你想构建的东西。
+  </Step>
+  <Step title="选择提问模式">
+    在输入想法之前或之中选择模式。按 <kbd>⇥</kbd> 向前切换，<kbd>⇧</kbd><kbd>⇥</kbd>
+    向后切换。
+  </Step>
+  <Step title="回答问题">
+    PRD Maker 会逐个提出澄清问题。输入你的答案，或使用建议
+    （<kbd>⌘</kbd><kbd>1</kbd>–<kbd>3</kbd>）。你可以回退修改之前的任何答案。
+  </Step>
+  <Step title="获取文档">
+    一份完整的 PRD 出现，启动提示词已在你的剪贴板上。文档保存在你的 Mac 上，
+    可选择以链接形式分享。
+  </Step>
+</Steps>
+
+## 提问模式
+
+| 模式 | 问题数 | 风格 |
+| --- | :---: | --- |
+| **Dax Standard** | 4 | 目标用户、核心功能、v1 不做什么、平台与约束 |
+| **Grill Me** | 9（3 轮） | 对抗式 —— 找出想法中的弱点 |
+| **Office Hours** | 6 | 需求验证 —— 要求你提供确实有人想要的证据 |
+
+从第 2 个问题起，你可以提前生成 PRD —— 按
+<kbd>⌘</kbd><kbd>D</kbd> 跳过剩余问题，用已回答的内容生成文档。
+
+## 建议
+
+每个问题附带最多三个建议答案。使用 <kbd>⌘</kbd><kbd>1</kbd>、
+<kbd>⌘</kbd><kbd>2</kbd> 或 <kbd>⌘</kbd><kbd>3</kbd>，或点击选择。建议
+基于你的想法和之前的答案生成。
+
+## PRD 保存位置
+
+每份 PRD 以 Markdown 格式保存在 **~/Documents/Dax Specs/** 中，以项目名和
+时间戳命名。启动提示词在同一文件的末尾。旧文件不会被删除 —— 直到你手动移除。
+
+在 **Settings → Tools → PRD Maker → Open Specs Folder** 中打开文件夹。
+
+## 以链接分享
+
+写完后，PRD 会自动上传并生成一个可分享的链接。使用 **Copy for agent** 复制
+一条 fetch 命令，远程编程 Agent 可以直接运行。链接会过期（默认 7 天）。
+
+如果你离线或未登录，PRD 仍会正常撰写并保存在本地 —— 链接只是一个便利功能，
+不是必需的。
+
+## 快捷键
+
+| 操作 | 快捷键 |
+| --- | --- |
+| 提交答案 | <kbd>↩</kbd> |
+| 使用建议 1 / 2 / 3 | <kbd>⌘</kbd><kbd>1</kbd> / <kbd>⌘</kbd><kbd>2</kbd> / <kbd>⌘</kbd><kbd>3</kbd> |
+| 立即生成 PRD（从 Q2 起） | <kbd>⌘</kbd><kbd>D</kbd> |
+| 复制启动提示词 | <kbd>⌘</kbd><kbd>C</kbd> |
+| 复制整份 PRD | <kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd> |
+| 在 Finder 中显示 | <kbd>⌘</kbd><kbd>R</kbd> |
+| 重新开始 | <kbd>⌘</kbd><kbd>N</kbd> |
+| 关闭 | <kbd>esc</kbd> |
+
+## 隐私
+
+只有你输入的文字会被发送，且仅在你按下 <kbd>↩</kbd> 时发送。生成的 PRD 写入
+你的 Documents 文件夹，不会发送到服务器。可选的分享链接是唯一离开你 Mac 的
+部分。

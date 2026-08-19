@@ -1,12 +1,12 @@
 ---
 title: "Ask AI"
-description: "A floating prompt box for quick questions, without switching windows."
+description: "A floating prompt box for quick questions, web search, and Deep Research."
 icon: "comment-dots"
 ---
 
-**Ask AI** (internally, *QuickQuestion*) is a floating prompt box for a quick
-question, a lookup, or a small task, without switching windows or opening a
-browser.
+**Ask AI** is a floating prompt box for a quick question, a lookup, or a small
+task, without switching windows or opening a browser. It can also search the
+web or run a Deep Research query with cited sources.
 
 ## Open it
 
@@ -17,26 +17,48 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>K</kbd> from any app.
 <Steps>
   <Step title="Open the panel">
     Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>K</kbd> anywhere. An Ask AI panel
-    floats up **without stealing focus** from your current window.
+    floats up **without stealing focus** from your current window. Drag it by
+    the grip to reposition.
   </Step>
   <Step title="Ask">
     Type anything (a question, a quick task, a lookup) and press
     <kbd>↩</kbd>.
   </Step>
   <Step title="Copy the answer">
-    A short answer appears in place, ready to copy with one click.
+    The answer renders as Markdown — headings, lists, and code blocks with a
+    copy button. Copy the whole answer with one click.
   </Step>
 </Steps>
 
+## Web search
+
+Latch the **globe** icon in the composer to answer from a live web search.
+The answer includes numbered, clickable source links.
+
+## Deep Research
+
+Latch the **magnifier** icon for a Deep Research query. This reads multiple
+sources, takes longer (up to several minutes), and returns a cited answer
+with a full source list.
+
+<Note>
+  Deep Research uses separate quota from regular questions. Free plans include
+  0 research questions per month; Pro plans include 20. Check **Usage** for
+  your current limits.
+</Note>
+
+## Attaching images
+
+Paste an image, drag one in, or click the attachment button to ask about a
+picture. Click any attached image to open it full size.
+
 <Tip>
-  Keep questions short and specific. Ask AI is built for the quick "what's
-  the flag for…" moments, not long research sessions.
+  Keep questions short and specific for the best results. For image questions
+  with follow-ups, try [Image Ask](/tools/image-ask) instead.
 </Tip>
 
 ## Privacy
 
-Only the text you type is sent, and only when you press <kbd>↩</kbd>.
-
-<Note>
-  Working with an image instead of text? Use [Image Ask](/tools/image-ask).
-</Note>
+Only the text (and any attached image) you type is sent, and only when you
+press <kbd>↩</kbd>. Web search and Deep Research queries go through the Dax
+backend.

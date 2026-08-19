@@ -1,0 +1,48 @@
+---
+title: "Image to Text"
+description: "从任意图片（截图、照片、扫描件）中提取文字，并复制到剪贴板。"
+icon: "scanner"
+---
+
+**Image to Text** 利用 Mac 内置的识别引擎读取任意图片中的文字，并将其复制到
+剪贴板，随时可粘贴。完全离线运行，数据不会离开你的 Mac。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>R</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="获取图片">
+    将一张图片复制到剪贴板（截图、照片，任何含有文字的图片），或者让 Dax
+    截取屏幕上的一个区域。
+  </Step>
+  <Step title="按下快捷键">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>R</kbd>。Dax 会立即识别图片中的文字，
+    无需等待服务器响应。
+  </Step>
+  <Step title="粘贴文字">
+    识别出的文字已在你的剪贴板上，粘贴到需要的地方即可。
+  </Step>
+</Steps>
+
+<Tip>
+  **两种获取方式。** 默认情况下，Image to Text 读取剪贴板上的图片。在 **Settings
+  → Tools → Image to Text** 中，将来源切换为 **Live Selection**，即可直接在
+  屏幕上框选区域，无需先截图就能提取窗口中的文字。
+</Tip>
+
+## 可识别的内容
+
+Apple Vision 框架能识别的一切：截图、文档照片、手写文字、终端中的代码、
+设计稿中的文字、收据、路牌，以及绝大多数含有清晰文字的内容。
+
+## Dax Shots
+
+你交给此工具的每一张图片都会保存到 `~/Pictures/Dax Shots/Image to Text`，
+命名方式与 macOS 截图一致，方便你随时找回原图。
+
+## 隐私
+
+完全本地运行。文字识别在 Mac 的神经引擎上进行，图片从不离开设备。

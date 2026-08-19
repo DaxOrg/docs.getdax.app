@@ -1,17 +1,18 @@
 ---
 title: "File Drop"
-description: "Déposez des fichiers ou des dossiers, obtenez un seul lien partageable."
+description: "Déposez des fichiers ou des dossiers, obtenez un seul lien partageable. Ou secouez un fichier pour le déposer instantanément."
 icon: "files"
 ---
 
-**File Drop** (en interne, *BulkUpload*) transforme n'importe quels
-fichiers ou dossiers en un seul lien partageable, le moyen le plus rapide
-de transmettre tout un lot de contexte à un LLM.
+**File Drop** transforme n'importe quels fichiers ou dossiers en un seul
+lien partageable, le moyen le plus rapide de transmettre tout un lot de
+contexte à un LLM.
 
 ## Comment l'ouvrir
 
 Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> depuis n'importe quelle
-app.
+app. Ou évitez le raccourci : **secouez un fichier** que vous êtes déjà en
+train de glisser et une étagère de dépôt apparaît sous le curseur.
 
 ## Fonctionnement
 
@@ -27,10 +28,21 @@ app.
     zip**, puis envoyés.
   </Step>
   <Step title="Envoyez">
-    Cliquez sur **Upload**. Le **lien atterrit dans votre presse-papiers**,
-    prêt à coller dans n'importe quel LLM.
+    Cliquez sur **Upload**. Le **lien atterrit dans votre presse-papiers**.
+    Collez-le dans n'importe quel LLM.
   </Step>
 </Steps>
+
+## Secouer pour déposer
+
+Prenez un fichier n'importe où, **agitez-le** tout en le maintenant, et une
+étagère de dépôt sombre apparaît sous le curseur. Déposez dessus et l'envoi
+démarre immédiatement — pas besoin de <kbd>⌃</kbd> <kbd>⌥</kbd>
+<kbd>L</kbd>.
+
+- **Activé par défaut**, avec un toast explicatif la première fois
+- Désactivez-le dans **Settings → Tools → File Drop → Shake to drop**
+- Trois inversions horizontales rapides de direction déclenchent l'étagère
 
 <Tip>
   Sélectionnez plusieurs fichiers dans le Finder et glissez-les ensemble.
@@ -41,5 +53,6 @@ app.
 
 - Jusqu'à **256 Mo** par envoi.
 - Les liens **expirent automatiquement au bout de 90 jours**.
-- **Les fichiers ne quittent ce Mac que lorsque vous cliquez sur Upload**
-  Jamais au moment du dépôt.
+- **Les fichiers ne quittent ce Mac que lorsque vous cliquez sur Upload**,
+  jamais au moment du dépôt.
+- Fermer la fenêtre n'annule plus l'envoi — il continue en arrière-plan.

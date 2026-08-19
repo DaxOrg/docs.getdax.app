@@ -1,12 +1,13 @@
 ---
 title: "Ask AI"
-description: "Un cuadro de preguntas flotante para dudas rápidas, sin cambiar de ventana."
+description: "Un cuadro de preguntas flotante para dudas rápidas, búsqueda web y Deep Research."
 icon: "comment-dots"
 ---
 
-**Ask AI** (internamente, *QuickQuestion*) es un cuadro de preguntas
-flotante para una duda rápida, una búsqueda o una tarea pequeña, sin
-cambiar de ventana ni abrir un navegador.
+**Ask AI** es un cuadro de preguntas flotante para una duda rápida, una
+búsqueda o una tarea pequeña, sin cambiar de ventana ni abrir un navegador.
+También puede buscar en la web o ejecutar una consulta de Deep Research con
+fuentes citadas.
 
 ## Cómo abrirlo
 
@@ -18,27 +19,50 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>K</kbd> desde cualquier app.
   <Step title="Abre el panel">
     Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>K</kbd> en cualquier lugar. Un
     panel de Ask AI aparece flotando **sin robarle el foco** a tu ventana
-    actual.
+    actual. Arrástralo por la pestaña para reposicionarlo.
   </Step>
   <Step title="Pregunta">
-    Escribe lo que sea: una pregunta, una tarea rápida, una búsqueda, y
+    Escribe lo que sea (una pregunta, una tarea rápida, una búsqueda) y
     pulsa <kbd>↩</kbd>.
   </Step>
   <Step title="Copia la respuesta">
-    Una respuesta breve aparece ahí mismo, lista para copiar con un clic.
+    La respuesta se renderiza como Markdown: encabezados, listas y bloques
+    de código con botón de copiar. Copia toda la respuesta con un clic.
   </Step>
 </Steps>
 
+## Búsqueda web
+
+Activa el icono del **globo** en el compositor para responder a partir de
+una búsqueda web en vivo. La respuesta incluye enlaces a fuentes numerados
+y clicables.
+
+## Deep Research
+
+Activa el icono de la **lupa** para una consulta de Deep Research. Esto lee
+múltiples fuentes, tarda más (hasta varios minutos) y devuelve una
+respuesta citada con una lista completa de fuentes.
+
+<Note>
+  Deep Research usa una cuota separada de las preguntas normales. Los planes
+  Free incluyen 0 consultas de investigación al mes; los planes Pro incluyen
+  20. Consulta **Usage** para ver tus límites actuales.
+</Note>
+
+## Adjuntar imágenes
+
+Pega una imagen, arrástrala o haz clic en el botón de adjuntar para
+preguntar sobre una foto. Haz clic en cualquier imagen adjunta para verla
+a tamaño completo.
+
 <Tip>
-  Mantén las preguntas cortas y concretas: Ask AI está pensado para esos
-  momentos de "¿cuál era el flag para...?", no para sesiones largas de
-  investigación.
+  Mantén las preguntas cortas y concretas para obtener los mejores
+  resultados. Para preguntas sobre imágenes con seguimiento, prueba
+  [Image Ask](/es/tools/image-ask).
 </Tip>
 
 ## Privacidad
 
-Solo se envía el texto que escribes, y solo cuando pulsas <kbd>↩</kbd>.
-
-<Note>
-  ¿Trabajando con una imagen en lugar de texto? Usa [Image Ask](/es/tools/image-ask).
-</Note>
+Solo se envía el texto (y cualquier imagen adjunta) que escribes, y solo
+cuando pulsas <kbd>↩</kbd>. Las consultas de búsqueda web y Deep Research
+pasan por el backend de Dax.

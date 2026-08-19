@@ -1,0 +1,135 @@
+---
+title: "Herdr"
+description: "Ejecuta una manada de agentes de código en una sola ventana, localmente o en un servidor por SSH."
+icon: "grid-2-plus"
+---
+
+**Herdr** es el centro de control para agentes de código. Conecta una
+carpeta y abre una ventana con terminales en vivo lado a lado. Añade
+agentes desde un menú, divide arrastrando, y observa cómo trabajan todos,
+en tu Mac o en un servidor conectado por SSH.
+
+Impulsado por [Herdr](https://herdr.dev), un multiplexor de terminales con
+detección de agentes integrada. Dax se encarga de la ventana, la barra
+lateral y las instalaciones; Herdr se encarga de las terminales.
+
+## Cómo abrirlo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> desde cualquier app.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Conecta una carpeta">
+    Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> o ve a **Settings → Herdr**
+    y conecta la carpeta del proyecto en el que estás trabajando.
+  </Step>
+  <Step title="Añade agentes">
+    Haz clic en **+** o usa el menú de agentes para añadir Claude Code,
+    Codex, Gemini o cualquier otro agente. Cada uno se abre en su propio
+    panel de terminal.
+  </Step>
+  <Step title="Divide y organiza">
+    Arrastra un panel hacia el borde de otro para dividir el espacio entre
+    ellos. **Even Out Terminals** iguala los espacios sin reiniciar nada.
+  </Step>
+</Steps>
+
+## Pestañas
+
+Organiza tu manada con pestañas:
+
+- <kbd>⌘</kbd><kbd>T</kbd> para abrir una nueva pestaña
+- <kbd>⌘</kbd><kbd>N</kbd> para añadir un agente
+- <kbd>⌃</kbd><kbd>Tab</kbd> para recorrer la barra de pestañas
+- <kbd>⌘</kbd><kbd>W</kbd> para cerrar un agente (no la ventana entera)
+- Nombra una pestaña antes de olvidar para qué era
+
+La barra lateral agrupa los agentes bajo su pestaña, una línea cada uno.
+
+## La barra lateral
+
+Un árbol que te dice qué está ejecutándose:
+
+- **Pestañas** contienen agentes, cada uno mostrando marca y estado de un
+  vistazo
+- Renombra lo que quieras, cierra lo que quieras, colapsa la barra lateral
+  para quitarla del medio
+- Una barra lateral colapsada sigue agrupando por pestaña en lugar de una
+  lista plana
+
+## Ejecución en un servidor
+
+Conecta un servidor y Herdr lo alcanza a través de un único reenvío SSH:
+misma ventana, mismas pestañas, mismos agentes, ejecutándose en la máquina
+que tiene el repositorio, la RAM y el uptime.
+
+<Steps>
+  <Step title="Añade un servidor">
+    Ve a **Settings → Herdr → Servers** y añade un host: dirección, usuario,
+    puerto y un archivo de clave o contraseña. Las contraseñas se guardan en
+    tu Keychain.
+  </Step>
+  <Step title="Cambia al servidor">
+    Elige el servidor desde el selector encima del árbol de la barra lateral.
+    Sus proyectos y terminales en vivo aparecen exactamente como los locales.
+  </Step>
+  <Step title="Instala herdr automáticamente">
+    Si el servidor aún no tiene herdr, Dax lo instala automáticamente. En
+    servidores solo IPv6 donde GitHub no es accesible, Dax envía el binario
+    a través de la conexión SSH ya abierta.
+  </Step>
+</Steps>
+
+<Note>
+  Tu `~/.ssh/config`, agente y `known_hosts` siguen aplicando. No se añade
+  ninguna dependencia nueva: todo pasa por la conexión SSH.
+</Note>
+
+### Remote Panel
+
+Un botón en la barra de herramientas de Herdr (visible solo para servidores)
+abre el Remote Panel con cinco pestañas:
+
+- **Coding Agents** -- qué está instalado, con actualización de un clic
+- **Services & Ports** -- procesos escuchando y puertos abiertos
+- **Web Servers & SSL** -- sitios agrupados por dominio, con certificados y
+  expiración
+- **Usage** -- disco, memoria, carga y una consola en vivo
+- **Utilities** -- herramientas comunes del servidor
+
+## División de paneles
+
+Arrastra un panel hacia el borde de otro (izquierda, derecha, arriba, abajo)
+y el espacio se divide entre ellos. Un relleno verde muestra el área
+objetivo para indicar dónde caerá la división. El divisor es arrastrable
+después.
+
+**Even Out Terminals** (desde el menú) redistribuye el espacio uniformemente
+sin reiniciar ningún proceso.
+
+## Detección de agentes
+
+Herdr detecta más de 19 agentes de código de fábrica: Claude Code, Codex,
+Gemini, Cursor, Grok, Pi, OpenCode y más. Cuando un agente está
+ejecutándose en un panel, la barra lateral muestra su icono de marca e
+informa si está trabajando, bloqueado o inactivo.
+
+## Pantalla completa
+
+El verde llena la pantalla en lugar de apoderarse de ella. La barra de menú
+y el Dock permanecen donde están, así que una pared de terminales no te
+cuesta el resto de tu Mac.
+
+## Instalar Herdr
+
+La primera vez que abres la herramienta, Dax ofrece instalar
+[Herdr](https://herdr.dev) vía Homebrew o un script de una línea. Una vez
+instalado, se ejecuta como un servidor en segundo plano, así que las
+sesiones persisten incluso cuando cierras la ventana.
+
+## Privacidad
+
+Todo se ejecuta localmente o a través de una conexión SSH directa a tu
+propio servidor. Tus terminales, tus agentes, tu código: nada pasa por el
+backend de Dax.

@@ -1,16 +1,17 @@
 ---
 title: "File Drop"
-description: "Suelta archivos o carpetas, obtén un enlace compartible."
+description: "Suelta archivos o carpetas, obtén un enlace compartible. O agita un archivo para soltarlo al instante."
 icon: "files"
 ---
 
-**File Drop** (internamente, *BulkUpload*) convierte cualquier archivo o
-carpeta en un único enlace compartible: la forma más rápida de darle a un
-LLM un paquete de contexto.
+**File Drop** convierte cualquier archivo o carpeta en un único enlace
+compartible: la forma más rápida de darle a un LLM un paquete de contexto.
 
 ## Cómo abrirlo
 
-Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> desde cualquier app.
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> desde cualquier app. O sáltate
+el atajo: **agita un archivo** que ya estés arrastrando y aparece una
+bandeja de soltar bajo el puntero.
 
 ## Cómo funciona
 
@@ -30,8 +31,19 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> desde cualquier app.
   </Step>
 </Steps>
 
+## Agitar para soltar
+
+Levanta un archivo en cualquier lugar, **agítalo** mientras lo sostienes,
+y aparece una bandeja oscura de soltar bajo el puntero. Suéltalo ahí y la
+subida comienza inmediatamente, sin necesidad de <kbd>⌃</kbd> <kbd>⌥</kbd>
+<kbd>L</kbd>.
+
+- **Activado por defecto**, con un toast explicativo la primera vez
+- Desactívalo en **Settings → Tools → File Drop → Shake to drop**
+- Tres cambios rápidos de dirección horizontal activan la bandeja
+
 <Tip>
-  Selecciona varios archivos en Finder y arrástralos juntos: File Drop los
+  Selecciona varios archivos en Finder y arrástralos juntos. File Drop los
   mantiene como un solo lote.
 </Tip>
 
@@ -41,3 +53,4 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> desde cualquier app.
 - Los enlaces **caducan automáticamente a los 90 días**.
 - **Los archivos solo salen de este Mac cuando haces clic en Upload**,
   nunca al soltarlos.
+- Cerrar la ventana ya no cancela la subida: continúa en segundo plano.

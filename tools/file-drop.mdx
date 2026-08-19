@@ -1,15 +1,17 @@
 ---
 title: "File Drop"
-description: "Drop files or folders, get one shareable link."
+description: "Drop files or folders, get one shareable link. Or shake a file to drop it instantly."
 icon: "files"
 ---
 
-**File Drop** (internally, *BulkUpload*) turns any files or folders into a
-single shareable link, the fast way to hand a bundle of context to an LLM.
+**File Drop** turns any files or folders into a single shareable link, the
+fast way to hand a bundle of context to an LLM.
 
 ## Open it
 
-Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> from any app.
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> from any app. Or skip the
+shortcut: **shake a file** you're already dragging and a drop shelf appears
+under the pointer.
 
 ## How it works
 
@@ -28,6 +30,16 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> from any app.
   </Step>
 </Steps>
 
+## Shake to drop
+
+Pick up a file anywhere, **wiggle it** while still holding, and a dark drop
+shelf appears under the pointer. Drop on it and the upload starts immediately
+— no <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> needed.
+
+- **On by default**, with a one-time explanatory toast
+- Switch it off in **Settings → Tools → File Drop → Shake to drop**
+- Three quick horizontal direction reversals trigger the shelf
+
 <Tip>
   Select several files in Finder and drag them in together. File Drop keeps
   them as one batch.
@@ -38,3 +50,5 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>L</kbd> from any app.
 - Up to **256 MB** per upload.
 - Links **expire automatically after 90 days**.
 - **Files only leave this Mac when you click Upload**, never on drop.
+- Closing the window no longer cancels the upload — it continues in the
+  background.

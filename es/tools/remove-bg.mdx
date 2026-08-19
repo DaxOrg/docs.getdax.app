@@ -1,0 +1,55 @@
+---
+title: "Remove BG"
+description: "Recorta el sujeto de una imagen, en el dispositivo."
+icon: "scissors"
+---
+
+**Remove BG** extrae el sujeto de una imagen y lo coloca sobre
+transparencia. Se ejecuta completamente en tu Mac usando Apple Vision: sin
+subida, sin clave de API, sin red necesaria.
+
+## Cómo abrirlo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>D</kbd> desde cualquier app.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Elige una fuente">
+    Elige **Select an Area** para arrastrar un recuadro en pantalla, o
+    **Choose a File** para abrir una imagen desde disco. La opción se
+    pregunta cada vez que pulsas el atajo.
+  </Step>
+  <Step title="Mira el recorte">
+    El sujeto aparece sobre transparencia en un visor a pantalla completa.
+    Desplázate para hacer zoom, arrastra para mover, doble clic para ver 1:1.
+  </Step>
+  <Step title="Úsalo">
+    El PNG transparente ya está en tu portapapeles. También se guarda en el
+    Escritorio y opcionalmente se sube para obtener un enlace compartible.
+  </Step>
+</Steps>
+
+## Qué obtienes
+
+- **Portapapeles:** un PNG transparente, siempre.
+- **Escritorio:** guardado como `Cutout.png` (numerado automáticamente si ya
+  existe uno). Desactívalo en Settings.
+- **Enlace:** subido para obtener una URL compartible. Desactívalo en
+  Settings.
+
+Aparece un toast con chips para alternar entre copiar la imagen, copiar el
+enlace o mostrar el archivo en Finder.
+
+## Ajustes
+
+Settings → Tools → Remove BG:
+
+- **Also save the cutout to the Desktop** -- activado por defecto.
+- **Also upload the cutout for a link** -- activado por defecto. Esta es la
+  única parte de la herramienta que sale de tu Mac.
+
+## Privacidad
+
+Todo se ejecuta en el dispositivo usando macOS Vision. Ningún dato de imagen
+sale de tu Mac a menos que actives la opción de subir para enlace.

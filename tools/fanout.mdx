@@ -1,45 +1,22 @@
 ---
-title: "Fanout"
-description: "Open a terminal in each of your repos with your coding agent already running, tiled side by side."
+title: "Fanout (retired)"
+description: "Fanout has been retired in v2.33.0. Use Herdr instead."
 icon: "grid-2"
 ---
 
-**Fanout** triggers one **profile** and Dax opens a terminal in each of its
-repos with your coding agent already running, tiled side by side. A whole dev
-setup in one keystroke. Works fully offline.
+<Warning>
+  **Fanout has been retired** as of Dax 2.33.0. Saved Fanout profiles have
+  been carried over to [Herdr](/tools/herdr) projects automatically.
+</Warning>
 
-## Open it
+Fanout opened a terminal in each of your repos with your coding agent
+already running, tiled side by side. This functionality is now part of
+[Herdr](/tools/herdr), which does everything Fanout did and adds tabs, a
+sidebar, split-by-drag, and remote server support over SSH.
 
-Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>D</kbd> from any app.
+## Migrating
 
-## How it works
+Your existing Fanout profiles are imported into Herdr automatically on
+first launch after the update. No action needed.
 
-<Steps>
-  <Step title="Build a profile">
-    In **Settings → Tools → Fanout**, name your profile and add the repos you
-    work on together. Drag folders in or use **Add Repos…**.
-  </Step>
-  <Step title="Pick a profile">
-    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>D</kbd> and choose a profile.
-  </Step>
-  <Step title="Work across repos">
-    Dax opens **one terminal per repo**, `cd`s into each, starts your agent,
-    and **tiles the new windows** across the screen.
-  </Step>
-</Steps>
-
-## Per-profile options
-
-- **Agent command:** what runs in every repo's terminal (defaults to `claude`;
-  pick from the Agents menu or type your own). Each repo can override it.
-- **YOLO:** add the agent's skip-permissions flag.
-- **Also skip Claude's folder-trust prompt:** mark each folder trusted so
-  Claude drops straight in (a backup of `~/.claude.json` is saved first).
-- **Arrange:** how the new windows are tiled (e.g. side by side). Tiling uses
-  Dax's existing Accessibility access and **falls back to just opening the
-  terminals** if it can't place them.
-
-## Privacy
-
-Entirely local. It opens terminals and runs your chosen command on your Mac;
-nothing is sent anywhere.
+See the [Herdr docs](/tools/herdr) for the full guide.

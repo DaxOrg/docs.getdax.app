@@ -1,12 +1,13 @@
 ---
 title: "Herdr"
-description: "Run a herd of coding agents in one window (Claude Code, Codex, Gemini, whichever you use) side by side in the same project."
+description: "Run a herd of coding agents in one window — locally or on a server over SSH."
 icon: "grid-2-plus"
 ---
 
 **Herdr** is mission control for coding agents. Connect a folder and it opens
 a window of live terminals running side by side. Add agents from a menu,
-split by dragging, and watch them all work.
+split by dragging, and watch them all work — on your Mac or on a server you
+connect over SSH.
 
 Powered by [Herdr](https://herdr.dev), a terminal multiplexer with built-in
 agent detection. Dax handles the window, the sidebar, and the installs; Herdr
@@ -33,14 +34,63 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> from any app.
   </Step>
 </Steps>
 
+## Tabs
+
+Organize your herd with tabs:
+
+- <kbd>⌘</kbd><kbd>T</kbd> to open a new tab
+- <kbd>⌘</kbd><kbd>N</kbd> to add an agent
+- <kbd>⌃</kbd><kbd>Tab</kbd> to walk the tab bar
+- <kbd>⌘</kbd><kbd>W</kbd> to close an agent (not the whole window)
+- Name a tab while you still remember what it was for
+
+The sidebar groups agents under their tab, one line each.
+
 ## The sidebar
 
 A tree that tells you what's running:
 
-- **Groups** hold agents and show the project folder
-- **Agents** show their brand icon and say when they're working
+- **Tabs** hold agents, each showing brand and status at a glance
 - Rename anything, close anything, collapse the sidebar out of the way
-- Drag to reorder
+- A collapsed sidebar still groups by tab instead of one flat list
+
+## Running on a server
+
+Connect a server and Herdr reaches it down a single SSH forward — same
+window, same tabs, same agents, running on the machine that has the repo,
+the RAM and the uptime.
+
+<Steps>
+  <Step title="Add a server">
+    Go to **Settings → Herdr → Servers** and add a host: address, user, port,
+    and a key file or password. Passwords are stored in your Keychain.
+  </Step>
+  <Step title="Switch to the server">
+    Pick the server from the switcher above the sidebar tree. Its projects
+    and live terminals appear exactly as local ones do.
+  </Step>
+  <Step title="Install herdr automatically">
+    If the server doesn't have herdr yet, Dax installs it automatically. On
+    IPv6-only servers where GitHub is unreachable, Dax sends the binary over
+    the SSH connection already open.
+  </Step>
+</Steps>
+
+<Note>
+  Your `~/.ssh/config`, agent, and `known_hosts` still apply. No new dependency
+  is added — everything goes through the SSH connection.
+</Note>
+
+### Remote Panel
+
+A button in the Herdr toolbar (shown only for servers) opens the Remote Panel
+with five tabs:
+
+- **Coding Agents** — what's installed, with a one-click update
+- **Services & Ports** — listening processes and open ports
+- **Web Servers & SSL** — sites grouped by domain, with certificates and expiry
+- **Usage** — disk, memory, load, and a live console
+- **Utilities** — common server tools
 
 ## Splitting
 
@@ -73,5 +123,6 @@ window.
 
 ## Privacy
 
-Everything runs locally. Your terminals, your agents, your code: nothing
-leaves your Mac.
+Everything runs locally or through a direct SSH connection to your own
+server. Your terminals, your agents, your code: nothing goes through the Dax
+backend.

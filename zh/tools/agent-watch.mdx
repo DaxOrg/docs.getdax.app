@@ -1,0 +1,176 @@
+---
+title: "Agent Watch"
+description: "无需离开当前应用，即可看到每个 Claude Code 会话的状态（工作中、等你操作、已完成）。"
+icon: "eye"
+---
+
+**Agent Watch** 替你盯着 Claude Code 会话。当某个会话完成或需要你的关注时，
+它会立即通知你，并让你直接跳转过去，或者在通知气泡中直接回复而无需切换应用。
+
+一切都在你的 Mac 上运行。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="运行你的 Agent">
+    在任意终端（Terminal、iTerm 或 Ghostty）中启动一个或多个 Claude Code 会话。
+    Agent Watch 会自动检测到它们。
+  </Step>
+  <Step title="继续工作">
+    当某个会话完成或在等你时（权限提示、提问），会弹出一个通知气泡。点击气泡
+    跳转到对应终端，或直接在气泡中输入回复。
+  </Step>
+  <Step title="打开面板">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> 一览所有实时会话。每一行显示
+    项目名称、Agent 最后说了什么、状态指示灯以及处于该状态的时长。按
+    <kbd>↩</kbd> 跳转到选中的会话。
+  </Step>
+</Steps>
+
+## 会话状态
+
+每个会话处于三种状态之一：
+
+| 状态 | 指示灯 | 生物 | 含义 |
+|---|---|---|---|
+| **工作中** | 🟢 绿色 | 行走 | Agent 正在输出内容或某个工具正在运行。 |
+| **等你操作** | 🟡 黄色 | 来回挪动 | 工具调用沉默了足够长的时间，看起来像是权限提示。 |
+| **已完成** | ⚫ 灰色 | 静止不动 | Agent 已交还控制权。轮到你了。 |
+
+状态指示灯和生物动画表达的是同一个信息，所以你可以一眼扫过面板，无需停下来
+阅读文字。
+
+## 角色
+
+每个项目都有自己的像素小生物，由其文件夹路径决定。同一个仓库，同一个角色，
+每次都是。屏幕上不会有两个一样的会话。
+
+当两个或多个会话共享同一个文件夹时，它们会在头像角落和名称中标上编号
+（"Dax 1"、"Dax 2"），这样你总能分辨它们。
+
+它们在会话工作时行走，在等你操作时来回挪动，完成后静止不动。
+
+<Accordion title="认识全部 21 个角色">
+
+<div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/fin@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Fin</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Fish</span> <span style={{fontSize: "13px"}}> 永不停歇，即使睡着也不停。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/pip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Pip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bird</span> <span style={{fontSize: "13px"}}> 小小的，嗓门大，总是第一个注意到什么。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/bo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Bo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Puffer</span> <span style={{fontSize: "13px"}}> 一丁点儿刺激就膨胀，消下去也一样快。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/moss@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Moss</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Sprout</span> <span style={{fontSize: "13px"}}> 每天长一点，拒绝被催促。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/nub@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nub</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crawler</span> <span style={{fontSize: "13px"}}> 很多条腿，一个方向。不会掉头。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/slate@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Slate</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Rock</span> <span style={{fontSize: "13px"}}> 大约一季挪动一次，而且得问两遍才行。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/dust@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Dust</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Moth</span> <span style={{fontSize: "13px"}}> 总被最亮的东西吸引，而那东西通常是错的。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/blip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Blip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Tadpole</span> <span style={{fontSize: "13px"}}> 还在变成什么的过程中。对此很满意。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/twig@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Twig</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Stick insect</span> <span style={{fontSize: "13px"}}> 一动不动，并认为这样就隐身了。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/coral@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coral</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Jellyfish</span> <span style={{fontSize: "13px"}}> 跟着水流飘到哪算哪，还管这叫计划。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/scale@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Scale</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Lizard</span> <span style={{fontSize: "13px"}}> 晒太阳，然后一溜烟跑掉。没有中间状态。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/nipper@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nipper</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crab</span> <span style={{fontSize: "13px"}}> 横着走是一个完全正当的方向。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/coil@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coil</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Snail</span> <span style={{fontSize: "13px"}}> 背着全部家当，依然能到达。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/hoot@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Hoot</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Owl</span> <span style={{fontSize: "13px"}}> 什么都看到了，什么都不说。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/echo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Echo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Bat</span> <span style={{fontSize: "13px"}}> 朝着黑暗大喊，然后听回声导航。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/husk@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Husk</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Beetle</span> <span style={{fontSize: "13px"}}> 全副武装，深思熟虑，悄悄地确信自己是对的。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/croak@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Croak</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Frog</span> <span style={{fontSize: "13px"}}> 一动不动地坐着，然后就不在了。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/ink@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Ink</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Squid</span> <span style={{fontSize: "13px"}}> 靠留下一团墨云来解决大多数问题。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/cap@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Cap</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Mushroom</span> <span style={{fontSize: "13px"}}> 一夜之间冒出来，表现得像一直住在这里。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/star@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Star</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Starfish</span> <span style={{fontSize: "13px"}}> 五条腿，没有正面，也没什么特别的计划。</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/mite@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Mite</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Ant</span> <span style={{fontSize: "13px"}}> 小小的，不知疲倦，扛着比自己大四倍的东西。</span>
+  </div>
+</div>
+
+每个角色都是 12 × 12 像素网格，有自己的颜色，既能通过形状辨认也能通过颜色
+辨认，所以"那只橙色的螃蟹"永远指的是 Nipper。
+
+</Accordion>
+
+## 从通知气泡中回复
+
+当某个会话在等你时，通知气泡中包含一个文本框。输入回复然后按 Return。Dax 会
+找到运行该会话的终端，将其前置，并粘贴你的回复。支持 Terminal、iTerm 和
+Ghostty。
+
+如果无法识别终端，回复会放到剪贴板上，并提示你手动粘贴。
+
+## Hooks（可选，推荐）
+
+没有 hooks 时，Dax 每隔几秒读取 Agent 的 trace 文件来*推断*它是否在等待。
+安装 hooks 后，Claude Code 会直接告诉 Dax，速度更快且准确无误。
+
+在 **Settings → Tools → Agent Watch → Install Hooks** 中安装。这会在
+`~/.claude/settings.json` 中添加两个条目（会先备份）：
+
+- **Notification：** 在会话遇到权限提示或完成的瞬间触发。
+- **Stop：** 在最终回复出来时送达。
+
+Remove Hooks 只会移除 Dax 的条目，其他内容保持不变。
+
+## 自然语言摘要
+
+Agent 写的是段落，通知气泡只有一行的空间。开启 **Say it in plain language**
+后，Dax 会用 Apple 的设备端模型将 Agent 的消息改写为一句话，无需联网、无费用、
+离线可用。需要 macOS 26 和 Apple Intelligence。
+
+## 选项
+
+Settings → Tools → Agent Watch：
+
+- **A session finishes：** 一个回合完成时弹出通知。
+- **One is waiting on me：** 遇到权限提示或提问时弹出通知。
+- **Play a sound：** 在通知的同时播放提示音。
+- **Pause watching：** 暂停通知而不禁用工具。
+- **Say it in plain language：** 使用设备端 AI 生成 Agent 消息的摘要。
+- **Let me answer from the toast：** 在"等你操作"的通知中显示回复框。
+
+## 隐私
+
+完全在你的 Mac 上运行。Agent Watch 读取 Claude Code 已写入磁盘的 trace 文件，
+从不联网。可选的摘要使用 Apple 的设备端模型，你的代码不会离开本地。
+
+## 支持的 Agent
+
+目前仅支持 Claude Code。Codex 会写入 Dax 可以读取的 trace 文件，但没有 hook
+来直接报告状态，所以其会话暂不被监控，而非半支持。

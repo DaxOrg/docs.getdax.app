@@ -32,7 +32,25 @@ app.
   </Step>
 </Steps>
 
+## Partager sous forme de lien
+
+Au lieu d'injecter dans un dossier local, choisissez **Share as a link**
+en haut de la palette de projets. Le fichier est mis en ligne et vous
+obtenez une URL que n'importe quel agent distant (ou serveur Herdr) peut
+récupérer avec `curl`.
+
+- **Expiration :** les liens expirent après une durée définie (7 jours par
+  défaut, configurable jusqu'à 30 jours).
+- **Gérer les liens :** consultez et révoquez les liens publiés depuis le
+  même écran.
+
+<Tip>
+  PRD Maker utilise aussi cette infrastructure de liens pour partager les
+  PRD finalisés avec des agents distants.
+</Tip>
+
 ## Confidentialité
 
-Local. La liste des projets provient de traces sur disque ; le fichier
-est écrit localement.
+Local par défaut. La liste des projets provient de traces sur disque ; le
+fichier est écrit localement. Le partage sous forme de lien est la seule
+action qui envoie le fichier hors de votre Mac.

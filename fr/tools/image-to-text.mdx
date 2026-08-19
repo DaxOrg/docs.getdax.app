@@ -1,0 +1,59 @@
+---
+title: "Image to Text"
+description: "Extrayez le texte de n'importe quelle image (capture d'écran, photo, scan) et copiez-le dans votre presse-papiers."
+icon: "scanner"
+---
+
+**Image to Text** lit le texte contenu dans n'importe quelle image grâce au
+moteur de reconnaissance intégré de votre Mac et le copie dans votre
+presse-papiers, prêt à coller. Fonctionne entièrement hors ligne. Rien ne
+quitte votre Mac.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>R</kbd> depuis n'importe quelle
+app.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Récupérez une image">
+    Copiez une image dans votre presse-papiers (capture d'écran, photo, tout
+    ce qui contient du texte), ou laissez Dax capturer une zone de votre
+    écran.
+  </Step>
+  <Step title="Appuyez sur le raccourci">
+    Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>R</kbd>. Dax lit le texte de
+    l'image instantanément, sans attendre de serveur.
+  </Step>
+  <Step title="Collez le texte">
+    Le texte reconnu atterrit dans votre presse-papiers. Collez-le où vous
+    en avez besoin.
+  </Step>
+</Steps>
+
+<Tip>
+  **Deux façons de capturer.** Par défaut, Image to Text lit l'image
+  présente dans votre presse-papiers. Dans **Settings → Tools → Image to
+  Text**, changez la source en **Live Selection** pour dessiner un cadre à
+  l'écran, pratique pour extraire du texte d'une fenêtre sans faire de
+  capture d'écran au préalable.
+</Tip>
+
+## Ce qu'il peut lire
+
+Tout ce que le framework Vision d'Apple peut reconnaître : captures d'écran,
+photos de documents, écriture manuscrite, code dans un terminal, texte dans
+une maquette de design, reçus, panneaux, et la plupart des éléments
+contenant du texte lisible.
+
+## Dax Shots
+
+Chaque image que vous confiez à cet outil est enregistrée dans
+`~/Pictures/Dax Shots/Image to Text`, nommée comme macOS nomme les captures
+d'écran, pour que vous puissiez toujours retrouver l'original.
+
+## Confidentialité
+
+Entièrement local. La reconnaissance de texte s'exécute sur le moteur
+neuronal de votre Mac ; l'image ne quitte jamais la machine.

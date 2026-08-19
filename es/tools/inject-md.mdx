@@ -29,7 +29,25 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd> desde cualquier app.
   </Step>
 </Steps>
 
+## Compartir como enlace
+
+En lugar de inyectar en una carpeta local, elige **Share as a link** desde
+la parte superior de la paleta de proyectos. El archivo se sube y obtienes
+una URL que cualquier agente remoto (o servidor Herdr) puede descargar con
+`curl`.
+
+- **Caducidad:** los enlaces caducan tras un período determinado (7 días
+  por defecto, configurable hasta 30 días).
+- **Gestionar enlaces:** visualiza y revoca enlaces publicados desde la
+  misma pantalla.
+
+<Tip>
+  PRD Maker también usa esta infraestructura de enlaces para compartir PRDs
+  terminados con agentes remotos.
+</Tip>
+
 ## Privacidad
 
-Local. La lista de proyectos viene de registros en disco; el archivo se
-escribe localmente.
+Local por defecto. La lista de proyectos viene de registros en disco; el
+archivo se escribe localmente. Compartir como enlace es la única acción que
+envía el archivo fuera de tu Mac.

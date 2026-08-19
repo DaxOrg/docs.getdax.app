@@ -1,0 +1,93 @@
+---
+title: "PRD Maker"
+description: "Di lo que quieres construir y obtén el brief."
+icon: "file-lines"
+---
+
+**PRD Maker** escribe el brief de lo que estás a punto de construir. Di lo
+que quieres hacer, responde unas preguntas, y obtén un PRD para revisar más
+un prompt inicial ya en tu portapapeles, listo para pegar en un agente de
+código.
+
+## Cómo abrirlo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>E</kbd> desde cualquier app.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Describe lo que quieres hacer">
+    Abre el compositor y escribe una descripción corta de lo que quieres
+    construir.
+  </Step>
+  <Step title="Elige un modo de preguntas">
+    Elige entre tres modos antes o durante el paso de la idea. Pulsa
+    <kbd>⇥</kbd> para avanzar, <kbd>⇧</kbd><kbd>⇥</kbd> para retroceder.
+  </Step>
+  <Step title="Responde las preguntas">
+    PRD Maker hace preguntas de clarificación una a una. Escribe tu
+    respuesta o usa una sugerencia
+    (<kbd>⌘</kbd><kbd>1</kbd>--<kbd>3</kbd>). Puedes volver atrás y editar
+    cualquier respuesta anterior.
+  </Step>
+  <Step title="Obtén el documento">
+    Aparece un PRD completo con un prompt inicial ya en tu portapapeles. El
+    documento se guarda en tu Mac y opcionalmente se comparte como enlace.
+  </Step>
+</Steps>
+
+## Modos de preguntas
+
+| Modo | Preguntas | Estilo |
+| --- | :---: | --- |
+| **Dax Standard** | 4 | Para quién es, lo esencial que debe hacer, qué queda fuera del v1 y plataforma/restricciones |
+| **Grill Me** | 9 (3 rondas) | Adversarial: encuentra los puntos débiles de la idea |
+| **Office Hours** | 6 | Validación de demanda: pide evidencia de que alguien realmente quiere esto |
+
+Puedes escribir el PRD antes de tiempo: a partir de la pregunta 2, pulsa
+<kbd>⌘</kbd><kbd>D</kbd> para saltar las preguntas restantes y generar el
+documento con lo que hayas respondido hasta ahora.
+
+## Sugerencias
+
+Cada pregunta viene con hasta tres respuestas sugeridas. Úsalas con
+<kbd>⌘</kbd><kbd>1</kbd>, <kbd>⌘</kbd><kbd>2</kbd> o
+<kbd>⌘</kbd><kbd>3</kbd>, o haz clic en una. Se generan a partir de tu
+idea y respuestas anteriores.
+
+## Dónde se guardan los PRDs
+
+Cada PRD se guarda como Markdown en **~/Documents/Dax Specs/**, con el
+nombre del proyecto y una marca de tiempo. El prompt inicial está al final
+del mismo archivo. Nada se borra: los antiguos se quedan hasta que los
+muevas.
+
+Abre la carpeta desde **Settings → Tools → PRD Maker → Open Specs Folder**.
+
+## Compartir como enlace
+
+Tras escribirlo, el PRD se sube automáticamente y queda disponible como
+enlace compartible. Usa **Copy for agent** para copiar un comando fetch que
+un agente remoto puede ejecutar. Los enlaces caducan (7 días por defecto).
+
+Si estás sin conexión o no has iniciado sesión, el PRD se escribe y guarda
+localmente de todas formas: el enlace es una conveniencia, no un requisito.
+
+## Atajos
+
+| Acción | Atajo |
+| --- | --- |
+| Enviar respuesta | <kbd>↩</kbd> |
+| Usar sugerencia 1 / 2 / 3 | <kbd>⌘</kbd><kbd>1</kbd> / <kbd>⌘</kbd><kbd>2</kbd> / <kbd>⌘</kbd><kbd>3</kbd> |
+| Escribir PRD ahora (desde P2) | <kbd>⌘</kbd><kbd>D</kbd> |
+| Copiar prompt inicial | <kbd>⌘</kbd><kbd>C</kbd> |
+| Copiar PRD completo | <kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd> |
+| Mostrar en Finder | <kbd>⌘</kbd><kbd>R</kbd> |
+| Empezar de nuevo | <kbd>⌘</kbd><kbd>N</kbd> |
+| Cerrar | <kbd>esc</kbd> |
+
+## Privacidad
+
+Solo se envía el texto que escribes, y solo cuando pulsas <kbd>↩</kbd>. El
+PRD terminado se escribe en tu carpeta Documents, no en el servidor. El
+enlace compartible opcional es la única parte que sale de tu Mac.

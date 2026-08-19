@@ -29,7 +29,23 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd> from any app.
   </Step>
 </Steps>
 
+## Share as a link
+
+Instead of injecting into a local folder, choose **Share as a link** from
+the top of the project palette. The file uploads and you get a URL that any
+remote agent (or Herdr server) can fetch with `curl`.
+
+- **Expiry:** links expire after a set period (default 7 days, configurable
+  up to 30 days).
+- **Manage links:** view and revoke published links from the same screen.
+
+<Tip>
+  PRD Maker also uses this link infrastructure to share finished PRDs with
+  remote agents.
+</Tip>
+
 ## Privacy
 
-Local. The project list comes from on-disk traces; the file is written
-locally.
+Local by default. The project list comes from on-disk traces; the file is
+written locally. Sharing as a link is the one action that sends the file
+off your Mac.

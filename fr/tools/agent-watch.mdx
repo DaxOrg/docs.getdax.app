@@ -1,0 +1,201 @@
+---
+title: "Agent Watch"
+description: "Voyez ce que chaque session Claude Code en cours fait (travaille, vous attend, ou a terminé) sans quitter ce que vous faites."
+icon: "eye"
+---
+
+**Agent Watch** surveille vos sessions Claude Code pour que vous n'ayez pas
+à le faire. Il vous prévient dès qu'une session termine ou a besoin de
+votre attention, et vous permet d'y accéder directement, ou de répondre
+depuis le toast sans changer d'app.
+
+Tout reste sur votre Mac.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> depuis n'importe quelle
+app.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Lancez vos agents">
+    Démarrez une ou plusieurs sessions Claude Code dans n'importe quel
+    terminal (Terminal, iTerm ou Ghostty). Agent Watch les détecte
+    automatiquement.
+  </Step>
+  <Step title="Continuez à travailler">
+    Un toast apparaît quand une session termine ou vous attend (une demande
+    de permission, une question). Cliquez sur le toast pour accéder à ce
+    terminal, ou tapez une réponse directement depuis le toast.
+  </Step>
+  <Step title="Ouvrez la palette">
+    Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> pour voir toutes les
+    sessions en cours d'un coup d'oeil. Chaque ligne affiche le nom du
+    projet, le dernier message de l'agent, un voyant d'état et depuis
+    combien de temps il est dans cet état. Appuyez sur <kbd>↩</kbd> pour
+    accéder à la session sélectionnée.
+  </Step>
+</Steps>
+
+## États des sessions
+
+Chaque session se trouve dans l'un des trois états suivants :
+
+| État | Voyant | Créature | Signification |
+|---|---|---|---|
+| **Working** | 🟢 Vert | Marche | L'agent produit du contenu ou un outil est en cours d'exécution. |
+| **Needs you** | 🟡 Jaune | Se dandine | Un appel d'outil est resté silencieux assez longtemps pour ressembler à une demande de permission. |
+| **Finished** | ⚫ Gris | Immobile | L'agent vous a rendu la main. C'est à vous. |
+
+Le voyant d'état et l'animation de la créature disent la même chose, pour
+que vous puissiez lire la palette d'un coup d'oeil sans avoir à décrypter
+du texte.
+
+## Personnages
+
+Chaque projet a sa propre créature en pixels, choisie à partir du chemin de
+son dossier. Même dépôt, même personnage, à chaque fois. Aucune session à
+l'écran ne se ressemble jamais.
+
+Quand deux sessions ou plus partagent le même dossier, elles sont numérotées
+("Dax 1", "Dax 2") dans le coin de leur avatar et dans leur nom, pour que
+vous puissiez toujours les distinguer.
+
+Elles marchent quand une session travaille, se dandinent quand l'une vous
+attend, et restent immobiles une fois terminée.
+
+<Accordion title="Découvrez les 21 personnages">
+
+<div style={{display: "flex", flexDirection: "column", gap: "2px"}}>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/fin@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Fin</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Poisson</span> <span style={{fontSize: "13px"}}> Ne cesse jamais de bouger, même endormi.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/pip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Pip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Oiseau</span> <span style={{fontSize: "13px"}}> Petit, bruyant, et le premier à remarquer quoi que ce soit.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/bo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Bo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Poisson-globe</span> <span style={{fontSize: "13px"}}> Se gonfle à la moindre provocation et se dégonfle tout aussi vite.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/moss@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Moss</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Pousse</span> <span style={{fontSize: "13px"}}> Grandit un peu chaque jour et refuse qu'on le presse.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/nub@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nub</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Rampant</span> <span style={{fontSize: "13px"}}> Beaucoup de pattes, une seule direction. Ne fait jamais demi-tour.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/slate@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Slate</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Rocher</span> <span style={{fontSize: "13px"}}> Bouge environ une fois par saison, et seulement si on le demande deux fois.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/dust@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Dust</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Papillon de nuit</span> <span style={{fontSize: "13px"}}> Attiré par ce qui brille le plus, ce qui est invariablement la mauvaise chose.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/blip@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Blip</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Têtard</span> <span style={{fontSize: "13px"}}> Toujours en devenir. Parfaitement à l'aise avec ça.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/twig@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Twig</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Phasme</span> <span style={{fontSize: "13px"}}> Reste parfaitement immobile et suppose que cela le rend invisible.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/coral@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coral</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Méduse</span> <span style={{fontSize: "13px"}}> Dérive où le courant l'emporte et appelle ça un plan.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/scale@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Scale</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Lézard</span> <span style={{fontSize: "13px"}}> Se prélasse, puis détale. Pas de réglage intermédiaire.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/nipper@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Nipper</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Crabe</span> <span style={{fontSize: "13px"}}> De côté est une direction parfaitement valable.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/coil@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Coil</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Escargot</span> <span style={{fontSize: "13px"}}> Transporte tout ce qu'il possède et arrive quand même.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/hoot@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Hoot</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Hibou</span> <span style={{fontSize: "13px"}}> Voit tout et n'en mentionne rien.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/echo@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Echo</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Chauve-souris</span> <span style={{fontSize: "13px"}}> Navigue en criant dans le noir et en écoutant.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/husk@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Husk</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Scarabée</span> <span style={{fontSize: "13px"}}> Blindé, méthodique, et discrètement convaincu d'avoir raison.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/croak@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Croak</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Grenouille</span> <span style={{fontSize: "13px"}}> Reste parfaitement immobile, puis n'est plus là.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/ink@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Ink</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Calmar</span> <span style={{fontSize: "13px"}}> Résout la plupart des problèmes en laissant un nuage derrière lui.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/cap@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Cap</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Champignon</span> <span style={{fontSize: "13px"}}> Apparu du jour au lendemain et se comporte comme s'il avait toujours vécu là.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/star@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Star</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Étoile de mer</span> <span style={{fontSize: "13px"}}> Cinq bras, pas de devant, pas de plan particulier.</span>
+  </div>
+  <div style={{display: "flex", alignItems: "center", gap: "10px", padding: "4px 0"}}>
+    <img src="/images/characters/mite@4x.png" width="24" style={{imageRendering: "pixelated"}} /> <strong>Mite</strong> <span style={{color: "var(--text-tertiary)", fontSize: "13px"}}>Fourmi</span> <span style={{fontSize: "13px"}}> Petite, infatigable, et transportant quelque chose quatre fois sa taille.</span>
+  </div>
+</div>
+
+Chaque personnage est une grille de 12 x 12 pixels avec sa propre couleur,
+pour qu'il se lise par la forme *et* par la couleur : « le crabe orange »
+désigne toujours Nipper.
+
+</Accordion>
+
+## Répondre depuis le toast
+
+Quand une session vous attend, le toast inclut un champ de texte. Tapez
+votre réponse et appuyez sur Return. Dax trouve le terminal exécutant cette
+session, le met au premier plan et colle votre réponse. Fonctionne avec
+Terminal, iTerm et Ghostty.
+
+Si le terminal ne peut pas être identifié, votre réponse va dans le
+presse-papiers et Dax vous indique de la coller vous-même.
+
+## Hooks (optionnel, recommandé)
+
+Sans hooks, Dax lit les fichiers de trace de l'agent toutes les quelques
+secondes et *déduit* s'il attend. Avec les hooks installés, Claude Code
+informe Dax directement, ce qui est plus rapide et certain.
+
+Installez-les depuis **Settings → Tools → Agent Watch → Install Hooks**.
+Cela ajoute deux entrées à `~/.claude/settings.json` (sauvegardé au
+préalable) :
+
+- **Notification :** se déclenche dès qu'une session atteint une demande de
+  permission ou termine.
+- **Stop :** transmet la réponse finale dès qu'elle arrive.
+
+Remove Hooks ne supprime que les entrées de Dax et laisse tout le reste
+intact.
+
+## Résumés en langage simple
+
+Ce que les agents écrivent, ce sont des paragraphes. Un toast n'a de place
+que pour une ligne. Quand **Say it in plain language** est activé, Dax
+reformule le message de l'agent en une phrase grâce au modèle on-device
+d'Apple, sans réseau, sans coût, et fonctionne hors ligne. Nécessite macOS
+26 et Apple Intelligence.
+
+## Options
+
+Settings → Tools → Agent Watch :
+
+- **A session finishes :** toast quand un tour est terminé.
+- **One is waiting on me :** toast lors d'une demande de permission ou d'une
+  question.
+- **Play a sound :** signal sonore accompagnant le toast.
+- **Pause watching :** arrête les notifications sans désactiver l'outil.
+- **Say it in plain language :** résumé IA on-device du message de l'agent.
+- **Let me answer from the toast :** champ de réponse dans les toasts
+  « needs you ».
+
+## Confidentialité
+
+Entièrement sur votre Mac. Agent Watch lit les fichiers de trace que Claude
+Code écrit déjà sur le disque et ne touche jamais au réseau. Le résumé
+optionnel utilise le modèle on-device d'Apple, donc votre code reste local.
+
+## Agents supportés
+
+Claude Code uniquement pour le moment. Codex écrit des fichiers de trace que
+Dax peut lire, mais ne dispose pas de hook pour signaler son état
+directement, donc ses sessions ne sont pas surveillées plutôt que
+partiellement supportées.

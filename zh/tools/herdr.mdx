@@ -1,0 +1,117 @@
+---
+title: "Herdr"
+description: "在一个窗口里运行一群编程 Agent —— 本地或通过 SSH 连接服务器。"
+icon: "grid-2-plus"
+---
+
+**Herdr** 是编程 Agent 的控制中心。连接一个文件夹，它会打开一个窗口，多个
+实时终端并排运行。从菜单中添加 Agent，通过拖拽分割面板，尽收眼底 —— 无论
+在你的 Mac 上还是通过 SSH 连接的服务器上。
+
+由 [Herdr](https://herdr.dev) 驱动，一个内置 Agent 检测的终端多路复用器。
+Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="连接文件夹">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> 或前往 **Settings → Herdr**，
+    连接你正在工作的项目文件夹。
+  </Step>
+  <Step title="添加 Agent">
+    点击 **+** 或使用 Agent 菜单添加 Claude Code、Codex、Gemini 或任何其他
+    Agent。每个 Agent 在自己的终端面板中打开。
+  </Step>
+  <Step title="分割与排列">
+    将一个面板拖向另一个面板的边缘以分割空间。**Even Out Terminals** 可以均匀
+    分配空间而不重启任何进程。
+  </Step>
+</Steps>
+
+## 标签页
+
+用标签页组织你的 Agent 群：
+
+- <kbd>⌘</kbd><kbd>T</kbd> 打开新标签页
+- <kbd>⌘</kbd><kbd>N</kbd> 添加 Agent
+- <kbd>⌃</kbd><kbd>Tab</kbd> 切换标签页
+- <kbd>⌘</kbd><kbd>W</kbd> 关闭 Agent（不是整个窗口）
+- 趁还记得的时候给标签页命名
+
+侧边栏按标签页分组显示 Agent，每个占一行。
+
+## 侧边栏
+
+一棵树，让你一目了然地知道什么在运行：
+
+- **标签页**包含 Agent，每个 Agent 一目了然地显示品牌和状态
+- 可以重命名、关闭任何项，也可以收起侧边栏
+- 收起的侧边栏仍然按标签页分组，而不是一个扁平列表
+
+## 在服务器上运行
+
+连接一台服务器，Herdr 通过一条 SSH 转发到达它 —— 同样的窗口、同样的标签页、
+同样的 Agent，运行在拥有仓库、内存和持续运行时间的机器上。
+
+<Steps>
+  <Step title="添加服务器">
+    前往 **Settings → Herdr → Servers**，添加一个主机：地址、用户名、端口，
+    以及密钥文件或密码。密码存储在钥匙串中。
+  </Step>
+  <Step title="切换到服务器">
+    在侧边栏树上方的切换器中选择服务器。它的项目和实时终端会像本地一样显示。
+  </Step>
+  <Step title="自动安装 herdr">
+    如果服务器上还没有 herdr，Dax 会自动安装。在 GitHub 不可达的纯 IPv6 服务器
+    上，Dax 会通过已建立的 SSH 连接发送二进制文件。
+  </Step>
+</Steps>
+
+<Note>
+  你的 `~/.ssh/config`、agent 和 `known_hosts` 仍然有效。不会添加新的依赖 ——
+  一切都通过 SSH 连接完成。
+</Note>
+
+### Remote Panel
+
+Herdr 工具栏中的一个按钮（仅在连接服务器时显示）可以打开 Remote Panel，
+包含五个标签页：
+
+- **Coding Agents** —— 已安装的 Agent，支持一键更新
+- **Services & Ports** —— 监听的进程和开放的端口
+- **Web Servers & SSL** —— 按域名分组的站点，含证书及到期时间
+- **Usage** —— 磁盘、内存、负载及实时控制台
+- **Utilities** —— 常用服务器工具
+
+## 分割
+
+将一个面板拖向另一个的边缘（左、右、上、下），空间会在它们之间分割。绿色填充
+目标区域以显示分割位置。之后分隔线可以拖动。
+
+**Even Out Terminals**（从菜单中选择）可以均匀重新分配空间而不重启任何进程。
+
+## Agent 检测
+
+Herdr 开箱即用地检测 19 种以上编程 Agent：Claude Code、Codex、Gemini、Cursor、
+Grok、Pi、OpenCode 等等。当某个 Agent 在面板中运行时，侧边栏会显示其品牌图标
+并报告它是在工作、被阻塞还是空闲。
+
+## 全屏
+
+绿色填充整个屏幕但不接管它。菜单栏和 Dock 保留在原处，这样一整面终端不会让你
+失去 Mac 的其余部分。
+
+## 安装 Herdr
+
+首次打开此工具时，Dax 会提供通过 Homebrew 或一行脚本安装
+[Herdr](https://herdr.dev)。安装后，它以后台服务运行，关闭窗口后会话仍然
+保持。
+
+## 隐私
+
+一切在本地运行，或通过直接的 SSH 连接到你自己的服务器。你的终端、你的 Agent、
+你的代码：没有任何东西经过 Dax 后端。
