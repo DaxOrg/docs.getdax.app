@@ -28,7 +28,8 @@
               "index",
               "quickstart",
               "how-dax-works",
-              "shortcuts"
+              "shortcuts",
+              "support"
             ]
           },
           {
@@ -87,7 +88,8 @@
               "zh/index",
               "zh/quickstart",
               "zh/how-dax-works",
-              "zh/shortcuts"
+              "zh/shortcuts",
+              "zh/support"
             ]
           },
           {
@@ -146,7 +148,8 @@
               "es/index",
               "es/quickstart",
               "es/how-dax-works",
-              "es/shortcuts"
+              "es/shortcuts",
+              "es/support"
             ]
           },
           {
@@ -205,7 +208,8 @@
               "fr/index",
               "fr/quickstart",
               "fr/how-dax-works",
-              "fr/shortcuts"
+              "fr/shortcuts",
+              "fr/support"
             ]
           },
           {
