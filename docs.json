@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.34: Adding a server to Herdr shows you what happened — Test with a connection log, and two invisible failures gone. <a href='/whats-new'>See what's new →</a>"
+    "content": "New in 2.38: Markdown Viewer, custom accent colour, rebuilt palettes, and Shepherd cross-fades between machines. <a href='/whats-new'>See what's new →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
@@ -55,25 +55,21 @@
               "tools/frequent-clis",
               "tools/open-project",
               "tools/inject-md",
-              "tools/boilerplates",
               "tools/agent-watch",
               "tools/vibe-history",
-              "tools/command-history",
               "tools/image-to-text",
               "tools/secrets",
               "tools/context-fill",
               "tools/herdr",
-              "tools/prd-maker",
               "tools/remove-bg",
               "tools/clip-to-link",
               "tools/prompt-snippets",
-              "tools/clipboard-history"
+              "tools/markdown-viewer"
             ]
           },
           {
             "group": "Help & feedback",
             "pages": [
-              "tools/suggest-a-tool",
               "tools/feedback"
             ]
           }
@@ -115,25 +111,21 @@
               "zh/tools/frequent-clis",
               "zh/tools/open-project",
               "zh/tools/inject-md",
-              "zh/tools/boilerplates",
               "zh/tools/vibe-history",
-              "zh/tools/command-history",
               "zh/tools/image-to-text",
               "zh/tools/secrets",
               "zh/tools/context-fill",
               "zh/tools/herdr",
-              "zh/tools/prd-maker",
               "zh/tools/remove-bg",
               "zh/tools/clip-to-link",
               "zh/tools/agent-watch",
               "zh/tools/prompt-snippets",
-              "zh/tools/clipboard-history"
+              "zh/tools/markdown-viewer"
             ]
           },
           {
             "group": "帮助与反馈",
             "pages": [
-              "zh/tools/suggest-a-tool",
               "zh/tools/feedback"
             ]
           }
@@ -175,25 +167,21 @@
               "es/tools/frequent-clis",
               "es/tools/open-project",
               "es/tools/inject-md",
-              "es/tools/boilerplates",
               "es/tools/vibe-history",
-              "es/tools/command-history",
               "es/tools/image-to-text",
               "es/tools/secrets",
               "es/tools/context-fill",
               "es/tools/herdr",
-              "es/tools/prd-maker",
               "es/tools/remove-bg",
               "es/tools/clip-to-link",
               "es/tools/agent-watch",
               "es/tools/prompt-snippets",
-              "es/tools/clipboard-history"
+              "es/tools/markdown-viewer"
             ]
           },
           {
             "group": "Ayuda y comentarios",
             "pages": [
-              "es/tools/suggest-a-tool",
               "es/tools/feedback"
             ]
           }
@@ -235,25 +223,21 @@
               "fr/tools/frequent-clis",
               "fr/tools/open-project",
               "fr/tools/inject-md",
-              "fr/tools/boilerplates",
               "fr/tools/vibe-history",
-              "fr/tools/command-history",
               "fr/tools/image-to-text",
               "fr/tools/secrets",
               "fr/tools/context-fill",
               "fr/tools/herdr",
-              "fr/tools/prd-maker",
               "fr/tools/remove-bg",
               "fr/tools/clip-to-link",
               "fr/tools/agent-watch",
               "fr/tools/prompt-snippets",
-              "fr/tools/clipboard-history"
+              "fr/tools/markdown-viewer"
             ]
           },
           {
             "group": "Aide et retours",
             "pages": [
-              "fr/tools/suggest-a-tool",
               "fr/tools/feedback"
             ]
           }
