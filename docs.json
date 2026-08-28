@@ -66,12 +66,6 @@
               "tools/prompt-snippets",
               "tools/markdown-viewer"
             ]
-          },
-          {
-            "group": "Help & feedback",
-            "pages": [
-              "tools/feedback"
-            ]
           }
         ]
       },
@@ -121,12 +115,6 @@
               "zh/tools/agent-watch",
               "zh/tools/prompt-snippets",
               "zh/tools/markdown-viewer"
-            ]
-          },
-          {
-            "group": "帮助与反馈",
-            "pages": [
-              "zh/tools/feedback"
             ]
           }
         ]
@@ -178,12 +166,6 @@
               "es/tools/prompt-snippets",
               "es/tools/markdown-viewer"
             ]
-          },
-          {
-            "group": "Ayuda y comentarios",
-            "pages": [
-              "es/tools/feedback"
-            ]
           }
         ]
       },
@@ -233,12 +215,6 @@
               "fr/tools/agent-watch",
               "fr/tools/prompt-snippets",
               "fr/tools/markdown-viewer"
-            ]
-          },
-          {
-            "group": "Aide et retours",
-            "pages": [
-              "fr/tools/feedback"
             ]
           }
         ]
