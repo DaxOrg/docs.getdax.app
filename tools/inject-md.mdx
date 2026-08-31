@@ -1,15 +1,16 @@
 ---
-title: "Inject MD"
-description: "Drop AGENTS.md (or any Markdown) into any project, right where the agent will read it."
+title: "Inject MD Skill"
+description: "Drop AGENTS.md (or any Markdown) into any project, install one of Dax's agent skills, or share a file as a link."
 icon: "markdown"
 ---
 
-**Inject MD** drops a Markdown instruction file (like `AGENTS.md`) into any
-project you've worked in, right where the coding agent will read it. Works
-fully offline.
+**Inject MD Skill** drops a Markdown instruction file (like `AGENTS.md`) into
+any project you've worked in, right where the coding agent will read it. Or
+installs one of Dax's agent skills. Or hands a file to an agent running on
+another machine.
 
 <Frame>
-  <img src="/images/screenshots/inject-md.jpg" alt="Inject MD — choose a file to inject" />
+  <img src="/images/screenshots/inject-md.jpg" alt="Inject MD Skill — choose a file to inject" />
 </Frame>
 
 ## Open it
@@ -19,29 +20,71 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd> from any app.
 ## How it works
 
 <Steps>
-  <Step title="Pick the file">
-    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>, then pick which Markdown
-    file to inject (`AGENTS.md` by default).
+  <Step title="Pick what to inject">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>. The first screen has **two
+    tabs** (<kbd>⌘</kbd> <kbd>1</kbd> / <kbd>⌘</kbd> <kbd>2</kbd>):
+
+    - **My Documents** — the Markdown files this tool keeps (`AGENTS.md` by
+      default), yours to edit in Settings. Press <kbd>⌘</kbd> <kbd>O</kbd> to
+      pick any Markdown or text file on this Mac instead — the PRD or brief
+      you just wrote.
+    - **Skill Library** — agent skills written by Dax. Type to search them;
+      the highlighted one opens out so you can read it before you commit.
   </Step>
   <Step title="Pick a project">
     A palette of **every project you've run Claude Code or Codex in**
     appears, distilled from your session traces.
   </Step>
   <Step title="Inject">
-    Pick a project. The file is **written into that project's folder**,
-    exactly where the agent looks for it.
+    Pick where it goes:
+
+    - **A project** — written into that folder, exactly where the agent
+      looks for it.
+    - **Choose Folder…** — any folder on disk.
+    - **Share as a Link…** — for an agent that isn't on this Mac (documents
+      only; see below).
   </Step>
 </Steps>
 
+## Skill Library
+
+Skills are written by Dax. You can browse, search and inject them — there is
+nothing here to create your own, and that is deliberate: a skill is something
+an agent loads and acts on, and a library of those is only worth trusting with
+one author behind it. Your own instructions have their own tab.
+
+A skill is a **folder**, not a file. Injecting one writes
+`.claude/skills/<name>/` into the project, which is where Claude Code looks.
+If the folder is already there you're asked before it is replaced.
+
+Dax fetches the library and keeps a copy, so the tab works offline; when it
+is showing the cached copy rather than a fresh one, it says so.
+
+<Note>
+  A skill **cannot** be shared as a link — the link route serves one file into
+  the project root, and a skill has to land in its own folder, so the option
+  isn't offered.
+</Note>
+
+Settings → Tools → Inject MD Skill lists every skill Dax has, searchable and
+readable in full.
+
 ## Share as a link
 
-Instead of injecting into a local folder, choose **Share as a link** from
-the top of the project palette. The file uploads and you get a URL that any
-remote agent (or Herdr server) can fetch with `curl`.
+Instead of injecting into a local folder, choose **Share as a Link** from
+the project palette. The file uploads and a one-line `curl` command lands on
+your clipboard:
 
-- **Expiry:** links expire after a set period (default 7 days, configurable
-  up to 30 days).
-- **Manage links:** view and revoke published links from the same screen.
+```
+curl -fsSL -o 'AGENTS.md' 'https://daxurl.click/d/9fK2s7Qm4bVx1TpZr8Wc3d/AGENTS.md'
+```
+
+Paste that where an agent is running — a Herdr pane on a server, a terminal on
+someone else's box, a CI job — and the file lands in its folder under its own
+name.
+
+- **Expiry:** links expire after **one hour** by default. Change the window
+  or make it single-use in Settings → Tools → Inject MD Skill.
 
 <Tip>
   PRD Maker also uses this link infrastructure to share finished PRDs with
@@ -51,5 +94,7 @@ remote agent (or Herdr server) can fetch with `curl`.
 ## Privacy
 
 Local by default. The project list comes from on-disk traces; the file is
-written locally. Sharing as a link is the one action that sends the file
-off your Mac.
+written locally. Fetching the Skill Library is a download and nothing else —
+Dax sends no snippet, document, project name or search term with it. **Share
+as a Link uploads the file's contents** to a URL that anyone holding the link
+can read until it expires.

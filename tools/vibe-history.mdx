@@ -23,12 +23,18 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> from any app.
     Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd>. Your recent agent
     conversations float up as a list.
   </Step>
-  <Step title="Pick a conversation">
-    Choose the one you want to resume.
+  <Step title="Pick an action">
+    Press <kbd>⇥</kbd> to cycle between three buttons across the top:
+
+    - **Copy Resume Command** — puts `claude --resume …` on your clipboard.
+    - **Open in Terminal** — opens your terminal in that project's folder
+      with the resume command already running.
+    - **Copy Context** — puts the whole conversation on the clipboard, to
+      paste into a fresh agent.
   </Step>
   <Step title="Jump back in">
-    The **resume command** for that conversation is **typed into the
-    terminal you were in**, so you're right back where you left off.
+    Press <kbd>↩</kbd> on the conversation you want. <kbd>⌘</kbd>
+    <kbd>C</kbd> copies the resume command from any of the three modes.
   </Step>
 </Steps>
 
@@ -37,6 +43,9 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> from any app.
 Settings → Tools → Vibe History:
 
 - Toggle which agents to include: **Claude Code**, **Codex**.
+- **Open sessions in** — which terminal app **Open in Terminal** uses.
+  *Default* is whichever app your Mac already opens terminal scripts with;
+  only terminals installed on this Mac are listed.
 
 ## Privacy
 
