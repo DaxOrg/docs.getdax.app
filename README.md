@@ -1,8 +1,8 @@
 # Dax documentation
 
-The documentation site for **[Dax](https://getdax.app)** - less
-context-switching, more vibing. A macOS menu-bar app with small tools, each a
-keystroke away.
+The documentation site for **[Dax](https://getdax.app)** — an AI-powered
+productivity companion built for developers, creators, and anyone building
+with AI.
 
 Built with [Mintlify](https://mintlify.com) (`willow` theme).
 

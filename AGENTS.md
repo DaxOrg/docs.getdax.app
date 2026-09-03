@@ -2,7 +2,7 @@
 
 ## About this project
 
-This is the **official documentation site** for [Dax](https://getdax.app), a macOS menu-bar app that ships 15 developer tools, each a keyboard shortcut away. Tagline: "Less context-switching. More Vibing."
+This is the **official documentation site** for [Dax](https://getdax.app) — an AI-powered productivity companion built for developers, creators, and anyone building with AI.
 
 - Built on [Mintlify](https://mintlify.com) with the Aspen theme
 - Pages are MDX files with YAML frontmatter; tool pages live in `tools/`
