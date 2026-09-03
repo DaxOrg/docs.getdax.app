@@ -1,10 +1,10 @@
 ---
-title: "Herdr"
+title: "Dax Shepherd"
 description: "在一个窗口里运行一群编程 Agent —— 本地或通过 SSH 连接服务器。"
 icon: "grid-2-plus"
 ---
 
-**Herdr** 是编程 Agent 的控制中心。连接一个文件夹，它会打开一个窗口，多个
+**Dax Shepherd** 是编程 Agent 的控制中心。连接一个文件夹，它会打开一个窗口，多个
 实时终端并排运行。从菜单中添加 Agent，通过拖拽分割面板，尽收眼底 —— 无论
 在你的 Mac 上还是通过 SSH 连接的服务器上。
 
@@ -18,9 +18,10 @@ Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
 ## 使用方法
 
 <Steps>
-  <Step title="连接文件夹">
-    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> 或前往 **Settings → Herdr**，
-    连接你正在工作的项目文件夹。
+  <Step title="创建或打开项目">
+    按下 <kbd>⌘</kbd><kbd>N</kbd> 创建新项目，或按 <kbd>⌘</kbd><kbd>O</kbd>
+    打开已有项目（最近使用的文件夹会优先显示）。你也可以直接按
+    <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> 打开 Shepherd。
   </Step>
   <Step title="添加 Agent">
     点击 **+** 或使用 Agent 菜单添加 Claude Code、Codex、Gemini 或任何其他
@@ -31,6 +32,13 @@ Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
     分配空间而不重启任何进程。
   </Step>
 </Steps>
+
+## 切换机器
+
+按下 <kbd>⌘</kbd><kbd>L</kbd> 打开**机器卡片** —— 一个 Dax 绘制的选择器，
+显示你连接过的所有机器。切换时使用**交叉淡入**而非直接切换，你离开的 herd
+会被**暂存**而非销毁，因此切换回来是即时的。服务器连接在切换、断开和休眠
+之间保持存活。
 
 ## 标签页
 

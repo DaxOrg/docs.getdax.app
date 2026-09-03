@@ -1,10 +1,10 @@
 ---
-title: "Herdr"
+title: "Dax Shepherd"
 description: "Pilotez un troupeau d'agents de code dans une seule fenêtre — en local ou sur un serveur via SSH."
 icon: "grid-2-plus"
 ---
 
-**Herdr** est le centre de contrôle pour vos agents de code. Connectez un
+**Dax Shepherd** est le centre de contrôle pour vos agents de code. Connectez un
 dossier et une fenêtre s'ouvre avec des terminaux en direct côte à côte.
 Ajoutez des agents depuis un menu, divisez en glissant, et regardez-les
 tous travailler — sur votre Mac ou sur un serveur connecté via SSH.
@@ -21,10 +21,11 @@ app.
 ## Fonctionnement
 
 <Steps>
-  <Step title="Connectez un dossier">
-    Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> ou allez dans
-    **Settings → Herdr** et connectez le dossier du projet sur lequel vous
-    travaillez.
+  <Step title="Créez ou ouvrez un projet">
+    Appuyez sur <kbd>⌘</kbd><kbd>N</kbd> pour créer un nouveau projet, ou
+    <kbd>⌘</kbd><kbd>O</kbd> pour en ouvrir un existant (les dossiers récents
+    apparaissent en premier). Vous pouvez aussi appuyer sur
+    <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> pour ouvrir Shepherd directement.
   </Step>
   <Step title="Ajoutez des agents">
     Cliquez sur le **+** ou utilisez le menu d'agents pour ajouter Claude
@@ -37,6 +38,15 @@ app.
     redémarrer quoi que ce soit.
   </Step>
 </Steps>
+
+## Changement de machine
+
+Appuyez sur <kbd>⌘</kbd><kbd>L</kbd> pour ouvrir la **carte des machines** —
+un sélecteur dessiné par Dax montrant chaque machine à laquelle vous vous
+êtes connecté. Le changement utilise un **fondu enchaîné** au lieu d'une
+coupure, et le troupeau que vous quittez est **garé** plutôt que détruit, le
+retour est donc instantané. Les connexions serveur survivent aux changements,
+déconnexions et mise en veille.
 
 ## Onglets
 

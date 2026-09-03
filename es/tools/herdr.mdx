@@ -1,10 +1,10 @@
 ---
-title: "Herdr"
+title: "Dax Shepherd"
 description: "Ejecuta una manada de agentes de código en una sola ventana, localmente o en un servidor por SSH."
 icon: "grid-2-plus"
 ---
 
-**Herdr** es el centro de control para agentes de código. Conecta una
+**Dax Shepherd** es el centro de control para agentes de código. Conecta una
 carpeta y abre una ventana con terminales en vivo lado a lado. Añade
 agentes desde un menú, divide arrastrando, y observa cómo trabajan todos,
 en tu Mac o en un servidor conectado por SSH.
@@ -20,9 +20,11 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> desde cualquier app.
 ## Cómo funciona
 
 <Steps>
-  <Step title="Conecta una carpeta">
-    Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> o ve a **Settings → Herdr**
-    y conecta la carpeta del proyecto en el que estás trabajando.
+  <Step title="Crea o abre un proyecto">
+    Pulsa <kbd>⌘</kbd><kbd>N</kbd> para crear un nuevo proyecto, o
+    <kbd>⌘</kbd><kbd>O</kbd> para abrir uno existente (las carpetas recientes
+    aparecen primero). También puedes pulsar <kbd>⌃</kbd> <kbd>⌥</kbd>
+    <kbd>.</kbd> para abrir Shepherd directamente.
   </Step>
   <Step title="Añade agentes">
     Haz clic en **+** o usa el menú de agentes para añadir Claude Code,
@@ -34,6 +36,14 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> desde cualquier app.
     ellos. **Even Out Terminals** iguala los espacios sin reiniciar nada.
   </Step>
 </Steps>
+
+## Cambio de máquina
+
+Pulsa <kbd>⌘</kbd><kbd>L</kbd> para abrir la **tarjeta de máquinas** — un
+selector dibujado por Dax que muestra cada máquina a la que te has conectado.
+El cambio usa **fundido cruzado** en lugar de un corte, y la manada que dejas
+se **aparca** en vez de destruirse, así que volver es instantáneo. Las
+conexiones al servidor sobreviven a cambios, caídas y suspensión.
 
 ## Pestañas
 
