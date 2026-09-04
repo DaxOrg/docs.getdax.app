@@ -44,9 +44,9 @@ Every session is in one of three states:
 
 | State | Light | Creature | Meaning |
 |---|---|---|---|
-| **Working** | 🟢 Green | Walking | The agent is producing output or a tool is running. |
-| **Needs you** | 🟡 Yellow | Shuffling | A tool call has been quiet long enough to look like a permission prompt. |
-| **Finished** | ⚫ Grey | Standing still | The agent handed control back. It's your move. |
+| **Working** | Green | Walking | The agent is producing output or a tool is running. |
+| **Needs you** | Yellow | Shuffling | The agent is waiting for your input — a permission prompt or a question. |
+| **Finished** | Grey | Standing still | The agent handed control back. It's your move. |
 
 The status light and the creature animation both say the same thing, so you
 can read the palette at a glance without stopping to parse text.
