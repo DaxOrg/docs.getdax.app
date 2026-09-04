@@ -4,12 +4,13 @@ description: "在一个窗口里运行一群编程 Agent —— 本地或通过 
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** 是编程 Agent 的控制中心。连接一个文件夹，它会打开一个窗口，多个
-实时终端并排运行。从菜单中添加 Agent，通过拖拽分割面板，尽收眼底 —— 无论
-在你的 Mac 上还是通过 SSH 连接的服务器上。
+**Dax Shepherd** 是编程 Agent 的指挥中心。打开一个项目文件夹，你会看到一个窗口，多个实时终端并排运行。从菜单中添加 Agent，拖拽分割面板，看它们同时工作 —— 无论在你的 Mac 上还是通过 SSH 连接的远程服务器上。
 
-由 [Herdr](https://herdr.dev) 驱动，一个内置 Agent 检测的终端多路复用器。
-Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
+<Frame>
+  <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
+由 [Herdr](https://herdr.dev) 驱动，一个专为编程 Agent 打造的终端多路复用器。Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
 
 ## 打开方式
 
@@ -20,111 +21,214 @@ Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
 <Steps>
   <Step title="创建或打开项目">
     按下 <kbd>⌘</kbd><kbd>N</kbd> 创建新项目，或按 <kbd>⌘</kbd><kbd>O</kbd>
-    打开已有项目（最近使用的文件夹会优先显示）。你也可以直接按
-    <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> 打开 Shepherd。
+    打开已有项目（最近使用的文件夹会优先显示）。你也可以用 <kbd>⌘</kbd><kbd>K</kbd>
+    按名称搜索最近的项目。
   </Step>
   <Step title="添加 Agent">
-    点击 **+** 或使用 Agent 菜单添加 Claude Code、Codex、Gemini 或任何其他
-    Agent。每个 Agent 在自己的终端面板中打开。
+    按下 <kbd>⌘</kbd><kbd>Return</kbd>（或点击 **+**）从 19 种以上支持的 Agent
+    中挑选 —— Claude Code、Codex、Gemini、Cursor、Grok 等等。每个 Agent 在自己的
+    终端面板中打开。Dax 会检测你的机器上安装了哪些 Agent，只显示你已有的。
   </Step>
   <Step title="分割与排列">
-    将一个面板拖向另一个面板的边缘以分割空间。**Even Out Terminals** 可以均匀
-    分配空间而不重启任何进程。
+    将一个面板拖向另一个面板的边缘来分割空间。绿色高亮会提示分割将出现在哪里。
+    之后可以拖动分隔线来调整大小。点击 **Even Out Terminals** 可以均匀重新分配
+    空间，而不需要重启任何进程。
   </Step>
 </Steps>
 
-## 切换机器
+## Agent 检测
 
-按下 <kbd>⌘</kbd><kbd>L</kbd> 打开**机器卡片** —— 一个 Dax 绘制的选择器，
-显示你连接过的所有机器。切换时使用**交叉淡入**而非直接切换，你离开的 herd
-会被**暂存**而非销毁，因此切换回来是即时的。服务器连接在切换、断开和休眠
-之间保持存活。
+Shepherd 开箱即用地检测 **19 种以上编程 Agent**：Claude Code、Codex、Gemini、
+Cursor、Grok、Pi、OpenCode、Devin、Copilot、Kimi 等等。当某个 Agent 在面板中
+运行时，侧边栏会显示：
+
+- 它的**品牌图标**（让你一眼就能区分不同的 Agent）
+- 它的**状态**：工作中、需要你（被阻塞等待输入）、已完成、空闲
+- 一个**生物头像** —— 21 种像素生物中的一个，分配给每个 Agent
+
+状态更新是实时的。如果某个 Agent 卡住了需要你的关注，你会立刻在侧边栏中看到。
 
 ## 标签页
 
-用标签页组织你的 Agent 群：
+用标签页组织你的 Agent 群 —— 每个标签页可以容纳多个 Agent：
 
-- <kbd>⌘</kbd><kbd>T</kbd> 打开新标签页
-- <kbd>⌘</kbd><kbd>N</kbd> 添加 Agent
-- <kbd>⌃</kbd><kbd>Tab</kbd> 切换标签页
-- <kbd>⌘</kbd><kbd>W</kbd> 关闭 Agent（不是整个窗口）
-- 趁还记得的时候给标签页命名
+- <kbd>⌘</kbd><kbd>T</kbd> —— 打开新标签页
+- <kbd>⌘</kbd><kbd>Return</kbd> —— 向当前标签页添加 Agent
+- <kbd>⌃</kbd><kbd>Tab</kbd> / <kbd>⌃</kbd><kbd>⇧</kbd><kbd>Tab</kbd> —— 在标签页之间切换
+- <kbd>⌘</kbd><kbd>W</kbd> —— 关闭单个 Agent（不是整个窗口）
 
-侧边栏按标签页分组显示 Agent，每个占一行。
+你可以给标签页重命名，每个标签页有自己的颜色，方便区分。配色方案可以在设置中
+选择**按标签页**或**按文件夹**。
 
 ## 侧边栏
 
-一棵树，让你一目了然地知道什么在运行：
+一个树状视图，让你一目了然：
 
-- **标签页**包含 Agent，每个 Agent 一目了然地显示品牌和状态
-- 可以重命名、关闭任何项，也可以收起侧边栏
-- 收起的侧边栏仍然按标签页分组，而不是一个扁平列表
+- 顶层是**项目**，下面是**标签页**，标签页里面是**Agent**
+- 每个 Agent 显示品牌图标、生物头像和当前状态
+- 可以重命名任何东西 —— Agent、标签页、项目
+- 用 <kbd>⌘</kbd><kbd>B</kbd> 将侧边栏折叠为**纯图标条**，也可以完全隐藏
+- **Agent 监视器**将 Agent 按状态分组：需要你、工作中、已完成、空闲
+
+## 在 Agent 之间跳转
+
+按下 <kbd>⌘</kbd><kbd>J</kbd> 打开**跳转选择器** —— 一个可搜索的列表，包含
+所有 Agent、标签页和文件夹。输入几个字母，按下 <kbd>Return</kbd>，你就能立刻
+跳到那个 Agent。
+
+你也可以用方向键在面板之间导航：
+<kbd>⌘</kbd><kbd>←</kbd> <kbd>⌘</kbd><kbd>→</kbd> <kbd>⌘</kbd><kbd>↑</kbd>
+<kbd>⌘</kbd><kbd>↓</kbd>。
+
+## 终端功能
+
+每个面板都是一个真正的终端 —— 不是预览或镜像：
+
+- **分割面板** —— 拖拽即可向左、向右、向上或向下分割
+- **放大面板** —— 按 <kbd>⌘</kbd><kbd>M</kbd> 让一个 Agent 占满整个标签页，再按一次恢复
+- **字体大小** —— <kbd>⌘</kbd><kbd>+</kbd> 放大，<kbd>⌘</kbd><kbd>-</kbd> 缩小，<kbd>⌘</kbd><kbd>0</kbd> 重置
+- **复制与粘贴** —— <kbd>⌘</kbd><kbd>C</kbd> 复制，<kbd>⌘</kbd><kbd>V</kbd> 粘贴
+- **滚动穿透** —— 用 <kbd>⌘</kbd><kbd>S</kbd> 切换，决定滚轮是传给 Agent 还是留给自己
+- **终端透明度** —— 在设置中调整玻璃透明度（默认完全不透明以保证可读性）
+- **链接点击** —— Shepherd 能检测终端输出中的 URL（包括跨行的），你可以直接点击
+
+## 自动命名面板
+
+如果你启用了 Apple Intelligence，Shepherd 会读取终端输出并**自动为每个面板命名**，
+内容基于 Agent 正在做的事情。随着 Agent 转向新任务，名称也会更新。你随时可以
+手动重命名面板 —— 手动名称会保留。
+
+## 文件浏览器
+
+按 <kbd>⌘</kbd><kbd>E</kbd> 在 Shepherd 内打开文件浏览器 —— 不需要切换到
+Finder：
+
+- 浏览你的项目文件夹，有**最近文件**栏和**全部文件**栏
+- 在任意文件上按 <kbd>Space</kbd> 使用 Quick Look 预览
+- 按 <kbd>Return</kbd> 打开文件
+- 在网格视图和列表视图之间切换
+- 在远程服务器上，打开文件时会自动下载
+
+## 全屏
+
+按 <kbd>⌘</kbd><kbd>F</kbd> 填满屏幕。与 macOS 全屏不同的是，**菜单栏和 Dock
+保持可见** —— 一面墙的终端不会让你失去 Mac 的其余部分。
+
+## 会话持久保存
+
+即使你做了以下操作，Agent 也会继续运行：
+
+- **关闭 Shepherd 窗口** —— 重新打开，它们还在
+- **完全退出 Dax** —— 你的会话不会丢失，因为 Herdr 作为后台服务运行
+- **切换机器** —— 每台机器的 Agent 群会被暂存，而不是销毁
+
+## 切换机器
+
+按下 <kbd>⌘</kbd><kbd>L</kbd> 打开**机器选择器** —— 一个卡片，显示你的 Mac
+和你连接过的每台服务器。切换时使用**交叉淡入**而非直接切换，你离开的 Agent 群
+会被**暂存**，因此切换回来是即时的。
+
+你可以输入名称来筛选机器，或用方向键导航。
 
 ## 在服务器上运行
 
-连接一台服务器，Herdr 通过一条 SSH 转发到达它 —— 同样的窗口、同样的标签页、
-同样的 Agent，运行在拥有仓库、内存和持续运行时间的机器上。
+连接一台服务器，Shepherd 通过一条 SSH 连接到达它 —— 同样的窗口、同样的标签页、
+同样的 Agent，运行在拥有代码仓库、内存和持续运行时间的机器上。
 
 <Steps>
   <Step title="添加服务器">
     前往 **Settings → Herdr → Servers**，添加一个主机：地址、用户名、端口，
-    以及密钥文件或密码。密码存储在钥匙串中。
+    以及密钥文件或密码。密码存储在你 Mac 的钥匙串中。从云控制台复制粘贴时产生的
+    不可见字符会被自动清除，密钥文件的权限也会自动收窄。
   </Step>
   <Step title="切换到服务器">
-    在侧边栏树上方的切换器中选择服务器。它的项目和实时终端会像本地一样显示。
+    按下 <kbd>⌘</kbd><kbd>L</kbd>，选择服务器。它的项目和实时终端会像本地一样
+    显示。
   </Step>
   <Step title="测试连接">
-    按下 **Test**（就在 Done 旁边）查看连接过程：哪个地址应答了、提供了哪个
-    密钥、服务器接受了什么。如需调试，可以复制完整日志。
+    点击 **Test** 查看完整的连接过程：哪个地址应答了、提供了哪个密钥、服务器
+    接受了什么。如需调试，可以复制完整日志。
   </Step>
-  <Step title="自动安装 herdr">
-    如果服务器上还没有 herdr，Dax 会自动安装。在 GitHub 不可达的纯 IPv6 服务器
+  <Step title="Herdr 自动安装">
+    如果服务器上还没有 Herdr，Dax 会自动安装。在 GitHub 不可达的纯 IPv6 服务器
     上，Dax 会通过已建立的 SSH 连接发送二进制文件。
   </Step>
 </Steps>
 
 <Note>
-  你的 `~/.ssh/config`、agent 和 `known_hosts` 仍然有效。不会添加新的依赖 ——
-  一切都通过 SSH 连接完成。从云控制台粘贴的地址会自动清除不可见字符，下载的
-  密钥文件权限会自动收窄。
+  你的 `~/.ssh/config`、SSH agent 和 `known_hosts` 仍然有效。你的 Mac 上不会
+  安装任何新东西 —— 一切都通过标准 SSH 连接完成。
 </Note>
 
 ### Remote Panel
 
-Herdr 工具栏中的一个按钮（仅在连接服务器时显示）可以打开 Remote Panel，
-包含五个标签页：
+按下 <kbd>⌘</kbd><kbd>R</kbd>（仅在连接服务器时显示）打开 **Remote Panel** ——
+一个服务器仪表盘，包含五个标签页：
 
-- **Coding Agents** —— 已安装的 Agent，支持一键更新
-- **Services & Ports** —— 监听的进程和开放的端口
-- **Web Servers & SSL** —— 按域名分组的站点，含证书及到期时间
-- **Usage** —— 磁盘、内存、负载及实时控制台
-- **Utilities** —— 常用服务器工具
+- **Coding Agents** —— 查看已安装的 Agent，一键安装缺少的，更新已有的
+- **Services & Ports** —— 所有监听的服务和开放的端口，带启动/停止控制
+- **Web Servers & SSL** —— 按域名分组的站点，含证书详情和到期日期
+- **Usage** —— 磁盘、内存、负载和实时控制台
+- **Utilities** —— 常用服务器工具，一键启动
 
-## 分割
+### 在服务器上安装 Agent
 
-将一个面板拖向另一个的边缘（左、右、上、下），空间会在它们之间分割。绿色填充
-目标区域以显示分割位置。之后分隔线可以拖动。
+首次连接服务器时，Shepherd 会检查安装了哪些编程 Agent。如果有缺少的，它会
+提供一键安装 —— 不需要单独 SSH 登录再跑安装脚本。
 
-**Even Out Terminals**（从菜单中选择）可以均匀重新分配空间而不重启任何进程。
+## 生物
 
-## Agent 检测
+每个 Agent 都有一个**像素生物** —— 21 个角色分布在四个生态群落中（水生、森林、
+地面、夜行）。生物根据 Agent 的终端分配，因此始终保持一致。生物会出现在侧边栏
+和群体视图中。
 
-Herdr 开箱即用地检测 19 种以上编程 Agent：Claude Code、Codex、Gemini、Cursor、
-Grok、Pi、OpenCode 等等。当某个 Agent 在面板中运行时，侧边栏会显示其品牌图标
-并报告它是在工作、被阻塞还是空闲。
+## 设置
 
-## 全屏
+Settings → Herdr 中可以配置：
 
-绿色填充整个屏幕但不接管它。菜单栏和 Dock 保留在原处，这样一整面终端不会让你
-失去 Mac 的其余部分。
+- **默认 Agent** —— 按 <kbd>⌘</kbd><kbd>T</kbd> 时添加哪个 Agent
+- **跳过权限提示** —— 让 Agent 无需询问直接运行（YOLO 模式）
+- **终端字体大小** —— 新面板的默认大小
+- **终端透明度** —— 终端背景的透明程度
+- **滚动穿透** —— 滚轮是否传给 Agent
+- **面板标题摘要** —— 使用 Apple Intelligence 自动命名面板
+- **标签页配色方案** —— 按标签页或按文件夹着色
+- **文件浏览器视图** —— 网格或列表
+- **项目文件夹** —— 新项目创建在哪里
+- **上传粘贴文件** —— 自动上传粘贴到远程终端的文件
+
+## 键盘快捷键
+
+| 操作 | 快捷键 |
+| --- | --- |
+| 打开 Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| 新建项目 | <kbd>⌘</kbd><kbd>N</kbd> |
+| 打开项目 | <kbd>⌘</kbd><kbd>O</kbd> |
+| 最近项目 | <kbd>⌘</kbd><kbd>K</kbd> |
+| 跳转到 Agent | <kbd>⌘</kbd><kbd>J</kbd> |
+| 新建标签页 | <kbd>⌘</kbd><kbd>T</kbd> |
+| 添加 Agent | <kbd>⌘</kbd><kbd>Return</kbd> |
+| 关闭 Agent | <kbd>⌘</kbd><kbd>W</kbd> |
+| 切换侧边栏 | <kbd>⌘</kbd><kbd>B</kbd> |
+| 填满屏幕 | <kbd>⌘</kbd><kbd>F</kbd> |
+| 放大单个 Agent | <kbd>⌘</kbd><kbd>M</kbd> |
+| Remote Panel | <kbd>⌘</kbd><kbd>R</kbd> |
+| 切换机器 | <kbd>⌘</kbd><kbd>L</kbd> |
+| 文件浏览器 | <kbd>⌘</kbd><kbd>E</kbd> |
+| 显示快捷键 | <kbd>⌘</kbd><kbd>/</kbd> |
+| 放大文字 | <kbd>⌘</kbd><kbd>+</kbd> |
+| 缩小文字 | <kbd>⌘</kbd><kbd>-</kbd> |
+| 重置文字大小 | <kbd>⌘</kbd><kbd>0</kbd> |
+| 复制 | <kbd>⌘</kbd><kbd>C</kbd> |
+| 切换滚动 | <kbd>⌘</kbd><kbd>S</kbd> |
 
 ## 安装 Herdr
 
-首次打开此工具时，Dax 会提供通过 Homebrew 或一行脚本安装
-[Herdr](https://herdr.dev)。安装后，它以后台服务运行，关闭窗口后会话仍然
-保持。
+首次打开 Shepherd 时，Dax 会提供通过 Homebrew 或一行脚本安装
+[Herdr](https://herdr.dev) 的选项。安装后，它作为后台服务运行 —— 即使关闭窗口
+或退出 Dax，你的会话也会保留。
 
 ## 隐私
 
 一切在本地运行，或通过直接的 SSH 连接到你自己的服务器。你的终端、你的 Agent、
-你的代码：没有任何东西经过 Dax 后端。
+你的代码 —— 没有任何东西经过 Dax 后端。

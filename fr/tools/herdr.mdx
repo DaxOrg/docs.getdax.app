@@ -4,19 +4,22 @@ description: "Pilotez un troupeau d'agents de code dans une seule fenêtre — e
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** est le centre de contrôle pour vos agents de code. Connectez un
-dossier et une fenêtre s'ouvre avec des terminaux en direct côte à côte.
-Ajoutez des agents depuis un menu, divisez en glissant, et regardez-les
-tous travailler — sur votre Mac ou sur un serveur connecté via SSH.
+**Dax Shepherd** est le centre de contrôle pour vos agents de code. Ouvrez un
+dossier de projet et vous obtenez une fenêtre avec des terminaux en direct côte
+à côte. Ajoutez des agents depuis un menu, divisez l'espace en glissant, et
+regardez-les tous travailler — sur votre Mac ou sur un serveur distant via SSH.
 
-Propulsé par [Herdr](https://herdr.dev), un multiplexeur de terminaux avec
-détection d'agents intégrée. Dax gère la fenêtre, la barre latérale et les
+<Frame>
+  <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — plusieurs agents de code côte à côte" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
+Propulsé par [Herdr](https://herdr.dev), un multiplexeur de terminaux conçu
+pour les agents de code. Dax gère la fenêtre, la barre latérale et les
 installations ; Herdr gère les terminaux.
 
 ## Comment l'ouvrir
 
-Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> depuis n'importe quelle
-app.
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> depuis n'importe quelle app.
 
 ## Fonctionnement
 
@@ -24,55 +27,132 @@ app.
   <Step title="Créez ou ouvrez un projet">
     Appuyez sur <kbd>⌘</kbd><kbd>N</kbd> pour créer un nouveau projet, ou
     <kbd>⌘</kbd><kbd>O</kbd> pour en ouvrir un existant (les dossiers récents
-    apparaissent en premier). Vous pouvez aussi appuyer sur
-    <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> pour ouvrir Shepherd directement.
+    apparaissent en premier). Vous pouvez aussi utiliser
+    <kbd>⌘</kbd><kbd>K</kbd> pour rechercher vos projets récents par nom.
   </Step>
   <Step title="Ajoutez des agents">
-    Cliquez sur le **+** ou utilisez le menu d'agents pour ajouter Claude
-    Code, Codex, Gemini ou tout autre agent. Chacun s'ouvre dans son propre
-    panneau de terminal.
+    Appuyez sur <kbd>⌘</kbd><kbd>Return</kbd> (ou cliquez sur **+**) pour
+    choisir parmi plus de 19 agents compatibles — Claude Code, Codex, Gemini,
+    Cursor, Grok, et bien d'autres. Chaque agent s'ouvre dans son propre
+    panneau de terminal. Dax vérifie quels agents sont installés sur votre
+    machine et n'affiche que ceux dont vous disposez.
   </Step>
   <Step title="Divisez et arrangez">
-    Glissez un panneau vers le bord d'un autre pour diviser l'espace entre
-    eux. **Even Out Terminals** répartit l'espace uniformément sans
-    redémarrer quoi que ce soit.
+    Glissez un panneau vers le bord d'un autre pour diviser l'espace. Un
+    surlignage vert indique où la division va se faire. Déplacez ensuite le
+    séparateur pour redimensionner. Appuyez sur **Even Out Terminals** pour
+    redistribuer l'espace uniformément sans rien redémarrer.
   </Step>
 </Steps>
 
-## Changement de machine
+## Détection d'agents
 
-Appuyez sur <kbd>⌘</kbd><kbd>L</kbd> pour ouvrir la **carte des machines** —
-un sélecteur dessiné par Dax montrant chaque machine à laquelle vous vous
-êtes connecté. Le changement utilise un **fondu enchaîné** au lieu d'une
-coupure, et le troupeau que vous quittez est **garé** plutôt que détruit, le
-retour est donc instantané. Les connexions serveur survivent aux changements,
-déconnexions et mise en veille.
+Shepherd détecte **plus de 19 agents de code** sans configuration : Claude Code,
+Codex, Gemini, Cursor, Grok, Pi, OpenCode, Devin, Copilot, Kimi, et d'autres.
+Quand un agent tourne dans un panneau, la barre latérale affiche :
+
+- Son **icône de marque** (pour distinguer les agents d'un coup d'oeil)
+- Son **statut** : En cours, Besoin de vous (bloqué et en attente d'une action), Terminé, ou Inactif
+- Un **avatar de créature** — l'une des 21 créatures en pixel art attribuées à chaque agent
+
+Les mises à jour de statut se font en temps réel. Si un agent est bloqué et
+a besoin de votre attention, vous le verrez immédiatement dans la barre latérale.
 
 ## Onglets
 
-Organisez votre troupeau avec des onglets :
+Organisez votre troupeau avec des onglets — chaque onglet peut contenir
+plusieurs agents :
 
-- <kbd>⌘</kbd><kbd>T</kbd> pour ouvrir un nouvel onglet
-- <kbd>⌘</kbd><kbd>N</kbd> pour ajouter un agent
-- <kbd>⌃</kbd><kbd>Tab</kbd> pour parcourir la barre d'onglets
-- <kbd>⌘</kbd><kbd>W</kbd> pour fermer un agent (pas toute la fenêtre)
-- Nommez un onglet tant que vous vous souvenez encore de son rôle
+- <kbd>⌘</kbd><kbd>T</kbd> — ouvrir un nouvel onglet
+- <kbd>⌘</kbd><kbd>Return</kbd> — ajouter un agent à l'onglet actuel
+- <kbd>⌃</kbd><kbd>Tab</kbd> / <kbd>⌃</kbd><kbd>⇧</kbd><kbd>Tab</kbd> — naviguer entre les onglets
+- <kbd>⌘</kbd><kbd>W</kbd> — fermer un seul agent (pas toute la fenêtre)
 
-La barre latérale regroupe les agents sous leur onglet, une ligne chacun.
+Vous pouvez renommer les onglets, et chacun reçoit sa propre couleur pour les
+distinguer facilement. Le schéma de couleurs peut être réglé sur **par onglet**
+ou **par dossier** dans les Réglages.
 
 ## La barre latérale
 
-Un arbre qui vous indique ce qui tourne :
+Une vue en arbre qui montre tout d'un coup d'oeil :
 
-- **Les onglets** contiennent les agents, chacun affichant sa marque et son
-  statut en un coup d'oeil
-- Renommez, fermez, ou réduisez la barre latérale
-- Une barre latérale réduite regroupe toujours par onglet au lieu d'une
-  liste plate
+- **Les projets** au premier niveau, avec les **onglets** en dessous, et les
+  **agents** à l'intérieur de chaque onglet
+- Chaque agent affiche son icône de marque, son avatar de créature et son statut actuel
+- Renommez n'importe quoi — agents, onglets, projets
+- Réduisez la barre latérale en une **bande d'icônes** avec <kbd>⌘</kbd><kbd>B</kbd>,
+  ou masquez-la complètement
+- Le **Moniteur d'agents** regroupe les agents par catégorie : Besoin de vous, En cours, Terminé, Inactif
+
+## Passer d'un agent à l'autre
+
+Appuyez sur <kbd>⌘</kbd><kbd>J</kbd> pour ouvrir le **sélecteur rapide** — une
+liste interrogeable de chaque agent, onglet et dossier. Tapez quelques lettres,
+appuyez sur <kbd>Return</kbd>, et vous atterrissez instantanément sur cet agent.
+
+Vous pouvez aussi naviguer entre les panneaux avec les touches fléchées :
+<kbd>⌘</kbd><kbd>←</kbd> <kbd>⌘</kbd><kbd>→</kbd> <kbd>⌘</kbd><kbd>↑</kbd>
+<kbd>⌘</kbd><kbd>↓</kbd>.
+
+## Fonctionnalités du terminal
+
+Chaque panneau est un vrai terminal — pas un aperçu ni un miroir :
+
+- **Panneaux divisés** — glissez pour diviser à gauche, à droite, en haut ou en bas
+- **Zoomer un panneau** — appuyez sur <kbd>⌘</kbd><kbd>M</kbd> pour donner tout l'onglet à un seul agent, appuyez à nouveau pour revenir
+- **Taille de police** — <kbd>⌘</kbd><kbd>+</kbd> pour agrandir, <kbd>⌘</kbd><kbd>-</kbd> pour réduire, <kbd>⌘</kbd><kbd>0</kbd> pour réinitialiser
+- **Copier et coller** — <kbd>⌘</kbd><kbd>C</kbd> pour copier, <kbd>⌘</kbd><kbd>V</kbd> pour coller
+- **Passthrough du défilement** — activez ou désactivez avec <kbd>⌘</kbd><kbd>S</kbd> pour laisser la molette atteindre l'agent ou la garder pour vous
+- **Opacité du terminal** — ajustez la transparence dans les Réglages (par défaut totalement opaque pour une meilleure lisibilité)
+- **Clic sur les liens** — Shepherd détecte les URLs dans la sortie du terminal (même sur plusieurs lignes) pour que vous puissiez cliquer dessus
+
+## Nommage automatique des panneaux
+
+Si vous avez Apple Intelligence activé, Shepherd lit la sortie du terminal et
+**nomme automatiquement chaque panneau** en fonction de ce sur quoi l'agent
+travaille. Le nom se met à jour quand l'agent passe à de nouvelles tâches. Vous
+pouvez toujours renommer un panneau manuellement — le nom manuel reste en place.
+
+## Explorateur de fichiers
+
+Appuyez sur <kbd>⌘</kbd><kbd>E</kbd> pour ouvrir un explorateur de fichiers
+dans Shepherd — pas besoin de basculer vers le Finder :
+
+- Parcourez votre dossier de projet avec une colonne **Récents** et une colonne **Fichiers**
+- Appuyez sur <kbd>Space</kbd> sur n'importe quel fichier pour un aperçu Quick Look
+- Appuyez sur <kbd>Return</kbd> pour ouvrir un fichier
+- Basculez entre la vue grille et la vue liste
+- Sur un serveur distant, les fichiers sont téléchargés automatiquement quand vous les ouvrez
+
+## Plein écran
+
+Appuyez sur <kbd>⌘</kbd><kbd>F</kbd> pour remplir l'écran. Contrairement au
+plein écran de macOS, **la barre de menu et le Dock restent visibles** — un
+mur de terminaux ne vous coûte pas le reste de votre Mac.
+
+## Les sessions persistent
+
+Vos agents continuent de tourner même quand vous :
+
+- **Fermez la fenêtre Shepherd** — rouvrez-la et ils sont toujours là
+- **Quittez Dax complètement** — vos sessions survivent car Herdr tourne en
+  tant que service en arrière-plan
+- **Changez de machine** — le troupeau de chaque machine est garé, pas détruit
+
+## Changement de machine
+
+Appuyez sur <kbd>⌘</kbd><kbd>L</kbd> pour ouvrir le **sélecteur de machines**
+— une carte montrant votre Mac et chaque serveur auquel vous vous êtes connecté.
+Le changement utilise un **fondu enchaîné** entre les machines au lieu d'une
+coupure, et le troupeau que vous quittez est **garé** pour que le retour soit
+instantané.
+
+Vous pouvez taper pour filtrer les machines par nom, ou utiliser les touches
+fléchées pour naviguer.
 
 ## Exécution sur un serveur
 
-Connectez un serveur et Herdr l'atteint via un seul forward SSH — même
+Connectez un serveur et Shepherd l'atteint via une seule connexion SSH — même
 fenêtre, mêmes onglets, mêmes agents, exécutés sur la machine qui a le
 dépôt, la RAM et l'uptime.
 
@@ -80,77 +160,111 @@ dépôt, la RAM et l'uptime.
   <Step title="Ajoutez un serveur">
     Allez dans **Settings → Herdr → Servers** et ajoutez un hôte : adresse,
     utilisateur, port, et un fichier de clé ou un mot de passe. Les mots de
-    passe sont stockés dans votre Trousseau.
+    passe sont stockés dans le Trousseau de votre Mac. Les caractères invisibles
+    provenant du copier-coller depuis une console cloud sont nettoyés
+    automatiquement, et les permissions des fichiers de clé sont resserrées
+    pour vous.
   </Step>
   <Step title="Basculez vers le serveur">
-    Choisissez le serveur depuis le sélecteur au-dessus de l'arbre de la
-    barre latérale. Ses projets et terminaux en direct apparaissent
-    exactement comme les locaux.
+    Appuyez sur <kbd>⌘</kbd><kbd>L</kbd> et choisissez le serveur. Ses projets
+    et terminaux en direct apparaissent exactement comme les locaux.
   </Step>
-  <Step title="Tester la connexion">
-    Appuyez sur **Test** (juste à côté de Done) pour voir la connexion se
-    dérouler : quelle adresse a répondu, quelle clé a été proposée, ce que
-    le serveur a accepté. Copiez le journal complet si vous avez besoin de
-    déboguer.
+  <Step title="Testez la connexion">
+    Appuyez sur **Test** pour voir le déroulement complet de la connexion :
+    quelle adresse a répondu, quelle clé a été proposée, ce que le serveur a
+    accepté. Copiez le journal si vous avez besoin de déboguer.
   </Step>
-  <Step title="Installation automatique de herdr">
-    Si le serveur n'a pas encore herdr, Dax l'installe automatiquement. Sur
-    les serveurs IPv6 uniquement où GitHub est inaccessible, Dax envoie le
-    binaire via la connexion SSH déjà ouverte.
+  <Step title="Herdr s'installe automatiquement">
+    Si le serveur n'a pas encore Herdr, Dax l'installe pour vous. Sur les
+    serveurs IPv6 uniquement où GitHub est inaccessible, Dax envoie le binaire
+    via la connexion SSH déjà ouverte.
   </Step>
 </Steps>
 
 <Note>
-  Vos `~/.ssh/config`, agent et `known_hosts` restent en vigueur. Aucune
-  nouvelle dépendance n'est ajoutée — tout passe par la connexion SSH. Les
-  adresses collées depuis une console cloud sont nettoyées des caractères
-  invisibles, et les fichiers de clé téléchargés voient leurs permissions
-  resserrées automatiquement.
+  Vos `~/.ssh/config`, agent SSH et `known_hosts` restent en vigueur. Rien de
+  nouveau n'est installé sur votre Mac — tout passe par la connexion SSH
+  standard.
 </Note>
 
 ### Remote Panel
 
-Un bouton dans la barre d'outils de Herdr (affiché uniquement pour les
-serveurs) ouvre le Remote Panel avec cinq onglets :
+Appuyez sur <kbd>⌘</kbd><kbd>R</kbd> (affiché uniquement quand vous êtes
+connecté à un serveur) pour ouvrir le **Remote Panel** — un tableau de bord
+pour votre serveur avec cinq onglets :
 
-- **Coding Agents** — ce qui est installé, avec mise à jour en un clic
-- **Services & Ports** — processus en écoute et ports ouverts
-- **Web Servers & SSL** — sites regroupés par domaine, avec certificats et
-  expiration
-- **Usage** — disque, mémoire, charge et console en direct
-- **Utilities** — outils serveur courants
+- **Coding Agents** — voyez ce qui est installé, installez les agents manquants
+  en un clic, et mettez à jour ceux qui existent déjà
+- **Services & Ports** — chaque service en écoute et port ouvert, avec des
+  contrôles pour démarrer et arrêter
+- **Web Servers & SSL** — sites regroupés par domaine, avec les détails des
+  certificats et leurs dates d'expiration
+- **Usage** — disque, mémoire, charge, et une console en direct
+- **Utilities** — outils serveur courants que vous pouvez lancer en un clic
 
-## Division
+### Installer des agents sur les serveurs
 
-Glissez un panneau vers le bord d'un autre (gauche, droite, haut, bas) et
-l'espace se divise entre eux. Un remplissage vert indique la zone cible
-pour montrer où la division se fera. Le séparateur est déplaçable ensuite.
+Quand vous vous connectez à un serveur pour la première fois, Shepherd vérifie
+quels agents de code sont installés. S'il en manque, il propose de les
+installer pour vous — pas besoin de vous connecter en SSH séparément pour
+lancer des scripts d'installation.
 
-**Even Out Terminals** (depuis le menu) redistribue l'espace uniformément
-sans redémarrer aucun processus.
+## Créatures
 
-## Détection d'agents
+Chaque agent reçoit une **créature en pixel art** — l'un des 21 personnages
+répartis dans quatre biomes (aquatique, forêt, sol, nocturne). La créature est
+attribuée en fonction du terminal de l'agent, elle reste donc toujours la même.
+Les créatures apparaissent dans la barre latérale et dans la vue du troupeau.
 
-Herdr détecte plus de 19 agents de code prêts à l'emploi : Claude Code,
-Codex, Gemini, Cursor, Grok, Pi, OpenCode, et plus encore. Quand un agent
-tourne dans un panneau, la barre latérale affiche son icône de marque et
-indique s'il travaille, est bloqué ou inactif.
+## Réglages
 
-## Plein écran
+Settings → Herdr vous permet de configurer :
 
-Le vert remplit l'écran plutôt que de le prendre en charge. La barre de
-menu et le Dock restent à leur place, de sorte qu'un mur de terminaux ne
-vous coûte pas le reste de votre Mac.
+- **Agent par défaut** — quel agent ajouter quand vous appuyez sur <kbd>⌘</kbd><kbd>T</kbd>
+- **Ignorer les demandes de permission** — laisser les agents s'exécuter sans demander (mode YOLO)
+- **Taille de police du terminal** — taille par défaut pour les nouveaux panneaux
+- **Opacité du terminal** — niveau de transparence de l'arrière-plan du terminal
+- **Passthrough du défilement** — si la molette atteint l'agent ou non
+- **Résumé du titre des panneaux** — nommage automatique des panneaux via Apple Intelligence
+- **Schéma de couleurs des onglets** — couleur par onglet ou par dossier
+- **Vue de l'explorateur de fichiers** — grille ou liste
+- **Dossier des projets** — où les nouveaux projets sont créés
+- **Téléverser les fichiers collés** — téléverser automatiquement les fichiers collés dans les terminaux distants
+
+## Raccourcis clavier
+
+| Action | Raccourci |
+| --- | --- |
+| Ouvrir Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| Nouveau projet | <kbd>⌘</kbd><kbd>N</kbd> |
+| Ouvrir un projet | <kbd>⌘</kbd><kbd>O</kbd> |
+| Projets récents | <kbd>⌘</kbd><kbd>K</kbd> |
+| Aller à un agent | <kbd>⌘</kbd><kbd>J</kbd> |
+| Nouvel onglet | <kbd>⌘</kbd><kbd>T</kbd> |
+| Ajouter un agent | <kbd>⌘</kbd><kbd>Return</kbd> |
+| Fermer un agent | <kbd>⌘</kbd><kbd>W</kbd> |
+| Barre latérale | <kbd>⌘</kbd><kbd>B</kbd> |
+| Plein écran | <kbd>⌘</kbd><kbd>F</kbd> |
+| Zoomer un agent | <kbd>⌘</kbd><kbd>M</kbd> |
+| Remote Panel | <kbd>⌘</kbd><kbd>R</kbd> |
+| Sélecteur de machines | <kbd>⌘</kbd><kbd>L</kbd> |
+| Explorateur de fichiers | <kbd>⌘</kbd><kbd>E</kbd> |
+| Afficher les raccourcis | <kbd>⌘</kbd><kbd>/</kbd> |
+| Agrandir le texte | <kbd>⌘</kbd><kbd>+</kbd> |
+| Réduire le texte | <kbd>⌘</kbd><kbd>-</kbd> |
+| Réinitialiser la taille | <kbd>⌘</kbd><kbd>0</kbd> |
+| Copier | <kbd>⌘</kbd><kbd>C</kbd> |
+| Activer/désactiver le défilement | <kbd>⌘</kbd><kbd>S</kbd> |
 
 ## Installer Herdr
 
-La première fois que vous ouvrez l'outil, Dax propose d'installer
+La première fois que vous ouvrez Shepherd, Dax propose d'installer
 [Herdr](https://herdr.dev) via Homebrew ou un script d'une ligne. Une fois
-installé, il tourne en tant que serveur en arrière-plan, de sorte que les
-sessions persistent même quand vous fermez la fenêtre.
+installé, il tourne en tant que service en arrière-plan — vos sessions
+persistent même quand vous fermez la fenêtre ou quittez Dax.
 
 ## Confidentialité
 
 Tout s'exécute localement ou via une connexion SSH directe vers votre propre
-serveur. Vos terminaux, vos agents, votre code : rien ne passe par le
-backend de Dax.
+serveur. Vos terminaux, vos agents, votre code — rien ne passe par le backend
+de Dax.
