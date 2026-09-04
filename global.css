@@ -56,3 +56,13 @@
 .dark [class*="callout"] svg {
   color: rgba(255, 255, 255, 0.5) !important;
 }
+
+/* Force keyboard symbols (↩ ⌃ ⌥ ⌘ ⇥ ⇧) to render as text glyphs,
+   not colour emoji. */
+kbd {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", "Segoe UI", Roboto, sans-serif !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: normal;
+  font-variant-emoji: text;
+}
