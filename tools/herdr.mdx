@@ -4,10 +4,10 @@ description: "Run a herd of coding agents in one window — locally or on a serv
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** is mission control for coding agents. Connect a folder and it opens
-a window of live terminals running side by side. Add agents from a menu,
-split by dragging, and watch them all work — on your Mac or on a server you
-connect over SSH.
+**Dax Shepherd** is mission control for coding agents. Open a project folder
+and you get a window of live terminals running side by side. Add agents from
+a menu, split by dragging, and watch them all work — on your Mac or on a
+remote server over SSH.
 
 <Frame>
   <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
@@ -27,123 +27,236 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> from any app.
   <Step title="Create or open a project">
     Press <kbd>⌘</kbd><kbd>N</kbd> to create a new project, or
     <kbd>⌘</kbd><kbd>O</kbd> to open an existing one (recently used folders
-    appear first). You can also press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd>
-    to open Shepherd directly.
+    appear first). You can also use <kbd>⌘</kbd><kbd>K</kbd> to search your
+    recent projects by name.
   </Step>
   <Step title="Add agents">
-    Click the **+** or use the agent menu to add Claude Code, Codex, Gemini,
-    or any other agent. Each one opens in its own terminal pane.
+    Press <kbd>⌘</kbd><kbd>Return</kbd> (or click **+**) to pick from 19+
+    supported agents — Claude Code, Codex, Gemini, Cursor, Grok, and more.
+    Each agent opens in its own terminal pane. Dax checks which agents are
+    installed on your machine and only shows the ones you have.
   </Step>
   <Step title="Split and arrange">
-    Drag a pane against the edge of another to split the space between them.
-    **Even Out Terminals** squares up the seams without restarting anything.
+    Drag a pane toward the edge of another to split the space. A green
+    highlight shows where the split will land. Drag the divider afterward to
+    resize. Press **Even Out Terminals** to redistribute space evenly without
+    restarting anything.
   </Step>
 </Steps>
 
-## Switching machines
+## Agent detection
 
-Press <kbd>⌘</kbd><kbd>L</kbd> to open the **machines card** — a Dax-drawn
-picker showing every machine you've connected. Switching **cross-fades**
-between machines instead of cutting, and the herd you leave is **parked**
-rather than demolished, so switching back is instant. Server connections
-survive across switches, drops, and sleep.
+Shepherd detects **19+ coding agents** out of the box: Claude Code, Codex,
+Gemini, Cursor, Grok, Pi, OpenCode, Devin, Copilot, Kimi, and more. When an
+agent is running in a pane, the sidebar shows:
+
+- Its **brand icon** (so you can tell agents apart at a glance)
+- Its **status**: Working, Needs You (blocked and waiting for input), Done, or Idle
+- A **creature avatar** — one of 21 pixel creatures assigned to each agent
+
+Status updates happen in real time. If an agent gets stuck and needs your
+attention, you'll see it immediately in the sidebar.
 
 ## Tabs
 
-Organize your herd with tabs:
+Organize your herd with tabs — each tab can hold multiple agents:
 
-- <kbd>⌘</kbd><kbd>T</kbd> to open a new tab
-- <kbd>⌘</kbd><kbd>N</kbd> to add an agent
-- <kbd>⌃</kbd><kbd>Tab</kbd> to walk the tab bar
-- <kbd>⌘</kbd><kbd>W</kbd> to close an agent (not the whole window)
-- Name a tab while you still remember what it was for
+- <kbd>⌘</kbd><kbd>T</kbd> — open a new tab
+- <kbd>⌘</kbd><kbd>Return</kbd> — add an agent to the current tab
+- <kbd>⌃</kbd><kbd>Tab</kbd> / <kbd>⌃</kbd><kbd>⇧</kbd><kbd>Tab</kbd> — move between tabs
+- <kbd>⌘</kbd><kbd>W</kbd> — close a single agent (not the whole window)
 
-The sidebar groups agents under their tab, one line each.
+You can rename tabs, and each tab gets its own color so it's easy to tell
+them apart. The color scheme can be set to **per-tab** or **per-folder** in
+Settings.
 
 ## The sidebar
 
-A tree that tells you what's running:
+A tree view that shows everything at a glance:
 
-- **Tabs** hold agents, each showing brand and status at a glance
-- Rename anything, close anything, collapse the sidebar out of the way
-- A collapsed sidebar still groups by tab instead of one flat list
+- **Projects** at the top level, with **tabs** underneath, and **agents**
+  inside each tab
+- Each agent shows its brand icon, creature avatar, and current status
+- Rename anything — agents, tabs, projects
+- Collapse the sidebar to an **icons-only strip** with <kbd>⌘</kbd><kbd>B</kbd>,
+  or hide it completely
+- The **Agent Monitor** groups agents into buckets: Needs You, Working, Done, Idle
+
+## Jumping between agents
+
+Press <kbd>⌘</kbd><kbd>J</kbd> to open the **jump picker** — a searchable
+list of every agent, tab, and folder. Type a few letters, press
+<kbd>Return</kbd>, and you land on that agent instantly.
+
+You can also navigate between panes with arrow keys:
+<kbd>⌘</kbd><kbd>←</kbd> <kbd>⌘</kbd><kbd>→</kbd> <kbd>⌘</kbd><kbd>↑</kbd>
+<kbd>⌘</kbd><kbd>↓</kbd>.
+
+## Terminal features
+
+Every pane is a real terminal — not a preview or a mirror:
+
+- **Split panes** — drag to split left, right, top, or bottom
+- **Zoom a pane** — press <kbd>⌘</kbd><kbd>M</kbd> to give one agent the whole tab, press again to go back
+- **Font size** — <kbd>⌘</kbd><kbd>+</kbd> to enlarge, <kbd>⌘</kbd><kbd>-</kbd> to shrink, <kbd>⌘</kbd><kbd>0</kbd> to reset
+- **Copy & paste** — <kbd>⌘</kbd><kbd>C</kbd> to copy, <kbd>⌘</kbd><kbd>V</kbd> to paste
+- **Scroll passthrough** — toggle with <kbd>⌘</kbd><kbd>S</kbd> to let the scroll wheel reach the agent or keep it for yourself
+- **Terminal opacity** — adjust the glass transparency in Settings (default is fully opaque for readability)
+- **Link clicking** — Shepherd detects URLs in terminal output (even multi-line ones) so you can click them
+
+## Auto-naming panes
+
+If you have Apple Intelligence enabled, Shepherd reads the terminal output
+and **automatically names each pane** based on what the agent is working on.
+The name updates as the agent moves to new tasks. You can always rename a
+pane manually — the manual name sticks.
+
+## File browser
+
+Press <kbd>⌘</kbd><kbd>E</kbd> to open a file browser inside Shepherd — no
+need to switch to Finder:
+
+- Browse your project folder with a **Recent** column and a **Files** column
+- Press <kbd>Space</kbd> on any file for a Quick Look preview
+- Press <kbd>Return</kbd> to open a file
+- Switch between grid and list view
+- On a remote server, files are downloaded automatically when you open them
+
+## Going full screen
+
+Press <kbd>⌘</kbd><kbd>F</kbd> to fill the screen. Unlike macOS full screen,
+the **menu bar and Dock stay visible** — a wall of terminals doesn't cost you
+the rest of your Mac.
+
+## Sessions persist
+
+Your agents keep running even when you:
+
+- **Close the Shepherd window** — reopen and they're still there
+- **Quit Dax entirely** — your sessions survive because Herdr runs as a
+  background service
+- **Switch between machines** — each machine's herd is parked, not destroyed
+
+## Switching machines
+
+Press <kbd>⌘</kbd><kbd>L</kbd> to open the **machine picker** — a card
+showing your Mac and every server you've connected. Switching **cross-fades**
+between machines instead of cutting, and the herd you leave behind is
+**parked** so switching back is instant.
+
+You can type to filter machines by name, or use arrow keys to navigate.
 
 ## Running on a server
 
-Connect a server and Herdr reaches it down a single SSH forward — same
+Connect a server and Shepherd reaches it over a single SSH connection — same
 window, same tabs, same agents, running on the machine that has the repo,
-the RAM and the uptime.
+the RAM, and the uptime.
 
 <Steps>
   <Step title="Add a server">
     Go to **Settings → Herdr → Servers** and add a host: address, user, port,
-    and a key file or password. Passwords are stored in your Keychain.
+    and a key file or password. Passwords are stored in your Mac's Keychain.
+    Invisible characters from cloud console copy-paste are cleaned
+    automatically, and key file permissions are narrowed for you.
   </Step>
   <Step title="Switch to the server">
-    Pick the server from the switcher above the sidebar tree. Its projects
-    and live terminals appear exactly as local ones do.
+    Press <kbd>⌘</kbd><kbd>L</kbd> and pick the server. Its projects and live
+    terminals appear exactly as local ones do.
   </Step>
   <Step title="Test the connection">
-    Press **Test** (right next to Done) to see the connection happen: which
-    address answered, which key was offered, what the server accepted. Copy
-    the whole log if you need to debug.
+    Press **Test** to see the full connection flow: which address answered,
+    which key was offered, what the server accepted. Copy the log if you need
+    to debug.
   </Step>
-  <Step title="Install herdr automatically">
-    If the server doesn't have herdr yet, Dax installs it automatically. On
+  <Step title="Herdr installs automatically">
+    If the server doesn't have Herdr yet, Dax installs it for you. On
     IPv6-only servers where GitHub is unreachable, Dax sends the binary over
-    the SSH connection already open.
+    the SSH connection that's already open.
   </Step>
 </Steps>
 
 <Note>
-  Your `~/.ssh/config`, agent, and `known_hosts` still apply. No new dependency
-  is added — everything goes through the SSH connection. Addresses pasted from
-  a cloud console are cleaned of invisible characters, and downloaded key files
-  have their permissions narrowed automatically.
+  Your `~/.ssh/config`, SSH agent, and `known_hosts` all still apply. Nothing
+  new is installed on your Mac — everything goes through the standard SSH
+  connection.
 </Note>
 
 ### Remote Panel
 
-A button in the Herdr toolbar (shown only for servers) opens the Remote Panel
-with five tabs:
+Press <kbd>⌘</kbd><kbd>R</kbd> (only shown when connected to a server) to
+open the **Remote Panel** — a dashboard for your server with five tabs:
 
-- **Coding Agents** — what's installed, with a one-click update
-- **Services & Ports** — listening processes and open ports
-- **Web Servers & SSL** — sites grouped by domain, with certificates and expiry
+- **Coding Agents** — see what's installed, install missing agents with one
+  click, and update existing ones
+- **Services & Ports** — every listening service and open port, with
+  start/stop controls
+- **Web Servers & SSL** — sites grouped by domain, with certificate details
+  and expiry dates
 - **Usage** — disk, memory, load, and a live console
-- **Utilities** — common server tools
+- **Utilities** — common server tools you can launch with one click
 
-## Splitting
+### Installing agents on servers
 
-Drag a pane toward the edge of another (left, right, top, bottom) and the
-space divides between them. Green fills the target area to show where the
-split will land. The divider is draggable afterward.
+When you connect to a server for the first time, Shepherd checks which
+coding agents are installed. If any are missing, it offers to install them
+for you — no need to SSH in separately and run setup scripts.
 
-**Even Out Terminals** (from the menu) redistributes the space evenly without
-restarting any process.
+## Creatures
 
-## Agent detection
+Every agent gets a **pixel creature** — one of 21 characters across four
+biomes (aquatic, forest, ground, nocturnal). The creature is assigned based
+on the agent's terminal, so it stays consistent. Creatures appear in the
+sidebar and in the flock view.
 
-Herdr detects 19+ coding agents out of the box: Claude Code, Codex, Gemini,
-Cursor, Grok, Pi, OpenCode, and more. When an agent is running in a pane,
-the sidebar shows its brand icon and reports whether it's working, blocked,
-or idle.
+## Settings
 
-## Going full screen
+Settings → Herdr lets you configure:
 
-Green fills the screen rather than taking it over. The menu bar and the Dock
-stay where they are, so a wall of terminals doesn't cost you the rest of your
-Mac.
+- **Default agent** — which agent to add when you press <kbd>⌘</kbd><kbd>T</kbd>
+- **Skip permission prompts** — let agents run without asking (YOLO mode)
+- **Terminal font size** — default size for new panes
+- **Terminal opacity** — how transparent the terminal background is
+- **Scroll passthrough** — whether the scroll wheel reaches the agent
+- **Pane title summarization** — auto-name panes using Apple Intelligence
+- **Tab color scheme** — color by tab or by folder
+- **File browser view** — grid or list
+- **Projects folder** — where new projects are created
+- **Upload pasted files** — automatically upload files pasted into remote terminals
+
+## Keyboard shortcuts
+
+| Action | Shortcut |
+| --- | --- |
+| Open Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| New project | <kbd>⌘</kbd><kbd>N</kbd> |
+| Open project | <kbd>⌘</kbd><kbd>O</kbd> |
+| Recent projects | <kbd>⌘</kbd><kbd>K</kbd> |
+| Jump to agent | <kbd>⌘</kbd><kbd>J</kbd> |
+| New tab | <kbd>⌘</kbd><kbd>T</kbd> |
+| Add agent | <kbd>⌘</kbd><kbd>Return</kbd> |
+| Close agent | <kbd>⌘</kbd><kbd>W</kbd> |
+| Toggle sidebar | <kbd>⌘</kbd><kbd>B</kbd> |
+| Fill screen | <kbd>⌘</kbd><kbd>F</kbd> |
+| Zoom one agent | <kbd>⌘</kbd><kbd>M</kbd> |
+| Remote Panel | <kbd>⌘</kbd><kbd>R</kbd> |
+| Machine switcher | <kbd>⌘</kbd><kbd>L</kbd> |
+| File browser | <kbd>⌘</kbd><kbd>E</kbd> |
+| Show shortcuts | <kbd>⌘</kbd><kbd>/</kbd> |
+| Larger text | <kbd>⌘</kbd><kbd>+</kbd> |
+| Smaller text | <kbd>⌘</kbd><kbd>-</kbd> |
+| Reset text size | <kbd>⌘</kbd><kbd>0</kbd> |
+| Copy | <kbd>⌘</kbd><kbd>C</kbd> |
+| Toggle scroll | <kbd>⌘</kbd><kbd>S</kbd> |
 
 ## Installing Herdr
 
-The first time you open the tool, Dax offers to install
+The first time you open Shepherd, Dax offers to install
 [Herdr](https://herdr.dev) via Homebrew or a one-line script. Once installed,
-it runs as a background server, so sessions persist even when you close the
-window.
+it runs as a background service — your sessions persist even when you close
+the window or quit Dax.
 
 ## Privacy
 
 Everything runs locally or through a direct SSH connection to your own
-server. Your terminals, your agents, your code: nothing goes through the Dax
-backend.
+server. Your terminals, your agents, your code — nothing goes through the
+Dax backend.
