@@ -3,15 +3,15 @@
    opacities for depth instead of tinted hues.
    ──────────────────────────────────────────────────────────────────── */
 
-/* Note / Info callouts: white/gray monochrome */
+/* Note / Info callouts: warm orange tint */
 .dark [data-callout="note"],
 .dark [data-callout="info"],
 .dark .callout-note,
 .dark .callout-info,
 .dark [class*="Note"],
 .dark [class*="callout"] {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(234, 159, 70, 0.08) !important;
+  border-color: rgba(234, 159, 70, 0.25) !important;
 }
 
 .dark [data-callout="note"],
@@ -26,7 +26,7 @@
 .dark [class*="Note"] *,
 .dark [class*="callout"],
 .dark [class*="callout"] * {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 220, 180, 0.85) !important;
 }
 
 .dark [data-callout="note"] a,
@@ -35,8 +35,8 @@
 .dark .callout-info a,
 .dark [class*="Note"] a,
 .dark [class*="callout"] a {
-  color: rgba(255, 255, 255, 0.9) !important;
-  text-decoration-color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(255, 200, 140, 1) !important;
+  text-decoration-color: rgba(234, 159, 70, 0.4) !important;
 }
 
 .dark [data-callout="note"] a:hover,
@@ -45,7 +45,7 @@
 .dark .callout-info a:hover,
 .dark [class*="Note"] a:hover,
 .dark [class*="callout"] a:hover {
-  text-decoration-color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration-color: rgba(234, 159, 70, 0.8) !important;
 }
 
 .dark [data-callout="note"] svg,
@@ -54,7 +54,23 @@
 .dark .callout-info svg,
 .dark [class*="Note"] svg,
 .dark [class*="callout"] svg {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(234, 159, 70, 0.7) !important;
+}
+
+/* Light mode: same orange tint */
+[data-callout="note"],
+[data-callout="info"],
+.callout-note,
+.callout-info {
+  background: rgba(234, 159, 70, 0.08) !important;
+  border-color: rgba(234, 159, 70, 0.3) !important;
+}
+
+[data-callout="note"] svg,
+[data-callout="info"] svg,
+.callout-note svg,
+.callout-info svg {
+  color: rgba(200, 120, 30, 0.8) !important;
 }
 
 /* Force keyboard symbols (↩ ⌃ ⌥ ⌘ ⇥ ⇧) to render as text glyphs,
