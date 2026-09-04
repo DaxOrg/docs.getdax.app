@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.38: Markdown Viewer, custom accent colour, rebuilt palettes, and Shepherd cross-fades between machines. <a href='/whats-new'>See what's new →</a>"
+    "content": "New in 2.39: Shepherd panes name themselves, colour tells folders apart, drag to swap panes, and paste images into remote servers. <a href='/whats-new'>See what's new →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
