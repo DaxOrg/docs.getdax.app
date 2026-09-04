@@ -228,16 +228,6 @@
           "icon": "globe"
         },
         {
-          "anchor": "Download",
-          "href": "https://getdax.app/download/",
-          "icon": "arrow-down-to-line"
-        },
-        {
-          "anchor": "Status",
-          "href": "https://status.getdax.app",
-          "icon": "signal"
-        },
-        {
           "anchor": "Community",
           "href": "https://discord.gg/V5te2fHHRA",
           "icon": "discord"
@@ -249,13 +239,7 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Download for macOS",
-      "href": "https://getdax.app/download/"
-    }
-  },
+  "navbar": {},
   "contextual": {
     "options": [
       "copy",
