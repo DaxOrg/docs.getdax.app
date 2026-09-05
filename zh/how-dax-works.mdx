@@ -17,13 +17,16 @@ Dax 里的每个工具都遵循一些共同的规则，与其在每个工具页�
   还没记住快捷键之前很好用。
 - **菜单栏图标**同样列出所有工具，也能打开设置。
 
+<Frame>
+  <img src="/images/screenshots/launcher.jpg" alt="Dax 启动器网格" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
 ### 全局快捷键（非工具）
 
 | 快捷键 | 打开 |
 | --- | --- |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | 工具启动器网格 |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | 设置 |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | 设置 → Tools 标签（单个工具的配置） |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | 设置 → Shortcuts 标签（重新绑定快捷键） |
 
 ## 入门
@@ -31,7 +34,7 @@ Dax 里的每个工具都遵循一些共同的规则，与其在每个工具页�
 首次启动 Dax 时，设置界面会引导你创建账号：
 
 - **注册**时输入你的姓名和邮箱。我们会发送一个验证码，输入后你的账号立即激活。
-  初始为 **Free** 方案（200 credits/月），可随时通过 Stripe 升级到 **Pro**（$10/月，2,500 credits）。
+  初始为 **Free** 方案，可随时通过 Stripe 升级到 **Pro**（$10/月，2,500 credits）。
 
 已有验证码？设置界面上有一个 **Already have a code?** 链接，可直接输入。
 
@@ -42,16 +45,15 @@ Dax 里的每个工具都遵循一些共同的规则，与其在每个工具页�
 | | Free | Pro ($10/月) |
 | --- | --- | --- |
 | Credits | 200/月 | 2,500/月 |
-| File upload limit | 250 MB | 10 GB |
-| Deep Research | — | 10 credits/use |
-| Web Search | — | 2 credits/use |
-| Dax Shepherd | Local only | Full remote + multiplayer |
+| 文件上传限制 | 250 MB | 10 GB |
+| Deep Research | — | 10 credits/次 |
+| Web Search | — | 2 credits/次 |
 
-#### Credit costs
+#### Credit 消耗
 
-Each action costs a different number of credits:
+每个操作消耗不同数量的 credits：
 
-| Action | Credits |
+| 操作 | Credits |
 | --- | --- |
 | Ask AI | 1 |
 | Text transform | 1 |
@@ -62,20 +64,19 @@ Each action costs a different number of credits:
 | Generate Image | 15 |
 | Deep Research | 25 |
 
-Credits from your plan reset on the 1st of each month.
+方案内的 credits 在每月 1 日重置。
 
-#### Top up credits
+#### 充值 credits
 
-Need more credits? Buy a top-up any time — credits are added instantly
-and last until the end of the month.
+需要更多 credits？随时购买充值包——credits 即时到账，有效期到月底。
 
-| Top-up | Price | Credits |
+| 充值包 | 价格 | Credits |
 | --- | --- | --- |
 | Standard | $10 | 3,000 |
 | Large | $20 | 7,500 |
 
-Spend order: plan credits are used first. When plan credits run out,
-top-up credits kick in. Unused credits reset at the end of the month.
+消费顺序：优先使用方案 credits。方案 credits 用完后，充值 credits 开始
+生效。未使用的 credits 在月底重置。
 
 随时在 **Usage** 窗口中升级。通过 Stripe 客户门户管理或取消你的订阅。
 
@@ -91,7 +92,7 @@ top-up credits kick in. Unused credits reset at the end of the month.
 <CardGroup cols={2}>
   <Card title="离线可用" icon="wifi-slash">
     [Frequent CLIs](/zh/tools/frequent-clis)、[Boilerplates](/zh/tools/boilerplates)、
-    [Inject MD](/zh/tools/inject-md)、[Open Project](/zh/tools/open-project)、
+    [Inject MD or Skill](/zh/tools/inject-md)（以链接分享除外）、[Open Project](/zh/tools/open-project)、
     [Vibe History](/zh/tools/vibe-history)、[Command History](/zh/tools/command-history)、
     [Image to Text](/zh/tools/image-to-text)、
     [Secrets](/zh/tools/secrets)、[Remove BG](/zh/tools/remove-bg)、
@@ -104,8 +105,13 @@ top-up credits kick in. Unused credits reset at the end of the month.
     [Generate Image](/zh/tools/generate-image)、[Context Form Fill](/zh/tools/context-fill)、
     [Image to URL](/zh/tools/image-to-url)、[File Drop](/zh/tools/file-drop)、
     [Clip to Link](/zh/tools/clip-to-link)、[PRD Maker](/zh/tools/prd-maker)、
+    [Feedback](/zh/tools/feedback)
   </Card>
 </CardGroup>
+
+## 通知
+
+Dax 通过不打扰的浮动通知来传递信息——小巧的悬浮卡片会自动出现并自动消失。
 
 ## 隐私
 

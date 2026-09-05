@@ -1,65 +1,98 @@
 ---
 title: "快速上手"
-description: "安装 Dax，两分钟内运行你的第一个工具。"
+description: "下载 Dax，完成设置，运行你的第一个工具。大约两分钟。"
 icon: "rocket"
 ---
 
-Dax 运行在你的菜单栏。这份指南将带你从下载到获得第一个图片托管链接。
+Dax 运行在你的菜单栏，在你按下快捷键之前一直安静待命。这份指南将带你从下载
+到获得第一个结果。
 
 ## 前提条件
 
-- macOS 13（Ventura）或更高版本
-- Apple Silicon 或 Intel Mac
+- macOS 14（Sonoma）或更高版本的 Mac
+- Apple Silicon 或 Intel（均可）
 
-## 安装 Dax
+## 第一步：下载并安装
 
 <Steps>
-  <Step title="下载">
-    从 [getdax.app/download](https://getdax.app/download/) 获取最新版本，
-    DMG 会自动开始下载。
+  <Step title="下载 Dax">
+    前往 [getdax.app/download](https://getdax.app/download/)，安装包会自动
+    开始下载。
   </Step>
-  <Step title="移动到 Applications">
-    打开 DMG，把 **Dax** 拖进你的 **Applications** 文件夹。
+  <Step title="运行安装程序">
+    打开下载的 `.pkg` 文件，按照提示操作。Dax 会安装到你的 Applications
+    文件夹。
   </Step>
-  <Step title="启动">
-    从 Applications 打开 Dax，Dax 图标会出现在你的菜单栏，所有工具都住在
-    那里。
+  <Step title="打开 Dax">
+    从 Applications 启动 Dax，屏幕顶部的**菜单栏**会出现一个小图标，那就是
+    大本营。
 
     <Tip>
-      第一次打开 Dax 时，macOS 可能会要求你确认这个应用。点击**打开**继续。
+      如果 macOS 提示"你确定要打开这个应用吗？"，点击**打开**。Dax 已经过
+      Apple 签名和公证。
     </Tip>
   </Step>
 </Steps>
 
-## 运行你的第一个工具
+## 第二步：设置账号
 
-我们用 [Image to URL](/zh/tools/image-to-url) 把一张图片变成可分享的链接。
+首次打开 Dax 时，设置界面会引导你创建账号：
+
+<Card title="注册 Dax 账号" icon="user-plus">
+  输入你的姓名和邮箱。我们会发送一个验证码，输入后你的账号立即激活。初始为
+  Free 方案，可随时升级到 Pro。
+</Card>
+
+<Note>
+  **已有验证码？** 在设置界面点击"Already have a code?"直接输入。
+</Note>
+
+## 第三步：试试你的第一个工具
+
+让我们用 [Image to URL](/zh/tools/image-to-url) 把一张图片变成可分享的链接。
 
 <Steps>
+  <Step title="复制一张图片">
+    截个屏（<kbd>⌘</kbd><kbd>⇧</kbd><kbd>4</kbd>）或把任意图片复制到剪贴板。
+  </Step>
   <Step title="按下快捷键">
-    在任意位置按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd>。
+    在任意位置按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>U</kbd>，即
+    **Control + Option + U**。
   </Step>
-  <Step title="拖入一张图片">
-    把图片拖进窗口，或从剪贴板粘贴一张。
-  </Step>
-  <Step title="分享链接">
-    Dax 会上传图片，并把托管链接复制到你的剪贴板。把它粘贴进你的聊天窗口、
-    提示词或 Pull Request 里。
+  <Step title="获取链接">
+    Dax 会上传图片并把可分享的 URL 复制到你的剪贴板。把它粘贴到你需要的
+    任何地方：聊天、Pull Request 或文档。
   </Step>
 </Steps>
 
-## 接下来看看
+<Tip>
+  **不确定快捷键？** 按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd>
+  （Control + Option + Space）打开**启动器网格**，每个工具都只需点一下。
+  你也可以点击菜单栏里的 Dax 图标。
+</Tip>
+
+## 接下来探索
 
 <CardGroup cols={2}>
-  <Card title="键盘快捷键" icon="keyboard" href="/zh/shortcuts">
-    了解每个工具的全局快捷键。
+  <Card title="向 AI 快速提问" icon="comment-dots" href="/zh/tools/ask-ai">
+    按下 <kbd>⌃</kbd><kbd>⌥</kbd><kbd>K</kbd>，一个悬浮提问框会出现。输入
+    问题，几秒内获得答案。
   </Card>
-  <Card title="浏览全部工具" icon="grid-2" href="/zh/tools/ask-ai">
-    看看每个工具分别能做什么。
+  <Card title="从图片中提取文字" icon="scanner" href="/zh/tools/image-to-text">
+    按下 <kbd>⌃</kbd><kbd>⌥</kbd><kbd>R</kbd>，Dax 会读取截图或照片中的文字
+    并复制到剪贴板。离线可用。
+  </Card>
+  <Card title="浏览全部工具" icon="grid-2" href="/zh/shortcuts">
+    在一张表里查看每个工具及其快捷键。
+  </Card>
+  <Card title="Dax 如何运作" icon="circle-info" href="/zh/how-dax-works">
+    快捷键、启动器、在线与离线工具，以及隐私。
   </Card>
 </CardGroup>
 
-<Tip>
-  有功能不好用，或者想要一个 Dax 还没有的工具？通过 [Feedback](/zh/tools/feedback)
-  菜单里直接找到。
-</Tip>
+<Note>
+  **什么是快捷键？** 快捷键是一组按键组合，按下即可立即打开一个工具。在 Dax
+  中，大多数快捷键是 **Control + Option + 一个字母**。同时按住 Control 和
+  Option，然后按对应的字母。例如 <kbd>⌃</kbd><kbd>⌥</kbd><kbd>K</kbd> 意思是
+  按住 Control + Option，然后按 K。
+</Note>

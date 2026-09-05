@@ -1,11 +1,16 @@
 ---
-title: "Inject MD"
-description: "把 AGENTS.md（或任意 Markdown 文件）放进任意项目，放在 Agent 会读取到的位置。"
+title: "Inject MD or Skill"
+description: "把 AGENTS.md（或任意 Markdown）放入任意项目，安装 Dax 的 Agent 技能，或以链接分享文件。"
 icon: "markdown"
 ---
 
-**Inject MD** 会把一份 Markdown 指令文件（比如 `AGENTS.md`）放进你用过的任意
-项目，正好放在编程 Agent 会读取到的位置。完全离线可用。
+**Inject MD** 把一份 Markdown 指令文件（比如 `AGENTS.md`）放进你用过的任意
+项目，正好放在编程 Agent 会读取到的位置。也可以安装 Dax 的 Agent 技能，或者
+把文件交给运行在另一台机器上的 Agent。
+
+<Frame>
+  <img src="/images/screenshots/inject-md.jpg" alt="Inject MD — 选择要注入的文件" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
 
 ## 打开方式
 
@@ -14,27 +19,64 @@ icon: "markdown"
 ## 使用方法
 
 <Steps>
-  <Step title="选择文件">
-    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>，然后选择要注入的 Markdown
-    文件（默认是 `AGENTS.md`）。
+  <Step title="选择要注入的内容">
+    按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>A</kbd>。第一个界面有**两个标签页**
+    （<kbd>⌘</kbd> <kbd>1</kbd> / <kbd>⌘</kbd> <kbd>2</kbd>）：
+
+    - **My Documents** — 这个工具保存的 Markdown 文件（默认是 `AGENTS.md`），
+      可以在设置里编辑。按 <kbd>⌘</kbd> <kbd>O</kbd> 可以选择这台 Mac 上的
+      任意 Markdown 或文本文件——比如你刚写的 PRD 或简报。
+    - **Skill Library** — 由 Dax 编写的 Agent 技能。输入关键词搜索；高亮的
+      技能会展开，方便你在确认之前阅读内容。
   </Step>
   <Step title="选择项目">
     一份面板会出现，列出**你用过 Claude Code 或 Codex 的所有项目**，数据来自
     你的会话记录。
   </Step>
   <Step title="注入">
-    选中一个项目，文件会被**写入该项目的文件夹**，正好是 Agent 会去查找的
-    位置。
+    选择放置位置：
+
+    - **某个项目** — 写入该项目的文件夹，正好是 Agent 会去查找的位置。
+    - **Choose Folder…** — 磁盘上的任意文件夹。
+    - **Share as a Link…** — 给不在这台 Mac 上的 Agent 使用（仅限文档，
+      见下文）。
   </Step>
 </Steps>
 
+## Skill Library
+
+技能由 Dax 编写。你可以浏览、搜索和注入它们——这里没有创建自定义技能的功能，
+这是刻意的设计：技能是 Agent 加载并执行的东西，只有在背后有统一作者的情况下，
+这样一个库才值得信赖。你自己的指令有专属的标签页。
+
+技能是一个**文件夹**，而不是单个文件。注入技能会在项目中写入
+`.claude/skills/<name>/`，这是 Claude Code 查找的路径。如果文件夹已存在，
+系统会在替换前询问你。
+
+Dax 会获取技能库并保留一份副本，所以这个标签页离线也能用；当显示的是缓存
+副本而非最新版本时，界面上会标明。
+
+<Note>
+  技能**不能**以链接方式分享——链接路由会将一个文件放到项目根目录，而技能必须
+  放在自己的文件夹里，所以不提供该选项。
+</Note>
+
+Settings → Tools → Inject MD 列出了 Dax 拥有的所有技能，可搜索并完整阅读。
+
 ## 以链接分享
 
-不注入到本地文件夹，而是从项目面板顶部选择 **Share as a link**。文件会上传，
-你会得到一个 URL，任何远程 Agent（或 Herdr 服务器）都可以用 `curl` 获取。
+不注入到本地文件夹，而是从项目面板选择 **Share as a Link**。文件会上传，一行
+`curl` 命令会复制到你的剪贴板：
 
-- **过期时间：** 链接在一段时间后过期（默认 7 天，可配置至 30 天）。
-- **管理链接：** 在同一界面查看和撤销已发布的链接。
+```
+curl -fsSL -o 'AGENTS.md' 'https://daxurl.click/d/9fK2s7Qm4bVx1TpZr8Wc3d/AGENTS.md'
+```
+
+把它粘贴到 Agent 运行的地方——Herdr 面板里的服务器、别人机器上的终端、CI 任务
+——文件就会以自己的名字落入对应文件夹。
+
+- **过期时间：** 链接默认在**一小时**后过期。在 Settings → Tools → Inject MD
+  中可以修改时限或设为一次性使用。
 
 <Tip>
   PRD Maker 也使用这个链接基础设施来与远程 Agent 分享已完成的 PRD。
@@ -42,5 +84,7 @@ icon: "markdown"
 
 ## 隐私
 
-默认本地运行。项目列表来自本地记录，文件写入也在本地完成。以链接分享是唯一
-会将文件发送到你 Mac 之外的操作。
+默认本地运行。项目列表来自本地记录，文件写入也在本地完成。获取 Skill Library
+只是一次下载，仅此而已——Dax 不会随之发送任何代码片段、文档、项目名或搜索词。
+**以链接分享会将文件内容上传**到一个 URL，任何持有该链接的人都可以在过期前
+访问。

@@ -105,6 +105,7 @@
               "zh/tools/frequent-clis",
               "zh/tools/open-project",
               "zh/tools/inject-md",
+              "zh/tools/agent-watch",
               "zh/tools/vibe-history",
               "zh/tools/image-to-text",
               "zh/tools/secrets",
@@ -112,7 +113,6 @@
               "zh/tools/herdr",
               "zh/tools/remove-bg",
               "zh/tools/clip-to-link",
-              "zh/tools/agent-watch",
               "zh/tools/prompt-snippets",
               "zh/tools/markdown-viewer"
             ]
@@ -155,6 +155,7 @@
               "es/tools/frequent-clis",
               "es/tools/open-project",
               "es/tools/inject-md",
+              "es/tools/agent-watch",
               "es/tools/vibe-history",
               "es/tools/image-to-text",
               "es/tools/secrets",
@@ -162,7 +163,6 @@
               "es/tools/herdr",
               "es/tools/remove-bg",
               "es/tools/clip-to-link",
-              "es/tools/agent-watch",
               "es/tools/prompt-snippets",
               "es/tools/markdown-viewer"
             ]
@@ -205,6 +205,7 @@
               "fr/tools/frequent-clis",
               "fr/tools/open-project",
               "fr/tools/inject-md",
+              "fr/tools/agent-watch",
               "fr/tools/vibe-history",
               "fr/tools/image-to-text",
               "fr/tools/secrets",
@@ -212,7 +213,6 @@
               "fr/tools/herdr",
               "fr/tools/remove-bg",
               "fr/tools/clip-to-link",
-              "fr/tools/agent-watch",
               "fr/tools/prompt-snippets",
               "fr/tools/markdown-viewer"
             ]

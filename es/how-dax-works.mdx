@@ -21,13 +21,16 @@ página.
 - **El icono de la barra de menú** también lista las herramientas y abre
   Settings.
 
+<Frame>
+  <img src="/images/screenshots/launcher.jpg" alt="La cuadrícula del lanzador de Dax" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
 ### Atajos globales (no son herramientas)
 
 | Atajo | Abre |
 | --- | --- |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | La cuadrícula del lanzador |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings → pestaña Tools (configuración de cada herramienta) |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → pestaña Shortcuts (reasignar atajos) |
 
 ## Primeros pasos
@@ -37,7 +40,8 @@ para crear una cuenta:
 
 - **Regístrate** con tu nombre y correo electrónico. Te enviaremos un
   código; escríbelo y tu cuenta se activa al instante. Empieza en el plan
-  **Free** (200 credits/mes) y sube a **Pro** ($10/mes, 2,500 credits) vía Stripe en cualquier momento.
+  **Free** y sube a **Pro** ($10/mes, 2,500 credits) vía Stripe en
+  cualquier momento.
 
 ¿Ya tienes un código? Hay un enlace **Already have a code?** en la
 pantalla de configuración para ingresarlo directamente.
@@ -53,13 +57,12 @@ tu Mac y las herramientas se desbloquean.
 | File upload limit | 250 MB | 10 GB |
 | Deep Research | — | 10 credits/use |
 | Web Search | — | 2 credits/use |
-| Dax Shepherd | Local only | Full remote + multiplayer |
 
-#### Credit costs
+#### Coste por créditos
 
-Each action costs a different number of credits:
+Cada acción consume un número diferente de créditos:
 
-| Action | Credits |
+| Acción | Créditos |
 | --- | --- |
 | Ask AI | 1 |
 | Text transform | 1 |
@@ -70,20 +73,21 @@ Each action costs a different number of credits:
 | Generate Image | 15 |
 | Deep Research | 25 |
 
-Credits from your plan reset on the 1st of each month.
+Los créditos de tu plan se reinician el 1 de cada mes.
 
-#### Top up credits
+#### Recargar créditos
 
-Need more credits? Buy a top-up any time — credits are added instantly
-and last until the end of the month.
+¿Necesitas más créditos? Compra una recarga en cualquier momento: los
+créditos se añaden al instante y duran hasta fin de mes.
 
-| Top-up | Price | Credits |
+| Recarga | Precio | Créditos |
 | --- | --- | --- |
 | Standard | $10 | 3,000 |
 | Large | $20 | 7,500 |
 
-Spend order: plan credits are used first. When plan credits run out,
-top-up credits kick in. Unused credits reset at the end of the month.
+Orden de gasto: primero se usan los créditos del plan. Cuando se agotan,
+entran los créditos de recarga. Los créditos no utilizados se reinician al
+final del mes.
 
 Sube de plan en cualquier momento desde la ventana **Usage**. Gestiona o
 cancela tu suscripción a través del portal de clientes de Stripe.
@@ -101,7 +105,7 @@ panel condenado a fallar. Se reactivan en cuanto vuelve la conexión.
 <CardGroup cols={2}>
   <Card title="Funcionan sin conexión" icon="wifi-slash">
     [Frequent CLIs](/es/tools/frequent-clis), [Boilerplates](/es/tools/boilerplates),
-    [Inject MD](/es/tools/inject-md), [Open Project](/es/tools/open-project),
+    [Inject MD or Skill](/es/tools/inject-md) (excepto Share as a Link), [Open Project](/es/tools/open-project),
     [Vibe History](/es/tools/vibe-history), [Command History](/es/tools/command-history),
     [Image to Text](/es/tools/image-to-text),
     [Secrets](/es/tools/secrets), [Remove BG](/es/tools/remove-bg),
@@ -114,8 +118,13 @@ panel condenado a fallar. Se reactivan en cuanto vuelve la conexión.
     [Generate Image](/es/tools/generate-image), [Context Form Fill](/es/tools/context-fill),
     [Image to URL](/es/tools/image-to-url), [File Drop](/es/tools/file-drop),
     [Clip to Link](/es/tools/clip-to-link), [PRD Maker](/es/tools/prd-maker),
+    [Feedback](/es/tools/feedback)
   </Card>
 </CardGroup>
+
+## Notificaciones
+
+Dax se comunica a través de notificaciones toast discretas: pequeñas tarjetas flotantes que aparecen y se cierran solas.
 
 ## Privacidad
 
