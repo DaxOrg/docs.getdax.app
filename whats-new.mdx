@@ -6,6 +6,87 @@ icon: "clock-rotate-left"
 
 Stay up to date with what's shipping in Dax.
 
+## 3.0.1
+
+<sub>September 2026</sub>
+
+**Launcher crash fix**
+
+- **Fixed a crash when pressing <kbd>⌘</kbd><kbd>E</kbd> in the launcher.** Several layout loops between palette windows and their hosting views could fight each other into a non-converging state — the scale effect, the content height, and every palette's NSHostingView all had to be pinned down separately.
+- **Dragging launcher tiles shows a grabbing-hand cursor** instead of the default pointer.
+- Setapp build naming and icon fixes.
+
+---
+
+## 3.0
+
+<sub>September 2026</sub>
+
+**Dax 3.0 — Available on Setapp**
+
+Dax is on Setapp. One subscription, no separate account — Setapp subscribers get every tool and every AI credit Dax offers.
+
+**New Tab and metering**
+- **New Tab lets you choose which agent opens first** instead of always starting the last one you used.
+- **Image to Prompt is now metered** like every other AI tool, with clear usage tracking.
+
+**MCP and toasts**
+- **MCP servers are grouped by connection state** — connected servers appear first, servers needing sign-in are separated below.
+- **Toast notifications are trimmed at word boundaries** and capped to their real line count instead of an estimate.
+
+**Polish**
+- **Agent Watch stops guessing a sheep's colour** when it doesn't have enough information.
+- **Shell hold gives local panes a second chance** before marking them as disconnected.
+- Visual polish across permissions, launcher panels, annotation editor, and the Setapp usage page.
+
+---
+
+## 2.40.0
+
+<sub>September 2026</sub>
+
+**MCP Catalog, Key Cast & Server Paths**
+
+The largest Shepherd release yet — MCP servers you can browse and install, a key overlay for recording demos, and paths that finally work on a server.
+
+**MCP servers, per agent**
+- **<kbd>⇧</kbd><kbd>⌘</kbd><kbd>M</kbd> opens the MCP panel** — see what the agent in a pane can reach, and add MCP servers from a catalog instead of editing a config file.
+- Every server wears its own logo, and signing in happens in the panel rather than somewhere else.
+
+**Key Cast** (<kbd>⌥</kbd><kbd>⌘</kbd><kbd>K</kbd>)
+- **Draws the keys you press on screen for recording demos** — chords only, so nothing you type leaks into the video.
+- **Place it by dragging** — drop the pill in a picture of the window it will sit in, with nine snap targets.
+- Holding the dictation key shows a red dot and names the agent the words will land in.
+
+**Reopen a closed agent** (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>W</kbd>)
+- **Reopens the agent you just closed**, in the same conversation, with its name, folder, and permissions.
+- **Closing a tab or project counts too** — <kbd>⇧</kbd><kbd>⌘</kbd><kbd>W</kbd> walks back through them one at a time.
+- Twenty deep, kept for a fortnight, and remembered across quitting Dax.
+
+**Paths and links on a server**
+- **A `~` expands against the machine the path is on.** Tilde paths on a server used to resolve against your Mac's home — so those links never lit up.
+- **A file outside the project is found.** Resolution climbs to the root, then searches — the git root first, then wider.
+- **A link wrapped across lines opens whole on a server too.**
+- <kbd>⌘</kbd>-clicking a file on a server downloads it and previews it here.
+
+**Rebuilt image editor**
+- A markup bar in groups — tools, size, colour, done.
+- **Remove Background**, on the bar. Press again and the background comes back, with everything you drew still in place.
+- **Rounded corners**, by however much you say — a slider, on by default at 1.5%.
+
+**Opening a folder**
+- **A folder already open is switched to**, not opened again. <kbd>⌘</kbd><kbd>O</kbd>, the server's browser, the Recent menu, and a folder dropped on the window all used to make a second project.
+- **<kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd> clones a repo** — paste a URL and it lands in your projects folder and opens.
+
+**Also**
+- A selection is copied when the mouse comes up. Dragging past the edge scrolls the pane.
+- <kbd>⌘</kbd><kbd>/</kbd> is five tabs rather than one tall column.
+- Agent Watch sorts into three lists and draws the herd as sheep, and can watch the agents on a server.
+- BYOK removed (deleted, not flagged off). Inject MD renamed to Inject MD or Skill.
+- Signed, notarized, universal (Apple Silicon & Intel), macOS 14+.
+
+---
+
 ## 2.39.0
 
 <sub>August 2026</sub>

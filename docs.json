@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "announcement": {
-    "content": "New in 2.39: Shepherd panes name themselves, colour tells folders apart, drag to swap panes, and paste images into remote servers. <a href='/whats-new'>See what's new →</a>"
+    "content": "Dax 3.0 is here — now on Setapp. MCP catalog, Key Cast, server paths, and a rebuilt image editor. <a href='/whats-new'>See what's new →</a>"
   },
   "theme": "aspen",
   "name": "Dax",
