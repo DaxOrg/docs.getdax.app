@@ -67,6 +67,12 @@
               "tools/prompt-snippets",
               "tools/markdown-viewer"
             ]
+          },
+          {
+            "group": "Developers",
+            "pages": [
+              "developers/accelerator-sdk"
+            ]
           }
         ]
       },

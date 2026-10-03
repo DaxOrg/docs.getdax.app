@@ -1,0 +1,213 @@
+---
+title: "Build your own accelerator"
+description: "Write a Dax accelerator in JavaScript and render it with native macOS controls."
+icon: "puzzle-piece"
+---
+
+A custom accelerator is a folder with two files: `manifest.json` and
+`main.js`. Your JavaScript describes a view, and Dax draws it with native
+SwiftUI and AppKit controls. You don't need Node, HTML, or a web view.
+
+Your accelerator opens from the launcher and the sidebar like any built-in
+tool, and you can give it its own shortcut.
+
+<CardGroup cols={2}>
+  <Card title="Starter package" icon="file-zipper" href="https://github.com/DaxOrg/docs.getdax.app/raw/main/developers/downloads/snip-to-brief.zip">
+    Snip to Brief: commented source, types, and a walkthrough. Unzip and install.
+  </Card>
+  <Card title="TypeScript definitions" icon="code" href="https://github.com/DaxOrg/docs.getdax.app/blob/main/developers/downloads/dax.d.ts">
+    `dax.d.ts` gives your editor completion for the whole API.
+  </Card>
+</CardGroup>
+
+## Install and develop
+
+<Steps>
+  <Step title="Create the folder">
+    Add a `manifest.json` and a `main.js`. Pick your own reverse-domain ID,
+    such as `com.yourname.format-json`. IDs starting with `app.getdax.` are
+    reserved.
+  </Step>
+  <Step title="Install it">
+    Open **Settings → Accelerators → Custom Accelerators**, then click
+    **Install from Folder…**. Review the author, version, and requested access
+    before you approve it.
+  </Step>
+  <Step title="Assign a shortcut">
+    Open the accelerator's settings page and record a shortcut. New packages
+    never claim one by default.
+  </Step>
+  <Step title="Iterate">
+    After each change, install the folder again. Dax snapshots the reviewed
+    files, so edits to an installed copy make it unavailable until you
+    reinstall it. **Reload Installed** rediscovers approved packages; it does
+    not approve edits.
+  </Step>
+</Steps>
+
+<Tip>
+  Using a build tool? Bundle your dependencies into `main.js`, and compile
+  TypeScript against `dax.d.ts`. Packages that need filesystem, process,
+  browser, or network globals can't run.
+</Tip>
+
+## A complete example
+
+This accelerator formats the JSON you have selected, entirely on your Mac.
+
+<CodeGroup>
+
+```json manifest.json
+{
+  "id": "com.example.format-json",
+  "name": "Format JSON",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "main.js",
+  "icon": "curlybraces",
+  "author": "Your name",
+  "description": "Format selected or pasted JSON.",
+  "input": "selectedText",
+  "permissions": ["selection.read", "clipboard.write"]
+}
+```
+
+```javascript main.js
+const input = dax.state("");
+const output = dax.state("");
+const error = dax.state("");
+
+dax.defineAccelerator({
+  activate(context) {
+    input.set(context.input.text || "");
+    dax.ui.mount(() => dax.ui.column({ children: [
+      dax.ui.textArea({ id: "input", label: "JSON", value: input.get(),
+                        onChange: value => input.set(value), height: 150 }),
+      dax.ui.row({ children: [
+        dax.ui.button({ id: "format", title: "Format", onPress: () => {
+          try { output.set(JSON.stringify(JSON.parse(input.get()), null, 2)); error.set(""); }
+          catch (e) { error.set(e.message); }
+        }}),
+        dax.ui.button({ id: "copy", title: "Copy result", disabled: !output.get(),
+          onPress: async () => {
+            await dax.clipboard.writeText(output.get());
+            await dax.ui.toast({ title: "Formatted JSON copied" });
+          }})
+      ]}),
+      error.get() && dax.ui.text({ text: error.get() }),
+      dax.ui.code({ id: "output", text: output.get(), height: 170 })
+    ]}));
+  }
+});
+```
+
+</CodeGroup>
+
+## Manifest
+
+| Field | Required | Notes |
+|---|---|---|
+| `id` | Yes | Reverse-domain ID, unique to your accelerator |
+| `name` | Yes | Shown in the launcher and sidebar |
+| `version` | Yes | Your version string |
+| `apiVersion` | Yes | Exactly `1` |
+| `entry` | Yes | Exactly `main.js` (UTF-8, at most 1 MB) |
+| `icon` | Yes | An [SF Symbol](https://developer.apple.com/sf-symbols/) name |
+| `permissions` | Yes | The access your code needs (see below); may be empty |
+| `author`, `description` | No | Shown on the install review |
+| `input` | No | `"selectedText"` captures the selection before Dax opens; needs `selection.read` |
+| `requiresNetwork` | No | `true` hides the accelerator while you're offline |
+
+The manifest can be at most 32 KB.
+
+## State and UI
+
+Call `dax.defineAccelerator({ activate(context) { … } })` once. Inside it,
+mount a render function with `dax.ui.mount(() => …)`. Create state with
+`dax.state(initial)`, read it with `.get()`, and change it with `.set(value)`
+or `.set(previous => next)`. Dax redraws whenever state changes.
+
+<Warning>
+  Give every interactive component a stable `id`, especially inside
+  conditional layouts. Without one, Dax derives the ID from position, and your
+  text fields can lose focus or undo history when the layout changes.
+</Warning>
+
+Rendering must not change state. Catch errors you expect and show them; an
+uncaught error replaces your view with Dax's error screen.
+
+| Component | Properties |
+|---|---|
+| `column`, `form`, `row` | `children` (`false` and `null` are skipped) |
+| `text`, `markdown` | `text`; `markdown` supports inline formatting |
+| `textField`, `textArea` | `label`, `value`, `placeholder`, `onChange`; `textArea` also takes `height` |
+| `button` | `title`, `onPress`, `disabled` |
+| `toggle` | `label`, boolean `value`, `onChange` |
+| `picker` | `label`, `value`, `options: [{id, title}]`, `onChange` |
+| `list` | `items: [{id, title, subtitle?}]`, selected `value`, `onSelect(id)` |
+| `code` | `text`, optional `height`; Dax detects the language |
+| `image` | an image handle in `image`, optional `label` and `height` |
+| `progress`, `emptyState` | optional `title`; `emptyState` also takes `text` |
+
+Every component accepts `id` and `disabled`. Accelerators open in a 700×560
+panel that scrolls; heights are clamped to 44–360 points. A view can have up
+to 200 nodes, 12 levels deep.
+
+## Permissions and capabilities
+
+Every method returns a Promise and rejects with a readable message. Your
+accelerator can only call what its manifest asked for and the user approved.
+
+| Permission | Methods |
+|---|---|
+| `selection.read` | Selected text in `context.input.text` |
+| `clipboard.read` | `dax.clipboard.readText()`, `dax.clipboard.readImage()` |
+| `clipboard.write` | `dax.clipboard.writeText(text)`, `dax.clipboard.writeImage(image)` |
+| `capture.snip` | `dax.capture.snip()`: the user selects a screen region |
+| `images.process` | `dax.images.recognizeText(image)`, `removeBackground(image)`, `annotate(image)` |
+| `ai.text` | `dax.ai.transform({text, instruction})`, `dax.ai.ask({question, …})` |
+| `ai.vision` | Also required to pass images to `dax.ai.ask` |
+| `ai.image` | `dax.ai.generateImage({prompt, model, …})` |
+| `files.userSelected` | `dax.files.pickImage()`, `dax.files.saveImage(image)` |
+| `storage.upload` | `dax.upload.image(image)`, which returns a public URL |
+| None | `dax.ai.models()`, `dax.images.release(image)`, `dax.storage.get/set`, `dax.ui.toast`, `dax.ui.close` |
+
+Images are opaque handles, not paths or base64. Pass them to other methods or
+to `dax.ui.image`, and release the ones you're done with.
+
+`dax.storage.get(key)` and `dax.storage.set(key, value)` keep JSON on this Mac,
+private to your accelerator (256 KB total). It isn't a secret store, so don't
+keep passwords or tokens there.
+
+### AI
+
+```javascript
+const answer = await dax.ai.ask({
+  question: "Explain this error and suggest a fix",
+  images: [await dax.capture.snip()],
+  search: "off" // or "search", "research"
+});
+// answer: { text, sources: [{ title, url }] }
+
+const result = await dax.ai.generateImage({
+  prompt: "A friendly sheep mascot",
+  model: "nanoBanana", // list choices with dax.ai.models()
+  aspectRatio: "1:1",
+  background: "transparent"
+});
+// result: { image, model, cost }
+```
+
+Dax asks the user once per run before the first AI request, and again before
+an upload. AI runs on the user's Dax account; your code never sees a token.
+
+## Limits
+
+- One accelerator runs at a time, for up to 30 minutes per run.
+- Up to 12 online operations per run, one at a time.
+- Up to 16 images (80 MB) held at once; each input at most 30 MB.
+- No arbitrary HTTP, shell commands, background tasks, or file access beyond
+  the user-chosen files above.
+
+Your code runs in a sandboxed helper with no network or file access of its
+own. Everything it does goes through the permissions above.
