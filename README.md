@@ -1,8 +1,7 @@
 # Dax documentation
 
-The documentation site for **[Dax](https://getdax.app)** — an AI-powered
-productivity companion built for developers, creators, and anyone building
-with AI.
+**[Dax](https://getdax.app)** — the human harness for AI agents. This is its
+documentation site.
 
 Built with [Mintlify](https://mintlify.com) (`willow` theme).
 
