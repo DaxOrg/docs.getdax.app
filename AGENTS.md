@@ -2,7 +2,7 @@
 
 ## About this project
 
-This is the **official documentation site** for [Dax](https://getdax.app) — the human harness for AI agents.
+This is the **official documentation site** for [Dax](https://getdax.app) — the human harness for working with AI agents.
 
 - Built on [Mintlify](https://mintlify.com) with the Aspen theme
 - Pages are MDX files with YAML frontmatter; tool pages live in `tools/`

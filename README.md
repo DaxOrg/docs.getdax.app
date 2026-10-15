@@ -1,6 +1,6 @@
 # Dax documentation
 
-**[Dax](https://getdax.app)** — the human harness for AI agents. This is its
+**[Dax](https://getdax.app)** — the human harness for working with AI agents. This is its
 documentation site.
 
 Built with [Mintlify](https://mintlify.com) (`willow` theme).
