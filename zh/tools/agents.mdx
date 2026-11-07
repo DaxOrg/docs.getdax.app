@@ -1,16 +1,14 @@
 ---
-title: "Dax Shepherd"
-description: "在一个窗口里运行一群编程 Agent —— 本地或通过 SSH 连接服务器。"
+title: "主窗口"
+description: "在一个窗口里并排运行你的编程 Agent —— 本地或通过 SSH 连接服务器。"
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** 是编程 Agent 的指挥中心。打开一个项目文件夹，你会看到一个窗口，多个实时终端并排运行。从菜单中添加 Agent，拖拽分割面板，看它们同时工作 —— 无论在你的 Mac 上还是通过 SSH 连接的远程服务器上。
+**Dax 主窗口** 是编程 Agent 的指挥中心。打开一个项目文件夹，你会看到一个窗口，多个实时终端并排运行。从菜单中添加 Agent，拖拽分割面板，看它们同时工作 —— 无论在你的 Mac 上还是通过 SSH 连接的远程服务器上。
 
 <Frame>
-  <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/dax-main-window.jpg" alt="Dax main window — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
-
-由 [Herdr](https://herdr.dev) 驱动，一个专为编程 Agent 打造的终端多路复用器。Dax 负责窗口、侧边栏和安装；Herdr 负责终端。
 
 ## 打开方式
 
@@ -38,7 +36,7 @@ icon: "grid-2-plus"
 
 ## Agent 检测
 
-Shepherd 开箱即用地检测 **19 种以上编程 Agent**：Claude Code、Codex、Gemini、
+Dax 开箱即用地检测 **19 种以上编程 Agent**：Claude Code、Codex、Gemini、
 Cursor、Grok、Pi、OpenCode、Devin、Copilot、Kimi 等等。当某个 Agent 在面板中
 运行时，侧边栏会显示：
 
@@ -90,17 +88,17 @@ Cursor、Grok、Pi、OpenCode、Devin、Copilot、Kimi 等等。当某个 Agent 
 - **复制与粘贴** —— <kbd>⌘</kbd><kbd>C</kbd> 复制，<kbd>⌘</kbd><kbd>V</kbd> 粘贴
 - **滚动穿透** —— 用 <kbd>⌘</kbd><kbd>S</kbd> 切换，决定滚轮是传给 Agent 还是留给自己
 - **终端透明度** —— 在设置中调整玻璃透明度（默认完全不透明以保证可读性）
-- **链接点击** —— Shepherd 能检测终端输出中的 URL（包括跨行的），你可以直接点击
+- **链接点击** —— Dax 能检测终端输出中的 URL（包括跨行的），你可以直接点击
 
 ## 自动命名面板
 
-如果你启用了 Apple Intelligence，Shepherd 会读取终端输出并**自动为每个面板命名**，
+如果你启用了 Apple Intelligence，Dax 会读取终端输出并**自动为每个面板命名**，
 内容基于 Agent 正在做的事情。随着 Agent 转向新任务，名称也会更新。你随时可以
 手动重命名面板 —— 手动名称会保留。
 
 ## 文件浏览器
 
-按 <kbd>⌘</kbd><kbd>E</kbd> 在 Shepherd 内打开文件浏览器 —— 不需要切换到
+按 <kbd>⌘</kbd><kbd>E</kbd> 在主窗口内打开文件浏览器 —— 不需要切换到
 Finder：
 
 - 浏览你的项目文件夹，有**最近文件**栏和**全部文件**栏
@@ -118,8 +116,8 @@ Finder：
 
 即使你做了以下操作，Agent 也会继续运行：
 
-- **关闭 Shepherd 窗口** —— 重新打开，它们还在
-- **完全退出 Dax** —— 你的会话不会丢失，因为 Herdr 作为后台服务运行
+- **关闭主窗口** —— 重新打开，它们还在
+- **完全退出 Dax** —— 你的会话不会丢失，因为终端在后台服务中运行
 - **切换机器** —— 每台机器的 Agent 群会被暂存，而不是销毁
 
 ## 切换机器
@@ -132,12 +130,12 @@ Finder：
 
 ## 在服务器上运行
 
-连接一台服务器，Shepherd 通过一条 SSH 连接到达它 —— 同样的窗口、同样的标签页、
+连接一台服务器，Dax 通过一条 SSH 连接到达它 —— 同样的窗口、同样的标签页、
 同样的 Agent，运行在拥有代码仓库、内存和持续运行时间的机器上。
 
 <Steps>
   <Step title="添加服务器">
-    前往 **Settings → Herdr → Servers**，添加一个主机：地址、用户名、端口，
+    前往 **Settings → Dax → Servers**，添加一个主机：地址、用户名、端口，
     以及密钥文件或密码。密码存储在你 Mac 的钥匙串中。从云控制台复制粘贴时产生的
     不可见字符会被自动清除，密钥文件的权限也会自动收窄。
   </Step>
@@ -149,8 +147,8 @@ Finder：
     点击 **Test** 查看完整的连接过程：哪个地址应答了、提供了哪个密钥、服务器
     接受了什么。如需调试，可以复制完整日志。
   </Step>
-  <Step title="Herdr 自动安装">
-    如果服务器上还没有 Herdr，Dax 会自动安装。在 GitHub 不可达的纯 IPv6 服务器
+  <Step title="Dax 自动配置服务器">
+    如果服务器缺少 Dax 运行 Agent 所用的终端服务，Dax 会自动安装。在 GitHub 不可达的纯 IPv6 服务器
     上，Dax 会通过已建立的 SSH 连接发送二进制文件。
   </Step>
 </Steps>
@@ -173,7 +171,7 @@ Finder：
 
 ### 在服务器上安装 Agent
 
-首次连接服务器时，Shepherd 会检查安装了哪些编程 Agent。如果有缺少的，它会
+首次连接服务器时，Dax 会检查安装了哪些编程 Agent。如果有缺少的，它会
 提供一键安装 —— 不需要单独 SSH 登录再跑安装脚本。
 
 ## 生物
@@ -184,7 +182,7 @@ Finder：
 
 ## 设置
 
-Settings → Herdr 中可以配置：
+Settings → Dax 中可以配置：
 
 - **默认 Agent** —— 按 <kbd>⌘</kbd><kbd>T</kbd> 时添加哪个 Agent
 - **跳过权限提示** —— 让 Agent 无需询问直接运行（YOLO 模式）
@@ -201,7 +199,7 @@ Settings → Herdr 中可以配置：
 
 | 操作 | 快捷键 |
 | --- | --- |
-| 打开 Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| 打开主窗口 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
 | 新建项目 | <kbd>⌘</kbd><kbd>N</kbd> |
 | 打开项目 | <kbd>⌘</kbd><kbd>O</kbd> |
 | 最近项目 | <kbd>⌘</kbd><kbd>K</kbd> |
@@ -222,10 +220,10 @@ Settings → Herdr 中可以配置：
 | 复制 | <kbd>⌘</kbd><kbd>C</kbd> |
 | 切换滚动 | <kbd>⌘</kbd><kbd>S</kbd> |
 
-## 安装 Herdr
+## 首次启动
 
-首次打开 Shepherd 时，Dax 会提供通过 Homebrew 或一行脚本安装
-[Herdr](https://herdr.dev) 的选项。安装后，它作为后台服务运行 —— 即使关闭窗口
+首次打开主窗口 时，Dax 会提供通过 Homebrew 或一行脚本安装
+运行 Agent 的终端服务（开源的 [herdr](https://herdr.dev)）的选项。安装后，它作为后台服务运行 —— 即使关闭窗口
 或退出 Dax，你的会话也会保留。
 
 ## 隐私

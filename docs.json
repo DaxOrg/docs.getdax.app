@@ -62,7 +62,7 @@
               "tools/image-to-text",
               "tools/secrets",
               "tools/context-fill",
-              "tools/herdr",
+              "tools/agents",
               "tools/remove-bg",
               "tools/clip-to-link",
               "tools/prompt-snippets",
@@ -119,7 +119,7 @@
               "zh/tools/image-to-text",
               "zh/tools/secrets",
               "zh/tools/context-fill",
-              "zh/tools/herdr",
+              "zh/tools/agents",
               "zh/tools/remove-bg",
               "zh/tools/clip-to-link",
               "zh/tools/prompt-snippets",
@@ -170,7 +170,7 @@
               "es/tools/image-to-text",
               "es/tools/secrets",
               "es/tools/context-fill",
-              "es/tools/herdr",
+              "es/tools/agents",
               "es/tools/remove-bg",
               "es/tools/clip-to-link",
               "es/tools/prompt-snippets",
@@ -221,7 +221,7 @@
               "fr/tools/image-to-text",
               "fr/tools/secrets",
               "fr/tools/context-fill",
-              "fr/tools/herdr",
+              "fr/tools/agents",
               "fr/tools/remove-bg",
               "fr/tools/clip-to-link",
               "fr/tools/prompt-snippets",
@@ -277,5 +277,23 @@
       "x": "https://x.com/getdax",
       "discord": "https://discord.gg/V5te2fHHRA"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/tools/herdr",
+      "destination": "/tools/agents"
+    },
+    {
+      "source": "/fr/tools/herdr",
+      "destination": "/fr/tools/agents"
+    },
+    {
+      "source": "/es/tools/herdr",
+      "destination": "/es/tools/agents"
+    },
+    {
+      "source": "/zh/tools/herdr",
+      "destination": "/zh/tools/agents"
+    }
+  ]
 }

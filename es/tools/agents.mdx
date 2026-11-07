@@ -1,21 +1,17 @@
 ---
-title: "Dax Shepherd"
-description: "Ejecuta una manada de agentes de código en una sola ventana — en local o en un servidor por SSH."
+title: "Ventana principal"
+description: "Ejecuta tus agentes de código lado a lado en una sola ventana — en local o en un servidor por SSH."
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** es el centro de control para agentes de código. Abre una
+**La ventana principal de Dax** es el centro de control para agentes de código. Abre una
 carpeta de proyecto y obtienes una ventana con terminales en vivo lado a
 lado. Añade agentes desde un menú, divide arrastrando, y observa cómo
 trabajan todos — en tu Mac o en un servidor remoto por SSH.
 
 <Frame>
-  <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — múltiples agentes de código ejecutándose lado a lado" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/dax-main-window.jpg" alt="La ventana principal de Dax — múltiples agentes de código ejecutándose lado a lado" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
-
-Impulsado por [Herdr](https://herdr.dev), un multiplexor de terminales
-diseñado para agentes de código. Dax se encarga de la ventana, la barra
-lateral y las instalaciones; Herdr se encarga de las terminales.
 
 ## Cómo abrirlo
 
@@ -47,7 +43,7 @@ Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> desde cualquier app.
 
 ## Detección de agentes
 
-Shepherd detecta **más de 19 agentes de código** de serie: Claude Code,
+Dax detecta **más de 19 agentes de código** de serie: Claude Code,
 Codex, Gemini, Cursor, Grok, Pi, OpenCode, Devin, Copilot, Kimi y más.
 Cuando un agente se está ejecutando en un panel, la barra lateral muestra:
 
@@ -60,7 +56,7 @@ atascado y necesita tu atención, lo verás de inmediato en la barra lateral.
 
 ## Pestañas
 
-Organiza tu manada con pestañas — cada pestaña puede contener varios agentes:
+Organiza tus agentes con pestañas — cada pestaña puede contener varios agentes:
 
 - <kbd>⌘</kbd><kbd>T</kbd> — abrir una nueva pestaña
 - <kbd>⌘</kbd><kbd>Return</kbd> — añadir un agente a la pestaña actual
@@ -103,11 +99,11 @@ Cada panel es un terminal real — no una vista previa ni un espejo:
 - **Copiar y pegar** — <kbd>⌘</kbd><kbd>C</kbd> para copiar, <kbd>⌘</kbd><kbd>V</kbd> para pegar
 - **Paso del scroll** — actívalo o desactívalo con <kbd>⌘</kbd><kbd>S</kbd> para que la rueda del ratón llegue al agente o se quede para ti
 - **Opacidad del terminal** — ajusta la transparencia del fondo en los Ajustes (por defecto es completamente opaco para facilitar la lectura)
-- **Clic en enlaces** — Shepherd detecta URLs en la salida del terminal (incluso las que ocupan varias líneas) para que puedas hacer clic en ellas
+- **Clic en enlaces** — Dax detecta URLs en la salida del terminal (incluso las que ocupan varias líneas) para que puedas hacer clic en ellas
 
 ## Nombrado automático de paneles
 
-Si tienes Apple Intelligence activado, Shepherd lee la salida del terminal y
+Si tienes Apple Intelligence activado, Dax lee la salida del terminal y
 **nombra cada panel automáticamente** según lo que el agente esté haciendo.
 El nombre se actualiza conforme el agente pasa a nuevas tareas. Siempre
 puedes renombrar un panel manualmente — el nombre manual se mantiene.
@@ -115,7 +111,7 @@ puedes renombrar un panel manualmente — el nombre manual se mantiene.
 ## Explorador de archivos
 
 Pulsa <kbd>⌘</kbd><kbd>E</kbd> para abrir un explorador de archivos dentro
-de Shepherd — sin necesidad de cambiar al Finder:
+de la ventana principal — sin necesidad de cambiar al Finder:
 
 - Navega por la carpeta de tu proyecto con una columna de **Recientes** y una columna de **Archivos**
 - Pulsa <kbd>Space</kbd> en cualquier archivo para una vista previa con Quick Look
@@ -133,30 +129,30 @@ una pared de terminales no te cuesta el resto de tu Mac.
 
 Tus agentes siguen ejecutándose incluso cuando:
 
-- **Cierras la ventana de Shepherd** — al volver a abrirla, siguen ahí
-- **Sales de Dax por completo** — tus sesiones sobreviven porque Herdr se
-  ejecuta como un servicio en segundo plano
-- **Cambias de máquina** — la manada de cada máquina se aparca, no se destruye
+- **Cierras la ventana principal** — al volver a abrirla, siguen ahí
+- **Sales de Dax por completo** — tus sesiones sobreviven porque las terminales se
+  ejecutan como un servicio en segundo plano
+- **Cambias de máquina** — los agentes de cada máquina se aparcan, no se detienen
 
 ## Cambiar de máquina
 
 Pulsa <kbd>⌘</kbd><kbd>L</kbd> para abrir el **selector de máquinas** — una
 tarjeta que muestra tu Mac y cada servidor al que te has conectado. El
-cambio hace un **fundido cruzado** entre máquinas en lugar de un corte, y la
-manada que dejas atrás se **aparca** para que volver sea instantáneo.
+cambio hace un **fundido cruzado** entre máquinas en lugar de un corte, y los
+agentes que dejas atrás se **aparcan** para que volver sea instantáneo.
 
 Puedes escribir para filtrar máquinas por nombre, o usar las teclas de
 dirección para navegar.
 
 ## Ejecución en un servidor
 
-Conecta un servidor y Shepherd lo alcanza a través de una única conexión
+Conecta un servidor y Dax lo alcanza a través de una única conexión
 SSH — misma ventana, mismas pestañas, mismos agentes, ejecutándose en la
 máquina que tiene el repositorio, la RAM y el tiempo de actividad.
 
 <Steps>
   <Step title="Añade un servidor">
-    Ve a **Settings → Herdr → Servers** y añade un host: dirección, usuario,
+    Ve a **Settings → Dax → Servers** y añade un host: dirección, usuario,
     puerto y un archivo de clave o contraseña. Las contraseñas se guardan en
     el Keychain de tu Mac. Los caracteres invisibles que vienen al copiar
     desde consolas en la nube se limpian automáticamente, y los permisos de
@@ -171,8 +167,8 @@ máquina que tiene el repositorio, la RAM y el tiempo de actividad.
     respondió, qué clave se ofreció, qué aceptó el servidor. Copia el
     registro si necesitas depurar.
   </Step>
-  <Step title="Herdr se instala automáticamente">
-    Si el servidor aún no tiene Herdr, Dax lo instala por ti. En servidores
+  <Step title="Dax prepara el servidor">
+    Si al servidor le falta el servicio de terminales que usa Dax, Dax lo instala por ti. En servidores
     solo IPv6 donde GitHub no es accesible, Dax envía el binario a través de
     la conexión SSH que ya está abierta.
   </Step>
@@ -200,7 +196,7 @@ servidor con cinco pestañas:
 
 ### Instalar agentes en servidores
 
-Cuando te conectas a un servidor por primera vez, Shepherd comprueba qué
+Cuando te conectas a un servidor por primera vez, Dax comprueba qué
 agentes de código están instalados. Si falta alguno, te ofrece instalarlo —
 sin necesidad de conectarte por SSH aparte y ejecutar scripts de
 configuración.
@@ -210,11 +206,11 @@ configuración.
 Cada agente recibe una **criatura pixelada** — uno de 21 personajes de
 cuatro biomas (acuático, bosque, tierra, nocturno). La criatura se asigna
 según el terminal del agente, así que se mantiene consistente. Las criaturas
-aparecen en la barra lateral y en la vista de manada.
+aparecen en la barra lateral y en el Agent Monitor.
 
 ## Ajustes
 
-Settings → Herdr te permite configurar:
+Settings → Dax te permite configurar:
 
 - **Agente predeterminado** — qué agente se añade cuando pulsas <kbd>⌘</kbd><kbd>T</kbd>
 - **Omitir confirmaciones de permisos** — dejar que los agentes ejecuten sin preguntar (modo YOLO)
@@ -231,7 +227,7 @@ Settings → Herdr te permite configurar:
 
 | Acción | Atajo |
 | --- | --- |
-| Abrir Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| Abrir la ventana principal | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
 | Nuevo proyecto | <kbd>⌘</kbd><kbd>N</kbd> |
 | Abrir proyecto | <kbd>⌘</kbd><kbd>O</kbd> |
 | Proyectos recientes | <kbd>⌘</kbd><kbd>K</kbd> |
@@ -252,10 +248,10 @@ Settings → Herdr te permite configurar:
 | Copiar | <kbd>⌘</kbd><kbd>C</kbd> |
 | Alternar scroll | <kbd>⌘</kbd><kbd>S</kbd> |
 
-## Instalar Herdr
+## Primer inicio
 
-La primera vez que abres Shepherd, Dax te ofrece instalar
-[Herdr](https://herdr.dev) vía Homebrew o un script de una línea. Una vez
+La primera vez que abres la ventana principal, Dax te ofrece instalar
+el servicio de terminales donde se ejecutan tus agentes ([herdr](https://herdr.dev), de código abierto) vía Homebrew o un script de una línea. Una vez
 instalado, se ejecuta como un servicio en segundo plano — tus sesiones
 persisten incluso cuando cierras la ventana o sales de Dax.
 

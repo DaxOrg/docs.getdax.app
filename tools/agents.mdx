@@ -1,21 +1,17 @@
 ---
-title: "Dax Shepherd"
-description: "Run a herd of coding agents in one window — locally or on a server over SSH."
+title: "Main Window"
+description: "Run your coding agents side by side in one window — on your Mac or on a server over SSH."
 icon: "grid-2-plus"
 ---
 
-**Dax Shepherd** is mission control for coding agents. Open a project folder
+**Dax's main window** is mission control for coding agents. Open a project folder
 and you get a window of live terminals running side by side. Add agents from
 a menu, split by dragging, and watch them all work — on your Mac or on a
 remote server over SSH.
 
 <Frame>
-  <img src="/images/screenshots/dax-shepherd.jpg" alt="Dax Shepherd — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/dax-main-window.jpg" alt="Dax's main window — multiple coding agents running side by side" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
-
-Powered by [Herdr](https://herdr.dev), a terminal multiplexer built for
-coding agents. Dax handles the window, the sidebar, and the installs; Herdr
-handles the terminals.
 
 ## Open it
 
@@ -46,7 +42,7 @@ Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> from any app.
 
 ## Agent detection
 
-Shepherd detects **19+ coding agents** out of the box: Claude Code, Codex,
+Dax detects **19+ coding agents** out of the box: Claude Code, Codex,
 Gemini, Cursor, Grok, Pi, OpenCode, Devin, Copilot, Kimi, and more. When an
 agent is running in a pane, the sidebar shows:
 
@@ -59,7 +55,7 @@ attention, you'll see it immediately in the sidebar.
 
 ## Tabs
 
-Organize your herd with tabs — each tab can hold multiple agents:
+Organize agents with tabs — each tab can hold multiple agents:
 
 - <kbd>⌘</kbd><kbd>T</kbd> — open a new tab
 - <kbd>⌘</kbd><kbd>Return</kbd> — add an agent to the current tab
@@ -102,18 +98,18 @@ Every pane is a real terminal — not a preview or a mirror:
 - **Copy & paste** — <kbd>⌘</kbd><kbd>C</kbd> to copy, <kbd>⌘</kbd><kbd>V</kbd> to paste
 - **Scroll passthrough** — toggle with <kbd>⌘</kbd><kbd>S</kbd> to let the scroll wheel reach the agent or keep it for yourself
 - **Terminal opacity** — adjust the glass transparency in Settings (default is fully opaque for readability)
-- **Link clicking** — Shepherd detects URLs in terminal output (even multi-line ones) so you can click them
+- **Link clicking** — Dax detects URLs in terminal output (even multi-line ones) so you can click them
 
 ## Auto-naming panes
 
-If you have Apple Intelligence enabled, Shepherd reads the terminal output
+If you have Apple Intelligence enabled, Dax reads the terminal output
 and **automatically names each pane** based on what the agent is working on.
 The name updates as the agent moves to new tasks. You can always rename a
 pane manually — the manual name sticks.
 
 ## File browser
 
-Press <kbd>⌘</kbd><kbd>E</kbd> to open a file browser inside Shepherd — no
+Press <kbd>⌘</kbd><kbd>E</kbd> to open a file browser inside the main window — no
 need to switch to Finder:
 
 - Browse your project folder with a **Recent** column and a **Files** column
@@ -132,29 +128,29 @@ the rest of your Mac.
 
 Your agents keep running even when you:
 
-- **Close the Shepherd window** — reopen and they're still there
-- **Quit Dax entirely** — your sessions survive because Herdr runs as a
+- **Close the main window** — reopen and they're still there
+- **Quit Dax entirely** — your sessions survive because the terminals run in a
   background service
-- **Switch between machines** — each machine's herd is parked, not destroyed
+- **Switch between machines** — each machine's agents are parked, not stopped
 
 ## Switching machines
 
 Press <kbd>⌘</kbd><kbd>L</kbd> to open the **machine picker** — a card
 showing your Mac and every server you've connected. Switching **cross-fades**
-between machines instead of cutting, and the herd you leave behind is
+between machines instead of cutting, and the agents you leave behind are
 **parked** so switching back is instant.
 
 You can type to filter machines by name, or use arrow keys to navigate.
 
 ## Running on a server
 
-Connect a server and Shepherd reaches it over a single SSH connection — same
+Connect a server and Dax reaches it over a single SSH connection — same
 window, same tabs, same agents, running on the machine that has the repo,
 the RAM, and the uptime.
 
 <Steps>
   <Step title="Add a server">
-    Go to **Settings → Herdr → Servers** and add a host: address, user, port,
+    Go to **Settings → Dax → Servers** and add a host: address, user, port,
     and a key file or password. Passwords are stored in your Mac's Keychain.
     Invisible characters from cloud console copy-paste are cleaned
     automatically, and key file permissions are narrowed for you.
@@ -168,8 +164,8 @@ the RAM, and the uptime.
     which key was offered, what the server accepted. Copy the log if you need
     to debug.
   </Step>
-  <Step title="Herdr installs automatically">
-    If the server doesn't have Herdr yet, Dax installs it for you. On
+  <Step title="Dax sets the server up">
+    If the server is missing the terminal service Dax runs agents in, Dax installs it for you. On
     IPv6-only servers where GitHub is unreachable, Dax sends the binary over
     the SSH connection that's already open.
   </Step>
@@ -197,7 +193,7 @@ open the **Remote Panel** — a dashboard for your server with five tabs:
 
 ### Installing agents on servers
 
-When you connect to a server for the first time, Shepherd checks which
+When you connect to a server for the first time, Dax checks which
 coding agents are installed. If any are missing, it offers to install them
 for you — no need to SSH in separately and run setup scripts.
 
@@ -206,11 +202,11 @@ for you — no need to SSH in separately and run setup scripts.
 Every agent gets a **pixel creature** — one of 21 characters across four
 biomes (aquatic, forest, ground, nocturnal). The creature is assigned based
 on the agent's terminal, so it stays consistent. Creatures appear in the
-sidebar and in the flock view.
+sidebar and in the Agent Monitor.
 
 ## Settings
 
-Settings → Herdr lets you configure:
+Settings → Dax lets you configure:
 
 - **Default agent** — which agent to add when you press <kbd>⌘</kbd><kbd>T</kbd>
 - **Skip permission prompts** — let agents run without asking (YOLO mode)
@@ -227,7 +223,7 @@ Settings → Herdr lets you configure:
 
 | Action | Shortcut |
 | --- | --- |
-| Open Shepherd | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
+| Open the main window | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>.</kbd> |
 | New project | <kbd>⌘</kbd><kbd>N</kbd> |
 | Open project | <kbd>⌘</kbd><kbd>O</kbd> |
 | Recent projects | <kbd>⌘</kbd><kbd>K</kbd> |
@@ -248,11 +244,11 @@ Settings → Herdr lets you configure:
 | Copy | <kbd>⌘</kbd><kbd>C</kbd> |
 | Toggle scroll | <kbd>⌘</kbd><kbd>S</kbd> |
 
-## Installing Herdr
+## First launch
 
-The first time you open Shepherd, Dax offers to install
-[Herdr](https://herdr.dev) via Homebrew or a one-line script. Once installed,
-it runs as a background service — your sessions persist even when you close
+The first time you open the main window, Dax offers to install the terminal
+service your agents run in ([herdr](https://herdr.dev), open source) via
+Homebrew or a one-line script. It runs as a background service — your sessions persist even when you close
 the window or quit Dax.
 
 ## Privacy
