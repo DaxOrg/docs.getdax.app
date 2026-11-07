@@ -27,6 +27,7 @@
             "pages": [
               "index",
               "quickstart",
+              "companion",
               "how-dax-works",
               "shortcuts",
               "support",
@@ -246,7 +247,14 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
-  "navbar": {},
+  "navbar": {
+    "links": [
+      {
+        "label": "iPhone & iPad app",
+        "href": "https://apps.apple.com/app/dax-companion/id6828041761"
+      }
+    ]
+  },
   "contextual": {
     "options": [
       "copy",
