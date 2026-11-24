@@ -1,33 +1,35 @@
 ---
 title: "Dax 如何运作"
-description: "所有工具共通的运作模型：呼出方式、激活流程、离线行为与隐私。"
+description: "Dax 的整体构成：主窗口、Accelerators、你的账号、离线行为与隐私。"
 icon: "circle-info"
 ---
 
-Dax 里的每个工具都遵循一些共同的规则，与其在每个工具页面里各讲一遍，不如
-在这里统一说明。
+Dax 是一个平台。**主窗口**是你的编程 Agent 运行的地方。**Accelerators** 是你可以
+从任意应用呼出的 Dax 组件。**Dax Companion** 把这一切带到你的 iPhone 和 iPad 上。
+有些规则在所有部分都适用，所以在这里统一说明。
 
-## 呼出工具
+## 呼出 Accelerators
 
-- **每个工具都有一个全局快捷键。** 默认都是 <kbd>⌃</kbd> <kbd>⌥</kbd> 加一个
-  按键。在 **设置 → Shortcuts**（<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>）里
-  可以重新绑定或清除任意快捷键，完整列表见[快速参考](/zh/shortcuts)。
-- **启动器网格**：按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> 打开包含
-  所有工具的网格。点击一个，或按 <kbd>1</kbd>–<kbd>9</kbd> 选择前九个。在你
-  还没记住快捷键之前很好用。
-- **菜单栏图标**同样列出所有工具，也能打开设置。
+- **每个 Accelerator 都有一个全局快捷键。** 默认都是 <kbd>⌃</kbd> <kbd>⌥</kbd>
+  加一个按键。在 **设置 → Shortcuts**（<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>）
+  里可以重新绑定或清除任意快捷键，完整列表见[快速参考](/zh/shortcuts)。
+- **Accelerator 启动器**：按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> 打开
+  包含所有 Accelerator 的网格。点击一个，或按 <kbd>1</kbd>–<kbd>9</kbd> 选择前
+  九个。在你还没记住快捷键之前很好用。
+- **菜单栏图标**同样列出它们，也能打开设置。
 
 <Frame>
-  <img src="/images/screenshots/launcher.jpg" alt="Dax 启动器网格" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/launcher.jpg" alt="Accelerator 启动器" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
 
-### 全局快捷键（非工具）
+### Dax 快捷键
 
 | 快捷键 | 打开 |
 | --- | --- |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | 工具启动器网格 |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | Accelerator 启动器 |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | 设置 |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | 设置 → Shortcuts 标签（重新绑定快捷键） |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | 设置 → Accelerators |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | 设置 → Shortcuts（重新绑定快捷键） |
 
 ## 入门
 
@@ -87,32 +89,21 @@ Pro 的 credits 在每月 1 日重置。
 
 随时在 **Usage** 窗口中升级。通过 Stripe 客户门户管理或取消你的订阅。
 
-如果你的账号被暂停，Dax 会进入锁定状态，所有工具都会礼貌地把你指向支持渠道，
-而不是正常打开。
+如果你的账号被暂停，Dax 会进入锁定状态，所有 Accelerator 都会礼貌地把你指向
+支持渠道，而不是正常打开。
 
-## 在线与离线工具
+## 在线与离线 Accelerators
 
-有些工具完全本地运行，有些需要联网。**离线时，需要联网的工具会在启动器里变暗**，
-并显示一个「需要联网」的提示，而不是打开一个注定会失败的面板。网络恢复的瞬间
-它们会重新启用。
+有些 Accelerator 完全本地运行，有些需要联网。**离线时，需要联网的 Accelerator
+会在启动器里变暗**，并显示一个「需要联网」的提示，而不是打开一个注定会失败的
+面板。网络恢复的瞬间它们会重新启用。
 
 <CardGroup cols={2}>
   <Card title="离线可用" icon="wifi-slash">
-    [Frequent CLIs](/zh/tools/frequent-clis)、[Boilerplates](/zh/tools/boilerplates)、
-    [Inject MD or Skill](/zh/tools/inject-md)（以链接分享除外）、[Open Project](/zh/tools/open-project)、
-    [Vibe History](/zh/tools/vibe-history)、[Command History](/zh/tools/command-history)、
-    [Image to Text](/zh/tools/image-to-text)、
-    [Secrets](/zh/tools/secrets)、[Remove BG](/zh/tools/remove-bg)、
-    [Agent Watch](/zh/tools/agent-watch)、[主窗口](/zh/tools/agents)、
-    [Prompt Snippets](/zh/tools/prompt-snippets)、[Clipboard History](/zh/tools/clipboard-history)
+    [主窗口](/zh/main-window)、[Frequent CLIs](/zh/accelerators/frequent-clis)、[Inject MD or Skill](/zh/accelerators/inject-md)（以链接分享除外）、[Vibe History](/zh/accelerators/vibe-history)、[Image to Text](/zh/accelerators/image-to-text)、[Secrets](/zh/accelerators/secrets)、[Remove BG](/zh/accelerators/remove-bg)、[Prompt Snippets](/zh/accelerators/prompt-snippets)、[Markdown Viewer](/zh/accelerators/markdown-viewer)、[Shelf](/zh/accelerators/shelf)、[Schedules](/zh/accelerators/schedules)
   </Card>
   <Card title="需要联网" icon="wifi">
-    [Ask AI](/zh/tools/ask-ai)、[AI Text Transform](/zh/tools/text-transform)、
-    [Image to Prompt](/zh/tools/image-to-prompt)、[Image Ask](/zh/tools/image-ask)、
-    [Generate Image](/zh/tools/generate-image)、[Context Form Fill](/zh/tools/context-fill)、
-    [Image to URL](/zh/tools/image-to-url)、[File Drop](/zh/tools/file-drop)、
-    [Clip to Link](/zh/tools/clip-to-link)、[PRD Maker](/zh/tools/prd-maker)、
-    [Feedback](/zh/tools/feedback)
+    [Ask AI](/zh/accelerators/ask-ai)、[AI Text Transform](/zh/accelerators/text-transform)、[Image to Prompt](/zh/accelerators/image-to-prompt)、[Image Ask](/zh/accelerators/image-ask)、[Generate Image](/zh/accelerators/generate-image)、[Context Form Fill](/zh/accelerators/context-fill)、[Image to URL](/zh/accelerators/image-to-url)、[File Drop](/zh/accelerators/file-drop)、[Clip to Link](/zh/accelerators/clip-to-link)、[Screen Markup](/zh/accelerators/screen-markup)、[Feedback](/zh/accelerators/feedback)
   </Card>
 </CardGroup>
 
@@ -122,6 +113,6 @@ Dax 通过不打扰的浮动通知来传递信息——小巧的悬浮卡片会�
 
 ## 隐私
 
-本地工具从不联网。需要联网的工具**只**发送该工具真正需要的内容，且**只**在
-你按下快捷键或点击按钮时发送，绝不会因为你复制了什么就自动发送。详情见每个
-工具各自的页面，以及隐私政策。
+本地 Accelerator 从不联网。需要联网的 Accelerator **只**发送它真正需要的内容，
+且**只**在你按下快捷键或点击按钮时发送，绝不会因为你复制了什么就自动发送。详情
+见每个 Accelerator 各自的页面，以及隐私政策。

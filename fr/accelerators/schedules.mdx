@@ -1,0 +1,104 @@
+---
+title: "Schedules"
+description: "Lancez un agent de code sur une tâche dans un dossier à une heure donnée, ou de façon récurrente, en tapant une seule phrase."
+icon: "calendar-clock"
+---
+
+**Schedules** lance un agent de code sur une tâche dans un dossier à l'heure
+que vous choisissez, une fois ou de façon récurrente. Tapez une phrase,
+comme « weekdays at 9 in Dax: triage new issues », et appuyez sur
+<kbd>Return</kbd>. À cette heure-là, Dax ouvre l'agent dans un nouvel onglet
+du projet de ce dossier, sur ce Mac. Aucune fenêtre ne passe au premier
+plan.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> depuis n'importe quelle
+app.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Dites quoi et quand">
+    Tapez dans le champ de saisie en bas. Avant les deux-points, le quand et
+    le où ; après, la tâche, mot pour mot.
+  </Step>
+  <Step title="Vérifiez l'interprétation">
+    Dax montre comment il a lu votre phrase sous forme de puces : l'heure,
+    le dossier, l'agent et le mode de permission. Cliquez sur une puce pour
+    la modifier.
+  </Step>
+  <Step title="Planifiez">
+    Appuyez sur <kbd>Return</kbd> pour planifier, ou sur <kbd>⌘</kbd>
+    <kbd>Return</kbd> pour planifier et tester tout de suite.
+  </Step>
+</Steps>
+
+Les planifications se répètent **une fois**, **toutes les heures**, **tous
+les jours**, **en semaine** ou **toutes les semaines**. Quelques secondes
+avant une exécution, une carte de compte à rebours vous permet de
+**Skip** (passer) ou de **Start now** (lancer maintenant).
+
+## Exécutions manquées
+
+Si votre Mac était en veille ou que Dax était fermé, rien ne s'exécute. Dax
+montre ce qui a été manqué et vous laisse choisir ce qu'il faut exécuter
+maintenant, ou **Skip all**. Une exécution manquée ne démarre jamais
+d'elle-même.
+
+## Chat et calendrier
+
+Vos planifications apparaissent sous forme de messages dans **Chat**
+(<kbd>⌘</kbd> <kbd>1</kbd>). **Calendar** (<kbd>⌘</kbd> <kbd>2</kbd>)
+affiche les prochaines exécutions par année, mois, semaine ou jour.
+
+| Action | Touche |
+| --- | --- |
+| Ouvrir les détails d'une planification | <kbd>Return</kbd> |
+| La tester maintenant | <kbd>⌘</kbd> <kbd>T</kbd> |
+| L'exécuter maintenant | <kbd>⌘</kbd> <kbd>R</kbd> |
+| Mettre en pause ou reprendre | <kbd>⌘</kbd> <kbd>P</kbd> |
+| Supprimer (appuyez deux fois) | <kbd>⌘</kbd> <kbd>Delete</kbd> |
+| Calendrier : année, mois, semaine, jour | <kbd>Y</kbd> <kbd>M</kbd> <kbd>W</kbd> <kbd>D</kbd> |
+| Calendrier : aujourd'hui | <kbd>T</kbd> |
+| Fermer | <kbd>Esc</kbd> |
+
+Un test exécute la planification une fois sans changer son heure. Depuis
+une exécution passée, ouvrez son panneau ou lisez ce qui s'est passé.
+
+## Si l'agent demande
+
+Chaque planification a un mode de permission :
+
+- **Ask** — chaque demande attend la carte d'approbation, sur votre Mac ou
+  sur un téléphone jumelé.
+- **Rules** — vos listes d'autorisation et d'interdiction décident ; tout
+  le reste est demandé.
+- **YOLO** — rien n'est demandé. C'est la valeur par défaut, car une
+  exécution a généralement lieu sans personne devant le Mac.
+
+## Réglages
+
+Retrouvez-les dans **Settings → Accelerators → Schedules** :
+
+- **Time zone** — celui de votre Mac par défaut, et il vous suit quand vous
+  voyagez.
+- **Agent** — Claude Code ou Codex pour les nouvelles planifications.
+- **If it asks** — le mode de permission des nouvelles planifications.
+- **Stop a run after** — de 15 minutes à 4 heures, ou sans limite. Une
+  heure par défaut.
+- **Tell me when a run finishes**, **Save what happened in each run** et
+  **Close the tab when a run finishes**.
+- **Rules mode** — une règle de permission Claude Code par ligne, comme
+  `Bash(npm test:*)`, sous **Allow without asking** et **Never allow**.
+
+## Pour les agents
+
+Les agents peuvent gérer vos planifications via le serveur MCP `dax-self` :
+les lister, en créer une, en mettre une en pause, l'exécuter ou la
+supprimer. Une planification créée par un agent utilise votre mode de
+permission par défaut. Dax affiche un toast pour chaque planification
+ajoutée ou supprimée.
+
+Les exécutions s'ouvrent sous forme d'onglets dans la [fenêtre
+principale](/fr/main-window), où vous pouvez les suivre ou intervenir.

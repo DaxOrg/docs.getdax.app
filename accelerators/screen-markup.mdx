@@ -1,0 +1,85 @@
+---
+title: "Screen Markup"
+description: "Draw arrows, boxes, labels and blur right on your screen, then get the annotated screenshot as a card and a link."
+icon: "highlighter"
+---
+
+**Screen Markup** lets you draw straight on your screen: arrows, boxes,
+highlights, labels, rulers and real blur. Press <kbd>⌘</kbd> <kbd>Return</kbd>
+and the annotated screenshot lands in a card, uploaded and ready to share.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> from any app.
+
+Screen Markup needs **Screen Recording** permission. Dax asks for it the
+first time.
+
+## How it works
+
+<Steps>
+  <Step title="Draw">
+    The screen is captured and a toolbar appears at the top. Pick a tool and
+    draw. Drag the toolbar's grip to move it out of the way.
+  </Step>
+  <Step title="Finish">
+    Press <kbd>⌘</kbd> <kbd>Return</kbd>, or click **Finish**. Press
+    <kbd>Esc</kbd> to cancel.
+  </Step>
+  <Step title="Share it">
+    The result appears as a card in the corner. Drag it anywhere, copy its
+    link once the upload is done, or reopen it to mark it up again.
+  </Step>
+</Steps>
+
+## Frozen or live
+
+- **Frozen** holds the picture still while you draw.
+- **Live** keeps the picture updating underneath your marks.
+
+Apps keep running in both. Switch with the **Frozen** / **Live** button in
+the toolbar.
+
+## Drawing shortcuts
+
+| Tool | Key |
+| --- | --- |
+| Select | <kbd>V</kbd> |
+| Pen | <kbd>P</kbd> |
+| Highlighter | <kbd>H</kbd> |
+| Arrow | <kbd>A</kbd> |
+| Box | <kbd>B</kbd> |
+| Blur | <kbd>R</kbd> |
+| Label | <kbd>T</kbd> |
+| Ruler | <kbd>M</kbd> |
+| Undo / redo | <kbd>⌘</kbd> <kbd>Z</kbd> / <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> |
+| Delete selected mark | <kbd>Delete</kbd> |
+| Finish | <kbd>⌘</kbd> <kbd>Return</kbd> |
+| Cancel | <kbd>Esc</kbd> |
+
+Pick a colour and a stroke thickness (thin, medium or thick) from the
+toolbar.
+
+## Settings
+
+Find these in **Settings → Accelerators → Screen Markup**:
+
+- **Start in** — frozen or live screen.
+- **Display** — the display under the pointer, the main display, or a
+  specific one.
+- **Starting drawing tool** — the tool selected when you open it.
+- **Upload the annotated screenshot** — on by default. Uploads use your
+  Storage settings.
+- **Keep a copy in Pictures › Dax Shots › Screen Markup** — on by default.
+- **Copy the image immediately** — off by default.
+
+**Show all results** lists every markup, with **Retry upload**, **Copy
+link** and **Remove**. Results are kept on your Mac. An upload cut off by a
+relaunch waits for you to retry it.
+
+## For agents
+
+Coding agents use the `dax-screen-markup` MCP server to point at things on
+your live screen, capture the screen with marks drawn in, or open Screen
+Markup with their marks placed and wait for yours. That last one is how an
+agent asks you to "show me where".

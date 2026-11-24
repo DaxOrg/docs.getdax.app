@@ -20,14 +20,12 @@
     "languages": [
       {
         "language": "en",
-        "default": true,
         "groups": [
           {
             "group": "Getting started",
             "pages": [
               "index",
               "quickstart",
-              "companion",
               "how-dax-works",
               "shortcuts",
               "support",
@@ -35,47 +33,62 @@
             ]
           },
           {
-            "group": "Capture & share",
+            "group": "Dax",
             "pages": [
-              "tools/image-to-url",
-              "tools/file-drop",
-              "tools/image-to-prompt"
+              "main-window",
+              "companion"
             ]
           },
           {
-            "group": "Ask AI",
+            "group": "Accelerators",
             "pages": [
-              "tools/ask-ai",
-              "tools/image-ask",
-              "tools/generate-image",
-              "tools/text-transform"
+              "accelerators/overview",
+              {
+                "group": "Capture & share",
+                "pages": [
+                  "accelerators/image-to-url",
+                  "accelerators/file-drop",
+                  "accelerators/clip-to-link",
+                  "accelerators/shelf",
+                  "accelerators/screen-markup"
+                ]
+              },
+              {
+                "group": "AI",
+                "pages": [
+                  "accelerators/ask-ai",
+                  "accelerators/image-ask",
+                  "accelerators/generate-image",
+                  "accelerators/image-to-prompt",
+                  "accelerators/text-transform",
+                  "accelerators/context-fill",
+                  "accelerators/image-to-text"
+                ]
+              },
+              {
+                "group": "Agent workflow",
+                "pages": [
+                  "accelerators/frequent-clis",
+                  "accelerators/inject-md",
+                  "accelerators/prompt-snippets",
+                  "accelerators/vibe-history",
+                  "accelerators/secrets",
+                  "accelerators/schedules",
+                  "accelerators/markdown-viewer",
+                  "accelerators/remove-bg",
+                  "accelerators/feedback"
+                ]
+              }
             ]
           },
           {
-            "group": "Your workflow",
-            "pages": [
-              "tools/frequent-clis",
-              "tools/open-project",
-              "tools/inject-md",
-              "tools/agent-watch",
-              "tools/vibe-history",
-              "tools/image-to-text",
-              "tools/secrets",
-              "tools/context-fill",
-              "tools/agents",
-              "tools/remove-bg",
-              "tools/clip-to-link",
-              "tools/prompt-snippets",
-              "tools/markdown-viewer"
-            ]
-          },
-          {
-            "group": "Developers",
+            "group": "Build your own",
             "pages": [
               "developers/accelerator-sdk"
             ]
           }
-        ]
+        ],
+        "default": true
       },
       {
         "language": "zh",
@@ -85,45 +98,58 @@
             "pages": [
               "zh/index",
               "zh/quickstart",
-              "zh/companion",
               "zh/how-dax-works",
               "zh/shortcuts",
               "zh/support"
             ]
           },
           {
-            "group": "捕获与分享",
+            "group": "Dax",
             "pages": [
-              "zh/tools/image-to-url",
-              "zh/tools/file-drop",
-              "zh/tools/image-to-prompt"
+              "zh/main-window",
+              "zh/companion"
             ]
           },
           {
-            "group": "AI 问答",
+            "group": "Accelerators",
             "pages": [
-              "zh/tools/ask-ai",
-              "zh/tools/image-ask",
-              "zh/tools/generate-image",
-              "zh/tools/text-transform"
-            ]
-          },
-          {
-            "group": "你的工作流",
-            "pages": [
-              "zh/tools/frequent-clis",
-              "zh/tools/open-project",
-              "zh/tools/inject-md",
-              "zh/tools/agent-watch",
-              "zh/tools/vibe-history",
-              "zh/tools/image-to-text",
-              "zh/tools/secrets",
-              "zh/tools/context-fill",
-              "zh/tools/agents",
-              "zh/tools/remove-bg",
-              "zh/tools/clip-to-link",
-              "zh/tools/prompt-snippets",
-              "zh/tools/markdown-viewer"
+              "zh/accelerators/overview",
+              {
+                "group": "捕获与分享",
+                "pages": [
+                  "zh/accelerators/image-to-url",
+                  "zh/accelerators/file-drop",
+                  "zh/accelerators/clip-to-link",
+                  "zh/accelerators/shelf",
+                  "zh/accelerators/screen-markup"
+                ]
+              },
+              {
+                "group": "AI",
+                "pages": [
+                  "zh/accelerators/ask-ai",
+                  "zh/accelerators/image-ask",
+                  "zh/accelerators/generate-image",
+                  "zh/accelerators/image-to-prompt",
+                  "zh/accelerators/text-transform",
+                  "zh/accelerators/context-fill",
+                  "zh/accelerators/image-to-text"
+                ]
+              },
+              {
+                "group": "智能体工作流",
+                "pages": [
+                  "zh/accelerators/frequent-clis",
+                  "zh/accelerators/inject-md",
+                  "zh/accelerators/prompt-snippets",
+                  "zh/accelerators/vibe-history",
+                  "zh/accelerators/secrets",
+                  "zh/accelerators/schedules",
+                  "zh/accelerators/markdown-viewer",
+                  "zh/accelerators/remove-bg",
+                  "zh/accelerators/feedback"
+                ]
+              }
             ]
           }
         ]
@@ -136,45 +162,58 @@
             "pages": [
               "es/index",
               "es/quickstart",
-              "es/companion",
               "es/how-dax-works",
               "es/shortcuts",
               "es/support"
             ]
           },
           {
-            "group": "Capturar y compartir",
+            "group": "Dax",
             "pages": [
-              "es/tools/image-to-url",
-              "es/tools/file-drop",
-              "es/tools/image-to-prompt"
+              "es/main-window",
+              "es/companion"
             ]
           },
           {
-            "group": "Preguntar a la IA",
+            "group": "Accelerators",
             "pages": [
-              "es/tools/ask-ai",
-              "es/tools/image-ask",
-              "es/tools/generate-image",
-              "es/tools/text-transform"
-            ]
-          },
-          {
-            "group": "Tu flujo de trabajo",
-            "pages": [
-              "es/tools/frequent-clis",
-              "es/tools/open-project",
-              "es/tools/inject-md",
-              "es/tools/agent-watch",
-              "es/tools/vibe-history",
-              "es/tools/image-to-text",
-              "es/tools/secrets",
-              "es/tools/context-fill",
-              "es/tools/agents",
-              "es/tools/remove-bg",
-              "es/tools/clip-to-link",
-              "es/tools/prompt-snippets",
-              "es/tools/markdown-viewer"
+              "es/accelerators/overview",
+              {
+                "group": "Capturar y compartir",
+                "pages": [
+                  "es/accelerators/image-to-url",
+                  "es/accelerators/file-drop",
+                  "es/accelerators/clip-to-link",
+                  "es/accelerators/shelf",
+                  "es/accelerators/screen-markup"
+                ]
+              },
+              {
+                "group": "IA",
+                "pages": [
+                  "es/accelerators/ask-ai",
+                  "es/accelerators/image-ask",
+                  "es/accelerators/generate-image",
+                  "es/accelerators/image-to-prompt",
+                  "es/accelerators/text-transform",
+                  "es/accelerators/context-fill",
+                  "es/accelerators/image-to-text"
+                ]
+              },
+              {
+                "group": "Flujo de trabajo con agentes",
+                "pages": [
+                  "es/accelerators/frequent-clis",
+                  "es/accelerators/inject-md",
+                  "es/accelerators/prompt-snippets",
+                  "es/accelerators/vibe-history",
+                  "es/accelerators/secrets",
+                  "es/accelerators/schedules",
+                  "es/accelerators/markdown-viewer",
+                  "es/accelerators/remove-bg",
+                  "es/accelerators/feedback"
+                ]
+              }
             ]
           }
         ]
@@ -187,45 +226,58 @@
             "pages": [
               "fr/index",
               "fr/quickstart",
-              "fr/companion",
               "fr/how-dax-works",
               "fr/shortcuts",
               "fr/support"
             ]
           },
           {
-            "group": "Capturer et partager",
+            "group": "Dax",
             "pages": [
-              "fr/tools/image-to-url",
-              "fr/tools/file-drop",
-              "fr/tools/image-to-prompt"
+              "fr/main-window",
+              "fr/companion"
             ]
           },
           {
-            "group": "Demander à l'IA",
+            "group": "Accelerators",
             "pages": [
-              "fr/tools/ask-ai",
-              "fr/tools/image-ask",
-              "fr/tools/generate-image",
-              "fr/tools/text-transform"
-            ]
-          },
-          {
-            "group": "Votre flux de travail",
-            "pages": [
-              "fr/tools/frequent-clis",
-              "fr/tools/open-project",
-              "fr/tools/inject-md",
-              "fr/tools/agent-watch",
-              "fr/tools/vibe-history",
-              "fr/tools/image-to-text",
-              "fr/tools/secrets",
-              "fr/tools/context-fill",
-              "fr/tools/agents",
-              "fr/tools/remove-bg",
-              "fr/tools/clip-to-link",
-              "fr/tools/prompt-snippets",
-              "fr/tools/markdown-viewer"
+              "fr/accelerators/overview",
+              {
+                "group": "Capturer et partager",
+                "pages": [
+                  "fr/accelerators/image-to-url",
+                  "fr/accelerators/file-drop",
+                  "fr/accelerators/clip-to-link",
+                  "fr/accelerators/shelf",
+                  "fr/accelerators/screen-markup"
+                ]
+              },
+              {
+                "group": "IA",
+                "pages": [
+                  "fr/accelerators/ask-ai",
+                  "fr/accelerators/image-ask",
+                  "fr/accelerators/generate-image",
+                  "fr/accelerators/image-to-prompt",
+                  "fr/accelerators/text-transform",
+                  "fr/accelerators/context-fill",
+                  "fr/accelerators/image-to-text"
+                ]
+              },
+              {
+                "group": "Flux de travail des agents",
+                "pages": [
+                  "fr/accelerators/frequent-clis",
+                  "fr/accelerators/inject-md",
+                  "fr/accelerators/prompt-snippets",
+                  "fr/accelerators/vibe-history",
+                  "fr/accelerators/secrets",
+                  "fr/accelerators/schedules",
+                  "fr/accelerators/markdown-viewer",
+                  "fr/accelerators/remove-bg",
+                  "fr/accelerators/feedback"
+                ]
+              }
             ]
           }
         ]
@@ -280,20 +332,196 @@
   },
   "redirects": [
     {
+      "source": "/tools/agents",
+      "destination": "/main-window"
+    },
+    {
       "source": "/tools/herdr",
-      "destination": "/tools/agents"
+      "destination": "/main-window"
     },
     {
-      "source": "/fr/tools/herdr",
-      "destination": "/fr/tools/agents"
+      "source": "/tools/agent-watch",
+      "destination": "/accelerators/overview"
     },
     {
-      "source": "/es/tools/herdr",
-      "destination": "/es/tools/agents"
+      "source": "/tools/boilerplates",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/command-history",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/open-project",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/prd-maker",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/clipboard-history",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/suggest-a-tool",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/fanout",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/tools/:slug*",
+      "destination": "/accelerators/:slug*"
+    },
+    {
+      "source": "/accelerators",
+      "destination": "/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/agents",
+      "destination": "/zh/main-window"
     },
     {
       "source": "/zh/tools/herdr",
-      "destination": "/zh/tools/agents"
+      "destination": "/zh/main-window"
+    },
+    {
+      "source": "/zh/tools/agent-watch",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/boilerplates",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/command-history",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/open-project",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/prd-maker",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/clipboard-history",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/suggest-a-tool",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/fanout",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/zh/tools/:slug*",
+      "destination": "/zh/accelerators/:slug*"
+    },
+    {
+      "source": "/zh/accelerators",
+      "destination": "/zh/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/agents",
+      "destination": "/es/main-window"
+    },
+    {
+      "source": "/es/tools/herdr",
+      "destination": "/es/main-window"
+    },
+    {
+      "source": "/es/tools/agent-watch",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/boilerplates",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/command-history",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/open-project",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/prd-maker",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/clipboard-history",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/suggest-a-tool",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/fanout",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/es/tools/:slug*",
+      "destination": "/es/accelerators/:slug*"
+    },
+    {
+      "source": "/es/accelerators",
+      "destination": "/es/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/agents",
+      "destination": "/fr/main-window"
+    },
+    {
+      "source": "/fr/tools/herdr",
+      "destination": "/fr/main-window"
+    },
+    {
+      "source": "/fr/tools/agent-watch",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/boilerplates",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/command-history",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/open-project",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/prd-maker",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/clipboard-history",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/suggest-a-tool",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/fanout",
+      "destination": "/fr/accelerators/overview"
+    },
+    {
+      "source": "/fr/tools/:slug*",
+      "destination": "/fr/accelerators/:slug*"
+    },
+    {
+      "source": "/fr/accelerators",
+      "destination": "/fr/accelerators/overview"
     }
   ]
 }

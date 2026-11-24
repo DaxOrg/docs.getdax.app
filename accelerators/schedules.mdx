@@ -1,0 +1,97 @@
+---
+title: "Schedules"
+description: "Start a coding agent on a task in a folder at a set time, or on a repeat, by typing one sentence."
+icon: "calendar-clock"
+---
+
+**Schedules** starts a coding agent on a task in a folder at the time you
+pick, once or on a repeat. Type one sentence, like "weekdays at 9 in Dax:
+triage new issues", and press <kbd>Return</kbd>. At that time Dax opens the
+agent in a new tab of that folder's project, on this Mac. No window comes
+forward.
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Say what and when">
+    Type in the composer at the bottom. Before a colon goes the when and
+    where; after it, the task, word for word.
+  </Step>
+  <Step title="Check the reading">
+    Dax shows how it read your sentence as chips: the time, the folder, the
+    agent and the permission mode. Click a chip to change it.
+  </Step>
+  <Step title="Schedule it">
+    Press <kbd>Return</kbd> to schedule it, or <kbd>⌘</kbd> <kbd>Return</kbd>
+    to schedule it and test it now.
+  </Step>
+</Steps>
+
+Schedules repeat **once**, **every hour**, **every day**, on **weekdays**
+or **every week**. A few seconds before a run, a countdown card lets you
+**Skip** it or **Start now**.
+
+## Missed runs
+
+If your Mac was asleep or Dax was closed, nothing runs. Dax shows what was
+missed and lets you pick which to run now, or **Skip all**. A missed run
+never starts on its own.
+
+## Chat and calendar
+
+Your schedules appear as messages in **Chat** (<kbd>⌘</kbd> <kbd>1</kbd>).
+**Calendar** (<kbd>⌘</kbd> <kbd>2</kbd>) lays out upcoming runs by year,
+month, week or day.
+
+| Action | Key |
+| --- | --- |
+| Open a schedule's details | <kbd>Return</kbd> |
+| Test it now | <kbd>⌘</kbd> <kbd>T</kbd> |
+| Run it now | <kbd>⌘</kbd> <kbd>R</kbd> |
+| Pause or resume | <kbd>⌘</kbd> <kbd>P</kbd> |
+| Delete (press twice) | <kbd>⌘</kbd> <kbd>Delete</kbd> |
+| Calendar: year, month, week, day | <kbd>Y</kbd> <kbd>M</kbd> <kbd>W</kbd> <kbd>D</kbd> |
+| Calendar: today | <kbd>T</kbd> |
+| Close | <kbd>Esc</kbd> |
+
+A test runs the schedule once without changing its time. From a past run,
+open its pane or read what happened.
+
+## If the agent asks
+
+Each schedule has a permission mode:
+
+- **Ask** — every prompt waits for the approval card, on your Mac or a
+  paired phone.
+- **Rules** — your allow and never lists decide; anything else is asked.
+- **YOLO** — nothing is asked. This is the default, since a run usually
+  happens with nobody at the Mac.
+
+## Settings
+
+Find these in **Settings → Accelerators → Schedules**:
+
+- **Time zone** — your Mac's own by default, and it follows you when you
+  travel.
+- **Agent** — Claude Code or Codex for new schedules.
+- **If it asks** — the permission mode new schedules start with.
+- **Stop a run after** — 15 minutes to 4 hours, or no limit. One hour by
+  default.
+- **Tell me when a run finishes**, **Save what happened in each run**, and
+  **Close the tab when a run finishes**.
+- **Rules mode** — one Claude Code permission rule per line, such as
+  `Bash(npm test:*)`, under **Allow without asking** and **Never allow**.
+
+## For agents
+
+Agents can manage your schedules through the `dax-self` MCP server: list
+them, create one, pause, run or delete one. A schedule an agent makes uses
+your default permission mode. Dax shows a toast for every one added or
+deleted.
+
+Runs open as tabs in the [main window](/main-window), where you can watch
+or step in.

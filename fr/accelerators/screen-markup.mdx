@@ -1,0 +1,91 @@
+---
+title: "Screen Markup"
+description: "Dessinez des flèches, des cadres, des étiquettes et du flou directement sur votre écran, puis récupérez la capture annotée sous forme de carte et de lien."
+icon: "highlighter"
+---
+
+**Screen Markup** vous permet de dessiner directement sur votre écran :
+flèches, cadres, surlignages, étiquettes, règles et vrai flou. Appuyez sur
+<kbd>⌘</kbd> <kbd>Return</kbd> et la capture annotée arrive dans une carte,
+envoyée en ligne et prête à être partagée.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> depuis n'importe quelle
+app.
+
+Screen Markup a besoin de l'autorisation **Enregistrement de l'écran**. Dax
+la demande la première fois.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Dessinez">
+    L'écran est capturé et une barre d'outils apparaît en haut. Choisissez
+    un outil et dessinez. Faites glisser la poignée de la barre d'outils
+    pour la déplacer.
+  </Step>
+  <Step title="Terminez">
+    Appuyez sur <kbd>⌘</kbd> <kbd>Return</kbd>, ou cliquez sur **Finish**.
+    Appuyez sur <kbd>Esc</kbd> pour annuler.
+  </Step>
+  <Step title="Partagez">
+    Le résultat apparaît sous forme de carte dans le coin. Faites-la glisser
+    n'importe où, copiez son lien une fois l'envoi terminé, ou rouvrez-la
+    pour l'annoter à nouveau.
+  </Step>
+</Steps>
+
+## Figé ou en direct
+
+- **Frozen** fige l'image pendant que vous dessinez.
+- **Live** continue de mettre à jour l'image sous vos annotations.
+
+Les apps continuent de tourner dans les deux cas. Basculez avec le bouton
+**Frozen** / **Live** de la barre d'outils.
+
+## Raccourcis de dessin
+
+| Outil | Touche |
+| --- | --- |
+| Sélection | <kbd>V</kbd> |
+| Stylo | <kbd>P</kbd> |
+| Surligneur | <kbd>H</kbd> |
+| Flèche | <kbd>A</kbd> |
+| Cadre | <kbd>B</kbd> |
+| Flou | <kbd>R</kbd> |
+| Étiquette | <kbd>T</kbd> |
+| Règle | <kbd>M</kbd> |
+| Annuler / rétablir | <kbd>⌘</kbd> <kbd>Z</kbd> / <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> |
+| Supprimer l'annotation sélectionnée | <kbd>Delete</kbd> |
+| Terminer | <kbd>⌘</kbd> <kbd>Return</kbd> |
+| Annuler | <kbd>Esc</kbd> |
+
+Choisissez une couleur et une épaisseur de trait (fine, moyenne ou épaisse)
+dans la barre d'outils.
+
+## Réglages
+
+Retrouvez-les dans **Settings → Accelerators → Screen Markup** :
+
+- **Start in** — écran figé ou en direct.
+- **Display** — l'écran sous le pointeur, l'écran principal, ou un écran
+  précis.
+- **Starting drawing tool** — l'outil sélectionné à l'ouverture.
+- **Upload the annotated screenshot** — activé par défaut. Les envois
+  utilisent vos réglages Storage.
+- **Keep a copy in Pictures › Dax Shots › Screen Markup** — activé par
+  défaut.
+- **Copy the image immediately** — désactivé par défaut.
+
+**Show all results** liste toutes les annotations, avec **Retry upload**,
+**Copy link** et **Remove**. Les résultats sont conservés sur votre Mac. Un
+envoi interrompu par un redémarrage attend que vous le relanciez.
+
+## Pour les agents
+
+Les agents de code utilisent le serveur MCP `dax-screen-markup` pour
+pointer des éléments sur votre écran en direct, capturer l'écran avec des
+annotations dessinées, ou ouvrir Screen Markup avec leurs annotations déjà
+placées et attendre les vôtres. C'est avec ce dernier qu'un agent vous
+demande de « montrer où ».

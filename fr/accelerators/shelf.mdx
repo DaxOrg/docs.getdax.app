@@ -1,0 +1,106 @@
+---
+title: "Shelf"
+description: "Une étagère au bord de votre écran pour les fichiers que vous voulez garder à portée de main. Déposez des fichiers, faites-les glisser vers l'extérieur, envoyez-les sur votre téléphone."
+icon: "inbox"
+---
+
+Le **Shelf** glisse depuis un bord de votre écran et garde les fichiers que
+vous voulez avoir à portée de main. Déposez-y des fichiers, puis
+faites-les glisser vers le Finder, Slack, un navigateur ou un panneau Dax.
+Il garde des références, jamais des copies, donc le Shelf n'occupe aucun
+espace.
+
+## Comment l'ouvrir
+
+Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>D</kbd> depuis n'importe quelle
+app. Appuyez à nouveau, ou sur <kbd>Esc</kbd>, pour le ranger.
+
+Pour l'ouvrir depuis un autre bord le temps d'un affichage, appuyez sur
+<kbd>⌃</kbd> <kbd>⌥</kbd> et une flèche. Le Shelf se déplace dans le sens
+de la flèche : <kbd>↑</kbd> le fait monter depuis le bas, <kbd>↓</kbd> le
+fait descendre depuis le haut. Le bord choisi dans Settings reste le même.
+
+Ouvrir le Shelf ne prend jamais le clavier à l'app dans laquelle vous tapez.
+
+## Fonctionnement
+
+<Steps>
+  <Step title="Déposez des fichiers">
+    Faites glisser des fichiers ou des dossiers sur le Shelf. Seul le chemin
+    est conservé. Un renommage ou un déplacement ne fait pas perdre le
+    fichier. Le texte et les images déposés sans fichier derrière eux sont
+    enregistrés comme des clips.
+  </Step>
+  <Step title="Regardez-en un">
+    Cliquez sur un fichier pour le sélectionner. Appuyez sur
+    <kbd>Space</kbd> pour l'afficher en Coup d'œil, et double-cliquez dessus
+    ou appuyez sur <kbd>Return</kbd> pour l'ouvrir.
+  </Step>
+  <Step title="Faites-le glisser">
+    Faites glisser un fichier vers le Finder, Slack, un navigateur ou un
+    panneau Dax. Cochez plusieurs tuiles (ou <kbd>⌘</kbd>-cliquez dessus)
+    pour les faire glisser ensemble.
+  </Step>
+</Steps>
+
+<Tip>
+  Pas besoin d'appuyer sur le raccourci pour déposer quelque chose. Pendant
+  que vous faites glisser un fichier ou une image, une fine bande lumineuse
+  du Shelf apparaît à son bord. Déposez dessus et le Shelf s'ouvre.
+</Tip>
+
+Tirez la poignée sur le bord intérieur du Shelf pour le rendre plus ou
+moins profond. Repoussez-la jusqu'au bout pour le fermer.
+
+## Onglets
+
+- **Now** se vide quand Dax quitte.
+- Appuyez sur **+** pour créer votre propre onglet. Les onglets que vous
+  créez sont enregistrés.
+- **Clear** vide un onglet. Supprimer un onglet ne supprime jamais les
+  fichiers.
+
+Un fichier supprimé ou déplacé reste sur le Shelf, marqué en rouge,
+jusqu'à ce que vous le retiriez. Appuyez sur **Remove deleted** pour tous
+les effacer.
+
+Faites un clic droit sur un fichier pour **Open**, **Quick Look**, **Show
+in Finder**, **Copy**, **Copy Path**, **Share…** et **Remove from Drawer**.
+
+## Files, Notes et Finder
+
+Le sélecteur dans l'en-tête du Shelf a trois positions :
+
+- **Files** — vos onglets de fichiers conservés, en grille ou en liste.
+- **Text** — des notes que vous tapez ou dictez, conservées d'un lancement
+  à l'autre. Copiez-en une avec son bouton de copie.
+- **Finder** — parcourez votre Mac et faites glisser des fichiers
+  directement. Déposez-en un sur un onglet pour le garder.
+
+## Envoyer sur votre iPhone ou iPad
+
+Avec un [Companion](/fr/companion) jumelé, faites un clic droit sur un
+fichier et choisissez **Send to** votre appareil. Cochez plusieurs tuiles
+et appuyez sur la barre **Send** pour les envoyer en un seul lot : une
+notification et une ligne sur le téléphone, avec **Save all**.
+
+Les fichiers que vous envoyez depuis votre téléphone arrivent dans l'onglet
+**iPhone** du Shelf. Le Shelf s'ouvre depuis le bas avec eux cochés, prêts
+à être glissés. Le texte que vous envoyez devient une note.
+
+## Réglages
+
+Retrouvez-les dans **Settings → Accelerators → Shelf** :
+
+- **Edge** — haut, bas, gauche ou droite. Le haut est la valeur par défaut.
+- **Layout** — grille ou liste.
+- **Peek when I drag a file** — activé par défaut.
+
+## Pour les agents
+
+Les agents de code accèdent au Shelf via le serveur MCP `dax-drawer`. Un
+agent peut déposer sur le Shelf les fichiers qu'il a créés pour que vous
+les fassiez glisser, voir ce que vous avez mis de côté pour lui, gérer les
+onglets, et envoyer un fichier terminé sur votre téléphone quand vous le
+demandez. Les agents voient les noms, chemins et tailles, jamais le contenu
+des fichiers.

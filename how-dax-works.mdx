@@ -1,34 +1,40 @@
 ---
 title: "How Dax works"
-description: "The shared model behind every tool: summoning, activation, offline behavior, and privacy."
+description: "How Dax fits together: the main window, Accelerators, your account, offline behavior, and privacy."
 icon: "circle-info"
 ---
 
-A few things are true of every tool in Dax, so they're explained once here
-instead of repeating them on every tool page.
+Dax is one platform. The **main window** is where your coding agents run.
+**Accelerators** are the parts of Dax you summon from any app. **Dax
+Companion** puts it all on your iPhone and iPad. A few things are true across
+all of it, so they're explained once here.
 
-## Summoning tools
+## Summoning Accelerators
 
-- **Every tool has a global shortcut.** By default they're all <kbd>⌃</kbd>
-  <kbd>⌥</kbd> plus one key. Rebind or clear any shortcut in **Settings →
-  Shortcuts** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>). See the [Quick
-  reference](/shortcuts) for the full list.
-- **The launcher grid:** press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> to
-  open a grid of every tool. Click one, or press <kbd>1</kbd>–<kbd>9</kbd> for
-  the first nine. Handy before you've memorized a shortcut.
-- **The menu-bar icon** lists the tools too, and opens Settings.
+- **Every Accelerator has a global shortcut.** By default they're all
+  <kbd>⌃</kbd> <kbd>⌥</kbd> plus one key. Rebind or clear any shortcut in
+  **Settings → Shortcuts** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>). See the
+  [Quick reference](/shortcuts) for the full list.
+- **The Accelerator launcher:** press <kbd>⌃</kbd> <kbd>⌥</kbd>
+  <kbd>Space</kbd> to open a grid of every Accelerator. Click one, or press
+  <kbd>1</kbd>–<kbd>9</kbd> for the first nine. Handy before you've memorized
+  a shortcut.
+- **The menu-bar icon** lists them too, and opens Settings.
 
 <Frame>
-  <img src="/images/screenshots/launcher.jpg" alt="The Dax launcher grid" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/launcher.jpg" alt="The Accelerator launcher" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
 
-### Global shortcuts (not tools)
+### Dax shortcuts
 
 | Shortcut | Opens |
 | --- | --- |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | The tool launcher grid |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | The Accelerator launcher |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → Shortcuts tab (rebind shortcuts) |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings → Accelerators |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → Shortcuts (rebind shortcuts) |
+
+cuts) |
 
 ## Getting started
 
@@ -95,33 +101,22 @@ Spend order: plan credits are used first, then top-up credits.
 Upgrade any time from the **Usage** window. Manage or cancel your subscription
 through the Stripe customer portal.
 
-If your account is suspended, Dax enters a locked-down state and every tool
-politely points you at support rather than opening.
+If your account is suspended, Dax enters a locked-down state and every
+Accelerator politely points you at support rather than opening.
 
-## Online vs. offline tools
+## Online vs. offline Accelerators
 
-Some tools are purely local; others need the internet. **Offline, the network
-tools dim in the launcher** and show a "needs the internet" toast instead of
-opening a panel that could only fail. They re-enable the moment the
-connection returns.
+Some Accelerators are purely local; others need the internet. **Offline, the
+network Accelerators dim in the launcher** and show a "needs the internet"
+toast instead of opening a panel that could only fail. They re-enable the
+moment the connection returns.
 
 <CardGroup cols={2}>
   <Card title="Work offline" icon="wifi-slash">
-    [Frequent CLIs](/tools/frequent-clis), [Boilerplates](/tools/boilerplates),
-    [Inject MD or Skill](/tools/inject-md) (except Share as a Link), [Open Project](/tools/open-project),
-    [Vibe History](/tools/vibe-history), [Command History](/tools/command-history),
-    [Image to Text](/tools/image-to-text),
-    [Secrets](/tools/secrets), [Remove BG](/tools/remove-bg),
-    [Agent Watch](/tools/agent-watch), [Main Window](/tools/agents),
-    [Prompt Snippets](/tools/prompt-snippets), [Clipboard History](/tools/clipboard-history)
+    [Main Window](/main-window), [Frequent CLIs](/accelerators/frequent-clis), [Inject MD or Skill](/accelerators/inject-md) (except Share as a Link), [Vibe History](/accelerators/vibe-history), [Image to Text](/accelerators/image-to-text), [Secrets](/accelerators/secrets), [Remove BG](/accelerators/remove-bg), [Prompt Snippets](/accelerators/prompt-snippets), [Markdown Viewer](/accelerators/markdown-viewer), [Shelf](/accelerators/shelf), [Schedules](/accelerators/schedules)
   </Card>
   <Card title="Need the internet" icon="wifi">
-    [Ask AI](/tools/ask-ai), [AI Text Transform](/tools/text-transform),
-    [Image to Prompt](/tools/image-to-prompt), [Image Ask](/tools/image-ask),
-    [Generate Image](/tools/generate-image), [Context Form Fill](/tools/context-fill),
-    [Image to URL](/tools/image-to-url), [File Drop](/tools/file-drop),
-    [Clip to Link](/tools/clip-to-link), [PRD Maker](/tools/prd-maker),
-    [Feedback](/tools/feedback)
+    [Ask AI](/accelerators/ask-ai), [AI Text Transform](/accelerators/text-transform), [Image to Prompt](/accelerators/image-to-prompt), [Image Ask](/accelerators/image-ask), [Generate Image](/accelerators/generate-image), [Context Form Fill](/accelerators/context-fill), [Image to URL](/accelerators/image-to-url), [File Drop](/accelerators/file-drop), [Clip to Link](/accelerators/clip-to-link), [Screen Markup](/accelerators/screen-markup), [Feedback](/accelerators/feedback)
   </Card>
 </CardGroup>
 
@@ -131,7 +126,7 @@ Dax communicates through unobtrusive toast notifications — small floating card
 
 ## Privacy
 
-Local tools never touch the network. Network tools send **only** what the
-tool needs, and **only** when you press the shortcut or click a button,
-never because you copied something. Details are in each tool's page and in
-the privacy policy.
+Local Accelerators never touch the network. Network Accelerators send
+**only** what they need, and **only** when you press the shortcut or click a
+button, never because you copied something. Details are on each
+Accelerator's page and in the privacy policy.

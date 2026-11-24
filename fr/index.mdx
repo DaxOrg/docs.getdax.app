@@ -5,91 +5,126 @@ icon: "house"
 ---
 
 <Frame>
-  <img src="/images/screenshots/home.jpg" alt="Ecran d'accueil de Dax" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/home.jpg" alt="Écran d'accueil de Dax" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
 
 **The human harness for working with AI agents.** Agents have harnesses. Now you do too.
 
-<CardGroup cols={2}>
-  <Card title="Demarrage rapide" icon="rocket" href="/fr/quickstart">
-    Installez Dax et lancez votre premier outil en moins de deux minutes.
+Dax est une seule plateforme pour travailler avec des agents de code IA.
+Faites tourner vos agents côte à côte dans la **fenêtre principale**,
+appelez un **Accelerator** depuis n'importe quelle app quand vous en avez
+besoin, et suivez le tout depuis votre téléphone avec **Dax Companion**.
+
+<CardGroup cols={3}>
+  <Card title="Fenêtre principale" icon="grid-2-plus" href="/fr/main-window">
+    Vos agents de code côte à côte, sur votre Mac ou sur un serveur via SSH.
   </Card>
-  <Card title="Fonctionnement de Dax" icon="circle-info" href="/fr/how-dax-works">
-    Invocation, activation, comportement hors ligne et confidentialite : le
-    modele commun a tous les outils.
-  </Card>
-  <Card title="Raccourcis clavier" icon="keyboard" href="/fr/shortcuts">
-    Le raccourci de chaque outil dans un seul tableau.
+  <Card title="Accelerators" icon="bolt" href="/fr/accelerators/overview">
+    Intégrés à Dax, à un raccourci de n'importe quelle app.
   </Card>
   <Card title="Dax Companion" icon="mobile" href="/fr/companion">
     L'application mobile de Dax : vos agents de code sur iPhone et iPad.
   </Card>
 </CardGroup>
 
-## Les outils
+## Par où commencer
+
+<CardGroup cols={2}>
+  <Card title="Démarrage rapide" icon="rocket" href="/fr/quickstart">
+    Installez Dax et ouvrez votre premier Accelerator en moins de deux minutes.
+  </Card>
+  <Card title="Fonctionnement de Dax" icon="circle-info" href="/fr/how-dax-works">
+    Votre compte, les plans et crédits, le comportement hors ligne et la
+    confidentialité.
+  </Card>
+  <Card title="Raccourcis clavier" icon="keyboard" href="/fr/shortcuts">
+    Tous les raccourcis de Dax dans un seul tableau.
+  </Card>
+  <Card title="Créez le vôtre" icon="code" href="/developers/accelerator-sdk">
+    Écrivez un Accelerator personnalisé avec l'Accelerator SDK.
+  </Card>
+</CardGroup>
+
+## Accelerators
+
+Les Accelerators sont les parties de Dax que vous invoquez de n'importe où :
+appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> pour le lanceur, ou
+sur le raccourci propre à chacun.
+
+### Capture et partage
 
 <CardGroup cols={3}>
-  <Card title="Image to URL" icon="link" href="/fr/tools/image-to-url">
-    Deposez une image, obtenez un lien heberge.
+  <Card title="Image to URL" icon="link" href="/fr/accelerators/image-to-url">
+    Déposez une image, obtenez un lien hébergé.
   </Card>
-  <Card title="File Drop" icon="files" href="/fr/tools/file-drop">
+  <Card title="File Drop" icon="files" href="/fr/accelerators/file-drop">
     Envoyez des fichiers en masse, en une seule fois.
   </Card>
-  <Card title="Image to Prompt" icon="wand-magic-sparkles" href="/fr/tools/image-to-prompt">
-    Transformez n'importe quelle image en prompt.
-  </Card>
-  <Card title="Ask AI" icon="comment-dots" href="/fr/tools/ask-ai">
-    Posez une question rapide, ou que vous soyez.
-  </Card>
-  <Card title="Image Ask" icon="comments" href="/fr/tools/image-ask">
-    Interrogez l'IA a propos d'une image.
-  </Card>
-  <Card title="Generate Image" icon="image" href="/fr/tools/generate-image">
-    Creez une image a partir d'un prompt.
-  </Card>
-  <Card title="AI Text Transform" icon="pen-nib" href="/fr/tools/text-transform">
-    Reecrivez ou retravaillez le texte selectionne.
-  </Card>
-  <Card title="Frequent CLIs" icon="terminal" href="/fr/tools/frequent-clis">
-    Accedez directement aux commandes que vous utilisez le plus.
-  </Card>
-  <Card title="Open Project" icon="folder-open" href="/fr/tools/open-project">
-    Rejoignez directement un projet.
-  </Card>
-  <Card title="Inject MD or Skill" icon="markdown" href="/fr/tools/inject-md">
-    Ajoutez un AGENTS.md ou installez une competence de la bibliotheque dans n'importe quel projet.
-  </Card>
-  <Card title="Vibe History" icon="clock-rotate-left" href="/fr/tools/vibe-history">
-    Reprenez une session de code ou copiez son contexte dans une nouvelle.
-  </Card>
-  <Card title="Command History" icon="terminal" href="/fr/tools/command-history">
-    Recherche floue dans votre historique shell.
-  </Card>
-  <Card title="Image to Text" icon="scanner" href="/fr/tools/image-to-text">
-    Extrayez le texte de n'importe quelle image avec l'OCR sur l'appareil.
-  </Card>
-  <Card title="Secrets" icon="key" href="/fr/tools/secrets">
-    Un coffre-fort chiffre cle-valeur dans votre barre de menu.
-  </Card>
-  <Card title="Context Form Fill" icon="file-lines" href="/fr/tools/context-fill">
-    Remplissez automatiquement les formulaires avec votre contexte enregistre.
-  </Card>
-  <Card title="Remove BG" icon="scissors" href="/fr/tools/remove-bg">
-    Detourez le sujet d'une image.
-  </Card>
-  <Card title="Fenêtre principale" icon="grid-2-plus" href="/fr/tools/agents">
-    Tous vos agents de code dans une seule fenetre.
-  </Card>
-  <Card title="Clip to Link" icon="video" href="/fr/tools/clip-to-link">
+  <Card title="Clip to Link" icon="video" href="/fr/accelerators/clip-to-link">
     Enregistrez une zone, obtenez un lien.
   </Card>
-  <Card title="Agent Watch" icon="eye" href="/fr/tools/agent-watch">
-    Voyez ce que chaque session de code fait en ce moment.
+  <Card title="Shelf" icon="inbox" href="/fr/accelerators/shelf">
+    Gardez des fichiers à portée de main au bord de votre écran.
   </Card>
-  <Card title="Prompt Snippets" icon="note-sticky" href="/fr/tools/prompt-snippets">
-    Des prompts enregistres que vous pouvez rechercher et coller.
+  <Card title="Screen Markup" icon="pen" href="/fr/accelerators/screen-markup">
+    Dessinez sur votre écran et partagez la capture.
   </Card>
-  <Card title="Markdown Viewer" icon="file-text" href="/fr/tools/markdown-viewer">
-    Ouvrez, lisez et editez des fichiers Markdown avec rendu en direct.
+</CardGroup>
+
+### IA
+
+<CardGroup cols={3}>
+  <Card title="Ask AI" icon="comment-dots" href="/fr/accelerators/ask-ai">
+    Posez une question rapide, où que vous soyez.
+  </Card>
+  <Card title="Image Ask" icon="comments" href="/fr/accelerators/image-ask">
+    Interrogez l'IA à propos d'une image.
+  </Card>
+  <Card title="Generate Image" icon="image" href="/fr/accelerators/generate-image">
+    Créez une image à partir d'un prompt.
+  </Card>
+  <Card title="Image to Prompt" icon="wand-magic-sparkles" href="/fr/accelerators/image-to-prompt">
+    Transformez n'importe quelle image en prompt.
+  </Card>
+  <Card title="AI Text Transform" icon="pen-nib" href="/fr/accelerators/text-transform">
+    Réécrivez ou retravaillez le texte sélectionné.
+  </Card>
+  <Card title="Context Form Fill" icon="file-lines" href="/fr/accelerators/context-fill">
+    Remplissez automatiquement les formulaires avec votre contexte enregistré.
+  </Card>
+  <Card title="Image to Text" icon="scanner" href="/fr/accelerators/image-to-text">
+    Extrayez le texte de n'importe quelle image avec l'OCR sur l'appareil.
+  </Card>
+</CardGroup>
+
+### Workflow des agents
+
+<CardGroup cols={3}>
+  <Card title="Frequent CLIs" icon="terminal" href="/fr/accelerators/frequent-clis">
+    Accédez directement aux CLI que vous utilisez le plus.
+  </Card>
+  <Card title="Inject MD or Skill" icon="markdown" href="/fr/accelerators/inject-md">
+    Ajoutez un AGENTS.md ou installez une compétence dans n'importe quel projet.
+  </Card>
+  <Card title="Prompt Snippets" icon="note-sticky" href="/fr/accelerators/prompt-snippets">
+    Des prompts enregistrés que vous pouvez rechercher et coller.
+  </Card>
+  <Card title="Vibe History" icon="clock-rotate-left" href="/fr/accelerators/vibe-history">
+    Reprenez une session de code ou copiez son contexte dans une nouvelle.
+  </Card>
+  <Card title="Secrets" icon="key" href="/fr/accelerators/secrets">
+    Un coffre-fort chiffré clé-valeur dans votre barre de menu.
+  </Card>
+  <Card title="Schedules" icon="calendar-clock" href="/fr/accelerators/schedules">
+    Lancez un agent sur une tâche plus tard, ou de façon récurrente.
+  </Card>
+  <Card title="Markdown Viewer" icon="file-text" href="/fr/accelerators/markdown-viewer">
+    Ouvrez, lisez et éditez du Markdown avec rendu en direct.
+  </Card>
+  <Card title="Remove BG" icon="scissors" href="/fr/accelerators/remove-bg">
+    Détourez le sujet d'une image.
+  </Card>
+  <Card title="Feedback" icon="message-heart" href="/fr/accelerators/feedback">
+    Envoyez un message et des captures d'écran à l'équipe.
   </Card>
 </CardGroup>

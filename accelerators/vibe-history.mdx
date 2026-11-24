@@ -1,0 +1,54 @@
+---
+title: "Vibe History"
+description: "Resume a recent coding session or copy its context to a new one."
+icon: "clock-rotate-left"
+---
+
+**Vibe History** is a palette of your recent Claude Code and Codex
+conversations, read straight from their trace files on disk. Pick one to
+resume where you left off, or copy the context from a past session into a
+new one.
+
+<Frame>
+  <img src="/images/screenshots/vibe-history.jpg" alt="Vibe History palette" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Open the palette">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Y</kbd>. Your recent agent
+    conversations float up as a list.
+  </Step>
+  <Step title="Pick an action">
+    Press <kbd>⇥</kbd> to cycle between three buttons across the top:
+
+    - **Copy Resume Command** — puts `claude --resume …` on your clipboard.
+    - **Open in Terminal** — opens your terminal in that project's folder
+      with the resume command already running.
+    - **Copy Context** — puts the whole conversation on the clipboard, to
+      paste into a fresh agent.
+  </Step>
+  <Step title="Jump back in">
+    Press <kbd>↩</kbd> on the conversation you want. <kbd>⌘</kbd>
+    <kbd>C</kbd> copies the resume command from any of the three modes.
+  </Step>
+</Steps>
+
+## Options
+
+Settings → Accelerators → Vibe History:
+
+- Toggle which agents to include: **Claude Code**, **Codex**.
+- **Open sessions in** — which terminal app **Open in Terminal** uses.
+  *Default* is whichever app your Mac already opens terminal scripts with;
+  only terminals installed on this Mac are listed.
+
+## Privacy
+
+Local. It reads the trace files the agents already write on your Mac;
+nothing is sent anywhere.

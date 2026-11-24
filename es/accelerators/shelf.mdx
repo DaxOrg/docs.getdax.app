@@ -1,0 +1,100 @@
+---
+title: "Shelf"
+description: "Un estante en el borde de tu pantalla para los archivos que quieres tener a mano. Suelta archivos, arrástralos fuera, envíalos a tu teléfono."
+icon: "inbox"
+---
+
+El **Shelf** se desliza desde un borde de tu pantalla y guarda los archivos
+que quieres tener a mano. Suelta archivos en él y luego arrástralos de vuelta
+a Finder, Slack, un navegador o un panel de Dax. Guarda referencias, nunca
+copias, así que el Shelf no ocupa espacio.
+
+## Ábrelo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>D</kbd> desde cualquier app. Púlsalo de
+nuevo, o <kbd>Esc</kbd>, para guardarlo.
+
+Para abrirlo desde otro borde solo esa vez, pulsa <kbd>⌃</kbd>
+<kbd>⌥</kbd> y una flecha. El Shelf se mueve hacia donde apunta la flecha:
+<kbd>↑</kbd> sube desde abajo, <kbd>↓</kbd> baja desde arriba. El borde
+configurado en Settings no cambia.
+
+Abrir el Shelf nunca le quita el teclado a la app en la que estás escribiendo.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Suelta archivos">
+    Arrastra archivos o carpetas al Shelf. Solo se guarda la ruta. Renombrar
+    o mover el archivo no hace que se pierda. El texto y las imágenes que
+    sueltas sin un archivo detrás se guardan como clips.
+  </Step>
+  <Step title="Echa un vistazo">
+    Haz clic en un archivo para seleccionarlo. Pulsa <kbd>Space</kbd> para
+    verlo con Quick Look, y haz doble clic o pulsa <kbd>Return</kbd> para
+    abrirlo.
+  </Step>
+  <Step title="Arrástralo fuera">
+    Arrastra un archivo a Finder, Slack, un navegador o un panel de Dax.
+    Marca varias fichas (o haz <kbd>⌘</kbd>-clic en ellas) para arrastrarlas
+    juntas.
+  </Step>
+</Steps>
+
+<Tip>
+  No hace falta pulsar el atajo para soltar algo. Mientras arrastras un
+  archivo o una imagen, una franja luminosa del Shelf asoma por su borde.
+  Suéltalo encima y el Shelf se abre.
+</Tip>
+
+Tira del asa del borde interior del Shelf para hacerlo más profundo o menos.
+Empújala hasta el fondo para cerrarlo.
+
+## Pestañas
+
+- **Now** se vacía cuando cierras Dax.
+- Pulsa **+** para crear una pestaña propia. Las pestañas que creas se guardan.
+- **Clear** vacía una pestaña. Eliminar una pestaña nunca elimina los archivos.
+
+Un archivo eliminado o movido sigue en el Shelf, marcado en rojo, hasta que
+lo quites. Pulsa **Remove deleted** para quitarlos todos.
+
+Haz clic derecho en un archivo para ver **Open**, **Quick Look**, **Show in
+Finder**, **Copy**, **Copy Path**, **Share…** y **Remove from Drawer**.
+
+## Archivos, notas y Finder
+
+El selector de la cabecera del Shelf tiene tres posiciones:
+
+- **Files**: tus pestañas de archivos guardados, en cuadrícula o en lista.
+- **Text**: notas que escribes o dictas, guardadas entre sesiones. Copia una
+  con su botón de copiar.
+- **Finder**: explora tu Mac y arrastra archivos directamente fuera. Suelta
+  uno en una pestaña para guardarlo.
+
+## Enviar a tu iPhone o iPad
+
+Con un [Companion](/es/companion) emparejado, haz clic derecho en un archivo y
+elige **Send to** tu dispositivo. Marca varias fichas y pulsa la barra
+**Send** para enviarlas como un solo paquete: una notificación y una fila en
+el teléfono, con **Save all**.
+
+Los archivos que envías desde tu teléfono llegan a la pestaña **iPhone** del
+Shelf. El Shelf se abre desde abajo con ellos marcados, listos para
+arrastrar. El texto que envías se convierte en una nota.
+
+## Ajustes
+
+Los encontrarás en **Settings → Accelerators → Shelf**:
+
+- **Edge**: arriba, abajo, izquierda o derecha. Arriba es el valor por defecto.
+- **Layout**: cuadrícula o lista.
+- **Peek when I drag a file**: activado por defecto.
+
+## Para agentes
+
+Los agentes de código acceden al Shelf a través del servidor MCP
+`dax-drawer`. Un agente puede dejar en el Shelf los archivos que ha creado
+para que los arrastres, ver lo que le has reservado, gestionar pestañas y
+enviar un archivo terminado a tu teléfono cuando se lo pidas. Los agentes ven
+nombres, rutas y tamaños, nunca el contenido de los archivos.

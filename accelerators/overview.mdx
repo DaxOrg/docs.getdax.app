@@ -1,0 +1,128 @@
+---
+title: "Accelerators"
+description: "The parts of Dax you summon from any app, each one shortcut away."
+icon: "bolt"
+---
+
+Accelerators are built into Dax. Each one does a single job you'd otherwise
+leave your work for: turning a screenshot into a link, asking a quick
+question, handing a secret to an agent, recording a clip. They open over
+whatever app you're in, do the job, and get out of the way.
+
+They're part of the same platform as the [main window](/main-window), where
+your coding agents run, and [Dax Companion](/companion) on your phone. Many
+are there for your agents too: an agent in Dax can put files on your
+[Shelf](/accelerators/shelf), mark up your screen, or ask you for a
+[secret](/accelerators/secrets) without ever seeing its value.
+
+## Open one
+
+- **Its shortcut.** Every Accelerator has a global shortcut, <kbd>⌃</kbd>
+  <kbd>⌥</kbd> plus one key by default. The [shortcuts page](/shortcuts)
+  lists them all.
+- **The launcher.** Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> for a
+  searchable grid of every Accelerator. Click one, or press
+  <kbd>1</kbd>–<kbd>9</kbd> for the first nine.
+- **The menu bar.** Click the Dax icon to find them there too.
+
+## Make them yours
+
+- **Switch one off** in **Settings → Accelerators** (<kbd>⌃</kbd>
+  <kbd>⌥</kbd> <kbd>T</kbd>). An Accelerator that's off doesn't answer its
+  shortcut and leaves the launcher.
+- **Rebind its shortcut** in **Settings → Shortcuts** (<kbd>⌃</kbd>
+  <kbd>⌥</kbd> <kbd>H</kbd>).
+- **Arrange the launcher.** Choose **Arrange Accelerators…** to drag them
+  into your own order and pin the ones you use most, or sort by most used,
+  recently used, or A–Z.
+
+## Every Accelerator
+
+### Capture & share
+
+<CardGroup cols={3}>
+  <Card title="Image to URL" icon="link" href="/accelerators/image-to-url">
+    Drop an image, get a hosted link.
+  </Card>
+  <Card title="File Drop" icon="files" href="/accelerators/file-drop">
+    Bulk-upload files in one go.
+  </Card>
+  <Card title="Clip to Link" icon="video" href="/accelerators/clip-to-link">
+    Record a region, get a link.
+  </Card>
+  <Card title="Shelf" icon="inbox" href="/accelerators/shelf">
+    Keep files on hand at the edge of your screen.
+  </Card>
+  <Card title="Screen Markup" icon="pen" href="/accelerators/screen-markup">
+    Draw on your screen and share the capture.
+  </Card>
+</CardGroup>
+
+### AI
+
+<CardGroup cols={3}>
+  <Card title="Ask AI" icon="comment-dots" href="/accelerators/ask-ai">
+    Ask a quick question, anywhere.
+  </Card>
+  <Card title="Image Ask" icon="comments" href="/accelerators/image-ask">
+    Ask AI about an image.
+  </Card>
+  <Card title="Generate Image" icon="image" href="/accelerators/generate-image">
+    Make an image from a prompt.
+  </Card>
+  <Card title="Image to Prompt" icon="wand-magic-sparkles" href="/accelerators/image-to-prompt">
+    Turn any image into a prompt.
+  </Card>
+  <Card title="AI Text Transform" icon="pen-nib" href="/accelerators/text-transform">
+    Rewrite or reshape selected text.
+  </Card>
+  <Card title="Context Form Fill" icon="file-lines" href="/accelerators/context-fill">
+    Auto-fill forms using your saved context.
+  </Card>
+  <Card title="Image to Text" icon="scanner" href="/accelerators/image-to-text">
+    Pull text from any image with on-device OCR.
+  </Card>
+</CardGroup>
+
+### Agent workflow
+
+<CardGroup cols={3}>
+  <Card title="Frequent CLIs" icon="terminal" href="/accelerators/frequent-clis">
+    Jump to the CLIs you use most.
+  </Card>
+  <Card title="Inject MD or Skill" icon="markdown" href="/accelerators/inject-md">
+    Drop an AGENTS.md or install a skill into any project.
+  </Card>
+  <Card title="Prompt Snippets" icon="note-sticky" href="/accelerators/prompt-snippets">
+    Saved prompts you can search and paste.
+  </Card>
+  <Card title="Vibe History" icon="clock-rotate-left" href="/accelerators/vibe-history">
+    Resume a coding session or copy its context to a new one.
+  </Card>
+  <Card title="Secrets" icon="key" href="/accelerators/secrets">
+    Encrypted key-value vault in your menu bar.
+  </Card>
+  <Card title="Schedules" icon="calendar-clock" href="/accelerators/schedules">
+    Start an agent on a task later, or on a repeat.
+  </Card>
+  <Card title="Markdown Viewer" icon="file-text" href="/accelerators/markdown-viewer">
+    Open, read, and edit Markdown with live rendering.
+  </Card>
+  <Card title="Remove BG" icon="scissors" href="/accelerators/remove-bg">
+    Cut the subject out of a picture.
+  </Card>
+  <Card title="Feedback" icon="message-heart" href="/accelerators/feedback">
+    Send a note and screen snips to the team.
+  </Card>
+</CardGroup>
+
+## Build your own
+
+Write a custom Accelerator in JavaScript and Dax draws it with native macOS
+controls. It opens from the launcher like the built-in ones, and you can give
+it its own shortcut. See the [Accelerator SDK](/developers/accelerator-sdk).
+
+<Note>
+  Custom Accelerators work in Dax downloaded from getdax.app. The Setapp
+  version of Dax runs the built-in ones only.
+</Note>

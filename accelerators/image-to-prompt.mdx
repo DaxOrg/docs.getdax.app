@@ -1,0 +1,57 @@
+---
+title: "Image to Prompt"
+description: "Reverse-engineer an image into a detailed generation prompt."
+icon: "wand-magic-sparkles"
+---
+
+**Image to Prompt** (internally, *Promptify*) reverse-engineers an image into
+a detailed text prompt you can feed to an image generator or LLM to recreate
+it.
+
+<Frame>
+  <img src="/images/screenshots/image-to-prompt.jpg" alt="Image to Prompt — generated description" style="width: 100%; height: auto; border-radius: 12px;" />
+</Frame>
+
+## Open it
+
+Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd> from any app.
+
+## How it works
+
+<Steps>
+  <Step title="Copy an image">
+    Copy any image: a design, a screenshot, something you want to reproduce.
+  </Step>
+  <Step title="Press the shortcut">
+    Press <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>P</kbd>. The image is sent to a
+    **vision model** with your chosen prompt style.
+  </Step>
+  <Step title="Paste the prompt">
+    A detailed recreation prompt **lands on your clipboard** and appears in a
+    panel. Paste it into any image generator or LLM.
+  </Step>
+</Steps>
+
+## Prompt styles
+
+Settings → Accelerators → Image to Prompt:
+
+- **UI Focused:** a prompt to rebuild the screen in code.
+- **General Purpose:** a balanced, faithful description.
+- **Image Focused:** geared toward recreating the image in an image model.
+- **Ask me every time:** pick the style from a menu on each run.
+
+<Tip>
+  Pair it with [Generate Image](/accelerators/generate-image): describe an image you
+  like, then riff on that prompt to make a variation.
+</Tip>
+
+## Dax Shots
+
+Every image you hand to this Accelerator is saved to `~/Pictures/Dax Shots/Image to Prompt`,
+named the way macOS names screenshots, so you can always find it again.
+
+## Why a keypress, not a watcher
+
+Image to Prompt is deliberately hotkey-triggered rather than watching your
+clipboard, so images only ever leave the machine on an explicit press.

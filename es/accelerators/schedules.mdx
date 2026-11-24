@@ -1,0 +1,99 @@
+---
+title: "Schedules"
+description: "Pon a un agente de código a trabajar en una tarea en una carpeta a una hora fija, o de forma periódica, escribiendo una sola frase."
+icon: "calendar-clock"
+---
+
+**Schedules** pone a un agente de código a trabajar en una tarea en una
+carpeta a la hora que elijas, una vez o de forma periódica. Escribe una frase,
+como "weekdays at 9 in Dax: triage new issues", y pulsa <kbd>Return</kbd>. A
+esa hora Dax abre el agente en una pestaña nueva del proyecto de esa carpeta,
+en este Mac. Ninguna ventana pasa al frente.
+
+## Ábrelo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> desde cualquier app.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Di qué y cuándo">
+    Escribe en el compositor de abajo. Antes de los dos puntos van el cuándo
+    y el dónde; después, la tarea, palabra por palabra.
+  </Step>
+  <Step title="Revisa la lectura">
+    Dax muestra cómo ha interpretado tu frase con chips: la hora, la carpeta,
+    el agente y el modo de permisos. Haz clic en un chip para cambiarlo.
+  </Step>
+  <Step title="Prográmalo">
+    Pulsa <kbd>Return</kbd> para programarlo, o <kbd>⌘</kbd> <kbd>Return</kbd>
+    para programarlo y probarlo ahora.
+  </Step>
+</Steps>
+
+Las programaciones se repiten **una vez**, **cada hora**, **cada día**, en
+**días laborables** o **cada semana**. Unos segundos antes de una ejecución,
+una tarjeta con cuenta atrás te permite **Skip** (saltarla) o **Start now**
+(empezar ya).
+
+## Ejecuciones perdidas
+
+Si tu Mac estaba en reposo o Dax estaba cerrado, no se ejecuta nada. Dax
+muestra lo que se perdió y te deja elegir cuáles ejecutar ahora, o **Skip
+all**. Una ejecución perdida nunca empieza por sí sola.
+
+## Chat y calendario
+
+Tus programaciones aparecen como mensajes en **Chat** (<kbd>⌘</kbd>
+<kbd>1</kbd>). **Calendar** (<kbd>⌘</kbd> <kbd>2</kbd>) muestra las próximas
+ejecuciones por año, mes, semana o día.
+
+| Acción | Tecla |
+| --- | --- |
+| Abrir los detalles de una programación | <kbd>Return</kbd> |
+| Probarla ahora | <kbd>⌘</kbd> <kbd>T</kbd> |
+| Ejecutarla ahora | <kbd>⌘</kbd> <kbd>R</kbd> |
+| Pausar o reanudar | <kbd>⌘</kbd> <kbd>P</kbd> |
+| Eliminar (pulsa dos veces) | <kbd>⌘</kbd> <kbd>Delete</kbd> |
+| Calendario: año, mes, semana, día | <kbd>Y</kbd> <kbd>M</kbd> <kbd>W</kbd> <kbd>D</kbd> |
+| Calendario: hoy | <kbd>T</kbd> |
+| Cerrar | <kbd>Esc</kbd> |
+
+Una prueba ejecuta la programación una vez sin cambiar su hora. Desde una
+ejecución pasada, abre su panel o lee lo que ocurrió.
+
+## Si el agente pregunta
+
+Cada programación tiene un modo de permisos:
+
+- **Ask**: cada solicitud espera a la tarjeta de aprobación, en tu Mac o en
+  un teléfono emparejado.
+- **Rules**: deciden tus listas de permitidos y prohibidos; todo lo demás se
+  pregunta.
+- **YOLO**: no se pregunta nada. Es el valor por defecto, ya que una
+  ejecución suele ocurrir sin nadie delante del Mac.
+
+## Ajustes
+
+Los encontrarás en **Settings → Accelerators → Schedules**:
+
+- **Time zone**: la de tu Mac por defecto, y te sigue cuando viajas.
+- **Agent**: Claude Code o Codex para las programaciones nuevas.
+- **If it asks**: el modo de permisos con el que empiezan las programaciones
+  nuevas.
+- **Stop a run after**: de 15 minutos a 4 horas, o sin límite. Una hora por
+  defecto.
+- **Tell me when a run finishes**, **Save what happened in each run** y
+  **Close the tab when a run finishes**.
+- **Rules mode**: una regla de permisos de Claude Code por línea, como
+  `Bash(npm test:*)`, en **Allow without asking** y **Never allow**.
+
+## Para agentes
+
+Los agentes pueden gestionar tus programaciones a través del servidor MCP
+`dax-self`: listarlas, crear una, pausar, ejecutar o eliminar una. Una
+programación creada por un agente usa tu modo de permisos por defecto. Dax
+muestra un aviso por cada una que se añade o se elimina.
+
+Las ejecuciones se abren como pestañas en la [ventana principal](/es/main-window),
+donde puedes observarlas o intervenir.

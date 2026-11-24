@@ -1,0 +1,86 @@
+---
+title: "Schedules"
+description: "只需输入一句话，就能在指定时间或按重复周期，让编程 Agent 在某个文件夹里开始一项任务。"
+icon: "calendar-clock"
+---
+
+**Schedules** 会在你选定的时间，让编程 Agent 在某个文件夹里开始一项任务，可以只运行
+一次，也可以重复运行。输入一句话，比如「weekdays at 9 in Dax: triage new issues」，
+然后按 <kbd>Return</kbd>。到了那个时间，Dax 会在这台 Mac 上、该文件夹所属项目的
+新标签页中打开 Agent。不会有任何窗口跳到前台。
+
+## 打开方式
+
+在任意应用中按下 <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd>。
+
+## 使用方法
+
+<Steps>
+  <Step title="说明做什么、何时做">
+    在底部的输入框中输入。冒号前面写时间和地点；冒号后面写任务，原样保留。
+  </Step>
+  <Step title="检查解读结果">
+    Dax 会把它对你这句话的解读显示为标签：时间、文件夹、Agent 和权限模式。点击
+    某个标签即可修改。
+  </Step>
+  <Step title="安排它">
+    按 <kbd>Return</kbd> 安排任务，或按 <kbd>⌘</kbd> <kbd>Return</kbd> 安排任务并
+    立即测试。
+  </Step>
+</Steps>
+
+Schedules 可以设置为**一次**、**每小时**、**每天**、**工作日**或**每周**。运行前
+几秒，会出现一张倒计时卡片，让你选择 **Skip** 跳过或 **Start now** 立即开始。
+
+## 错过的运行
+
+如果你的 Mac 处于睡眠状态，或 Dax 已关闭，就不会有任何运行。Dax 会显示错过了哪些，
+让你选择现在运行哪些，或 **Skip all**。错过的运行永远不会自行开始。
+
+## Chat 和 Calendar
+
+你的日程会以消息形式出现在 **Chat**（<kbd>⌘</kbd> <kbd>1</kbd>）中。**Calendar**
+（<kbd>⌘</kbd> <kbd>2</kbd>）按年、月、周或日排列即将到来的运行。
+
+| 操作 | 按键 |
+| --- | --- |
+| 打开日程详情 | <kbd>Return</kbd> |
+| 立即测试 | <kbd>⌘</kbd> <kbd>T</kbd> |
+| 立即运行 | <kbd>⌘</kbd> <kbd>R</kbd> |
+| 暂停或恢复 | <kbd>⌘</kbd> <kbd>P</kbd> |
+| 删除（按两次） | <kbd>⌘</kbd> <kbd>Delete</kbd> |
+| 日历：年、月、周、日 | <kbd>Y</kbd> <kbd>M</kbd> <kbd>W</kbd> <kbd>D</kbd> |
+| 日历：今天 | <kbd>T</kbd> |
+| 关闭 | <kbd>Esc</kbd> |
+
+测试会运行一次日程，而不改变它的时间。从过去的某次运行中，可以打开它的窗格，或查看
+发生了什么。
+
+## 如果 Agent 提问
+
+每个日程都有一个权限模式：
+
+- **Ask** —— 每个请求都会等待审批卡片，在你的 Mac 或已配对的手机上处理。
+- **Rules** —— 由你的允许和禁止列表决定；其他情况都会询问。
+- **YOLO** —— 什么都不问。这是默认设置，因为运行通常发生在 Mac 前没人的时候。
+
+## 设置
+
+在 **设置 → Accelerators → Schedules** 中可以找到：
+
+- **Time zone** —— 默认使用你 Mac 自己的时区，你出行时它也会随之改变。
+- **Agent** —— 新日程使用 Claude Code 或 Codex。
+- **If it asks** —— 新日程默认的权限模式。
+- **Stop a run after** —— 15 分钟到 4 小时，或不限制。默认为一小时。
+- **Tell me when a run finishes**、**Save what happened in each run** 和
+  **Close the tab when a run finishes**。
+- **Rules mode** —— 每行一条 Claude Code 权限规则，例如 `Bash(npm test:*)`，分别
+  写在 **Allow without asking** 和 **Never allow** 下。
+
+## 供 Agent 使用
+
+Agent 可以通过 `dax-self` MCP 服务器管理你的日程：列出日程、创建日程，以及暂停、
+运行或删除某个日程。Agent 创建的日程使用你的默认权限模式。每添加或删除一个日程，
+Dax 都会显示一条提示。
+
+运行会以标签页的形式在[主窗口](/zh/main-window)中打开，你可以在那里观看或介入。

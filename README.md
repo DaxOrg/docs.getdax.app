@@ -9,7 +9,7 @@ Built with [Mintlify](https://mintlify.com) (`willow` theme).
 
 - `docs.json` - site config: theme, colors, navigation, logos
 - `index.mdx`, `quickstart.mdx`, `shortcuts.mdx` - getting started
-- `tools/` - one page per tool
+- `accelerators/` - the Accelerators overview and one page per Accelerator
 - `logo/`, `favicon.svg` - brand assets
 
 ## Develop

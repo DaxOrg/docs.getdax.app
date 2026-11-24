@@ -1,38 +1,41 @@
 ---
 title: "Fonctionnement de Dax"
-description: "Le modele commun a tous les outils : invocation, activation, comportement hors ligne et confidentialite."
+description: "Comment Dax s'articule : la fenetre principale, les Accelerators, votre compte, le comportement hors ligne et la confidentialite."
 icon: "circle-info"
 ---
 
-Certaines choses sont vraies pour tous les outils de Dax, alors autant les
-expliquer une seule fois ici plutot que sur chaque page d'outil.
+Dax est une seule plateforme. La **fenetre principale** est l'endroit ou
+tournent vos agents de code. Les **Accelerators** sont les parties de Dax
+que vous invoquez depuis n'importe quelle app. **Dax Companion** met le tout
+sur votre iPhone et votre iPad. Certaines choses sont vraies partout, alors
+autant les expliquer une seule fois ici.
 
-## Invoquer les outils
+## Invoquer les Accelerators
 
-- **Chaque outil a un raccourci global.** Par defaut, ce sont tous
+- **Chaque Accelerator a un raccourci global.** Par defaut, ce sont tous
   <kbd>⌃</kbd> <kbd>⌥</kbd> plus une touche. Reassignez ou effacez
   n'importe quel raccourci dans **Settings -> Shortcuts** (<kbd>⌃</kbd>
   <kbd>⌥</kbd> <kbd>H</kbd>). Voir la [reference
   rapide](/fr/shortcuts) pour la liste complete.
-- **La grille du lanceur :** appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd>
-  <kbd>Space</kbd> pour ouvrir une grille listant tous les outils. Cliquez
-  sur l'un d'eux, ou appuyez sur <kbd>1</kbd>-<kbd>9</kbd> pour les neuf
-  premiers. Pratique tant que vous ne connaissez pas encore un raccourci
-  par coeur.
-- **L'icone de la barre de menu** liste aussi les outils, et ouvre
-  Settings.
+- **Le lanceur d'Accelerators :** appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd>
+  <kbd>Space</kbd> pour ouvrir une grille listant tous les Accelerators.
+  Cliquez sur l'un d'eux, ou appuyez sur <kbd>1</kbd>-<kbd>9</kbd> pour les
+  neuf premiers. Pratique tant que vous ne connaissez pas encore un
+  raccourci par coeur.
+- **L'icone de la barre de menu** les liste aussi, et ouvre Settings.
 
 <Frame>
-  <img src="/images/screenshots/launcher.jpg" alt="La grille du lanceur Dax" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/launcher.jpg" alt="Le lanceur d'Accelerators" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
 
-### Raccourcis globaux (pas des outils)
+### Raccourcis de Dax
 
 | Raccourci | Ouvre |
 | --- | --- |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | La grille du lanceur d'outils |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | Le lanceur d'Accelerators |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings -> onglet Shortcuts (reassigner les raccourcis) |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings -> Accelerators |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings -> Shortcuts (reassigner les raccourcis) |
 
 ## Premiers pas
 
@@ -101,34 +104,23 @@ Ordre de depense : les credits du plan d'abord, puis ceux des recharges.
 Passez au plan superieur a tout moment depuis la fenetre **Usage**. Gerez
 ou annulez votre abonnement via le portail client Stripe.
 
-Si votre compte est suspendu, Dax passe en mode verrouille et chaque outil
-vous redirige poliment vers le support plutot que de s'ouvrir.
+Si votre compte est suspendu, Dax passe en mode verrouille et chaque
+Accelerator vous redirige poliment vers le support plutot que de s'ouvrir.
 
-## Outils en ligne et hors ligne
+## Accelerators en ligne et hors ligne
 
-Certains outils sont entierement locaux ; d'autres ont besoin d'internet.
-**Hors ligne, les outils qui necessitent le reseau s'estompent dans le
-lanceur** et affichent un message « necessite internet » plutot que
-d'ouvrir un panneau voue a echouer. Ils se reactivent des que la connexion
-revient.
+Certains Accelerators sont entierement locaux ; d'autres ont besoin
+d'internet. **Hors ligne, les Accelerators qui necessitent le reseau
+s'estompent dans le lanceur** et affichent un message « necessite internet »
+plutot que d'ouvrir un panneau voue a echouer. Ils se reactivent des que la
+connexion revient.
 
 <CardGroup cols={2}>
   <Card title="Fonctionnent hors ligne" icon="wifi-slash">
-    [Frequent CLIs](/fr/tools/frequent-clis), [Boilerplates](/fr/tools/boilerplates),
-    [Inject MD or Skill](/fr/tools/inject-md) (sauf Share as a Link), [Open Project](/fr/tools/open-project),
-    [Vibe History](/fr/tools/vibe-history), [Command History](/fr/tools/command-history),
-    [Image to Text](/fr/tools/image-to-text),
-    [Secrets](/fr/tools/secrets), [Remove BG](/fr/tools/remove-bg),
-    [Agent Watch](/fr/tools/agent-watch), [Fenêtre principale](/fr/tools/agents),
-    [Prompt Snippets](/fr/tools/prompt-snippets), [Clipboard History](/fr/tools/clipboard-history)
+    [Fenêtre principale](/fr/main-window), [Frequent CLIs](/fr/accelerators/frequent-clis), [Inject MD or Skill](/fr/accelerators/inject-md) (sauf Share as a Link), [Vibe History](/fr/accelerators/vibe-history), [Image to Text](/fr/accelerators/image-to-text), [Secrets](/fr/accelerators/secrets), [Remove BG](/fr/accelerators/remove-bg), [Prompt Snippets](/fr/accelerators/prompt-snippets), [Markdown Viewer](/fr/accelerators/markdown-viewer), [Shelf](/fr/accelerators/shelf), [Schedules](/fr/accelerators/schedules)
   </Card>
   <Card title="Necessitent internet" icon="wifi">
-    [Ask AI](/fr/tools/ask-ai), [AI Text Transform](/fr/tools/text-transform),
-    [Image to Prompt](/fr/tools/image-to-prompt), [Image Ask](/fr/tools/image-ask),
-    [Generate Image](/fr/tools/generate-image), [Context Form Fill](/fr/tools/context-fill),
-    [Image to URL](/fr/tools/image-to-url), [File Drop](/fr/tools/file-drop),
-    [Clip to Link](/fr/tools/clip-to-link), [PRD Maker](/fr/tools/prd-maker),
-    [Feedback](/fr/tools/feedback)
+    [Ask AI](/fr/accelerators/ask-ai), [AI Text Transform](/fr/accelerators/text-transform), [Image to Prompt](/fr/accelerators/image-to-prompt), [Image Ask](/fr/accelerators/image-ask), [Generate Image](/fr/accelerators/generate-image), [Context Form Fill](/fr/accelerators/context-fill), [Image to URL](/fr/accelerators/image-to-url), [File Drop](/fr/accelerators/file-drop), [Clip to Link](/fr/accelerators/clip-to-link), [Screen Markup](/fr/accelerators/screen-markup), [Feedback](/fr/accelerators/feedback)
   </Card>
 </CardGroup>
 
@@ -139,8 +131,8 @@ flottantes qui apparaissent et disparaissent d'elles-memes.
 
 ## Confidentialite
 
-Les outils locaux ne touchent jamais au reseau. Les outils en ligne
-envoient **uniquement** ce dont l'outil a besoin, et **uniquement** quand
+Les Accelerators locaux ne touchent jamais au reseau. Les Accelerators en
+ligne envoient **uniquement** ce dont ils ont besoin, et **uniquement** quand
 vous appuyez sur le raccourci ou cliquez sur un bouton, jamais parce que
-vous avez copie quelque chose. Les details se trouvent sur la page de
-chaque outil et dans la politique de confidentialite.
+vous avez copie quelque chose. Les details se trouvent sur la page de chaque
+Accelerator et dans la politique de confidentialite.

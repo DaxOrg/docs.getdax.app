@@ -1,0 +1,88 @@
+---
+title: "Screen Markup"
+description: "Dibuja flechas, cuadros, etiquetas y desenfoque directamente sobre tu pantalla y obtén la captura anotada como tarjeta y como enlace."
+icon: "highlighter"
+---
+
+**Screen Markup** te permite dibujar directamente sobre tu pantalla: flechas,
+cuadros, resaltados, etiquetas, reglas y desenfoque real. Pulsa <kbd>⌘</kbd>
+<kbd>Return</kbd> y la captura anotada aparece en una tarjeta, subida y lista
+para compartir.
+
+## Ábrelo
+
+Pulsa <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> desde cualquier app.
+
+Screen Markup necesita el permiso de **Screen Recording**. Dax lo pide la
+primera vez.
+
+## Cómo funciona
+
+<Steps>
+  <Step title="Dibuja">
+    Se captura la pantalla y aparece una barra de herramientas arriba. Elige
+    una herramienta y dibuja. Arrastra el asa de la barra para apartarla.
+  </Step>
+  <Step title="Termina">
+    Pulsa <kbd>⌘</kbd> <kbd>Return</kbd>, o haz clic en **Finish**. Pulsa
+    <kbd>Esc</kbd> para cancelar.
+  </Step>
+  <Step title="Compártelo">
+    El resultado aparece como una tarjeta en la esquina. Arrástrala a
+    cualquier sitio, copia su enlace cuando termine la subida o vuelve a
+    abrirla para seguir marcándola.
+  </Step>
+</Steps>
+
+## Congelada o en vivo
+
+- **Frozen** mantiene la imagen quieta mientras dibujas.
+- **Live** sigue actualizando la imagen bajo tus marcas.
+
+Las apps siguen funcionando en ambos modos. Cambia con el botón **Frozen** /
+**Live** de la barra de herramientas.
+
+## Atajos de dibujo
+
+| Herramienta | Tecla |
+| --- | --- |
+| Seleccionar | <kbd>V</kbd> |
+| Lápiz | <kbd>P</kbd> |
+| Resaltador | <kbd>H</kbd> |
+| Flecha | <kbd>A</kbd> |
+| Cuadro | <kbd>B</kbd> |
+| Desenfoque | <kbd>R</kbd> |
+| Etiqueta | <kbd>T</kbd> |
+| Regla | <kbd>M</kbd> |
+| Deshacer / rehacer | <kbd>⌘</kbd> <kbd>Z</kbd> / <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> |
+| Eliminar la marca seleccionada | <kbd>Delete</kbd> |
+| Terminar | <kbd>⌘</kbd> <kbd>Return</kbd> |
+| Cancelar | <kbd>Esc</kbd> |
+
+Elige un color y un grosor de trazo (fino, medio o grueso) en la barra de
+herramientas.
+
+## Ajustes
+
+Los encontrarás en **Settings → Accelerators → Screen Markup**:
+
+- **Start in**: pantalla congelada o en vivo.
+- **Display**: la pantalla bajo el puntero, la pantalla principal o una
+  concreta.
+- **Starting drawing tool**: la herramienta seleccionada al abrirlo.
+- **Upload the annotated screenshot**: activado por defecto. Las subidas usan
+  tus ajustes de Storage.
+- **Keep a copy in Pictures › Dax Shots › Screen Markup**: activado por
+  defecto.
+- **Copy the image immediately**: desactivado por defecto.
+
+**Show all results** muestra todas tus anotaciones, con **Retry upload**,
+**Copy link** y **Remove**. Los resultados se guardan en tu Mac. Una subida
+interrumpida por un reinicio espera a que la reintentes.
+
+## Para agentes
+
+Los agentes de código usan el servidor MCP `dax-screen-markup` para señalar
+cosas en tu pantalla en vivo, capturar la pantalla con marcas dibujadas o
+abrir Screen Markup con sus marcas colocadas y esperar las tuyas. Esto último
+es como un agente te pide "enséñame dónde".

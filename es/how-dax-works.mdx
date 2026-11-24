@@ -1,37 +1,39 @@
 ---
 title: "Cómo funciona Dax"
-description: "El modelo común a todas las herramientas: invocación, activación, comportamiento sin conexión y privacidad."
+description: "Cómo encaja Dax: la ventana principal, los Accelerators, tu cuenta, el comportamiento sin conexión y la privacidad."
 icon: "circle-info"
 ---
 
-Hay algunas cosas que son ciertas para todas las herramientas de Dax, así
-que las explicamos una sola vez aquí en lugar de repetirlas en cada
-página.
+Dax es una sola plataforma. La **ventana principal** es donde se ejecutan tus
+agentes de código. Los **Accelerators** son las partes de Dax que invocas
+desde cualquier app. **Dax Companion** lo lleva todo a tu iPhone y iPad. Hay
+algunas cosas que son ciertas en todo Dax, así que las explicamos una sola vez
+aquí.
 
-## Invocar herramientas
+## Invocar Accelerators
 
-- **Cada herramienta tiene un atajo global.** Por defecto todos son
+- **Cada Accelerator tiene un atajo global.** Por defecto todos son
   <kbd>⌃</kbd> <kbd>⌥</kbd> más una tecla. Reasigna o borra cualquier atajo
   en **Settings → Shortcuts** (<kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd>);
   consulta la [referencia rápida](/es/shortcuts) para ver la lista completa.
-- **La cuadrícula del lanzador:** pulsa <kbd>⌃</kbd> <kbd>⌥</kbd>
-  <kbd>Space</kbd> para abrir una cuadrícula con todas las herramientas.
-  Haz clic en una, o pulsa <kbd>1</kbd>–<kbd>9</kbd> para las primeras
-  nueve. Útil mientras aún no te sabes un atajo de memoria.
-- **El icono de la barra de menú** también lista las herramientas y abre
-  Settings.
+- **El lanzador de Accelerators:** pulsa <kbd>⌃</kbd> <kbd>⌥</kbd>
+  <kbd>Space</kbd> para abrir una cuadrícula con todos los Accelerators.
+  Haz clic en uno, o pulsa <kbd>1</kbd>–<kbd>9</kbd> para los nueve
+  primeros. Útil mientras aún no te sabes un atajo de memoria.
+- **El icono de la barra de menú** también los lista y abre Settings.
 
 <Frame>
-  <img src="/images/screenshots/launcher.jpg" alt="La cuadrícula del lanzador de Dax" style="width: 100%; height: auto; border-radius: 12px;" />
+  <img src="/images/screenshots/launcher.jpg" alt="El lanzador de Accelerators" style="width: 100%; height: auto; border-radius: 12px;" />
 </Frame>
 
-### Atajos globales (no son herramientas)
+### Atajos de Dax
 
 | Atajo | Abre |
 | --- | --- |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | La cuadrícula del lanzador |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd> | El lanzador de Accelerators |
 | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>,</kbd> | Settings |
-| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → pestaña Shortcuts (reasignar atajos) |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>T</kbd> | Settings → Accelerators |
+| <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>H</kbd> | Settings → Shortcuts (reasignar atajos) |
 
 ## Primeros pasos
 
@@ -101,32 +103,21 @@ Sube de plan en cualquier momento desde la ventana **Usage**. Gestiona o
 cancela tu suscripción a través del portal de clientes de Stripe.
 
 Si tu cuenta está suspendida, Dax entra en un estado bloqueado y cada
-herramienta te dirige amablemente al soporte en lugar de abrirse.
+Accelerator te dirige amablemente al soporte en lugar de abrirse.
 
-## Herramientas en línea y sin conexión
+## Accelerators en línea y sin conexión
 
-Algunas herramientas son completamente locales; otras necesitan internet.
-**Sin conexión, las herramientas que necesitan red se atenúan en el
+Algunos Accelerators son completamente locales; otros necesitan internet.
+**Sin conexión, los Accelerators que necesitan red se atenúan en el
 lanzador** y muestran un aviso de "necesita internet" en lugar de abrir un
 panel condenado a fallar. Se reactivan en cuanto vuelve la conexión.
 
 <CardGroup cols={2}>
   <Card title="Funcionan sin conexión" icon="wifi-slash">
-    [Frequent CLIs](/es/tools/frequent-clis), [Boilerplates](/es/tools/boilerplates),
-    [Inject MD or Skill](/es/tools/inject-md) (excepto Share as a Link), [Open Project](/es/tools/open-project),
-    [Vibe History](/es/tools/vibe-history), [Command History](/es/tools/command-history),
-    [Image to Text](/es/tools/image-to-text),
-    [Secrets](/es/tools/secrets), [Remove BG](/es/tools/remove-bg),
-    [Agent Watch](/es/tools/agent-watch), [Ventana principal](/es/tools/agents),
-    [Prompt Snippets](/es/tools/prompt-snippets), [Clipboard History](/es/tools/clipboard-history)
+    [Ventana principal](/es/main-window), [Frequent CLIs](/es/accelerators/frequent-clis), [Inject MD or Skill](/es/accelerators/inject-md) (excepto Share as a Link), [Vibe History](/es/accelerators/vibe-history), [Image to Text](/es/accelerators/image-to-text), [Secrets](/es/accelerators/secrets), [Remove BG](/es/accelerators/remove-bg), [Prompt Snippets](/es/accelerators/prompt-snippets), [Markdown Viewer](/es/accelerators/markdown-viewer), [Shelf](/es/accelerators/shelf), [Schedules](/es/accelerators/schedules)
   </Card>
   <Card title="Necesitan conexión" icon="wifi">
-    [Ask AI](/es/tools/ask-ai), [AI Text Transform](/es/tools/text-transform),
-    [Image to Prompt](/es/tools/image-to-prompt), [Image Ask](/es/tools/image-ask),
-    [Generate Image](/es/tools/generate-image), [Context Form Fill](/es/tools/context-fill),
-    [Image to URL](/es/tools/image-to-url), [File Drop](/es/tools/file-drop),
-    [Clip to Link](/es/tools/clip-to-link), [PRD Maker](/es/tools/prd-maker),
-    [Feedback](/es/tools/feedback)
+    [Ask AI](/es/accelerators/ask-ai), [AI Text Transform](/es/accelerators/text-transform), [Image to Prompt](/es/accelerators/image-to-prompt), [Image Ask](/es/accelerators/image-ask), [Generate Image](/es/accelerators/generate-image), [Context Form Fill](/es/accelerators/context-fill), [Image to URL](/es/accelerators/image-to-url), [File Drop](/es/accelerators/file-drop), [Clip to Link](/es/accelerators/clip-to-link), [Screen Markup](/es/accelerators/screen-markup), [Feedback](/es/accelerators/feedback)
   </Card>
 </CardGroup>
 
@@ -136,8 +127,7 @@ Dax se comunica a través de notificaciones toast discretas: pequeñas tarjetas 
 
 ## Privacidad
 
-Las herramientas locales nunca tocan la red. Las herramientas en línea
-envían **solo** lo que la herramienta necesita, y **solo** cuando pulsas el
-atajo o haces clic en un botón, nunca porque hayas copiado algo. Los
-detalles están en la página de cada herramienta y en la política de
-privacidad.
+Los Accelerators locales nunca tocan la red. Los Accelerators en línea envían
+**solo** lo que necesitan, y **solo** cuando pulsas el atajo o haces clic en un
+botón, nunca porque hayas copiado algo. Los detalles están en la página de
+cada Accelerator y en la política de privacidad.

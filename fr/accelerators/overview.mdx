@@ -1,0 +1,132 @@
+---
+title: "Accelerators"
+description: "Les parties de Dax que vous invoquez depuis n'importe quelle app, chacune à un raccourci."
+icon: "bolt"
+---
+
+Les Accelerators sont intégrés à Dax. Chacun fait une seule chose pour
+laquelle vous devriez sinon quitter votre travail : transformer une capture
+d'écran en lien, poser une question rapide, transmettre un secret à un
+agent, enregistrer un clip. Ils s'ouvrent par-dessus l'app où vous êtes,
+font leur travail et s'effacent.
+
+Ils font partie de la même plateforme que la [fenêtre
+principale](/fr/main-window), où tournent vos agents de code, et que [Dax
+Companion](/fr/companion) sur votre téléphone. Beaucoup servent aussi à vos
+agents : un agent dans Dax peut déposer des fichiers sur votre
+[Shelf](/fr/accelerators/shelf), annoter votre écran, ou vous demander un
+[secret](/fr/accelerators/secrets) sans jamais en voir la valeur.
+
+## En ouvrir un
+
+- **Son raccourci.** Chaque Accelerator a un raccourci global, <kbd>⌃</kbd>
+  <kbd>⌥</kbd> plus une touche par défaut. La [page des
+  raccourcis](/fr/shortcuts) les liste tous.
+- **Le lanceur.** Appuyez sur <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd>
+  pour une grille de recherche de tous les Accelerators. Cliquez sur l'un
+  d'eux, ou appuyez sur <kbd>1</kbd>–<kbd>9</kbd> pour les neuf premiers.
+- **La barre de menu.** Cliquez sur l'icône Dax pour les y retrouver aussi.
+
+## Personnalisez-les
+
+- **Désactivez-en un** dans **Settings → Accelerators** (<kbd>⌃</kbd>
+  <kbd>⌥</kbd> <kbd>T</kbd>). Un Accelerator désactivé ne répond plus à son
+  raccourci et disparaît du lanceur.
+- **Réassignez son raccourci** dans **Settings → Shortcuts** (<kbd>⌃</kbd>
+  <kbd>⌥</kbd> <kbd>H</kbd>).
+- **Organisez le lanceur.** Choisissez **Arrange Accelerators…** pour les
+  glisser dans votre propre ordre et épingler ceux que vous utilisez le
+  plus, ou triez par plus utilisés, utilisés récemment, ou A–Z.
+
+## Tous les Accelerators
+
+### Capture et partage
+
+<CardGroup cols={3}>
+  <Card title="Image to URL" icon="link" href="/fr/accelerators/image-to-url">
+    Déposez une image, obtenez un lien hébergé.
+  </Card>
+  <Card title="File Drop" icon="files" href="/fr/accelerators/file-drop">
+    Envoyez des fichiers en masse, en une seule fois.
+  </Card>
+  <Card title="Clip to Link" icon="video" href="/fr/accelerators/clip-to-link">
+    Enregistrez une zone, obtenez un lien.
+  </Card>
+  <Card title="Shelf" icon="inbox" href="/fr/accelerators/shelf">
+    Gardez des fichiers à portée de main au bord de votre écran.
+  </Card>
+  <Card title="Screen Markup" icon="pen" href="/fr/accelerators/screen-markup">
+    Dessinez sur votre écran et partagez la capture.
+  </Card>
+</CardGroup>
+
+### IA
+
+<CardGroup cols={3}>
+  <Card title="Ask AI" icon="comment-dots" href="/fr/accelerators/ask-ai">
+    Posez une question rapide, où que vous soyez.
+  </Card>
+  <Card title="Image Ask" icon="comments" href="/fr/accelerators/image-ask">
+    Interrogez l'IA à propos d'une image.
+  </Card>
+  <Card title="Generate Image" icon="image" href="/fr/accelerators/generate-image">
+    Créez une image à partir d'un prompt.
+  </Card>
+  <Card title="Image to Prompt" icon="wand-magic-sparkles" href="/fr/accelerators/image-to-prompt">
+    Transformez n'importe quelle image en prompt.
+  </Card>
+  <Card title="AI Text Transform" icon="pen-nib" href="/fr/accelerators/text-transform">
+    Réécrivez ou retravaillez le texte sélectionné.
+  </Card>
+  <Card title="Context Form Fill" icon="file-lines" href="/fr/accelerators/context-fill">
+    Remplissez automatiquement les formulaires avec votre contexte enregistré.
+  </Card>
+  <Card title="Image to Text" icon="scanner" href="/fr/accelerators/image-to-text">
+    Extrayez le texte de n'importe quelle image avec l'OCR sur l'appareil.
+  </Card>
+</CardGroup>
+
+### Workflow des agents
+
+<CardGroup cols={3}>
+  <Card title="Frequent CLIs" icon="terminal" href="/fr/accelerators/frequent-clis">
+    Accédez directement aux CLI que vous utilisez le plus.
+  </Card>
+  <Card title="Inject MD or Skill" icon="markdown" href="/fr/accelerators/inject-md">
+    Ajoutez un AGENTS.md ou installez une compétence dans n'importe quel projet.
+  </Card>
+  <Card title="Prompt Snippets" icon="note-sticky" href="/fr/accelerators/prompt-snippets">
+    Des prompts enregistrés que vous pouvez rechercher et coller.
+  </Card>
+  <Card title="Vibe History" icon="clock-rotate-left" href="/fr/accelerators/vibe-history">
+    Reprenez une session de code ou copiez son contexte dans une nouvelle.
+  </Card>
+  <Card title="Secrets" icon="key" href="/fr/accelerators/secrets">
+    Un coffre-fort chiffré clé-valeur dans votre barre de menu.
+  </Card>
+  <Card title="Schedules" icon="calendar-clock" href="/fr/accelerators/schedules">
+    Lancez un agent sur une tâche plus tard, ou de façon récurrente.
+  </Card>
+  <Card title="Markdown Viewer" icon="file-text" href="/fr/accelerators/markdown-viewer">
+    Ouvrez, lisez et éditez du Markdown avec rendu en direct.
+  </Card>
+  <Card title="Remove BG" icon="scissors" href="/fr/accelerators/remove-bg">
+    Détourez le sujet d'une image.
+  </Card>
+  <Card title="Feedback" icon="message-heart" href="/fr/accelerators/feedback">
+    Envoyez un message et des captures d'écran à l'équipe.
+  </Card>
+</CardGroup>
+
+## Créez le vôtre
+
+Écrivez un Accelerator personnalisé en JavaScript et Dax le dessine avec
+des contrôles macOS natifs. Il s'ouvre depuis le lanceur comme les
+Accelerators intégrés, et vous pouvez lui donner son propre raccourci.
+Voir l'[Accelerator SDK](/developers/accelerator-sdk).
+
+<Note>
+  Les Accelerators personnalisés fonctionnent dans la version de Dax
+  téléchargée depuis getdax.app. La version Setapp de Dax n'exécute que les
+  Accelerators intégrés.
+</Note>
